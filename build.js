@@ -93,6 +93,7 @@ const FOOTER = `
 /* ---------- page contents ---------- */
 const IMG = 'assets/projects/aashihbhai/';
 const IMG2 = 'assets/projects/dilipbhai/';
+const IMG3 = 'assets/projects/junebhai/';
 
 const home = `
 <section class="hero">
@@ -164,6 +165,19 @@ const home = `
       <img class="m-tall" src="${IMG2}01-day.jpg" alt="Dilipbhai Residence by day" />
       <img class="m-side" src="${IMG2}03-day-side.jpg" alt="Dilipbhai Residence — side view" />
     </div>
+
+    <a href="junebhai-residence.html" class="feature reveal" style="margin-top:clamp(44px,7vw,90px)">
+      <div class="feature__img"><img src="${IMG3}02-dusk.webp" alt="Junebhai Residence at dusk" /></div>
+      <div class="feature__meta">
+        <span class="index-num">03</span>
+        <h3 class="feature__title">Junebhai Residence</h3>
+        <span class="tag">Architecture — Residential · Surat</span>
+      </div>
+    </a>
+    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
+      <img class="m-tall" src="${IMG3}01-day.webp" alt="Junebhai Residence by day" />
+      <img class="m-side" src="${IMG3}03-night.webp" alt="Junebhai Residence — front at night" />
+    </div>
   </div>
 </section>
 
@@ -220,6 +234,10 @@ const projects = `
       <a class="pcard reveal d1" href="dilipbhai-residence.html" data-cat="architecture">
         <div class="pcard__media"><img src="${IMG2}01-day.jpg" alt="Dilipbhai Residence" /></div>
         <div class="pcard__body"><div><div class="pcard__title">Dilipbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
+      </a>
+      <a class="pcard reveal d2" href="junebhai-residence.html" data-cat="architecture">
+        <div class="pcard__media"><img src="${IMG3}02-dusk.webp" alt="Junebhai Residence" /></div>
+        <div class="pcard__body"><div><div class="pcard__title">Junebhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
       </a>
       <div class="pcard pcard--soon reveal d2" data-cat="interior">
         <div class="pcard__media"><span>Photography coming</span></div>
@@ -319,6 +337,56 @@ const dilipbhai = `
     <figure class="pd-figure reveal">
       <img src="${IMG2}05-day-front.jpg" alt="Dilipbhai Residence — street elevation" />
       <figcaption>Street elevation — the circular motif carried from gate to upper façade.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
+const junebhai = `
+<div class="pd-hero">
+  <img src="${IMG3}02-dusk.webp" alt="Junebhai Residence at dusk" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture — Residential</span><h1>Junebhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A green, terraced residence where architecture and planting grow together — a board-formed concrete frame layered with cascading creepers, deep planted balconies and a perforated brick-jaali screen that crowns the upper floor.</p>
+    <p class="muted">Corner glazing opens the living spaces to light and the street, while the jaali and timber louvers filter the Surat sun and give privacy above. Trailing greenery softens every edge, turning the façade into a living, seasonal thing; by evening, warm interior light glows between the planted tiers.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG3}01-day.webp" alt="Junebhai Residence by day" />
+      <figcaption>Daylight — planted balconies and the brick-jaali crown in full detail.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG3}04-day-front.webp" alt="Junebhai Residence — street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG3}03-night.webp" alt="Junebhai Residence — street elevation at night" /></figure>
+    </div>
+    <figure class="pd-figure reveal">
+      <img src="${IMG3}05-front-alt.webp" alt="Junebhai Residence — front elevation" />
+      <figcaption>The layered façade — stone, timber, jaali and green.</figcaption>
     </figure>
   </div>
 </section>
@@ -540,6 +608,7 @@ const PAGES = [
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: false, title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
   { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
+  { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
@@ -556,9 +625,18 @@ for (const p of PAGES) {
 if (process.argv[2] === 'preview') {
   const OUTP = process.argv[3] || path.join(ROOT, 'preview.html');
   const mime = { '.webp': 'image/webp', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg' };
+  const OVERRIDE = process.env.PREVIEW_ASSETS || ''; // dir of downscaled, webp-encoded copies
   const cache = {};
   function toData(rel) {
     if (cache[rel]) return cache[rel];
+    // Prefer a downscaled override copy (all re-encoded to webp) to keep the bundle small.
+    if (OVERRIDE) {
+      const ov = path.join(OVERRIDE, rel);
+      if (fs.existsSync(ov)) {
+        const uri = `data:image/webp;base64,${fs.readFileSync(ov).toString('base64')}`;
+        cache[rel] = uri; return uri;
+      }
+    }
     const abs = path.join(ROOT, rel);
     if (!fs.existsSync(abs)) return rel;
     const ext = path.extname(rel).toLowerCase();
