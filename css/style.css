@@ -6,19 +6,23 @@
    ========================================================================== */
 
 :root {
-  /* Tvastra — light theme (white ground). Brand blue accent. */
-  --clay:      #00618e;   /* brand blue — accent + solid fills */
-  --clay-deep: #004b6e;
-  --clay-soft: #4a90b3;   /* lighter blue — accents on dark bands / photo tiles */
-  --ink:       #1b2a32;   /* cool near-black — primary text */
-  --charcoal:  #24333b;
-  --paper:     #ffffff;   /* white page ground */
-  --paper-2:   #f2f5f7;   /* light grey for alternating sections */
-  --stone:     #6d7a82;   /* muted grey */
-  --stone-dk:  #46535b;   /* muted dark-grey text */
-  --line:      #e4e9ec;   /* light border */
-  --line-dk:   #2a3a43;   /* lines on dark bands */
-  --bg-deep:   #0d0f11;   /* deepest band — dark sections & footer */
+  /* Tvastra — earthy palette: terracotta + charcoal + navy (beige/olive support) */
+  --clay:      #ad4a2b;   /* terracotta — primary accent + solid fills */
+  --clay-deep: #8c3a20;
+  --clay-soft: #cf835f;   /* light terracotta — accents on dark surfaces */
+  --navy:      #22304e;   /* deep navy — title card, footer */
+  --navy-deep: #1a2740;
+  --olive:     #4f5733;   /* olive — occasional support */
+  --beige:     #cdb79a;   /* beige — warm neutral */
+  --ink:       #2a2e31;   /* charcoal — primary text */
+  --charcoal:  #2c3033;
+  --paper:     #fbfaf8;   /* near-white, faintly warm */
+  --paper-2:   #f1ece3;   /* warm beige band */
+  --stone:     #837b71;   /* warm grey */
+  --stone-dk:  #55504a;   /* warm dark-grey — muted text */
+  --line:      #e8e1d7;   /* warm light border */
+  --line-dk:   #3a4048;   /* lines on dark bands */
+  --bg-deep:   #262a2d;   /* charcoal — dark sections & footer base */
   --white:     #ffffff;
 
   --max: 1440px;
@@ -460,3 +464,13 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
   .wwd__view span:first-child { display: none; }
   .wwd__arrow { width: 44px; height: 44px; }
 }
+
+/* ==========================================================================
+   Palette v3 — terracotta / charcoal / navy placements
+   ========================================================================== */
+.title-card { background: var(--navy); }               /* navy cover */
+.title-card__tag { color: #ddcbb0; }                   /* warm cream tagline */
+.site-footer { background: var(--navy); }              /* navy footer */
+.hero .eyebrow { color: #e3b49b; }                     /* light terracotta on hero */
+.hero .eyebrow::before { background: #e3b49b; }
+.wwd { background: #24282b; }                          /* charcoal slider stage */

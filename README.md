@@ -9,16 +9,17 @@ live in one place.
 
 ## Design
 
-A **dark, cinematic** theme built on the Tvastra brand: charcoal grounds with
-the logo **blue** (`#00618e`, from the brand's C100 M60 Y25 K05 profile) as the
-accent. The home page opens on a branded **title card**, and work is shown as
-**immersive image tiles** with the project name overlaid on the photo. The
-official logo (white variant `assets/logo-white.png`) sits in the header and
-footer. Type is **Quicksand** (Google Fonts), matched to the logo wordmark.
+An **earthy, editorial** theme: a warm near-white ground with **terracotta**
+(`#ad4a2b`) as the accent, **charcoal** for dark surfaces, and **navy**
+(`#22304e`) for the title card and footer (beige/olive support tones). The home
+page opens on a branded **title card**; work is shown as **immersive image
+tiles** (name overlaid on the photo); the Disciplines page has a **"What we do"
+slider** with oversized serif names. Type is **Quicksand** (matched to the
+logo), with **Cormorant Garamond** for the slider's display words. The official
+logo sits in the header and footer.
 
-Palette tokens live at the top of `css/style.css` (`--clay` = brand blue,
-`--paper` = charcoal ground, `--ink` = light text, `--bg-deep` = darkest band)
-— retune the whole site from there.
+Palette tokens live at the top of `css/style.css` (`--clay` = terracotta,
+`--navy`, `--bg-deep` = charcoal, `--paper` = warm white) — retune from there.
 
 ## Pages
 
