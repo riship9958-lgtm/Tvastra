@@ -97,6 +97,7 @@ const IMG3 = 'assets/projects/junebhai/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/kamalbhai/';
 const IMG6 = 'assets/projects/mukeshbhai/';
+const IMG7 = 'assets/projects/kamleshbhai/';
 
 // Central list of real projects — add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
@@ -106,6 +107,7 @@ const PROJECTS_LIST = [
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}01-night.webp`, feat: `${IMG6}01-night.webp` },
+  { name: 'Kamleshbhai Residence', file: 'kamleshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}01-front.jpg`, feat: `${IMG7}01-front.jpg` },
 ];
 // "Forthcoming" entries (no photography yet)
 const PROJECTS_SOON = [
@@ -538,6 +540,56 @@ const mukeshbhai = `
   </div>
 </section>`;
 
+const kamleshbhai = `
+<div class="pd-hero">
+  <img src="${IMG7}01-front.jpg" alt="Kamleshbhai Residence" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture — Residential</span><h1>Kamleshbhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A warm, earthen family home where clay-toned render meets banded rammed-earth-textured stone and teak — quiet, grounded volumes arranged around a private courtyard and softened by desert planting.</p>
+    <p class="muted">A double-height stone entrance portal frames a full-height teak door, while a taller rendered block rises behind for the upper rooms. The palette is deliberately of the earth — sandy render, striated stone and timber — and the design turns inward to a sheltered garden. A jaali compound wall gives privacy, and a full run of rooftop solar makes the house quietly self-sufficient.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Landscape</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG7}05-aerial.jpg" alt="Kamleshbhai Residence — aerial view" />
+      <figcaption>Aerial — the plan wraps a private courtyard; rooftop solar crowns the massing.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Kamleshbhai Residence — garden elevation" /></figure>
+      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Kamleshbhai Residence — courtyard elevation" /></figure>
+    </div>
+    <figure class="pd-figure reveal">
+      <img src="${IMG7}04-rear.jpg" alt="Kamleshbhai Residence — rear elevation" />
+      <figcaption>Rear elevation — rammed-earth-textured stone meets warm clay render.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
   <div class="container reveal" style="max-width:820px">
@@ -748,6 +800,7 @@ const PAGES = [
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
+  { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
