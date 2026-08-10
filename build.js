@@ -98,6 +98,7 @@ const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/kamalbhai/';
 const IMG6 = 'assets/projects/mukeshbhai/';
 const IMG7 = 'assets/projects/kamleshbhai/';
+const IMG8 = 'assets/projects/sudhirbhai/';
 
 // Central list of real projects — add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
@@ -108,6 +109,7 @@ const PROJECTS_LIST = [
   { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}01-night.webp`, feat: `${IMG6}01-night.webp` },
   { name: 'Kamleshbhai Residence', file: 'kamleshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}01-front.jpg`, feat: `${IMG7}01-front.jpg` },
+  { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
 ];
 // "Forthcoming" entries (no photography yet)
 const PROJECTS_SOON = [
@@ -590,6 +592,52 @@ const kamleshbhai = `
   </div>
 </section>`;
 
+const sudhirbhai = `
+<div class="pd-hero">
+  <img src="${IMG8}03-night-front.webp" alt="Sudhirbhai Residence at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture — Residential</span><h1>Sudhirbhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A contemporary apartment building where pale stone and grey panels are framed by bands and piers of exposed red brick — deep, recessed balconies stacked up a corner that turns the street with quiet confidence.</p>
+    <p class="muted">Punched openings and full-height glazing are set into stone surrounds, while brick wraps the corner and grounds the base at the sheltered parking level. A timber-lined pavilion caps the roof, catching light and giving the block a crown. The material pairing — cool stone against warm brick — keeps the elevation ordered yet tactile.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG8}02-day-corner.webp" alt="Sudhirbhai Residence — corner view by day" />
+      <figcaption>Daylight — stone and grey panels framed by exposed red brick.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Sudhirbhai Residence — corner at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Sudhirbhai Residence — street elevation by day" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
   <div class="container reveal" style="max-width:820px">
@@ -801,6 +849,7 @@ const PAGES = [
   { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
+  { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
