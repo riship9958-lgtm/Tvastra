@@ -10,7 +10,7 @@ const path = require('path');
 const ROOT = __dirname;
 
 /* ---------- shared bits ---------- */
-const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />';
+const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />';
 
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
@@ -203,7 +203,7 @@ const home = `
   <div class="hero__media"><img src="${IMG}03-night.webp" alt="Aashihbhai Residence illuminated at night" /></div>
   <div class="container hero__inner" style="padding-bottom:clamp(56px,8vw,110px)">
     <p class="eyebrow no-rule">Our vision</p>
-    <h2 style="font-size:clamp(30px,4.6vw,64px);max-width:20ch;font-weight:320">Every home a sanctuary of comfort, style and individuality.</h2>
+    <h2 style="font-size:clamp(30px,4.6vw,64px);max-width:20ch;font-weight:400">Every home a sanctuary of comfort, style and individuality.</h2>
   </div>
 </section>
 
