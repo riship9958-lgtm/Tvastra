@@ -95,6 +95,34 @@ const IMG = 'assets/projects/aashihbhai/';
 const IMG2 = 'assets/projects/dilipbhai/';
 const IMG3 = 'assets/projects/junebhai/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
+const IMG5 = 'assets/projects/kamalbhai/';
+
+// Central list of real projects — add one entry (+ a detail page) to publish a new project.
+const PROJECTS_LIST = [
+  { name: 'Aashihbhai Residence',  file: 'aashihbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}01-day.webp`,   feat: `${IMG}04-day-side.webp` },
+  { name: 'Dilipbhai Residence',   file: 'dilipbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG2}01-day.jpg`,   feat: `${IMG2}02-night.webp` },
+  { name: 'Junebhai Residence',    file: 'junebhai-residence.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
+  { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
+  { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
+];
+// "Forthcoming" entries (no photography yet)
+const PROJECTS_SOON = [
+  { name: 'Avadh Habitat', cat: 'interior', meta: 'Residential interior · 2,567 sq ft · Completed', label: 'Photography coming', file: '' },
+  { name: 'Vatrusa',       cat: 'product',  meta: 'Custom furniture · Teak / Oak / Walnut',        label: 'The furniture line', file: 'vatrusa.html' },
+];
+
+function pcard(p, i) {
+  const inner = `<div class="pcard__media"><img src="${p.card}" alt="${p.name}" /></div>
+      <div class="pcard__body"><div><div class="pcard__title">${p.name}</div><div class="pcard__meta">${p.meta}</div></div><span class="pcard__cat">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</span></div>`;
+  return `<a class="pcard reveal${i%2?' d1':''}" href="${p.file}" data-cat="${p.cat}">${inner}</a>`;
+}
+function pcardSoon(p, i) {
+  const body = `<div class="pcard__media"><span>${p.label}</span></div>
+      <div class="pcard__body"><div><div class="pcard__title">${p.name}</div><div class="pcard__meta">${p.meta}</div></div><span class="pcard__cat">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</span></div>`;
+  return p.file
+    ? `<a class="pcard pcard--soon reveal${i%2?' d1':''}" href="${p.file}" data-cat="${p.cat}">${body}</a>`
+    : `<div class="pcard pcard--soon reveal${i%2?' d1':''}" data-cat="${p.cat}">${body}</div>`;
+}
 
 const home = `
 <section class="hero">
@@ -141,56 +169,16 @@ const home = `
       <div><p class="eyebrow">Selected work</p><h2 class="h-lg">Recent projects.</h2></div>
       <a href="projects.html" class="link-arrow">All projects ${ARROW}</a>
     </div>
-    <a href="aashihbhai-residence.html" class="feature reveal">
-      <div class="feature__img"><img src="${IMG}04-day-side.webp" alt="Aashihbhai Residence" /></div>
+    <a href="${PROJECTS_LIST[0].file}" class="feature reveal">
+      <div class="feature__img"><img src="${PROJECTS_LIST[0].feat}" alt="${PROJECTS_LIST[0].name}" /></div>
       <div class="feature__meta">
         <span class="index-num">01</span>
-        <h3 class="feature__title">Aashihbhai Residence</h3>
+        <h3 class="feature__title">${PROJECTS_LIST[0].name}</h3>
         <span class="tag">Architecture — Residential · Surat</span>
       </div>
     </a>
-    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
-      <img class="m-tall" src="${IMG}02-dusk.webp" alt="Aashihbhai Residence at dusk" />
-      <img class="m-side" src="${IMG}05-night-side.webp" alt="Aashihbhai Residence — side elevation at night" />
-    </div>
-
-    <a href="dilipbhai-residence.html" class="feature reveal" style="margin-top:clamp(44px,7vw,90px)">
-      <div class="feature__img"><img src="${IMG2}02-night.webp" alt="Dilipbhai Residence at night" /></div>
-      <div class="feature__meta">
-        <span class="index-num">02</span>
-        <h3 class="feature__title">Dilipbhai Residence</h3>
-        <span class="tag">Architecture — Residential · Surat</span>
-      </div>
-    </a>
-    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
-      <img class="m-tall" src="${IMG2}01-day.jpg" alt="Dilipbhai Residence by day" />
-      <img class="m-side" src="${IMG2}03-day-side.jpg" alt="Dilipbhai Residence — side view" />
-    </div>
-
-    <a href="junebhai-residence.html" class="feature reveal" style="margin-top:clamp(44px,7vw,90px)">
-      <div class="feature__img"><img src="${IMG3}02-dusk.webp" alt="Junebhai Residence at dusk" /></div>
-      <div class="feature__meta">
-        <span class="index-num">03</span>
-        <h3 class="feature__title">Junebhai Residence</h3>
-        <span class="tag">Architecture — Residential · Surat</span>
-      </div>
-    </a>
-    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
-      <img class="m-tall" src="${IMG3}01-day.webp" alt="Junebhai Residence by day" />
-      <img class="m-side" src="${IMG3}03-night.webp" alt="Junebhai Residence — front at night" />
-    </div>
-
-    <a href="kalpeshbhai-residence.html" class="feature reveal" style="margin-top:clamp(44px,7vw,90px)">
-      <div class="feature__img"><img src="${IMG4}01-night.webp" alt="Kalpeshbhai Residence at night" /></div>
-      <div class="feature__meta">
-        <span class="index-num">04</span>
-        <h3 class="feature__title">Kalpeshbhai Residence</h3>
-        <span class="tag">Architecture — Residential · Surat</span>
-      </div>
-    </a>
-    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
-      <img class="m-tall" src="${IMG4}02-day.webp" alt="Kalpeshbhai Residence by day" />
-      <img class="m-side" src="${IMG4}05-front.webp" alt="Kalpeshbhai Residence — street elevation" />
+    <div class="pgrid" style="margin-top:clamp(28px,4vw,54px)">
+      ${PROJECTS_LIST.slice(1).map(function (p, i) { return pcard(p, i); }).join('\n      ')}
     </div>
   </div>
 </section>
@@ -241,30 +229,8 @@ const projects = `
       <button class="filter" data-filter="product">Product</button>
     </div>
     <div class="pgrid">
-      <a class="pcard reveal" href="aashihbhai-residence.html" data-cat="architecture">
-        <div class="pcard__media"><img src="${IMG}01-day.webp" alt="Aashihbhai Residence" /></div>
-        <div class="pcard__body"><div><div class="pcard__title">Aashihbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
-      </a>
-      <a class="pcard reveal d1" href="dilipbhai-residence.html" data-cat="architecture">
-        <div class="pcard__media"><img src="${IMG2}01-day.jpg" alt="Dilipbhai Residence" /></div>
-        <div class="pcard__body"><div><div class="pcard__title">Dilipbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
-      </a>
-      <a class="pcard reveal d2" href="junebhai-residence.html" data-cat="architecture">
-        <div class="pcard__media"><img src="${IMG3}02-dusk.webp" alt="Junebhai Residence" /></div>
-        <div class="pcard__body"><div><div class="pcard__title">Junebhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
-      </a>
-      <a class="pcard reveal" href="kalpeshbhai-residence.html" data-cat="architecture">
-        <div class="pcard__media"><img src="${IMG4}01-night.webp" alt="Kalpeshbhai Residence" /></div>
-        <div class="pcard__body"><div><div class="pcard__title">Kalpeshbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
-      </a>
-      <div class="pcard pcard--soon reveal d1" data-cat="interior">
-        <div class="pcard__media"><span>Photography coming</span></div>
-        <div class="pcard__body"><div><div class="pcard__title">Avadh Habitat</div><div class="pcard__meta">Residential interior · 2,567 sq ft · Completed</div></div><span class="pcard__cat">Interior</span></div>
-      </div>
-      <a class="pcard pcard--soon reveal d2" href="vatrusa.html" data-cat="product">
-        <div class="pcard__media"><span>The furniture line</span></div>
-        <div class="pcard__body"><div><div class="pcard__title">Vatrusa</div><div class="pcard__meta">Custom furniture · Teak / Oak / Walnut</div></div><span class="pcard__cat">Product</span></div>
-      </a>
+      ${PROJECTS_LIST.map(function (p, i) { return pcard(p, i); }).join('\n      ')}
+      ${PROJECTS_SOON.map(function (p, i) { return pcardSoon(p, PROJECTS_LIST.length + i); }).join('\n      ')}
     </div>
     <p class="muted reveal" style="margin-top:40px;font-size:15px">More projects are being added as photography is finalised. Have a specific project in mind? <a href="contact.html" class="link-arrow" style="font-size:12px">Get in touch ${ARROW}</a></p>
   </div>
@@ -455,6 +421,56 @@ const kalpeshbhai = `
     <figure class="pd-figure reveal">
       <img src="${IMG4}05-front.webp" alt="Kalpeshbhai Residence — street elevation" />
       <figcaption>Street elevation — the timber jaali and planted terrace along the front.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
+const kamalbhai = `
+<div class="pd-hero">
+  <img src="${IMG5}01-night.webp" alt="Kamalbhai Residence at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e2c39c">Architecture — Residential</span><h1>Kamalbhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A calm, contemporary home in board-formed concrete and warm timber — clean stacked volumes softened by full-height wood-slat panels, deep planted balconies and trailing green that spills from every level.</p>
+    <p class="muted">Grey concrete grids the façade into quiet bays, while cedar-toned slats warm the entrances and screen the terraces. Corner glazing and generous openings pull daylight deep inside; by night, the timber glows and the greenery reads as soft silhouettes against the lit interiors — a restrained, liveable balance of raw material and planting.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG5}02-day.webp" alt="Kamalbhai Residence by day" />
+      <figcaption>Daylight — concrete, timber slats and planted balconies in full detail.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG5}04-day-front.webp" alt="Kamalbhai Residence — street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG5}03-night-front.webp" alt="Kamalbhai Residence — street elevation at night" /></figure>
+    </div>
+    <figure class="pd-figure reveal">
+      <img src="${IMG5}05-day-tall.webp" alt="Kamalbhai Residence — front elevation" />
+      <figcaption>Front elevation — the timber-clad core and layered balconies.</figcaption>
     </figure>
   </div>
 </section>
@@ -678,6 +694,7 @@ const PAGES = [
   { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
+  { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
