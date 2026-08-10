@@ -10,7 +10,7 @@ const path = require('path');
 const ROOT = __dirname;
 
 /* ---------- shared bits ---------- */
-const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />';
+const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />';
 
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
@@ -602,38 +602,57 @@ const sudhirbhai = `
 </section>`;
 
 const services = `
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
-  <div class="container reveal" style="max-width:820px">
-    <p class="eyebrow">What we offer</p>
-    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Disciplines.</h1>
-    <p class="lead" style="margin-top:22px">Three connected disciplines under one roof — architecture, interiors and furniture, integrated into a single, comprehensive approach to transforming living spaces.</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="container">
-    <div class="disc reveal">
-      <div class="disc__row">
-        <div class="disc__n">01</div>
-        <div><h3>Architecture</h3></div>
-        <div><p class="muted">We shape architectural landscapes across residential and commercial projects, prioritising sustainability and function so every building is both beautiful and environmentally responsible.</p>
-          <ul class="disc__list"><li>Residential &amp; commercial buildings</li><li>Sustainable, eco-conscious design</li><li>Façade &amp; material detailing</li><li>Concept through construction</li></ul></div>
-      </div>
-      <div class="disc__row">
-        <div class="disc__n">02</div>
-        <div><h3>Interior Design</h3></div>
-        <div><p class="muted">Our interiors curate exquisite spaces that blend aesthetic elegance with functionality, reflecting your vision and enhancing the way you live and work.</p>
-          <ul class="disc__list"><li>Space planning &amp; layouts</li><li>Material, finish &amp; lighting design</li><li>Custom furniture &amp; joinery</li><li>Styling &amp; handover</li></ul></div>
-      </div>
-      <div class="disc__row">
-        <div class="disc__n">03</div>
-        <div><h3>Product &amp; Furniture</h3></div>
-        <div><p class="muted">Under our label <em class="serif-em">Vatrusa</em>, each piece embodies a harmony of utility, aesthetics and style — crafted with a commitment to timeless design, durability and affordability.</p>
-          <ul class="disc__list"><li>Custom, made-to-order furniture</li><li>Solid Teak, Oak &amp; Walnut</li><li>Responsibly sourced, ethically made</li><li>Integrated with architecture &amp; interiors</li></ul>
-          <a href="vatrusa.html" class="link-arrow" style="margin-top:18px">Explore Vatrusa ${ARROW}</a></div>
-      </div>
+<section class="wwd" id="wwd">
+  <div class="wwd__stage">
+    <div class="wwd__track">
+      <article class="wwd__slide">
+        <div class="wwd__media"><img src="${IMG}01-day.webp" alt="Architecture" loading="lazy" /></div>
+        <h2 class="wwd__word">Architec&shy;ture</h2>
+        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
+      </article>
+      <article class="wwd__slide">
+        <div class="wwd__media"><img src="${IMG4}01-night.webp" alt="Interior Design" loading="lazy" /></div>
+        <h2 class="wwd__word">Interior<br>Design</h2>
+        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
+      </article>
+      <article class="wwd__slide">
+        <div class="wwd__media"><img src="${IMG6}01-night.webp" alt="Product Design" loading="lazy" /></div>
+        <h2 class="wwd__word">Product<br>Design</h2>
+        <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
+      </article>
     </div>
   </div>
+
+  <div class="wwd__meta">
+    <span class="wwd__label">What we do</span>
+    <div class="wwd__num"><b>01</b><span>/ 03</span></div>
+  </div>
+
+  <button class="wwd__arrow wwd__prev" aria-label="Previous discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="wwd__arrow wwd__next" aria-label="Next discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l6 6-6 6"/></svg></button>
+
+  <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+
+  <script>
+  (function(){
+    var s = document.getElementById('wwd'); if(!s || s.__wwd) return; s.__wwd = 1;
+    var track = s.querySelector('.wwd__track');
+    var slides = s.querySelectorAll('.wwd__slide');
+    var numB = s.querySelector('.wwd__num b');
+    var total = slides.length, i = 0;
+    function go(n){
+      i = (n % total + total) % total;
+      track.style.transform = 'translateX(' + (-i * 100) + '%)';
+      slides.forEach(function(sl, k){ sl.classList.toggle('is-active', k === i); });
+      if(numB) numB.textContent = '0' + (i + 1);
+    }
+    s.querySelector('.wwd__next').addEventListener('click', function(){ go(i + 1); });
+    s.querySelector('.wwd__prev').addEventListener('click', function(){ go(i - 1); });
+    s.addEventListener('keydown', function(e){ if(e.key==='ArrowRight') go(i+1); if(e.key==='ArrowLeft') go(i-1); });
+    s.setAttribute('tabindex','0');
+    go(0);
+  })();
+  </script>
 </section>
 
 <section class="section section--ink">
@@ -813,7 +832,7 @@ const PAGES = [
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
   { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
-  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
+  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },

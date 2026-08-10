@@ -410,3 +410,53 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .tile__name { font-family: var(--serif); font-weight: 500; font-size: clamp(24px, 2.4vw, 38px); line-height: 1.05; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
 .tile__meta { font-size: 14px; color: #d6dde1; margin-top: 10px; opacity: 0; transform: translateY(10px); transition: opacity .45s var(--ease), transform .45s var(--ease); }
 .tile:hover .tile__meta { opacity: 1; transform: none; }
+
+/* ==========================================================================
+   "What we do" — editorial discipline slider (dark)
+   ========================================================================== */
+.wwd { position: relative; background: #15181b; color: #fff; overflow: hidden; }
+.wwd__stage { position: relative; overflow: hidden; height: min(92vh, 900px); min-height: 600px; }
+.wwd__track { display: flex; height: 100%; transition: transform .85s cubic-bezier(.6,.05,.15,1); }
+.wwd__slide { position: relative; min-width: 100%; height: 100%; }
+
+.wwd__media { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -46%); width: min(40%, 440px); aspect-ratio: 3/4; overflow: hidden; z-index: 1; box-shadow: 0 40px 90px -34px rgba(0,0,0,.7); }
+.wwd__media img { width: 100%; height: 100%; object-fit: cover; }
+.wwd__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,10,12,.38), rgba(8,10,12,.12) 45%, rgba(8,10,12,.35)); }
+
+.wwd__word { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-52%); margin: 0; text-align: center; z-index: 2;
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-size: clamp(52px, 10vw, 152px); line-height: .84;
+  letter-spacing: .015em; text-transform: uppercase; color: #fff; pointer-events: none; text-shadow: 0 6px 60px rgba(0,0,0,.4); }
+
+.wwd__tags { position: absolute; left: clamp(20px, 7vw, 130px); bottom: 15%; z-index: 3; list-style: none; margin: 0; padding: 0;
+  display: flex; flex-direction: column; gap: 9px; font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: #c9d0d5; }
+.wwd__tags li { position: relative; padding-left: 20px; }
+.wwd__tags li::before { content: ""; position: absolute; left: 0; top: .7em; width: 9px; height: 1px; background: var(--clay-soft); }
+
+.wwd__meta { position: absolute; left: clamp(20px, 7vw, 130px); top: clamp(100px, 22%, 230px); z-index: 5; }
+.wwd__label { display: block; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--clay-soft); }
+.wwd__num { margin-top: 12px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 26px; display: flex; align-items: baseline; gap: 8px; }
+.wwd__num b { font-weight: 600; }
+.wwd__num span { font-size: 15px; color: #8b949a; }
+
+.wwd__view { position: absolute; right: clamp(20px, 7vw, 130px); bottom: 13%; z-index: 5; display: inline-flex; align-items: center; gap: 16px; color: #fff; font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; }
+.wwd__circle { width: 56px; height: 56px; border: 1px solid rgba(255,255,255,.35); border-radius: 50%; display: grid; place-items: center; transition: background .3s var(--ease), border-color .3s var(--ease); }
+.wwd__circle svg { width: 20px; height: 20px; }
+.wwd__view:hover .wwd__circle { background: var(--clay); border-color: var(--clay); }
+
+.wwd__arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.03); color: #fff; cursor: pointer; display: grid; place-items: center; transition: .25s var(--ease); }
+.wwd__arrow svg { width: 22px; height: 22px; }
+.wwd__arrow:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.5); }
+.wwd__prev { left: clamp(10px, 3vw, 40px); }
+.wwd__next { right: clamp(10px, 3vw, 40px); }
+
+@media (max-width: 760px) {
+  .wwd__stage { height: min(88vh, 720px); min-height: 500px; }
+  .wwd__media { width: 66%; transform: translate(-50%, -48%); }
+  .wwd__word { font-size: clamp(40px, 15vw, 96px); }
+  .wwd__meta { top: 92px; left: 20px; }
+  .wwd__tags { left: 20px; bottom: 11%; font-size: 11px; }
+  .wwd__view { right: 20px; bottom: 9%; }
+  .wwd__view span:first-child { display: none; }
+  .wwd__arrow { width: 44px; height: 44px; }
+}
