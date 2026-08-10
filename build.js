@@ -178,45 +178,7 @@ const home = `
   </div>
 </section>
 
-<section class="section section--paper2">
-  <div class="container">
-    <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px">
-      <div><p class="eyebrow">Selected work</p><h2 class="h-lg">Recent projects.</h2></div>
-      <a href="projects.html" class="link-arrow">All projects ${ARROW}</a>
-    </div>
-    <div class="tiles">
-      ${PROJECTS_LIST.map(function (p, i) { return pcard(p, i); }).join('\n      ')}
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="reveal" style="margin-bottom:10px"><p class="eyebrow">What we do</p><h2 class="h-lg">Three disciplines, one studio.</h2></div>
-    <div class="disc reveal">
-      <div class="disc__row"><div class="disc__n">01</div><h3>Architecture</h3><div class="muted">Residential and commercial buildings that prioritise sustainability and function — aesthetically resolved and environmentally responsible, from concept to construction detail.</div></div>
-      <div class="disc__row"><div class="disc__n">02</div><h3>Interior Design</h3><div class="muted">Interiors that blend aesthetic elegance with everyday function — material, light and detail composed to reflect how a space is truly lived in.</div></div>
-      <div class="disc__row"><div class="disc__n">03</div><h3>Product Design</h3><div class="muted">Custom furniture under our label <em class="serif-em">Vatrusa</em> — each piece a harmony of utility, aesthetics and craft, integrated with the architecture around it.</div></div>
-    </div>
-    <div class="reveal" style="margin-top:40px"><a href="services.html" class="btn">Explore services ${ARROW}</a></div>
-  </div>
-</section>
-
-<section class="hero" style="min-height:70svh">
-  <div class="hero__media"><img src="${IMG}03-night.webp" alt="Aashihbhai Residence illuminated at night" /></div>
-  <div class="container hero__inner" style="padding-bottom:clamp(56px,8vw,110px)">
-    <p class="eyebrow no-rule">Our vision</p>
-    <h2 style="font-size:clamp(30px,4.6vw,64px);max-width:20ch;font-weight:400">Every home a sanctuary of comfort, style and individuality.</h2>
-  </div>
-</section>
-
-<section class="cta section">
-  <div class="container reveal">
-    <h2>Have a site, a brief, or just an idea?</h2>
-    <p>We work with individuals, developers and institutions to shape spaces worth returning to. Tell us what you're planning.</p>
-    <a href="contact.html" class="btn btn--ghost-light">Start a conversation ${ARROW}</a>
-  </div>
-</section>`;
+`;
 
 const projects = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:0">
