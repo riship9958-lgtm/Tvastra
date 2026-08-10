@@ -32,6 +32,7 @@ ${FONTS}
 const NAV = [['projects.html','Work'],['services.html','Services'],['about.html','Studio'],['contact.html','Contact']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
+  if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
   var links = NAV.map(function(n){
     var a = n[0] === active ? ' class="active"' : '';
     return `<li><a href="${n[0]}"${a}>${n[1]}</a></li>`;
@@ -129,7 +130,15 @@ function pcardSoon(p, i) {
 }
 
 const home = `
-<section class="hero">
+<section class="title-card">
+  <div class="title-card__inner">
+    <img class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
+    <p class="title-card__tag">Architecture &middot; Interiors &middot; Product Design</p>
+  </div>
+  <a href="#lead" class="title-card__scroll" aria-label="Scroll to enter"><span>Scroll</span></a>
+</section>
+
+<section class="hero" id="lead">
   <div class="hero__media"><img src="${IMG}01-day.webp" alt="Aashihbhai Residence — brick and concrete façade" /></div>
   <div class="container hero__inner">
     <p class="eyebrow">Architecture · Interiors · Objects</p>
@@ -941,6 +950,7 @@ if (process.argv[2] === 'preview') {
     if(toggle) toggle.setAttribute('aria-expanded','false');
     document.body.style.overflow='';
     setHeader(page.getAttribute('data-dark')==='1');
+    hdr.classList.toggle('on-home', id==='home');
     window.scrollTo(0,0);
     revealPage(page);
   }
