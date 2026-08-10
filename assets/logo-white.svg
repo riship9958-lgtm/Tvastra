@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 170" role="img" aria-label="Tvastra Design LLP">
+  <style>
+    .wm { font-family: 'Poppins','Segoe UI',Arial,sans-serif; font-weight: 700; letter-spacing: 6px; fill: #ffffff; }
+    .sub { font-family: 'Poppins','Segoe UI',Arial,sans-serif; font-weight: 400; letter-spacing: 10px; fill: #d7e3ea; }
+    .reg { font-family: Arial, sans-serif; font-weight: 400; fill: #ffffff; }
+  </style>
+  <rect x="330" y="34" width="70" height="10" rx="5" fill="#ffffff"/>
+  <text class="wm" x="20" y="108" font-size="86">TVASTRA</text>
+  <text class="reg" x="470" y="100" font-size="24">&#174;</text>
+  <text class="sub" x="150" y="150" font-size="30">Design LLP</text>
+</svg>

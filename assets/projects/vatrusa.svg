@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <rect width="1200" height="900" fill="#eef0ec"/>
+  <g stroke="#0f5f8c" stroke-width="2.4" fill="none" opacity="0.4">
+    <path d="M420 300 q180 -60 360 0 l-40 320 q-140 40 -280 0 z"/>
+    <line x1="440" y1="620" x2="420" y2="760"/><line x1="760" y1="620" x2="780" y2="760"/>
+    <line x1="500" y1="632" x2="500" y2="770"/><line x1="700" y1="632" x2="700" y2="770"/>
+    <path d="M420 300 q180 60 360 0" opacity="0.5"/>
+  </g>
+  <g stroke="#0f5f8c" stroke-width="1.3" fill="none" opacity="0.18">
+    <path d="M470 380 q130 -34 260 0"/><path d="M470 450 q130 -30 260 0"/><path d="M470 520 q130 -26 260 0"/>
+  </g>
+  <text x="80" y="815" font-family="'Poppins',Arial,sans-serif" font-weight="600" font-size="46" fill="#1f3a48">Vatrusa</text>
+  <text x="80" y="858" font-family="'Poppins',Arial,sans-serif" font-weight="400" font-size="26" fill="#0f5f8c" letter-spacing="4">PRODUCT</text>
+</svg>

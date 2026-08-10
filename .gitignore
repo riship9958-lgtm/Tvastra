@@ -1,0 +1,6 @@
+# OS / editor
+.DS_Store
+.claude/
+
+# Node (if tooling is added later)
+node_modules/
