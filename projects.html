@@ -3,41 +3,31 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Projects — Tvastra Design LLP</title>
-<meta name="description" content="Selected architecture, interior and product design work by Tvastra Design LLP, including Avadh Habitat and the Vatrusa furniture line." />
+<title>Work — Tvastra Design LLP</title>
+<meta name="description" content="Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence." />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
-<header class="site-header">
+<header class="site-header solid on-light">
   <div class="container nav">
-    <a class="brand-logo" href="index.html" aria-label="Tvastra Design LLP — home"><img src="assets/logo.svg" alt="Tvastra Design LLP" /></a>
+    <a class="brand" href="index.html" aria-label="Tvastra Design LLP — home">
+      <span class="name">Tvastra</span><span class="sub">Design LLP</span>
+    </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">Studio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <ul class="nav-links"><li><a href="projects.html" class="active">Work</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
   </div>
 </header>
-
-<!-- Page intro -->
-<section class="section" style="padding-bottom:0">
-  <div class="container section-head reveal">
-    <p class="eyebrow">Our work</p>
-    <h2>Projects.</h2>
-    <p class="muted">A selection of work across our three disciplines — architecture, interiors and furniture. Each project integrates utility, aesthetics, function and style into a single, considered whole.</p>
+<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:0">
+  <div class="container reveal" style="max-width:760px">
+    <p class="eyebrow">Selected work</p>
+    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
+    <p class="lead" style="margin-top:22px">A selection of work across our three disciplines. Each project integrates utility, aesthetics, function and style into a single, considered whole.</p>
   </div>
 </section>
 
-<!-- Grid -->
-<section class="section" style="padding-top:clamp(30px,5vw,56px)">
+<section class="section">
   <div class="container">
     <div class="filters reveal">
       <button class="filter active" data-filter="all">All</button>
@@ -45,61 +35,57 @@
       <button class="filter" data-filter="interior">Interior</button>
       <button class="filter" data-filter="product">Product</button>
     </div>
-
-    <!--
-      Avadh Habitat and Vatrusa are Tvastra's real, confirmed projects.
-      The remaining cards are placeholders — replace the image, title and
-      meta with real Tvastra projects (see README.md).
-    -->
-    <div class="project-grid">
-      <a class="card reveal" href="project.html" data-cat="interior">
-        <div class="card__media"><img src="assets/projects/avadh-habitat.svg" alt="Avadh Habitat" /></div>
-        <div class="card__overlay"><span class="card__cat">Interior</span><span class="card__title">Avadh Habitat</span><span class="card__meta">Residential &middot; 2,567 sq ft</span></div>
+    <div class="pgrid">
+      <a class="pcard reveal" href="aashihbhai-residence.html" data-cat="architecture">
+        <div class="pcard__media"><img src="assets/projects/aashihbhai/01-day.webp" alt="Aashihbhai Residence" /></div>
+        <div class="pcard__body"><div><div class="pcard__title">Aashihbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
       </a>
-      <a class="card reveal" href="vatrusa.html" data-cat="product">
-        <div class="card__media"><img src="assets/projects/vatrusa.svg" alt="Vatrusa furniture" /></div>
-        <div class="card__overlay"><span class="card__cat">Product</span><span class="card__title">Vatrusa</span><span class="card__meta">Furniture &middot; Teak / Oak / Walnut</span></div>
-      </a>
-      <a class="card reveal" href="services.html" data-cat="architecture">
-        <div class="card__media"><img src="assets/projects/the-weave.svg" alt="Architecture project" /></div>
-        <div class="card__overlay"><span class="card__cat">Architecture</span><span class="card__title">Commercial Works</span><span class="card__meta">Surat, Gujarat</span></div>
-      </a>
-      <a class="card reveal" href="services.html" data-cat="architecture">
-        <div class="card__media"><img src="assets/projects/courtyard-house.svg" alt="Residential architecture" /></div>
-        <div class="card__overlay"><span class="card__cat">Architecture</span><span class="card__title">Residential Works</span><span class="card__meta">Surat, Gujarat</span></div>
-      </a>
-      <a class="card reveal" href="services.html" data-cat="interior">
-        <div class="card__media"><img src="assets/projects/linear-loft.svg" alt="Interior project" /></div>
-        <div class="card__overlay"><span class="card__cat">Interior</span><span class="card__title">Interior Works</span><span class="card__meta">Residential &amp; Commercial</span></div>
-      </a>
-      <a class="card reveal" href="vatrusa.html" data-cat="product">
-        <div class="card__media"><img src="assets/projects/terracotta-studio.svg" alt="Furniture collection" /></div>
-        <div class="card__overlay"><span class="card__cat">Product</span><span class="card__title">Furniture Collection</span><span class="card__meta">Custom craftsmanship</span></div>
+      <div class="pcard pcard--soon reveal d1" data-cat="interior">
+        <div class="pcard__media"><span>Photography coming</span></div>
+        <div class="pcard__body"><div><div class="pcard__title">Avadh Habitat</div><div class="pcard__meta">Residential interior · 2,567 sq ft · Completed</div></div><span class="pcard__cat">Interior</span></div>
+      </div>
+      <a class="pcard pcard--soon reveal d2" href="vatrusa.html" data-cat="product">
+        <div class="pcard__media"><span>The furniture line</span></div>
+        <div class="pcard__body"><div><div class="pcard__title">Vatrusa</div><div class="pcard__meta">Custom furniture · Teak / Oak / Walnut</div></div><span class="pcard__cat">Product</span></div>
       </a>
     </div>
+    <p class="muted reveal" style="margin-top:40px;font-size:15px">More projects are being added as photography is finalised. Have a specific project in mind? <a href="contact.html" class="link-arrow" style="font-size:12px">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
   </div>
 </section>
-
-<section class="cta">
-  <div class="container reveal">
-    <h2>Your project could be next.</h2>
-    <p>We take on a limited number of projects each year so every one gets our full attention.</p>
-    <a href="contact.html" class="btn btn--light">Start a conversation</a>
-  </div>
-</section>
-
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
-      <div><img src="assets/logo-white.svg" alt="Tvastra Design LLP" /><p style="max-width:34ch">Architecture, interior &amp; product design — blending historical elegance with contemporary craft.</p></div>
-      <div><h5>Explore</h5><ul><li><a href="projects.html">Projects</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h5>Services</h5><ul><li><a href="services.html">Architecture</a></li><li><a href="services.html">Interior Design</a></li><li><a href="services.html">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul></div>
-      <div><h5>Get in touch</h5><ul><li><a href="mailto:info@tvastra.design">info@tvastra.design</a></li><li><a href="tel:+919081813231">+91 90818 13231</a></li><li>Surat, Gujarat, India</li></ul></div>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="name">Tvastra</div><div class="sub">Design LLP</div>
+        <p>Architecture, interiors &amp; product design — a 29-year practice blending historical elegance with contemporary craft.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul><li><a href="projects.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+      <div>
+        <h5>Disciplines</h5>
+        <ul><li><a href="services.html">Architecture</a></li><li><a href="services.html">Interior Design</a></li><li><a href="services.html">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
+      </div>
+      <div>
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="mailto:info@tvastra.design">info@tvastra.design</a></li>
+          <li><a href="tel:+919081813231">+91 90818 13231</a></li>
+          <li>Umra Road, Athwalines,<br />Surat, Gujarat 395007</li>
+        </ul>
+        <div class="socials">
+          <a href="https://www.instagram.com/tvastradesignllp/" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 100 13.4 6.7 6.7 0 000-13.4zm0 11a4.3 4.3 0 110-8.6 4.3 4.3 0 010 8.6zm6.5-11.3a1.55 1.55 0 11-3.1 0 1.55 1.55 0 013.1 0z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5.01A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.75V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></a>
+        </div>
+      </div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 Tvastra Design LLP. All rights reserved.</span><span>Architecture &middot; Interiors &middot; Product Design</span></div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Tvastra Design LLP. All rights reserved.</span>
+      <span>Surat · Gujarat · India</span>
+    </div>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>

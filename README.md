@@ -1,88 +1,70 @@
 # Tvastra Design LLP — Website
 
-A minimalist, image-forward portfolio site for **Tvastra Design LLP**, built in
-the concept style of studios like Studio Sangath: lots of white space, refined
-typography, and a project-grid gallery as the heart of the site.
+An editorial, image-forward portfolio site for **Tvastra Design LLP** — a
+29-year architecture, interior and product design practice in Surat, Gujarat.
 
-Pure static HTML/CSS/JS — **no build step, no dependencies.**
+Pure static **HTML / CSS / JS** — no build dependencies, no framework. Pages
+are generated from a small Node script (`build.js`) so the shared header/footer
+live in one place.
+
+## Design
+
+Material-driven palette pulled from the studio's own brick-and-concrete work —
+terracotta/clay, charcoal ink, warm paper and concrete stone. Display type is
+**Fraunces**; body is **Inter** (loaded from Google Fonts).
+
+Palette tokens live at the top of `css/style.css` (`--clay`, `--ink`, `--paper`,
+…) — retune the whole site from there.
 
 ## Pages
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home — hero, philosophy, services & featured projects |
-| `projects.html` | Filterable project gallery grid (the core page) |
-| `project.html` | Single-project detail (currently **Avadh Habitat**) |
-| `services.html` | Architecture, Interior Design, Product Design + process |
-| `vatrusa.html` | The **Vatrusa** furniture line (product detail) |
-| `about.html` | Studio story, vision, principles, stats |
-| `contact.html` | Contact details + enquiry form |
+| `index.html` | Home — hero, philosophy, featured project, disciplines, vision, CTA |
+| `projects.html` | Work grid with category filters |
+| `aashihbhai-residence.html` | Project case study — **Aashihbhai Residence** |
+| `services.html` | Architecture, Interior, Product + process |
+| `vatrusa.html` | The **Vatrusa** furniture line |
+| `about.html` | Studio story, vision, principles, awards |
+| `contact.html` | Studio details + enquiry form |
 
-## Content
+## Editing content
 
-The copy is populated with **Tvastra's real information** (29-year legacy;
-architecture / interior / product disciplines; the *Vatrusa* furniture line;
-the *Avadh Habitat* interior project; the 2023 A&D Platinum award; and the
-Surat studio address and phone) sourced from tvastra.design.
+All page copy and structure lives in `build.js` as template strings, with a
+shared `header()` / `FOOTER`. After editing, regenerate the pages:
 
-Two things to confirm/replace:
-- **Email** — set to `info@tvastra.design` as a sensible default; confirm the
-  real address and update it across the footers + `contact.html`.
-- **Additional projects** — only *Avadh Habitat* and *Vatrusa* are real; the
-  other cards in `projects.html` are labelled placeholders (see the HTML
-  comment there). Swap in real projects and photos.
+```bash
+node build.js            # writes the 7 HTML pages
+node build.js preview out.html   # also writes a single-file interactive preview
+```
+
+## Real projects & photography
+
+Real project imagery lives under `assets/projects/`. The **Aashihbhai
+Residence** renders are in `assets/projects/aashihbhai/` (`.webp`).
+
+To add a project: drop its photos in a new `assets/projects/<name>/` folder,
+add a card to the `projects` section in `build.js`, and (optionally) a case
+study page. Two projects are named but awaiting photography — **Avadh Habitat**
+(interior, 2,567 sq ft) and **Vatrusa** (furniture) — shown as text cards until
+their images are added.
 
 ## View it locally
-
-Just open `index.html` in a browser, or serve the folder:
 
 ```bash
 python3 -m http.server 8080
 # then open http://localhost:8080
 ```
 
-## Adding your real logo
+## Deploy
 
-The logo is currently a clean SVG recreation of the Tvastra wordmark in the
-brand colours. To use the official artwork, replace these two files (keep the
-same filenames) — SVG, PNG or WEBP all work:
+A GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) publishes the
+repo root to GitHub Pages on every push to `main`. Enable it once at
+**Settings → Pages → Source → GitHub Actions**; the site then serves at
+`https://<user>.github.io/Tvastra/`.
 
-- `assets/logo.svg` — coloured logo for light backgrounds (header)
-- `assets/logo-white.svg` — white logo for the dark footer
+## Contact form
 
-If you drop in a PNG instead, update the `<img src="…">` in each page's header
-and footer accordingly.
-
-## Adding your real project photos
-
-Placeholder images live in `assets/projects/` as `.svg` files. Replace each
-with a real photo (recommended landscape, ~1600×1200, `.jpg` or `.webp`):
-
-```
-assets/projects/courtyard-house.svg   -> courtyard-house.jpg
-assets/projects/riverside-villa.svg   -> riverside-villa.jpg
-... etc.
-```
-
-Then update the matching `<img src="…">` and the titles/locations/years in
-`projects.html`, `index.html` and `project.html`. Also swap `assets/hero.svg`
-(homepage banner) and `assets/about.svg` (studio photo).
-
-> The project names, cities and years in the markup are **placeholders** — edit
-> them to Tvastra's real projects.
-
-## Brand palette
-
-Taken from the logo colour profile (C100 M60 Y25 K05 / K80):
-
-- **Blue** `#0f5f8c` — primary brand
-- **Ink** `#1f2a30`, **Grey** `#5c6b73`
-
-Defined as CSS variables at the top of `css/style.css` (`--brand`, `--ink`, …)
-— change them in one place to retune the whole site.
-
-## Making the contact form live
-
-The form is front-end only (shows a thank-you message). To actually receive
-enquiries, point it at a form service (Formspree, Basin, Netlify Forms) or your
-own endpoint by editing the `<form>` action and the handler in `js/main.js`.
+The enquiry form is front-end only (shows a thank-you message). To receive
+enquiries, point it at a form service (Formspree, Basin, Netlify Forms) by
+editing the `<form>` and the handler in `js/main.js`.
