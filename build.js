@@ -29,7 +29,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['projects.html','Work'],['services.html','Services'],['about.html','Studio'],['contact.html','Contact']];
+const NAV = [['projects.html','Projects'],['services.html','Disciplines'],['about.html','Studio'],['contact.html','Contact']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -63,7 +63,7 @@ const FOOTER = `
       </div>
       <div>
         <h5>Explore</h5>
-        <ul><li><a href="projects.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="projects.html">Projects</a></li><li><a href="services.html">Disciplines</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
       </div>
       <div>
         <h5>Disciplines</h5>
@@ -605,7 +605,7 @@ const services = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
   <div class="container reveal" style="max-width:820px">
     <p class="eyebrow">What we offer</p>
-    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Services.</h1>
+    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Disciplines.</h1>
     <p class="lead" style="margin-top:22px">Three connected disciplines under one roof — architecture, interiors and furniture, integrated into a single, comprehensive approach to transforming living spaces.</p>
   </div>
 </section>
@@ -813,7 +813,7 @@ const PAGES = [
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
   { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
-  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
+  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
@@ -861,7 +861,7 @@ if (process.argv[2] === 'preview') {
   let sections = '';
   for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
 
-  const navLinks = [['home','Home'],['projects','Work'],['services','Services'],['about','Studio'],['contact','Contact']]
+  const navLinks = [['home','Home'],['projects','Projects'],['services','Disciplines'],['about','Studio'],['contact','Contact']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
