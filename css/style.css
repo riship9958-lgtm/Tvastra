@@ -6,18 +6,18 @@
    ========================================================================== */
 
 :root {
-  /* Tvastra — dark theme. Brand blue (C100 M60 Y25 K05) accent on charcoal. */
-  --clay:      #00618e;   /* brand blue — solid fills (title card, CTA, buttons) */
-  --clay-deep: #00476a;
-  --clay-soft: #5aa7d4;   /* lighter brand-blue tint — accent text on dark */
-  --ink:       #eef2f4;   /* light foreground / primary text */
-  --charcoal:  #cfd6db;
-  --paper:     #121417;   /* charcoal page ground */
-  --paper-2:   #181b1f;   /* slightly lighter charcoal for alternating sections */
-  --stone:     #7c878f;   /* muted grey — captions, footer meta */
-  --stone-dk:  #a2acb2;   /* readable light grey — body-muted text */
-  --line:      #282e34;   /* subtle dark border */
-  --line-dk:   #20262c;
+  /* Tvastra — light theme (white ground). Brand blue accent. */
+  --clay:      #00618e;   /* brand blue — accent + solid fills */
+  --clay-deep: #004b6e;
+  --clay-soft: #4a90b3;   /* lighter blue — accents on dark bands / photo tiles */
+  --ink:       #1b2a32;   /* cool near-black — primary text */
+  --charcoal:  #24333b;
+  --paper:     #ffffff;   /* white page ground */
+  --paper-2:   #f2f5f7;   /* light grey for alternating sections */
+  --stone:     #6d7a82;   /* muted grey */
+  --stone-dk:  #46535b;   /* muted dark-grey text */
+  --line:      #e4e9ec;   /* light border */
+  --line-dk:   #2a3a43;   /* lines on dark bands */
   --bg-deep:   #0d0f11;   /* deepest band — dark sections & footer */
   --white:     #ffffff;
 
@@ -395,42 +395,8 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 }
 
 /* ==========================================================================
-   DARK THEME adjustments + immersive project tiles
+   Immersive project tiles (name overlaid on the photo)
    ========================================================================== */
-
-/* Accent text uses the lighter brand-blue tint for contrast on charcoal */
-.index-num, .tag, .pcard__cat, .tile__cat, .disc__n, .step__n,
-.stat .n, .pd-meta .k, .cinfo .k, .form-status { color: var(--clay-soft); }
-.eyebrow { color: var(--clay-soft); }
-.eyebrow::before, .disc__list li::before { background: var(--clay-soft); }
-.statement em { color: var(--clay-soft); }
-
-/* Always use the white logo (there are no light backgrounds now) */
-.brand .logo-color { display: none !important; }
-.brand .logo-white { display: block !important; }
-
-/* Glassy dark header when solid */
-.site-header.solid { background: rgba(15,17,20,.82); border-bottom-color: var(--line); }
-
-/* Mobile nav overlay stays dark */
-@media (max-width: 880px) { .nav-links { background: var(--bg-deep); } }
-
-/* Former "dark band" sections -> deepest charcoal with light text */
-.section--ink { background: var(--bg-deep); color: var(--ink); }
-.section--ink .muted, .section--ink .stat .l { color: var(--stone-dk); }
-.section--ink .stats { border-color: var(--line); }
-
-/* Form fields on dark */
-input, textarea, select { background: #1a1e22; color: var(--ink); border-color: var(--line); }
-input::placeholder, textarea::placeholder { color: #6f7a81; }
-
-/* Footer on deepest charcoal */
-.site-footer { background: var(--bg-deep); color: #aab4bb; }
-.site-footer a { color: #aab4bb; }
-.site-footer a:hover { color: var(--clay-soft); }
-.footer-bottom { border-top-color: var(--line); color: var(--stone); }
-
-/* ---------- Immersive project tiles (name overlaid on the photo) ---------- */
 .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 @media (max-width: 720px) { .tiles { grid-template-columns: 1fr; } }
 .tile { position: relative; display: block; overflow: hidden; aspect-ratio: 4 / 3; background: #000; border-radius: 2px; }
