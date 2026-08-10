@@ -9,12 +9,14 @@ live in one place.
 
 ## Design
 
-Material-driven palette pulled from the studio's own brick-and-concrete work —
-terracotta/clay, charcoal ink, warm paper and concrete stone. Display type is
-**Fraunces**; body is **Inter** (loaded from Google Fonts).
+Built on the Tvastra brand identity: the logo **blue** (`#00618e`, from the
+brand's C100 M60 Y25 K05 profile) as the accent, with a **grey** (K80) and a
+cool off-white ground. The official logo (`assets/logo.png`, and a white
+variant `assets/logo-white.png` for dark backgrounds) sits in the header and
+footer. Display type is **Fraunces**; body is **Inter** (Google Fonts).
 
-Palette tokens live at the top of `css/style.css` (`--clay`, `--ink`, `--paper`,
-…) — retune the whole site from there.
+Palette tokens live at the top of `css/style.css` (`--clay` holds the brand
+blue, plus `--ink`, `--paper`, …) — retune the whole site from there.
 
 ## Pages
 

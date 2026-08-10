@@ -40,7 +40,8 @@ function header(active, dark) {
 <header class="${cls}">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="Tvastra Design LLP — home">
-      <span class="name">Tvastra</span><span class="sub">Design LLP</span>
+      <img class="logo-color" src="assets/logo.png" alt="Tvastra Design LLP" />
+      <img class="logo-white" src="assets/logo-white.png" alt="Tvastra Design LLP" />
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">${links}</ul>
@@ -56,7 +57,7 @@ const FOOTER = `
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="name">Tvastra</div><div class="sub">Design LLP</div>
+        <img src="assets/logo-white.png" alt="Tvastra Design LLP" />
         <p>Architecture, interiors &amp; product design — a 29-year practice blending historical elegance with contemporary craft.</p>
       </div>
       <div>
@@ -903,7 +904,7 @@ if (process.argv[2] === 'preview') {
   const spaHeader = `
 <header class="site-header" id="hdr">
   <div class="container nav">
-    <a class="brand" href="#home" data-page="home"><span class="name">Tvastra</span><span class="sub">Design LLP</span></a>
+    <a class="brand" href="#home" data-page="home"><img class="logo-color" src="${toData('assets/logo.png')}" alt="Tvastra Design LLP" /><img class="logo-white" src="${toData('assets/logo-white.png')}" alt="Tvastra Design LLP" /></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">${navLinks}</ul>
   </div>

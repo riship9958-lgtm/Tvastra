@@ -6,17 +6,18 @@
    ========================================================================== */
 
 :root {
-  --clay:      #b04a2b;   /* brick / terracotta — primary accent */
-  --clay-deep: #8f3a20;
-  --clay-soft: #c8785a;
-  --ink:       #1a1815;   /* warm near-black */
-  --charcoal:  #262320;
-  --paper:     #f5f0e8;   /* warm off-white ground */
-  --paper-2:   #ece4d7;
-  --stone:     #8b8175;   /* concrete grey */
-  --stone-dk:  #55504a;
-  --line:      #ddd3c4;
-  --line-dk:   #3a352f;
+  /* Tvastra brand palette — logo blue (C100 M60 Y25 K05) + grey (K80) */
+  --clay:      #00618e;   /* brand blue — primary accent */
+  --clay-deep: #004b6e;
+  --clay-soft: #4a90b3;   /* lighter blue for dark backgrounds */
+  --ink:       #1b2a32;   /* cool near-black */
+  --charcoal:  #24333b;
+  --paper:     #f5f6f7;   /* cool off-white ground */
+  --paper-2:   #e8edf0;
+  --stone:     #6d7a82;   /* cool grey */
+  --stone-dk:  #46535b;
+  --line:      #dce3e7;
+  --line-dk:   #2a3a43;
   --white:     #ffffff;
 
   --max: 1440px;
@@ -115,9 +116,17 @@ p { margin: 0 0 1.1em; }
   border-bottom: 1px solid transparent;
 }
 .site-header .nav { display: flex; align-items: center; justify-content: space-between; height: 82px; }
-.brand { display: flex; flex-direction: column; line-height: 1; color: #fff; transition: color .4s var(--ease); }
-.brand .name { font-family: var(--serif); font-size: 25px; letter-spacing: 0.04em; font-weight: 400; }
-.brand .sub { font-family: var(--sans); font-size: 9.5px; letter-spacing: 0.42em; text-transform: uppercase; margin-top: 4px; opacity: .8; }
+.brand { display: flex; align-items: center; }
+.brand img { height: 40px; width: auto; display: block; }
+/* over a dark hero the header is transparent -> show the white logo;
+   when solid (scrolled) or on a light page -> show the colour logo */
+.brand .logo-color { display: none; }
+.brand .logo-white { display: block; }
+.site-header.solid .brand .logo-color,
+.site-header.on-light .brand .logo-color { display: block; }
+.site-header.solid .brand .logo-white,
+.site-header.on-light .brand .logo-white { display: none; }
+@media (max-width: 880px) { .brand img { height: 34px; } }
 
 .nav-links { display: flex; align-items: center; gap: 38px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
@@ -163,7 +172,9 @@ p { margin: 0 0 1.1em; }
 .hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,17,13,.42) 0%, rgba(20,17,13,.05) 34%, rgba(20,17,13,.66) 100%); }
 .hero__inner { position: relative; z-index: 2; padding-bottom: clamp(48px, 8vw, 96px); padding-top: 140px; width: 100%; }
 .hero h1 { font-size: clamp(46px, 9vw, 132px); line-height: 0.92; letter-spacing: -0.025em; max-width: 16ch; font-weight: 320; }
-.hero .lead { color: #f0e9df; max-width: 46ch; margin-top: 26px; }
+.hero .lead { color: #eef3f6; max-width: 46ch; margin-top: 26px; }
+.hero .eyebrow { color: #9ecbe4; }
+.hero .eyebrow::before { background: #9ecbe4; }
 .hero__row { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
 .hero__scroll { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; opacity: .8; display: flex; align-items: center; gap: 12px; }
 .hero__scroll::before { content: ""; width: 46px; height: 1px; background: currentColor; }
@@ -319,8 +330,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .footer-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px; }
 @media (max-width: 860px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 40px 24px; } }
 @media (max-width: 500px) { .footer-top { grid-template-columns: 1fr; } }
-.footer-brand .name { font-family: var(--serif); font-size: 30px; color: #fff; letter-spacing: 0.04em; }
-.footer-brand .sub { font-size: 9.5px; letter-spacing: 0.42em; text-transform: uppercase; color: var(--stone); margin-top: 6px; }
+.footer-brand img { height: 50px; width: auto; display: block; }
 .footer-brand p { margin-top: 22px; max-width: 34ch; font-size: 15px; }
 .site-footer h5 { font-family: var(--sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #fff; margin: 0 0 20px; font-weight: 600; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
