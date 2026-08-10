@@ -96,6 +96,7 @@ const IMG2 = 'assets/projects/dilipbhai/';
 const IMG3 = 'assets/projects/junebhai/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/kamalbhai/';
+const IMG6 = 'assets/projects/mukeshbhai/';
 
 // Central list of real projects — add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
@@ -104,6 +105,7 @@ const PROJECTS_LIST = [
   { name: 'Junebhai Residence',    file: 'junebhai-residence.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
+  { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}01-night.webp`, feat: `${IMG6}01-night.webp` },
 ];
 // "Forthcoming" entries (no photography yet)
 const PROJECTS_SOON = [
@@ -486,6 +488,56 @@ const kamalbhai = `
   </div>
 </section>`;
 
+const mukeshbhai = `
+<div class="pd-hero">
+  <img src="${IMG6}01-night.webp" alt="Mukeshbhai Residence at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture — Residential</span><h1>Mukeshbhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A crisp, cubic villa in white and sage — clean panelised volumes cut by a tall exposed-brick jaali that glows like a lantern at the entrance, its perforations dissolving from solid to open as they rise.</p>
+    <p class="muted">Interlocking stone-grey and white masses stack and cantilever to frame planted balconies and a sheltered entry court, while full-height glazing and sheer curtains soften the geometry. The single warm brick element anchors the composition against the pale façade; concealed uplighting turns the house luminous after dark.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG6}03-day-front.jpg" alt="Mukeshbhai Residence — entrance by day" />
+      <figcaption>Daylight — the brick jaali against the white and sage volumes.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG6}02-night-front.webp" alt="Mukeshbhai Residence — entrance at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG6}05-day-street.jpg" alt="Mukeshbhai Residence — street view by day" /></figure>
+    </div>
+    <figure class="pd-figure reveal">
+      <img src="${IMG6}04-night-street.webp" alt="Mukeshbhai Residence — street view at night" />
+      <figcaption>Night — the massing reads as glowing, stacked volumes from the street.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
   <div class="container reveal" style="max-width:820px">
@@ -695,6 +747,7 @@ const PAGES = [
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
+  { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
