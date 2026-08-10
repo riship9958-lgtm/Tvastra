@@ -427,10 +427,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 /* ==========================================================================
    "What we do" — editorial discipline slider (dark)
    ========================================================================== */
-.wwd { position: relative; background: #15181b; color: #fff; overflow: hidden; }
-.wwd__stage { position: relative; overflow: hidden; height: min(92vh, 900px); min-height: 600px; }
-.wwd__track { display: flex; height: 100%; transition: transform .85s cubic-bezier(.6,.05,.15,1); }
-.wwd__slide { position: relative; min-width: 100%; height: 100%; }
+.wwd { background: #24282b; color: #fff; }
+.wwd__panel { position: relative; height: min(92vh, 900px); min-height: 600px; overflow: hidden; }
+.wwd__panel + .wwd__panel { border-top: 1px solid rgba(255,255,255,.07); }
 
 .wwd__media { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -46%); width: min(40%, 440px); aspect-ratio: 3/4; overflow: hidden; z-index: 1; box-shadow: 0 40px 90px -34px rgba(0,0,0,.7); }
 .wwd__media img { width: 100%; height: 100%; object-fit: cover; }
@@ -456,22 +455,14 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .wwd__circle svg { width: 20px; height: 20px; }
 .wwd__view:hover .wwd__circle { background: var(--clay); border-color: var(--clay); }
 
-.wwd__arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; width: 52px; height: 52px; border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.03); color: #fff; cursor: pointer; display: grid; place-items: center; transition: .25s var(--ease); }
-.wwd__arrow svg { width: 22px; height: 22px; }
-.wwd__arrow:hover { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.5); }
-.wwd__prev { left: clamp(10px, 3vw, 40px); }
-.wwd__next { right: clamp(10px, 3vw, 40px); }
-
 @media (max-width: 760px) {
-  .wwd__stage { height: min(88vh, 720px); min-height: 500px; }
+  .wwd__panel { height: min(88vh, 720px); min-height: 500px; }
   .wwd__media { width: 66%; transform: translate(-50%, -48%); }
   .wwd__word { font-size: clamp(40px, 15vw, 96px); }
   .wwd__meta { top: 92px; left: 20px; }
   .wwd__tags { left: 20px; bottom: 11%; font-size: 11px; }
   .wwd__view { right: 20px; bottom: 9%; }
   .wwd__view span:first-child { display: none; }
-  .wwd__arrow { width: 44px; height: 44px; }
 }
 
 /* ==========================================================================

@@ -21,56 +21,29 @@
   </div>
 </header>
 <section class="wwd" id="wwd">
-  <div class="wwd__stage">
-    <div class="wwd__track">
-      <article class="wwd__slide">
-        <div class="wwd__media"><img src="assets/projects/aashihbhai/01-day.webp" alt="Architecture" loading="lazy" /></div>
-        <h2 class="wwd__word">Architec&shy;ture</h2>
-        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
-      </article>
-      <article class="wwd__slide">
-        <div class="wwd__media"><img src="assets/projects/kalpeshbhai/01-night.webp" alt="Interior Design" loading="lazy" /></div>
-        <h2 class="wwd__word">Interior<br>Design</h2>
-        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
-      </article>
-      <article class="wwd__slide">
-        <div class="wwd__media"><img src="assets/projects/mukeshbhai/01-night.webp" alt="Product Design" loading="lazy" /></div>
-        <h2 class="wwd__word">Product<br>Design</h2>
-        <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
-      </article>
-    </div>
+  <div class="wwd__panel reveal">
+    <div class="wwd__meta"><span class="wwd__label">What we do</span><div class="wwd__num"><b>01</b><span>/ 03</span></div></div>
+    <div class="wwd__media"><img src="assets/projects/aashihbhai/01-day.webp" alt="Architecture" loading="lazy" /></div>
+    <h2 class="wwd__word">Architec&shy;ture</h2>
+    <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
+    <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 
-  <div class="wwd__meta">
-    <span class="wwd__label">What we do</span>
-    <div class="wwd__num"><b>01</b><span>/ 03</span></div>
+  <div class="wwd__panel reveal">
+    <div class="wwd__meta"><span class="wwd__label">What we do</span><div class="wwd__num"><b>02</b><span>/ 03</span></div></div>
+    <div class="wwd__media"><img src="assets/projects/kalpeshbhai/01-night.webp" alt="Interior Design" loading="lazy" /></div>
+    <h2 class="wwd__word">Interior<br>Design</h2>
+    <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
+    <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
   </div>
 
-  <button class="wwd__arrow wwd__prev" aria-label="Previous discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 6l-6 6 6 6"/></svg></button>
-  <button class="wwd__arrow wwd__next" aria-label="Next discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l6 6-6 6"/></svg></button>
-
-  <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-
-  <script>
-  (function(){
-    var s = document.getElementById('wwd'); if(!s || s.__wwd) return; s.__wwd = 1;
-    var track = s.querySelector('.wwd__track');
-    var slides = s.querySelectorAll('.wwd__slide');
-    var numB = s.querySelector('.wwd__num b');
-    var total = slides.length, i = 0;
-    function go(n){
-      i = (n % total + total) % total;
-      track.style.transform = 'translateX(' + (-i * 100) + '%)';
-      slides.forEach(function(sl, k){ sl.classList.toggle('is-active', k === i); });
-      if(numB) numB.textContent = '0' + (i + 1);
-    }
-    s.querySelector('.wwd__next').addEventListener('click', function(){ go(i + 1); });
-    s.querySelector('.wwd__prev').addEventListener('click', function(){ go(i - 1); });
-    s.addEventListener('keydown', function(e){ if(e.key==='ArrowRight') go(i+1); if(e.key==='ArrowLeft') go(i-1); });
-    s.setAttribute('tabindex','0');
-    go(0);
-  })();
-  </script>
+  <div class="wwd__panel reveal">
+    <div class="wwd__meta"><span class="wwd__label">What we do</span><div class="wwd__num"><b>03</b><span>/ 03</span></div></div>
+    <div class="wwd__media"><img src="assets/projects/mukeshbhai/01-night.webp" alt="Product Design" loading="lazy" /></div>
+    <h2 class="wwd__word">Product<br>Design</h2>
+    <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
+    <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </div>
 </section>
 
 <section class="section section--ink">
