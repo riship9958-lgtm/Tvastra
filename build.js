@@ -112,11 +112,8 @@ const PROJECTS_LIST = [
   { name: 'Kamleshbhai Residence', file: 'kamleshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}01-front.jpg`, feat: `${IMG7}01-front.jpg` },
   { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
 ];
-// "Forthcoming" entries (no photography yet)
-const PROJECTS_SOON = [
-  { name: 'Avadh Habitat', cat: 'interior', meta: 'Residential interior · 2,567 sq ft · Completed', label: 'Photography coming', file: '' },
-  { name: 'Vatrusa',       cat: 'product',  meta: 'Custom furniture · Teak / Oak / Walnut',        label: 'The furniture line', file: 'vatrusa.html' },
-];
+// "Forthcoming" entries (no photography yet) — none shown for now
+const PROJECTS_SOON = [];
 
 function pcard(p, i) {
   const inner = `<div class="pcard__media"><img src="${p.card}" alt="${p.name}" /></div>
