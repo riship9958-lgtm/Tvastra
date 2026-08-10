@@ -117,9 +117,11 @@ const PROJECTS_LIST = [
 const PROJECTS_SOON = [];
 
 function pcard(p, i) {
-  const inner = `<div class="pcard__media"><img src="${p.card}" alt="${p.name}" /></div>
-      <div class="pcard__body"><div><div class="pcard__title">${p.name}</div><div class="pcard__meta">${p.meta}</div></div><span class="pcard__cat">${p.cat.charAt(0).toUpperCase()+p.cat.slice(1)}</span></div>`;
-  return `<a class="pcard reveal${i%2?' d1':''}" href="${p.file}" data-cat="${p.cat}">${inner}</a>`;
+  const cat = p.cat.charAt(0).toUpperCase() + p.cat.slice(1);
+  return `<a class="tile reveal${i%2?' d1':''}" href="${p.file}" data-cat="${p.cat}">
+      <div class="tile__img"><img src="${p.card}" alt="${p.name}" loading="lazy" /></div>
+      <div class="tile__cap"><span class="tile__cat">${cat}</span><span class="tile__name">${p.name}</span><span class="tile__meta">${p.meta}</span></div>
+    </a>`;
 }
 function pcardSoon(p, i) {
   const body = `<div class="pcard__media"><span>${p.label}</span></div>
@@ -182,16 +184,8 @@ const home = `
       <div><p class="eyebrow">Selected work</p><h2 class="h-lg">Recent projects.</h2></div>
       <a href="projects.html" class="link-arrow">All projects ${ARROW}</a>
     </div>
-    <a href="${PROJECTS_LIST[0].file}" class="feature reveal">
-      <div class="feature__img"><img src="${PROJECTS_LIST[0].feat}" alt="${PROJECTS_LIST[0].name}" /></div>
-      <div class="feature__meta">
-        <span class="index-num">01</span>
-        <h3 class="feature__title">${PROJECTS_LIST[0].name}</h3>
-        <span class="tag">Architecture — Residential · Surat</span>
-      </div>
-    </a>
-    <div class="pgrid" style="margin-top:clamp(28px,4vw,54px)">
-      ${PROJECTS_LIST.slice(1).map(function (p, i) { return pcard(p, i); }).join('\n      ')}
+    <div class="tiles">
+      ${PROJECTS_LIST.map(function (p, i) { return pcard(p, i); }).join('\n      ')}
     </div>
   </div>
 </section>
@@ -241,7 +235,7 @@ const projects = `
       <button class="filter" data-filter="interior">Interior</button>
       <button class="filter" data-filter="product">Product</button>
     </div>
-    <div class="pgrid">
+    <div class="tiles">
       ${PROJECTS_LIST.map(function (p, i) { return pcard(p, i); }).join('\n      ')}
       ${PROJECTS_SOON.map(function (p, i) { return pcardSoon(p, PROJECTS_LIST.length + i); }).join('\n      ')}
     </div>

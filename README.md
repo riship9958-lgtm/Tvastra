@@ -9,14 +9,16 @@ live in one place.
 
 ## Design
 
-Built on the Tvastra brand identity: the logo **blue** (`#00618e`, from the
-brand's C100 M60 Y25 K05 profile) as the accent, with a **grey** (K80) and a
-cool off-white ground. The official logo (`assets/logo.png`, and a white
-variant `assets/logo-white.png` for dark backgrounds) sits in the header and
-footer. Display type is **Fraunces**; body is **Inter** (Google Fonts).
+A **dark, cinematic** theme built on the Tvastra brand: charcoal grounds with
+the logo **blue** (`#00618e`, from the brand's C100 M60 Y25 K05 profile) as the
+accent. The home page opens on a branded **title card**, and work is shown as
+**immersive image tiles** with the project name overlaid on the photo. The
+official logo (white variant `assets/logo-white.png`) sits in the header and
+footer. Type is **Quicksand** (Google Fonts), matched to the logo wordmark.
 
-Palette tokens live at the top of `css/style.css` (`--clay` holds the brand
-blue, plus `--ink`, `--paper`, …) — retune the whole site from there.
+Palette tokens live at the top of `css/style.css` (`--clay` = brand blue,
+`--paper` = charcoal ground, `--ink` = light text, `--bg-deep` = darkest band)
+— retune the whole site from there.
 
 ## Pages
 
