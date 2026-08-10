@@ -92,6 +92,7 @@ const FOOTER = `
 
 /* ---------- page contents ---------- */
 const IMG = 'assets/projects/aashihbhai/';
+const IMG2 = 'assets/projects/dilipbhai/';
 
 const home = `
 <section class="hero">
@@ -150,6 +151,19 @@ const home = `
       <img class="m-tall" src="${IMG}02-dusk.webp" alt="Aashihbhai Residence at dusk" />
       <img class="m-side" src="${IMG}05-night-side.webp" alt="Aashihbhai Residence — side elevation at night" />
     </div>
+
+    <a href="dilipbhai-residence.html" class="feature reveal" style="margin-top:clamp(44px,7vw,90px)">
+      <div class="feature__img"><img src="${IMG2}02-night.webp" alt="Dilipbhai Residence at night" /></div>
+      <div class="feature__meta">
+        <span class="index-num">02</span>
+        <h3 class="feature__title">Dilipbhai Residence</h3>
+        <span class="tag">Architecture — Residential · Surat</span>
+      </div>
+    </a>
+    <div class="mosaic reveal d1" style="margin-top:clamp(14px,2vw,22px)">
+      <img class="m-tall" src="${IMG2}01-day.jpg" alt="Dilipbhai Residence by day" />
+      <img class="m-side" src="${IMG2}03-day-side.jpg" alt="Dilipbhai Residence — side view" />
+    </div>
   </div>
 </section>
 
@@ -203,7 +217,11 @@ const projects = `
         <div class="pcard__media"><img src="${IMG}01-day.webp" alt="Aashihbhai Residence" /></div>
         <div class="pcard__body"><div><div class="pcard__title">Aashihbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
       </a>
-      <div class="pcard pcard--soon reveal d1" data-cat="interior">
+      <a class="pcard reveal d1" href="dilipbhai-residence.html" data-cat="architecture">
+        <div class="pcard__media"><img src="${IMG2}01-day.jpg" alt="Dilipbhai Residence" /></div>
+        <div class="pcard__body"><div><div class="pcard__title">Dilipbhai Residence</div><div class="pcard__meta">Residential · Surat, Gujarat</div></div><span class="pcard__cat">Architecture</span></div>
+      </a>
+      <div class="pcard pcard--soon reveal d2" data-cat="interior">
         <div class="pcard__media"><span>Photography coming</span></div>
         <div class="pcard__body"><div><div class="pcard__title">Avadh Habitat</div><div class="pcard__meta">Residential interior · 2,567 sq ft · Completed</div></div><span class="pcard__cat">Interior</span></div>
       </div>
@@ -251,6 +269,56 @@ const aashihbhai = `
     <figure class="pd-figure reveal">
       <img src="${IMG}03-night.webp" alt="Aashihbhai Residence illuminated at night" />
       <figcaption>Night — concealed lighting reveals the depth of the brick and the circular openings.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--paper2" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects.html" class="btn">All projects</a>
+      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
+const dilipbhai = `
+<div class="pd-hero">
+  <img src="${IMG2}02-night.webp" alt="Dilipbhai Residence at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#cfe0c4">Architecture — Residential</span><h1>Dilipbhai Residence</h1></div></div>
+</div>
+
+<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
+  <div class="container wrap-narrow reveal">
+    <p class="eyebrow">The project</p>
+    <p class="lead">A contemporary family villa in stone and sage — dressed-stone cladding and warm timber screens set against muted green stucco, with the studio's signature circular apertures cut through the façade at the entrance and upper levels.</p>
+    <p class="muted">Interlocking volumes step and cantilever to carve out balconies and a raised garden terrace, while full-height glazing draws the greenery indoors. Board-marked and travertine surfaces give the house a quiet, tactile weight; at night, concealed uplights graze the stone and the round openings glow like lanterns from within.</p>
+  </div>
+  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Type</div><div class="v">Residential</div></div>
+      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
+      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
+      <img src="${IMG2}01-day.jpg" alt="Dilipbhai Residence by day" />
+      <figcaption>Daylight — the stone, timber and sage-green volumes in full detail.</figcaption>
+    </figure>
+    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
+      <figure class="pd-figure"><img src="${IMG2}03-day-side.jpg" alt="Dilipbhai Residence — side view by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG2}04-night-side.webp" alt="Dilipbhai Residence — side elevation at night" /></figure>
+    </div>
+    <figure class="pd-figure reveal">
+      <img src="${IMG2}05-day-front.jpg" alt="Dilipbhai Residence — street elevation" />
+      <figcaption>Street elevation — the circular motif carried from gate to upper façade.</figcaption>
     </figure>
   </div>
 </section>
@@ -471,6 +539,7 @@ const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft. Home of the Vatrusa furniture line.', content: home },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: false, title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
+  { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: false, title: 'Services — Tvastra Design LLP', desc: 'Architecture, interior design and product design services by Tvastra Design LLP.', content: services },
   { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
