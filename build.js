@@ -29,7 +29,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['index.html','Home'],['about.html','About Us'],['recognition.html','Recognition'],['services.html','Discipline'],['contact.html','Contact Us']];
+const NAV = [['index.html','Home'],['services.html','Discipline'],['about.html','About Us'],['recognition.html','Recognition'],['contact.html','Contact Us']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -63,7 +63,7 @@ const FOOTER = `
       </div>
       <div>
         <h5>Explore</h5>
-        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="services.html">Discipline</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Discipline</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       </div>
       <div>
         <h5>Disciplines</h5>
@@ -937,7 +937,7 @@ if (process.argv[2] === 'preview') {
   let sections = '';
   for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
 
-  const navLinks = [['home','Home'],['about','About Us'],['recognition','Recognition'],['services','Discipline'],['contact','Contact Us']]
+  const navLinks = [['home','Home'],['services','Discipline'],['about','About Us'],['recognition','Recognition'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
