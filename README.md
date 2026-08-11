@@ -9,17 +9,16 @@ live in one place.
 
 ## Design
 
-An **earthy, editorial** theme: a warm near-white ground with **terracotta**
-(`#ad4a2b`) as the accent, **charcoal** for dark surfaces, and **navy**
-(`#22304e`) for the title card and footer (beige/olive support tones). The home
-page opens on a branded **title card**; work is shown as **immersive image
-tiles** (name overlaid on the photo); the Disciplines page has a **"What we do"
-slider** with oversized serif names. Type is **Quicksand** (matched to the
-logo), with **Cormorant Garamond** for the slider's display words. The official
-logo sits in the header and footer.
+Aligned to the Tvastra logo: **brand blue** (`#00618e`) on a white ground, with
+**navy** for the footer and a **deep blue-charcoal** for the dark bands. The home
+page opens on a brand-blue **title card**; work is shown as **immersive image
+tiles** (name overlaid on the photo); the Disciplines page presents the three
+disciplines as **stacked full-screen panels** with oversized serif names. Type
+is **Quicksand** (matched to the logo), with **Cormorant Garamond** for the
+disciplines' display words. The official logo sits in the header and footer.
 
-Palette tokens live at the top of `css/style.css` (`--clay` = terracotta,
-`--navy`, `--bg-deep` = charcoal, `--paper` = warm white) — retune from there.
+Palette tokens live at the top of `css/style.css` (`--clay` = brand blue,
+`--navy`, `--bg-deep` = dark band, `--paper` = white) — retune from there.
 
 ## Pages
 

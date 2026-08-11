@@ -7,22 +7,23 @@
 
 :root {
   /* Tvastra — earthy palette: terracotta + charcoal + navy (beige/olive support) */
-  --clay:      #e8c99d;   /* warm gold — accent text on the terracotta wall */
-  --clay-deep: #cbae82;
-  --clay-soft: #e6bf94;   /* gold accent on charcoal panels */
-  --navy:      #22304e;   /* deep navy — title card, footer */
-  --navy-deep: #1a2740;
-  --olive:     #4f5733;   /* olive — occasional support */
-  --beige:     #cdb79a;   /* beige — warm neutral */
-  --ink:       #f7ede2;   /* warm ivory — primary text on terracotta */
-  --charcoal:  #2c3033;
-  --paper:     #a94e2e;   /* TERRACOTTA wall — main background */
-  --paper-2:   #9e4728;   /* deeper terracotta band */
-  --stone:     #d8c3b2;   /* muted cream */
-  --stone-dk:  #e7d6c7;   /* muted text (light, readable on terracotta) */
-  --line:      #bd7053;   /* terracotta line */
-  --line-dk:   #3a4048;   /* lines on dark bands */
-  --bg-deep:   #262a2d;   /* charcoal — dark bands & panels */
+  /* Aligned to the Tvastra logo — brand blue on white, navy + charcoal panels */
+  --clay:      #00618e;   /* brand blue — primary accent + fills */
+  --clay-deep: #004b6e;
+  --clay-soft: #4a90b3;   /* lighter blue — accents on dark panels / tiles */
+  --navy:      #1f3a5f;   /* deep navy-blue — footer */
+  --navy-deep: #172c48;
+  --olive:     #4f5733;   /* support */
+  --beige:     #cdb79a;   /* support */
+  --ink:       #1b2a32;   /* cool near-black — primary text */
+  --charcoal:  #24333b;
+  --paper:     #ffffff;   /* white ground */
+  --paper-2:   #f1f5f7;   /* cool light band */
+  --stone:     #6d7a82;   /* cool grey */
+  --stone-dk:  #46535b;   /* muted text */
+  --line:      #e3e8ec;   /* light border */
+  --line-dk:   #2a3a43;   /* lines on dark bands */
+  --bg-deep:   #14212e;   /* deep blue-charcoal — dark bands & slider */
   --white:     #ffffff;
 
   --max: 1440px;
@@ -41,16 +42,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
 body {
   margin: 0;
-  /* Terracotta plaster wall: colour + soft uneven lighting + fine grain */
-  background-color: var(--paper);
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E"),
-    radial-gradient(135% 90% at 12% -12%, rgba(255,238,222,.12), transparent 55%),
-    radial-gradient(130% 95% at 100% 112%, rgba(48,16,8,.26), transparent 55%);
-  background-size: 200px 200px, 100% 100%, 100% 100%;
-  background-repeat: repeat, no-repeat, no-repeat;
-  background-blend-mode: soft-light, normal, normal;
-  background-attachment: fixed, fixed, fixed;
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--sans);
   font-size: 17px;
@@ -466,43 +458,16 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 }
 
 /* ==========================================================================
-   Palette v3 — terracotta / charcoal / navy placements
+   Palette placements — aligned to the Tvastra logo (blue)
    ========================================================================== */
-.title-card { background: var(--navy); }               /* navy cover */
-.title-card__tag { color: #ddcbb0; }                   /* warm cream tagline */
-.site-footer { background: var(--navy); }              /* navy footer */
-.hero .eyebrow { color: #e3b49b; }                     /* light terracotta on hero */
-.hero .eyebrow::before { background: #e3b49b; }
-.wwd { background: #24282b; }                          /* charcoal slider stage */
+.title-card { background: var(--clay); }                 /* brand-blue cover */
+.title-card__tag { color: #cfe6f2; }                     /* light blue tagline */
+.site-footer { background: var(--navy); }                /* deep navy-blue footer */
+.hero .eyebrow { color: #bfe0f2; }                       /* light blue on hero */
+.hero .eyebrow::before { background: #bfe0f2; }
+.wwd { background: #14212e; }                            /* deep blue-charcoal slider */
 
-/* ==========================================================================
-   Terracotta-wall theme adjustments
-   ========================================================================== */
-/* Logo: the wall is dark enough that the white logo reads everywhere */
-.brand .logo-color { display: none !important; }
-.brand .logo-white { display: block !important; }
-
-/* Solid header matches the wall */
-.site-header.solid { background: var(--paper); border-bottom-color: rgba(255,255,255,.12); }
-
-/* Dark bands stay charcoal panels against the terracotta */
-.section--ink { background: var(--bg-deep); color: #f4ede3; }
-.section--ink .muted, .section--ink .stat .l { color: #d8c9ba; }
+/* Dark bands: deep blue-charcoal with light text */
+.section--ink { background: var(--bg-deep); color: #eef3f6; }
+.section--ink .muted, .section--ink .stat .l { color: #aebfc9; }
 .section--ink .stats { border-color: rgba(255,255,255,.14); }
-
-/* CTA becomes a navy panel on the wall */
-.cta { background: var(--navy); }
-
-/* Solid button = ivory fill with terracotta text (a plaster tile on the wall) */
-.btn--clay { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.btn--clay:hover { background: #efe2d2; border-color: #efe2d2; color: var(--paper); }
-
-/* Ghost buttons / dividers a touch warmer on the wall */
-.btn { border-color: rgba(247,237,226,.55); color: var(--ink); }
-.btn:hover { background: var(--ink); color: var(--paper); }
-
-/* Form fields: glassy on the wall */
-input, textarea, select { background: rgba(255,255,255,.08); color: var(--ink); border-color: rgba(247,237,226,.30); }
-input::placeholder, textarea::placeholder { color: #dcc6b4; }
-input:focus, textarea:focus, select:focus { border-color: var(--clay); }
-select option { color: #2a2e31; }
