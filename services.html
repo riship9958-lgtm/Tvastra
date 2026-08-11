@@ -17,23 +17,23 @@
       <img class="logo-white" src="assets/logo-white.png" alt="Tvastra Design LLP" />
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <ul class="nav-links"><li><a href="projects.html">Projects</a></li><li><a href="services.html" class="active">Disciplines</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="services.html" class="active">Discipline</a></li><li><a href="contact.html">Contact Us</a></li></ul>
   </div>
 </header>
 <section class="wwd" id="wwd">
   <div class="wwd__stage">
     <div class="wwd__track">
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="architecture">
         <div class="wwd__media"><img src="assets/projects/aashihbhai/01-day.webp" alt="Architecture" loading="lazy" /></div>
         <h2 class="wwd__word">Architec&shy;ture</h2>
         <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
       </article>
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="interior">
         <div class="wwd__media"><img src="assets/projects/kalpeshbhai/01-night.webp" alt="Interior Design" loading="lazy" /></div>
         <h2 class="wwd__word">Interior<br>Design</h2>
         <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
       </article>
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="product">
         <div class="wwd__media"><img src="assets/projects/mukeshbhai/01-night.webp" alt="Product Design" loading="lazy" /></div>
         <h2 class="wwd__word">Product<br>Design</h2>
         <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
@@ -57,12 +57,14 @@
     var track = s.querySelector('.wwd__track');
     var slides = s.querySelectorAll('.wwd__slide');
     var numB = s.querySelector('.wwd__num b');
+    var view = s.querySelector('.wwd__view');
     var total = slides.length, i = 0;
     function go(n){
       i = (n % total + total) % total;
       track.style.transform = 'translateX(' + (-i * 100) + '%)';
       slides.forEach(function(sl, k){ sl.classList.toggle('is-active', k === i); });
       if(numB) numB.textContent = '0' + (i + 1);
+      if(view) view.setAttribute('href', 'projects.html#d-' + slides[i].getAttribute('data-cat'));
     }
     s.querySelector('.wwd__next').addEventListener('click', function(){ go(i + 1); });
     s.querySelector('.wwd__prev').addEventListener('click', function(){ go(i - 1); });
@@ -101,11 +103,11 @@
       </div>
       <div>
         <h5>Explore</h5>
-        <ul><li><a href="projects.html">Projects</a></li><li><a href="services.html">Disciplines</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="services.html">Discipline</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       </div>
       <div>
         <h5>Disciplines</h5>
-        <ul><li><a href="services.html">Architecture</a></li><li><a href="services.html">Interior Design</a></li><li><a href="services.html">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
+        <ul><li><a href="projects.html#d-architecture">Architecture</a></li><li><a href="projects.html#d-interior">Interior Design</a></li><li><a href="projects.html#d-product">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
       </div>
       <div>
         <h5>Studio</h5>

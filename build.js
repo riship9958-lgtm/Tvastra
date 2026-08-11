@@ -29,7 +29,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['projects.html','Projects'],['services.html','Disciplines'],['about.html','Studio'],['contact.html','Contact']];
+const NAV = [['index.html','Home'],['about.html','About Us'],['recognition.html','Recognition'],['services.html','Discipline'],['contact.html','Contact Us']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -63,11 +63,11 @@ const FOOTER = `
       </div>
       <div>
         <h5>Explore</h5>
-        <ul><li><a href="projects.html">Projects</a></li><li><a href="services.html">Disciplines</a></li><li><a href="about.html">Studio</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="services.html">Discipline</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       </div>
       <div>
         <h5>Disciplines</h5>
-        <ul><li><a href="services.html">Architecture</a></li><li><a href="services.html">Interior Design</a></li><li><a href="services.html">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
+        <ul><li><a href="projects.html#d-architecture">Architecture</a></li><li><a href="projects.html#d-interior">Interior Design</a></li><li><a href="projects.html#d-product">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
       </div>
       <div>
         <h5>Studio</h5>
@@ -131,6 +131,25 @@ function pcardSoon(p, i) {
     : `<div class="pcard pcard--soon reveal${i%2?' d1':''}" data-cat="${p.cat}">${body}</div>`;
 }
 
+// A discipline's projects — the tiles that belong to it, or a "coming soon" panel.
+function discSection(id, title, cat) {
+  const items = PROJECTS_LIST.filter(function (p) { return p.cat === cat; });
+  const inner = items.length
+    ? `<div class="tiles">\n      ${items.map(function (p, i) { return pcard(p, i); }).join('\n      ')}\n    </div>`
+    : `<div class="disc-empty reveal"><span>Projects in ${title.toLowerCase()} are being photographed.</span><a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></div>`;
+  const count = items.length ? (items.length + (items.length > 1 ? ' projects' : ' project')) : 'Coming soon';
+  return `
+<section class="section" id="${id}">
+  <div class="container">
+    <div class="reveal" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:clamp(26px,3vw,42px);border-top:1px solid var(--line);padding-top:clamp(28px,3vw,44px)">
+      <h2 class="h-lg">${title}.</h2>
+      <span class="muted" style="font-size:13px;letter-spacing:.06em;text-transform:uppercase">${count}</span>
+    </div>
+    ${inner}
+  </div>
+</section>`;
+}
+
 const home = `
 <section class="title-card">
   <div class="title-card__inner">
@@ -181,29 +200,18 @@ const home = `
 `;
 
 const projects = `
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:0">
+<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
   <div class="container reveal" style="max-width:760px">
     <p class="eyebrow">Selected work</p>
     <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
-    <p class="lead" style="margin-top:22px">A selection of work across our three disciplines. Each project integrates utility, aesthetics, function and style into a single, considered whole.</p>
+    <p class="lead" style="margin-top:22px">Our work, grouped by discipline — architecture, interiors and product design.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="filters reveal">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="architecture">Architecture</button>
-      <button class="filter" data-filter="interior">Interior</button>
-      <button class="filter" data-filter="product">Product</button>
-    </div>
-    <div class="tiles">
-      ${PROJECTS_LIST.map(function (p, i) { return pcard(p, i); }).join('\n      ')}
-      ${PROJECTS_SOON.map(function (p, i) { return pcardSoon(p, PROJECTS_LIST.length + i); }).join('\n      ')}
-    </div>
-    <p class="muted reveal" style="margin-top:40px;font-size:15px">More projects are being added as photography is finalised. Have a specific project in mind? <a href="contact.html" class="link-arrow" style="font-size:12px">Get in touch ${ARROW}</a></p>
-  </div>
-</section>`;
+${discSection('d-architecture', 'Architecture', 'architecture')}
+${discSection('d-interior', 'Interior Design', 'interior')}
+${discSection('d-product', 'Product Design', 'product')}
+`;
 
 const aashihbhai = `
 <div class="pd-hero">
@@ -605,17 +613,17 @@ const services = `
 <section class="wwd" id="wwd">
   <div class="wwd__stage">
     <div class="wwd__track">
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="architecture">
         <div class="wwd__media"><img src="${IMG}01-day.webp" alt="Architecture" loading="lazy" /></div>
         <h2 class="wwd__word">Architec&shy;ture</h2>
         <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
       </article>
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="interior">
         <div class="wwd__media"><img src="${IMG4}01-night.webp" alt="Interior Design" loading="lazy" /></div>
         <h2 class="wwd__word">Interior<br>Design</h2>
         <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
       </article>
-      <article class="wwd__slide">
+      <article class="wwd__slide" data-cat="product">
         <div class="wwd__media"><img src="${IMG6}01-night.webp" alt="Product Design" loading="lazy" /></div>
         <h2 class="wwd__word">Product<br>Design</h2>
         <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
@@ -639,12 +647,14 @@ const services = `
     var track = s.querySelector('.wwd__track');
     var slides = s.querySelectorAll('.wwd__slide');
     var numB = s.querySelector('.wwd__num b');
+    var view = s.querySelector('.wwd__view');
     var total = slides.length, i = 0;
     function go(n){
       i = (n % total + total) % total;
       track.style.transform = 'translateX(' + (-i * 100) + '%)';
       slides.forEach(function(sl, k){ sl.classList.toggle('is-active', k === i); });
       if(numB) numB.textContent = '0' + (i + 1);
+      if(view) view.setAttribute('href', 'projects.html#d-' + slides[i].getAttribute('data-cat'));
     }
     s.querySelector('.wwd__next').addEventListener('click', function(){ go(i + 1); });
     s.querySelector('.wwd__prev').addEventListener('click', function(){ go(i - 1); });
@@ -820,9 +830,56 @@ const contact = `
   </div>
 </section>`;
 
+const recognition = `
+<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
+  <div class="container reveal" style="max-width:820px">
+    <p class="eyebrow">Awards &amp; press</p>
+    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Recognition.</h1>
+    <p class="lead" style="margin-top:22px">Considered, crafted work — and the honours it has quietly earned along the way.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="rec-list reveal">
+      <div class="rec-item">
+        <div class="rec-item__year">2023</div>
+        <div>
+          <h3 class="rec-item__title">Platinum Winner</h3>
+          <div class="rec-item__where">Architecture &amp; Design Collection Awards</div>
+          <p class="muted" style="margin:0">Honoured for design that integrates utility, aesthetics, function and style into a single, considered whole.</p>
+        </div>
+        <span class="rec-item__tag">Award</span>
+      </div>
+    </div>
+    <p class="muted reveal" style="margin-top:30px;font-size:15px">More awards and press features will appear here as they're announced. Have a feature to share? <a href="contact.html" class="link-arrow" style="font-size:12px">Get in touch ${ARROW}</a></p>
+  </div>
+</section>
+
+<section class="section section--ink">
+  <div class="container">
+    <div class="stats reveal" style="border:0;padding:0;margin:0">
+      <div class="stat"><div class="n">29</div><div class="l">Years of practice</div></div>
+      <div class="stat"><div class="n">2023</div><div class="l">A&amp;D Platinum Winner</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
+      <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
+    </div>
+    <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
+  </div>
+</section>
+
+<section class="cta section">
+  <div class="container reveal">
+    <h2>Let's create something worth celebrating.</h2>
+    <p>Tell us about your project — we'd love to help shape it.</p>
+    <a href="contact.html" class="btn btn--ghost-light">Get in touch ${ARROW}</a>
+  </div>
+</section>`;
+
 /* ---------- assemble ---------- */
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft. Home of the Vatrusa furniture line.', content: home },
+  { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition — Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: false, title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
   { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
@@ -873,14 +930,14 @@ if (process.argv[2] === 'preview') {
     // data-URI images
     content = content.replace(/(src=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // *.html -> hash
-    content = content.replace(/href="([a-z0-9-]+\.html)"/g, (m,f) => `href="${hmap[f] || ('#'+f)}"`);
+    content = content.replace(/href="([a-z0-9-]+\.html)(#[a-z0-9-]+)?"/g, (m,f) => `href="${hmap[f] || ('#'+f)}"`);
     return content;
   }
 
   let sections = '';
   for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
 
-  const navLinks = [['home','Home'],['projects','Projects'],['services','Disciplines'],['about','Studio'],['contact','Contact']]
+  const navLinks = [['home','Home'],['about','About Us'],['recognition','Recognition'],['services','Discipline'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
