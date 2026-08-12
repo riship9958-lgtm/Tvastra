@@ -368,7 +368,7 @@ const projProduct = disciplinePage(
 );
 
 const aashihbhai = `
-<div class="pd-hero pd-hero--tall">
+<div class="pd-hero pd-hero--tall pd-hero--zoom">
   <img src="${IMG}slide-01.webp" alt="Aashihbhai Residence" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e6b7a3">Architecture, Residential · Surat</span>
@@ -500,7 +500,7 @@ const aashihbhai = `
 
 
 const junebhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG3}02-dusk.webp" alt="Junebhai Residence at dusk" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture, Residential</span><h1>Junebhai Residence</h1></div></div>
 </div>
@@ -550,7 +550,7 @@ const junebhai = `
 </section>`;
 
 const kalpeshbhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG4}01-night.webp" alt="Kalpeshbhai Residence at night" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e8b49a">Architecture, Residential</span><h1>Kalpeshbhai Residence</h1></div></div>
 </div>
@@ -600,7 +600,7 @@ const kalpeshbhai = `
 </section>`;
 
 const kamalbhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG5}01-night.webp" alt="Kamalbhai Residence at night" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e2c39c">Architecture, Residential</span><h1>Kamalbhai Residence</h1></div></div>
 </div>
@@ -650,7 +650,7 @@ const kamalbhai = `
 </section>`;
 
 const mukeshbhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG6}01-night.webp" alt="Mukeshbhai Residence at night" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture, Residential</span><h1>Mukeshbhai Residence</h1></div></div>
 </div>
@@ -700,7 +700,7 @@ const mukeshbhai = `
 </section>`;
 
 const kamleshbhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG7}01-front.jpg" alt="Kamleshbhai Residence" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture, Residential</span><h1>Kamleshbhai Residence</h1></div></div>
 </div>
@@ -750,7 +750,7 @@ const kamleshbhai = `
 </section>`;
 
 const sudhirbhai = `
-<div class="pd-hero">
+<div class="pd-hero pd-hero--zoom">
   <img src="${IMG8}03-night-front.webp" alt="Sudhirbhai Residence at night" />
   <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture, Residential</span><h1>Sudhirbhai Residence</h1></div></div>
 </div>

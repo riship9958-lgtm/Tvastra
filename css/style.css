@@ -328,6 +328,8 @@ p { margin: 0 0 1.1em; }
    ========================================================================== */
 .pd-hero { height: 92svh; position: relative; overflow: hidden; }
 .pd-hero img { width: 100%; height: 100%; object-fit: cover; }
+/* Architecture project title cards: zoomed in and softly blurred behind the title */
+.pd-hero--zoom img { transform: scale(1.14); filter: blur(3px); }
 .pd-hero__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--gutter); background: linear-gradient(0deg, rgba(20,17,13,.72), transparent); color: #fff; }
 .pd-hero__cap h1 { font-size: clamp(38px, 6vw, 84px); font-weight: 400; }
 .pd-meta { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-block: 1px solid var(--line); padding-block: 40px; }
