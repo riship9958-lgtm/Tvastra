@@ -107,7 +107,7 @@ const IMG2 = 'assets/projects/dilipbhai/';
 const IMG3 = 'assets/projects/rju/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/vallabh-nivas/';
-const IMG6 = 'assets/projects/mukeshbhai/';
+const IMG6 = 'assets/projects/urdhva/';
 const IMG7 = 'assets/projects/valuka/';
 const IMG8 = 'assets/projects/asamvrta/';
 
@@ -117,7 +117,7 @@ const PROJECTS_LIST = [
   { name: 'Ṛju',    file: 'rju.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Vallabh Nivas',   file: 'vallabh-nivas.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
-  { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
+  { name: 'Urdhva',  file: 'urdhva.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
   { name: 'Vālukā', file: 'valuka.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
   { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
@@ -649,10 +649,10 @@ const vallabhNivas = `
   </div>
 </section>`;
 
-const mukeshbhai = `
+const urdhva = `
 <div class="pd-hero pd-hero--zoom">
-  <img src="${IMG6}01-night.webp" alt="Mukeshbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture, Residential</span><h1>Mukeshbhai Residence</h1></div></div>
+  <img src="${IMG6}01-night.webp" alt="Urdhva at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture, Residential</span><h1>Urdhva</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
@@ -674,15 +674,15 @@ const mukeshbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG6}03-day-front.jpg" alt="Mukeshbhai Residence, entrance by day" />
+      <img src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" />
       <figcaption>Daylight, the brick jaali against the white and sage volumes.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG6}02-night-front.webp" alt="Mukeshbhai Residence, entrance at night" /></figure>
-      <figure class="pd-figure"><img src="${IMG6}05-day-street.jpg" alt="Mukeshbhai Residence, street view by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG6}02-night-front.webp" alt="Urdhva, entrance at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG6}05-day-street.jpg" alt="Urdhva, street view by day" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG6}04-night-street.webp" alt="Mukeshbhai Residence, street view at night" />
+      <img src="${IMG6}04-night-street.webp" alt="Urdhva, street view at night" />
       <figcaption>Night, the massing reads as glowing, stacked volumes from the street.</figcaption>
     </figure>
   </div>
@@ -1200,7 +1200,7 @@ const PAGES = [
   { file: 'rju.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Ṛju, Tvastra Design LLP', desc: 'Ṛju, a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: rju },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence, Tvastra Design LLP', desc: 'Kalpeshbhai Residence, a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'vallabh-nivas.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Vallabh Nivas, Tvastra Design LLP', desc: 'Vallabh Nivas, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: vallabhNivas },
-  { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence, Tvastra Design LLP', desc: 'Mukeshbhai Residence, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
+  { file: 'urdhva.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Urdhva, Tvastra Design LLP', desc: 'Urdhva, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: urdhva },
   { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence, Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
