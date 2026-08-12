@@ -294,6 +294,30 @@ const home = `
   </div>
 </section>
 
+<section class="section section--ink founder">
+  <div class="container">
+    <div class="founder__grid reveal">
+      <div class="founder__media"><img src="assets/founder/founder.webp" alt="Founder — Tvastra Design LLP" loading="lazy" /></div>
+      <div class="founder__body">
+        <p class="eyebrow">The founder</p>
+        <h2 class="h-lg">In the field of design since 1995.</h2>
+        <p class="lead">Through college studies, practical training and years of field work — a practice built hands-on, from the first sketch to the finished site.</p>
+        <div class="founder__spec">
+          <div class="k">Specialties</div>
+          <ul>
+            <li>Architecture</li>
+            <li>Interior design</li>
+            <li>Product design</li>
+            <li>Turn-key projects</li>
+            <li>Project management</li>
+          </ul>
+        </div>
+        <a href="founders-mind.html" class="link-arrow">Inside the founder's mind ${ARROW}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 `;
 
 const projects = `
@@ -1057,6 +1081,68 @@ const recognition = `
   </div>
 </section>`;
 
+const foundersMind = `
+<div class="pd-hero pd-hero--tall fmind-hero">
+  <img src="assets/founder/founder.webp" alt="The founder of Tvastra Design LLP" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#bfe0f2">The founder</span>
+    <h1>Inside the founder's mind</h1>
+    <p class="pd-hero__sub">Design since 1995 — a way of seeing, before it is a way of building.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The journey</p>
+        <h2 class="statement">It began in 1995 — in <em>college studies</em>, in practical training, and on site, learning how buildings really come together.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">Nearly three decades on, that hands-on beginning still shapes the way I work — moving between the drawing and the dust of the workshop, from the first sketch to the finished site.</p>
+        <p class="muted">I have never seen architecture, interiors and the objects within them as separate crafts. They are one continuous idea — and my role is to hold that idea steady, across every scale and every discipline, until a space feels inevitable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink">
+  <div class="container">
+    <div class="reveal" style="max-width:760px">
+      <p class="eyebrow">What I believe</p>
+      <h2 class="h-lg" style="margin-bottom:26px">Good design is quiet.</h2>
+      <p class="lead" style="color:#cfd9e0">It does not announce itself. It earns its place through proportion, light and material — through the patience to resolve the unseen details, and the discipline to leave out everything that isn't needed.</p>
+      <p class="muted" style="margin-top:16px">A home should feel like a sanctuary — comfortable, individual, and made to last. That belief, more than any style, is what carries through every project.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">Where I work</p><h2 class="h-lg">Specialties.</h2></div>
+      <ul class="approach reveal d1">
+        <li>Architecture</li>
+        <li>Interior design</li>
+        <li>Product design</li>
+        <li>Turn-key projects</li>
+        <li>Project management</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Let's build something</p>
+    <h2 class="h-lg" style="margin-bottom:34px">Start a conversation.</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="about.html" class="btn btn--ghost-light">About the studio</a>
+      <a href="contact.html" class="btn btn--ghost-light">Get in touch ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 /* ---------- assemble ---------- */
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
@@ -1075,6 +1161,7 @@ const PAGES = [
   { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence — Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence — a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
+  { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind — Tvastra Design LLP", desc: "Inside the founder's mind — designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
 ];
 

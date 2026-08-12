@@ -609,6 +609,19 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
   .slideshow__bar-inner { justify-content: center; gap: 26px; }
 }
 
+/* Founder section (home) */
+.founder__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(30px, 5vw, 76px); align-items: center; }
+.founder__media img { width: 100%; height: auto; display: block; border-radius: 2px; }
+.founder__body .h-lg { margin: 14px 0 18px; }
+.founder__body .lead { color: #cfd9e0; }
+.founder__spec { margin: clamp(26px, 3.4vw, 38px) 0 clamp(22px, 2.6vw, 30px); }
+.founder__spec .k { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--clay-soft); margin-bottom: 14px; }
+.founder__spec ul { list-style: none; display: flex; flex-wrap: wrap; }
+.founder__spec li { font-family: var(--serif); font-size: clamp(16px, 1.8vw, 21px); color: #eef3f6; }
+.founder__spec li:not(:last-child)::after { content: "·"; margin: 0 clamp(10px, 1.4vw, 16px); color: var(--clay-soft); }
+.section--ink .link-arrow { color: #bfe0f2; }
+@media (max-width: 760px) { .founder__grid { grid-template-columns: 1fr; } }
+
 /* Colour-psychology grid */
 .cpsych { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 34px) clamp(24px, 4vw, 48px); }
 .cpsych__item { border-top: 1px solid var(--line); padding-top: 16px; }
