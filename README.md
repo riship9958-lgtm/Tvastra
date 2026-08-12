@@ -26,7 +26,7 @@ Palette tokens live at the top of `css/style.css` (`--clay` = brand blue,
 |------|---------|
 | `index.html` | Home — hero, philosophy, featured project, disciplines, vision, CTA |
 | `projects.html` | Work grid with category filters |
-| `aashihbhai-residence.html` | Project case study — **Aashihbhai Residence** |
+| `vritta.html` | Project case study — **Vritta** |
 | `services.html` | Architecture, Interior, Product + process |
 | `projects-architecture.html` / `-interior.html` / `-product.html` | Per-discipline project pages |
 | `about.html` | Studio story, vision, principles, awards |
@@ -44,8 +44,8 @@ node build.js preview out.html   # also writes a single-file interactive preview
 
 ## Real projects & photography
 
-Real project imagery lives under `assets/projects/`. The **Aashihbhai
-Residence** renders are in `assets/projects/aashihbhai/` (`.webp`).
+Real project imagery lives under `assets/projects/`. The **Vritta
+Residence** renders are in `assets/projects/vritta/` (`.webp`).
 
 To add a project: drop its photos in a new `assets/projects/<name>/` folder,
 add an entry to the `PROJECTS_LIST` array in `build.js`, and (optionally) a case

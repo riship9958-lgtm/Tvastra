@@ -102,7 +102,7 @@ const FOOTER = `
 </html>`;
 
 /* ---------- page contents ---------- */
-const IMG = 'assets/projects/aashihbhai/';
+const IMG = 'assets/projects/vritta/';
 const IMG2 = 'assets/projects/dilipbhai/';
 const IMG3 = 'assets/projects/junebhai/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
@@ -113,7 +113,7 @@ const IMG8 = 'assets/projects/sudhirbhai/';
 
 // Central list of real projects, add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
-  { name: 'Aashihbhai Residence',  file: 'aashihbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}06-night-corner.webp`,   feat: `${IMG}04-day-side.webp` },
+  { name: 'Vritta',  file: 'vritta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}06-night-corner.webp`,   feat: `${IMG}04-day-side.webp` },
   { name: 'Junebhai Residence',    file: 'junebhai-residence.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
@@ -367,12 +367,12 @@ const projProduct = disciplinePage(
   ]
 );
 
-const aashihbhai = `
+const vritta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom">
-  <img src="${IMG}slide-01.webp" alt="Aashihbhai Residence" />
+  <img src="${IMG}slide-01.webp" alt="Vritta" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e6b7a3">Architecture, Residential · Surat</span>
-    <h1>Aashihbhai Residence</h1>
+    <h1>Vritta</h1>
     <p class="pd-hero__sub">A sculptural family home in brick and board-formed concrete.</p>
   </div></div>
 </div>
@@ -407,8 +407,8 @@ const aashihbhai = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal">
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Aashihbhai Residence, concept sketch, aerial perspective" /></figure>
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-02.webp" alt="Aashihbhai Residence, concept sketch, street perspective" /></figure>
+      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, aerial perspective" /></figure>
+      <figure class="pd-sketch-fig"><img src="${IMG}sketch-02.webp" alt="Vritta, concept sketch, street perspective" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">Hand studies, the stepped massing, carved terraces and circular apertures explored in line before the render.</p>
   </div>
@@ -421,9 +421,9 @@ const aashihbhai = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence, full corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence, full aerial view" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence, full side elevation with brick jaali" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Vritta, full corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Vritta, full aerial view" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -431,14 +431,14 @@ const aashihbhai = `
       <h2 class="h-lg">Day to night.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Aashihbhai Residence renders">
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vritta renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Aashihbhai Residence, street corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Aashihbhai Residence, street corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img src="${IMG}slide-03.webp" alt="Aashihbhai Residence, upper terraces by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img src="${IMG}slide-04.webp" alt="Aashihbhai Residence, dramatic night view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img src="${IMG}slide-05.webp" alt="Aashihbhai Residence, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img src="${IMG}slide-06.webp" alt="Aashihbhai Residence, street elevation at night" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Vritta, street corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Vritta, street corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img src="${IMG}slide-03.webp" alt="Vritta, upper terraces by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img src="${IMG}slide-04.webp" alt="Vritta, dramatic night view" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img src="${IMG}slide-05.webp" alt="Vritta, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img src="${IMG}slide-06.webp" alt="Vritta, street elevation at night" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1192,11 +1192,11 @@ const foundersMind = `
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
-  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
+  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including Vritta.', content: projects },
   { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects, Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
   { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects, Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP.', content: projProduct },
-  { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence, Tvastra Design LLP', desc: 'Aashihbhai Residence, a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
+  { file: 'vritta.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Vritta, Tvastra Design LLP', desc: 'Vritta, a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: vritta },
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence, Tvastra Design LLP', desc: 'Junebhai Residence, a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence, Tvastra Design LLP', desc: 'Kalpeshbhai Residence, a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence, Tvastra Design LLP', desc: 'Kamalbhai Residence, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
