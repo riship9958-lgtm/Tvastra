@@ -105,7 +105,6 @@ const IMG8 = 'assets/projects/sudhirbhai/';
 // Central list of real projects — add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
   { name: 'Aashihbhai Residence',  file: 'aashihbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}01-day.webp`,   feat: `${IMG}04-day-side.webp` },
-  { name: 'Dilipbhai Residence',   file: 'dilipbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG2}01-day.jpg`,   feat: `${IMG2}02-night.webp` },
   { name: 'Junebhai Residence',    file: 'junebhai-residence.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Kamalbhai Residence',   file: 'kamalbhai-residence.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
@@ -359,55 +358,6 @@ const aashihbhai = `
   </div>
 </section>`;
 
-const dilipbhai = `
-<div class="pd-hero">
-  <img src="${IMG2}02-night.webp" alt="Dilipbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#cfe0c4">Architecture — Residential</span><h1>Dilipbhai Residence</h1></div></div>
-</div>
-
-<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
-  <div class="container wrap-narrow reveal">
-    <p class="eyebrow">The project</p>
-    <p class="lead">A contemporary family villa in stone and sage — dressed-stone cladding and warm timber screens set against muted green stucco, with the studio's signature circular apertures cut through the façade at the entrance and upper levels.</p>
-    <p class="muted">Interlocking volumes step and cantilever to carve out balconies and a raised garden terrace, while full-height glazing draws the greenery indoors. Board-marked and travertine surfaces give the house a quiet, tactile weight; at night, concealed uplights graze the stone and the round openings glow like lanterns from within.</p>
-  </div>
-  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
-    <div class="pd-meta reveal">
-      <div><div class="k">Type</div><div class="v">Residential</div></div>
-      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
-      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
-      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="container">
-    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG2}01-day.jpg" alt="Dilipbhai Residence by day" />
-      <figcaption>Daylight — the stone, timber and sage-green volumes in full detail.</figcaption>
-    </figure>
-    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG2}03-day-side.jpg" alt="Dilipbhai Residence — side view by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG2}04-night-side.webp" alt="Dilipbhai Residence — side elevation at night" /></figure>
-    </div>
-    <figure class="pd-figure reveal">
-      <img src="${IMG2}05-day-front.jpg" alt="Dilipbhai Residence — street elevation" />
-      <figcaption>Street elevation — the circular motif carried from gate to upper façade.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="section section--paper2" style="text-align:center">
-  <div class="container reveal">
-    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
-    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="projects.html" class="btn">All projects</a>
-      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
-    </div>
-  </div>
-</section>`;
 
 const junebhai = `
 <div class="pd-hero">
@@ -942,7 +892,6 @@ const PAGES = [
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects — Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP — considered materials, custom furniture and contemporary warmth.', content: projInterior },
   { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects — Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP, gathered under the Vatrusa line.', content: projProduct },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
-  { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
