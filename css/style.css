@@ -602,9 +602,9 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
   .slideshow__bar-inner { justify-content: center; gap: 26px; }
 }
 
-/* Full uncropped renders below the slideshow */
-.pd-fullset { margin-top: clamp(40px, 5vw, 72px); }
-.pd-fullset__label { text-align: center; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--clay); margin-bottom: clamp(22px, 3vw, 36px); }
-.pd-full { margin: 0 0 clamp(14px, 2vw, 24px); }
-.pd-full:last-child { margin-bottom: 0; }
+/* Full uncropped renders below the slideshow — three side by side */
+.pd-fullset { margin-top: clamp(48px, 6vw, 84px); }
+.pd-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 1.5vw, 20px); }
+.pd-full { margin: 0; }
 .pd-full img { width: 100%; height: auto; display: block; border-radius: 2px; }
+@media (max-width: 720px) { .pd-full-grid { grid-template-columns: 1fr; } }

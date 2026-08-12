@@ -382,10 +382,15 @@ const aashihbhai = `
     </div>
   </div>
   <div class="container pd-fullset">
-    <p class="pd-fullset__label reveal">The complete project</p>
-    <figure class="pd-full reveal"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence — full corner view by day" loading="lazy" /></figure>
-    <figure class="pd-full reveal"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence — full aerial view" loading="lazy" /></figure>
-    <figure class="pd-full reveal"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence — full side elevation with brick jaali" loading="lazy" /></figure>
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The complete project</p>
+      <h2 class="h-lg">Every angle.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence — full corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence — full aerial view" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence — full side elevation with brick jaali" loading="lazy" /></figure>
+    </div>
   </div>
 </section>
 
