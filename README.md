@@ -28,7 +28,7 @@ Palette tokens live at the top of `css/style.css` (`--clay` = brand blue,
 | `projects.html` | Work grid with category filters |
 | `aashihbhai-residence.html` | Project case study — **Aashihbhai Residence** |
 | `services.html` | Architecture, Interior, Product + process |
-| `vatrusa.html` | The **Vatrusa** furniture line |
+| `projects-architecture.html` / `-interior.html` / `-product.html` | Per-discipline project pages |
 | `about.html` | Studio story, vision, principles, awards |
 | `contact.html` | Studio details + enquiry form |
 
@@ -48,10 +48,8 @@ Real project imagery lives under `assets/projects/`. The **Aashihbhai
 Residence** renders are in `assets/projects/aashihbhai/` (`.webp`).
 
 To add a project: drop its photos in a new `assets/projects/<name>/` folder,
-add a card to the `projects` section in `build.js`, and (optionally) a case
-study page. Two projects are named but awaiting photography — **Avadh Habitat**
-(interior, 2,567 sq ft) and **Vatrusa** (furniture) — shown as text cards until
-their images are added.
+add an entry to the `PROJECTS_LIST` array in `build.js`, and (optionally) a case
+study page.
 
 ## View it locally
 

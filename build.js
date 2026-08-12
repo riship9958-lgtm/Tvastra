@@ -67,7 +67,7 @@ const FOOTER = `
       </div>
       <div>
         <h5>Disciplines</h5>
-        <ul><li><a href="projects-architecture.html">Architecture</a></li><li><a href="projects-interior.html">Interior Design</a></li><li><a href="projects-product.html">Product Design</a></li><li><a href="vatrusa.html">Vatrusa Furniture</a></li></ul>
+        <ul><li><a href="projects-architecture.html">Architecture</a></li><li><a href="projects-interior.html">Interior Design</a></li><li><a href="projects-product.html">Product Design</a></li></ul>
       </div>
       <div>
         <h5>Studio</h5>
@@ -304,8 +304,8 @@ const projInterior = disciplinePage(
 
 const projProduct = disciplinePage(
   'Objects', 'Product Design', 'product',
-  'Furniture and objects designed and made in-house — the pieces that complete a Tvastra interior, gathered under our Vatrusa line.',
-  { href: 'vatrusa.html', img: 'assets/product/mesh-chair.webp', name: 'Vatrusa — Mesh Chair', side: 'Furniture' }
+  'Furniture and objects designed and made in-house — the pieces that complete a Tvastra interior.',
+  { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Steel Mesh Chair', side: 'Furniture' }
 );
 
 const aashihbhai = `
@@ -668,7 +668,7 @@ const services = `
   <div class="dcols">
     ${dcol('01', 'Architecture', 'architecture', IMG + '01-day.webp', 'Surat, Gujarat')}
     ${dcol('02', 'Interior Design', 'interior', 'assets/interior/living-room.webp', 'Residential · Commercial')}
-    ${dcol('03', 'Product Design', 'product', 'assets/product/mesh-chair.webp', 'Vatrusa Furniture')}
+    ${dcol('03', 'Product Design', 'product', 'assets/product/mesh-chair.webp', 'Furniture & Objects')}
   </div>
 </section>
 
@@ -748,56 +748,6 @@ const about = `
   </div>
 </section>`;
 
-const vatrusa = `
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(30px,4vw,50px)">
-  <div class="container reveal" style="max-width:820px">
-    <p class="eyebrow">Product design — Furniture</p>
-    <h1 class="display" style="font-size:clamp(46px,8vw,110px)">Vatrusa</h1>
-    <p class="lead" style="margin-top:22px">Our furniture line. Tvastra goes beyond conventional furniture — each Vatrusa piece embodies a harmony of utility, aesthetics, functionality and style, crafted with a commitment to timeless design, durability and affordability.</p>
-  </div>
-</section>
-
-<section class="section" style="padding-top:0">
-  <div class="container">
-    <div class="pd-meta reveal">
-      <div><div class="k">Materials</div><div class="v">Teak · Oak · Walnut</div></div>
-      <div><div class="k">Made</div><div class="v">Custom, to order</div></div>
-      <div><div class="k">Approach</div><div class="v">Responsibly sourced</div></div>
-      <div><div class="k">By</div><div class="v">Tvastra Design</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--ink" style="padding-top:clamp(56px,7vw,90px)">
-  <div class="container grid-2 top">
-    <div class="reveal"><p class="eyebrow">The inspiration</p><h2 class="statement" style="color:var(--paper)">Where <em>water</em> meets oil.</h2></div>
-    <div class="reveal d1">
-      <p class="muted">Vatrusa draws from the captivating interplay observed as oil converges with water — the fluid, unrepeatable patterns that form where the two blend. That movement is translated into form, grain and line.</p>
-      <p class="muted">Available in Teak, Oak and Walnut, each piece integrates seamlessly with the architecture and interiors around it — a comprehensive approach to transforming living spaces.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="reveal" style="max-width:620px;margin-bottom:clamp(36px,5vw,56px)"><p class="eyebrow">From idea to object</p><h2 class="h-lg">How each piece is made.</h2></div>
-    <div class="steps reveal">
-      <div class="step"><div class="step__n">01</div><h4>Sketch</h4><p>The concept begins in sketching — capturing the interplay of water and oil.</p></div>
-      <div class="step"><div class="step__n">02</div><h4>Plan</h4><p>Rough planning refines proportion and detail into a direction.</p></div>
-      <div class="step"><div class="step__n">03</div><h4>Finalise</h4><p>The idea is translated into a comprehensive final plan.</p></div>
-      <div class="step"><div class="step__n">04</div><h4>Craft</h4><p>Production is set in motion with custom craftsmanship.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta section">
-  <div class="container reveal">
-    <h2>Bring Vatrusa into your space.</h2>
-    <p>Enquire about custom furniture in Teak, Oak or Walnut, made to suit your interiors.</p>
-    <a href="contact.html" class="btn btn--ghost-light">Enquire now ${ARROW}</a>
-  </div>
-</section>`;
-
 const contact = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px)">
   <div class="container reveal" style="max-width:760px;margin-bottom:clamp(40px,5vw,60px)">
@@ -825,7 +775,7 @@ const contact = `
         <div class="form-row">
           <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" /></div>
           <div><label for="type">Project type</label>
-            <select id="type" name="type"><option>Architecture</option><option>Interior design</option><option>Product / Furniture (Vatrusa)</option><option>Residential</option><option>Commercial</option><option>Other</option></select>
+            <select id="type" name="type"><option>Architecture</option><option>Interior design</option><option>Product / Furniture</option><option>Residential</option><option>Commercial</option><option>Other</option></select>
           </div>
         </div>
         <label for="message">About your project</label>
@@ -885,12 +835,12 @@ const recognition = `
 
 /* ---------- assemble ---------- */
 const PAGES = [
-  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft. Home of the Vatrusa furniture line.', content: home },
+  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition — Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
   { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects — Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects — Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP — considered materials, custom furniture and contemporary warmth.', content: projInterior },
-  { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects — Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP, gathered under the Vatrusa line.', content: projProduct },
+  { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects — Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP.', content: projProduct },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
@@ -899,7 +849,6 @@ const PAGES = [
   { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
   { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
-  { file: 'vatrusa.html',              id: 'vatrusa',   nav: 'services.html', dark: false, title: 'Vatrusa — Furniture by Tvastra Design LLP', desc: 'Vatrusa is the Tvastra Design LLP furniture line — custom pieces in Teak, Oak and Walnut, inspired by the interplay of water and oil.', content: vatrusa },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
 ];
