@@ -114,7 +114,7 @@ const IMG8 = 'assets/projects/sudhirbhai/';
 // Central list of real projects, add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
   { name: 'Vritta',  file: 'vritta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}06-night-corner.webp`,   feat: `${IMG}04-day-side.webp` },
-  { name: 'Rju',    file: 'rju.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
+  { name: 'Ṛju',    file: 'rju.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Vallabh Nivas',   file: 'vallabh-nivas.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
@@ -501,8 +501,8 @@ const vritta = `
 
 const rju = `
 <div class="pd-hero pd-hero--zoom">
-  <img src="${IMG3}02-dusk.webp" alt="Rju at dusk" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture, Residential</span><h1>Rju</h1></div></div>
+  <img src="${IMG3}02-dusk.webp" alt="Ṛju at dusk" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture, Residential</span><h1>Ṛju</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
@@ -524,15 +524,15 @@ const rju = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG3}01-day.webp" alt="Rju by day" />
+      <img src="${IMG3}01-day.webp" alt="Ṛju by day" />
       <figcaption>Daylight, planted balconies and the brick-jaali crown in full detail.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG3}04-day-front.webp" alt="Rju, street elevation by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG3}03-night.webp" alt="Rju, street elevation at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG3}04-day-front.webp" alt="Ṛju, street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG3}03-night.webp" alt="Ṛju, street elevation at night" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG3}05-front-alt.webp" alt="Rju, front elevation" />
+      <img src="${IMG3}05-front-alt.webp" alt="Ṛju, front elevation" />
       <figcaption>The layered façade, stone, timber, jaali and green.</figcaption>
     </figure>
   </div>
@@ -1197,7 +1197,7 @@ const PAGES = [
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
   { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects, Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP.', content: projProduct },
   { file: 'vritta.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Vritta, Tvastra Design LLP', desc: 'Vritta, a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: vritta },
-  { file: 'rju.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Rju, Tvastra Design LLP', desc: 'Rju, a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: rju },
+  { file: 'rju.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Ṛju, Tvastra Design LLP', desc: 'Ṛju, a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: rju },
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence, Tvastra Design LLP', desc: 'Kalpeshbhai Residence, a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'vallabh-nivas.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Vallabh Nivas, Tvastra Design LLP', desc: 'Vallabh Nivas, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: vallabhNivas },
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence, Tvastra Design LLP', desc: 'Mukeshbhai Residence, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
