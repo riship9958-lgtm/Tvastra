@@ -109,7 +109,7 @@ const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/vallabh-nivas/';
 const IMG6 = 'assets/projects/mukeshbhai/';
 const IMG7 = 'assets/projects/valuka/';
-const IMG8 = 'assets/projects/sudhirbhai/';
+const IMG8 = 'assets/projects/asamvrta/';
 
 // Central list of real projects, add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
@@ -119,7 +119,7 @@ const PROJECTS_LIST = [
   { name: 'Vallabh Nivas',   file: 'vallabh-nivas.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
   { name: 'Vālukā', file: 'valuka.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
-  { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
+  { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
@@ -749,10 +749,10 @@ const valuka = `
   </div>
 </section>`;
 
-const sudhirbhai = `
+const asamvrta = `
 <div class="pd-hero pd-hero--zoom">
-  <img src="${IMG8}03-night-front.webp" alt="Sudhirbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture, Residential</span><h1>Sudhirbhai Residence</h1></div></div>
+  <img src="${IMG8}03-night-front.webp" alt="Asaṁvṛta at night" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture, Residential</span><h1>Asaṁvṛta</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
@@ -774,12 +774,12 @@ const sudhirbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG8}02-day-corner.webp" alt="Sudhirbhai Residence, corner view by day" />
+      <img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" />
       <figcaption>Daylight, stone and grey panels framed by exposed red brick.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Sudhirbhai Residence, corner at night" /></figure>
-      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Sudhirbhai Residence, street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" /></figure>
     </div>
   </div>
 </section>
@@ -1202,7 +1202,7 @@ const PAGES = [
   { file: 'vallabh-nivas.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Vallabh Nivas, Tvastra Design LLP', desc: 'Vallabh Nivas, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: vallabhNivas },
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence, Tvastra Design LLP', desc: 'Mukeshbhai Residence, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
-  { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence, Tvastra Design LLP', desc: 'Sudhirbhai Residence, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
+  { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence, Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
