@@ -215,7 +215,7 @@ function disciplinePage(ghost, title, cat, lead, feature) {
     const more = rest.length
       ? `<div class="pcols pcols--trio">\n      ${rest.map(function (o, i) { return catcard(String(i + 2).padStart(2, '0'), o); }).join('\n      ')}\n    </div>`
       : '';
-    body = first + more + `\n  <div class="container"><p class="pgrp__note reveal">Furniture in production; lighting, décor and bespoke commissions on request. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
+    body = first + more + `\n  <div class="container"><p class="pgrp__note reveal">Furniture, lighting, décor and bespoke pieces — designed and made in-house. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
   } else if (feature) {
     body = `<div class="pcols">\n      ${dcard('01', feature.href, feature.img, feature.name, feature.side)}\n    </div>
   <div class="container"><p class="pgrp__note reveal">More ${title.toLowerCase()} projects are being photographed. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
@@ -330,7 +330,7 @@ const projProduct = disciplinePage(
     { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Meshobase', side: 'Furniture' },
     { href: 'contact.html', img: 'assets/product/lighting-pendants.webp', name: 'Lighting', side: 'Pendants' },
     { href: 'contact.html', img: 'assets/product/decor-lamp.webp', name: 'Decor', side: 'Objects' },
-    { href: 'contact.html', name: 'Bespoke', side: 'Coming soon' }
+    { href: 'contact.html', img: 'assets/product/bespoke-workshop.webp', name: 'Bespoke', side: 'Made by hand' }
   ]
 );
 
