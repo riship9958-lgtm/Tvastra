@@ -572,6 +572,7 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .approach li { display: flex; align-items: flex-start; gap: 14px; break-inside: avoid; padding: 15px 0; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); line-height: 1.5; color: var(--ink); }
 .approach li::before { content: ""; flex: 0 0 8px; width: 8px; height: 8px; margin-top: calc(0.75em - 4px); border: 1px solid var(--clay); border-radius: 50%; }
 @media (max-width: 560px) { .approach { columns: 1; } }
+.section--ink .approach li { color: #eef3f6; border-top-color: rgba(255,255,255,.16); }
 
 /* Accommodation / program */
 .program { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 3vw, 40px); }

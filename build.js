@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tvastra Design LLP — static site builder
+   Tvastra Design LLP, static site builder
    Generates the 7 HTML pages from shared header/footer + per-page content,
    and (optionally) a single-file interactive preview bundle.
    Run:  node build.js         -> writes the site pages
@@ -49,7 +49,7 @@ function header(active, dark) {
   return `
 <header class="${cls}">
   <div class="container nav">
-    <a class="brand" href="index.html" aria-label="Tvastra Design LLP — home">
+    <a class="brand" href="index.html" aria-label="Tvastra Design LLP, home">
       <img class="logo-color" src="assets/logo.png" alt="Tvastra Design LLP" />
       <img class="logo-white" src="assets/logo-white.png" alt="Tvastra Design LLP" />
     </a>
@@ -68,7 +68,7 @@ const FOOTER = `
     <div class="footer-top">
       <div class="footer-brand">
         <img src="assets/logo-white.png" alt="Tvastra Design LLP" />
-        <p>Architecture, interiors &amp; product design — a 29-year practice blending historical elegance with contemporary craft.</p>
+        <p>Architecture, interiors &amp; product design, a 29-year practice blending historical elegance with contemporary craft.</p>
       </div>
       <div>
         <h5>Explore</h5>
@@ -111,7 +111,7 @@ const IMG6 = 'assets/projects/mukeshbhai/';
 const IMG7 = 'assets/projects/kamleshbhai/';
 const IMG8 = 'assets/projects/sudhirbhai/';
 
-// Central list of real projects — add one entry (+ a detail page) to publish a new project.
+// Central list of real projects, add one entry (+ a detail page) to publish a new project.
 const PROJECTS_LIST = [
   { name: 'Aashihbhai Residence',  file: 'aashihbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG}06-night-corner.webp`,   feat: `${IMG}04-day-side.webp` },
   { name: 'Junebhai Residence',    file: 'junebhai-residence.html',    cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG3}02-dusk.webp`, feat: `${IMG3}02-dusk.webp` },
@@ -122,7 +122,7 @@ const PROJECTS_LIST = [
   { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
 ];
-// "Forthcoming" entries (no photography yet) — none shown for now
+// "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
 
 function pcard(p, i) {
@@ -140,7 +140,7 @@ function pcardSoon(p, i) {
     : `<div class="pcard pcard--soon reveal${i%2?' d1':''}" data-cat="${p.cat}">${body}</div>`;
 }
 
-// A discipline's projects — the tiles that belong to it, or a "coming soon" panel.
+// A discipline's projects, the tiles that belong to it, or a "coming soon" panel.
 function discSection(id, title, cat) {
   const items = PROJECTS_LIST.filter(function (p) { return p.cat === cat; });
   const inner = items.length
@@ -193,7 +193,7 @@ function catcard(num, o) {
     </a>`;
 }
 
-// A discipline group on the projects overview page — numbered heading + a grid of project columns.
+// A discipline group on the projects overview page, numbered heading + a grid of project columns.
 function projGroup(num, id, title, cat) {
   const items = PROJECTS_LIST.filter(function (p) { return p.cat === cat; });
   const grid = items.length
@@ -224,7 +224,7 @@ function disciplinePage(ghost, title, cat, lead, feature) {
     const more = rest.length
       ? `<div class="pcols pcols--trio">\n      ${rest.map(function (o, i) { return catcard(String(i + 2).padStart(2, '0'), o); }).join('\n      ')}\n    </div>`
       : '';
-    body = first + more + `\n  <div class="container"><p class="pgrp__note reveal">Furniture, lighting, décor and bespoke pieces — designed and made in-house. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
+    body = first + more + `\n  <div class="container"><p class="pgrp__note reveal">Furniture, lighting, décor and bespoke pieces, designed and made in-house. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
   } else if (feature) {
     body = `<div class="pcols">\n      ${dcard('01', feature.href, feature.img, feature.name, feature.side)}\n    </div>
   <div class="container"><p class="pgrp__note reveal">More ${title.toLowerCase()} projects are being photographed. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
@@ -266,11 +266,11 @@ const home = `
 </section>
 
 <section class="hero" id="lead">
-  <div class="hero__media"><img src="assets/home/hero-bw.webp" alt="Tvastra Design — rammed-earth residence, black and white" /></div>
+  <div class="hero__media"><img src="assets/home/hero-bw.webp" alt="Tvastra Design, rammed-earth residence, black and white" /></div>
   <div class="container hero__inner">
     <p class="eyebrow">Architecture · Interiors · Objects</p>
     <h1>We shape spaces worth returning to.</h1>
-    <p class="lead">Tvastra Design LLP is a 29-year practice in Surat, blending historical elegance with contemporary craft — across architecture, interiors and the furniture within them.</p>
+    <p class="lead">Tvastra Design LLP is a 29-year practice in Surat, blending historical elegance with contemporary craft, across architecture, interiors and the furniture within them.</p>
     <div class="hero__row">
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="projects.html" class="btn btn--ghost-light">View our work</a>
@@ -285,10 +285,10 @@ const home = `
   <div class="container grid-2 top">
     <div class="reveal">
       <p class="eyebrow">The practice</p>
-      <h2 class="statement">Named after the celestial architect, we design across scales — from the <em>building</em> to the <em>object</em> within it.</h2>
+      <h2 class="statement">Named after the celestial architect, we design across scales, from the <em>building</em> to the <em>object</em> within it.</h2>
     </div>
     <div class="reveal d1">
-      <p class="lead">For nearly three decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture — each project a fusion of innovation and custom craftsmanship.</p>
+      <p class="lead">For nearly three decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
       <p class="muted">Our work integrates utility, aesthetics, function and style into a single, considered whole, so historical warmth and contemporary calm sit together as one continuous idea.</p>
       <a href="about.html" class="link-arrow" style="margin-top:10px">About the studio ${ARROW}</a>
     </div>
@@ -306,11 +306,11 @@ const home = `
 <section class="section section--ink founder">
   <div class="container">
     <div class="founder__grid reveal">
-      <div class="founder__media"><img src="assets/founder/founder-portrait.webp" alt="Founder — Tvastra Design LLP" loading="lazy" /></div>
+      <div class="founder__media"><img src="assets/founder/founder-portrait.webp" alt="Founder, Tvastra Design LLP" loading="lazy" /></div>
       <div class="founder__body">
         <p class="eyebrow">The founder</p>
         <h2 class="h-lg">In the field of design since 1995.</h2>
-        <p class="lead">Through college studies, practical training and years of field work — a practice built hands-on, from the first sketch to the finished site.</p>
+        <p class="lead">Through college studies, practical training and years of field work, a practice built hands-on, from the first sketch to the finished site.</p>
         <div class="founder__spec">
           <div class="k">Specialties</div>
           <ul>
@@ -337,7 +337,7 @@ const projects = `
       <p class="eyebrow">Selected work</p>
       <h1 class="whead__title display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
     </div>
-    <p class="lead reveal" style="max-width:600px;margin-top:18px">Our work, grouped by discipline — architecture, interiors and product design, each project a fusion of innovation and custom craftsmanship.</p>
+    <p class="lead reveal" style="max-width:600px;margin-top:18px">Our work, grouped by discipline, architecture, interiors and product design, each project a fusion of innovation and custom craftsmanship.</p>
   </div>
   ${projGroup('01', 'd-architecture', 'Architecture', 'architecture')}
   ${projGroup('02', 'd-interior', 'Interior Design', 'interior')}
@@ -347,18 +347,18 @@ const projects = `
 
 const projArch = disciplinePage(
   'Architecture', 'Architecture', 'architecture',
-  'Homes and buildings where structure, light and material resolve into one continuous idea — our residential architecture across Surat, Gujarat.'
+  'Homes and buildings where structure, light and material resolve into one continuous idea, our residential architecture across Surat, Gujarat.'
 );
 
 const projInterior = disciplinePage(
   'Interiors', 'Interior Design', 'interior',
-  'Interiors composed as carefully as the buildings that hold them — considered materials, custom furniture and a calm, contemporary warmth.',
+  'Interiors composed as carefully as the buildings that hold them, considered materials, custom furniture and a calm, contemporary warmth.',
   { href: 'services.html', img: 'assets/interior/living-room.webp', name: 'Living Room Study', side: 'Interior &middot; Surat' }
 );
 
 const projProduct = disciplinePage(
   'Objects', 'Product Design', 'product',
-  'Furniture and objects designed and made in-house — the pieces that complete a Tvastra interior.',
+  'Furniture and objects designed and made in-house, the pieces that complete a Tvastra interior.',
   [
     { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Furniture', side: 'Meshobase' },
     { href: 'contact.html', img: 'assets/product/lighting-pendants.webp', name: 'Lighting', side: 'Pendants' },
@@ -371,7 +371,7 @@ const aashihbhai = `
 <div class="pd-hero pd-hero--tall">
   <img src="${IMG}slide-01.webp" alt="Aashihbhai Residence" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#e6b7a3">Architecture — Residential · Surat</span>
+    <span class="tag" style="color:#e6b7a3">Architecture, Residential · Surat</span>
     <h1>Aashihbhai Residence</h1>
     <p class="pd-hero__sub">A sculptural family home in brick and board-formed concrete.</p>
   </div></div>
@@ -382,11 +382,11 @@ const aashihbhai = `
     <div class="grid-2 top">
       <div class="reveal">
         <p class="eyebrow">The project</p>
-        <h2 class="statement">A play of <em>solid</em> and void — brick stacked over concrete, terraces carved out, and circular apertures cut like lenses into the façade.</h2>
+        <h2 class="statement">A play of <em>solid</em> and void, brick stacked over concrete, terraces carved out, and circular apertures cut like lenses into the façade.</h2>
       </div>
       <div class="reveal d1">
         <p class="lead">The massing steps back as it rises, giving every level its own outdoor room. Vertical brick screens filter the Surat light and soften the concrete mass, while the round openings frame the sky and pull daylight deep into the plan.</p>
-        <p class="muted">Planned to Vastu and built to breathe — cavity walls temper heat and sound, stack ventilation moves air through the section, and a rainwater tank and solar-ready roof quietly carry the house toward self-sufficiency. At night, concealed uplights wash the textures and the apertures glow from within.</p>
+        <p class="muted">Planned to Vastu and built to breathe. Cavity walls temper heat and sound, stack ventilation moves air through the section, and a rainwater tank and solar-ready roof quietly carry the house toward self-sufficiency. At night, concealed uplights wash the textures and the apertures glow from within.</p>
       </div>
     </div>
   </div>
@@ -407,10 +407,10 @@ const aashihbhai = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal">
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Aashihbhai Residence — concept sketch, aerial perspective" /></figure>
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-02.webp" alt="Aashihbhai Residence — concept sketch, street perspective" /></figure>
+      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Aashihbhai Residence, concept sketch, aerial perspective" /></figure>
+      <figure class="pd-sketch-fig"><img src="${IMG}sketch-02.webp" alt="Aashihbhai Residence, concept sketch, street perspective" /></figure>
     </div>
-    <p class="muted reveal pd-sketch-note">Hand studies — the stepped massing, carved terraces and circular apertures explored in line before the render.</p>
+    <p class="muted reveal pd-sketch-note">Hand studies, the stepped massing, carved terraces and circular apertures explored in line before the render.</p>
   </div>
 </section>
 
@@ -421,9 +421,9 @@ const aashihbhai = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence — full corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence — full aerial view" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence — full side elevation with brick jaali" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence, full corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence, full aerial view" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence, full side elevation with brick jaali" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -433,18 +433,18 @@ const aashihbhai = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Aashihbhai Residence renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner — brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Aashihbhai Residence — street corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark — the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Aashihbhai Residence — street corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img src="${IMG}slide-03.webp" alt="Aashihbhai Residence — upper terraces by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night — concealed uplights graze the brick screens."><img src="${IMG}slide-04.webp" alt="Aashihbhai Residence — dramatic night view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation — brick jaali punctures the concrete plane."><img src="${IMG}slide-05.webp" alt="Aashihbhai Residence — street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img src="${IMG}slide-06.webp" alt="Aashihbhai Residence — street elevation at night" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Aashihbhai Residence, street corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Aashihbhai Residence, street corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img src="${IMG}slide-03.webp" alt="Aashihbhai Residence, upper terraces by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img src="${IMG}slide-04.webp" alt="Aashihbhai Residence, dramatic night view" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img src="${IMG}slide-05.webp" alt="Aashihbhai Residence, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img src="${IMG}slide-06.webp" alt="Aashihbhai Residence, street elevation at night" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
     <div class="slideshow__bar">
       <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Street corner — brick volumes stacked over the concrete base. Day.</span>
+        <span class="slideshow__cap">Street corner, brick volumes stacked over the concrete base. Day.</span>
         <div class="slideshow__dots" role="tablist"></div>
         <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
       </div>
@@ -460,7 +460,7 @@ const aashihbhai = `
         <li>Vastu-guided planning</li>
         <li>Raw, exposed &amp; natural materials</li>
         <li>Daylight through the day</li>
-        <li>Cavity walls — heat &amp; sound</li>
+        <li>Cavity walls, heat &amp; sound</li>
         <li>Open planning</li>
         <li>Stack ventilation</li>
         <li>Generous green areas</li>
@@ -502,13 +502,13 @@ const aashihbhai = `
 const junebhai = `
 <div class="pd-hero">
   <img src="${IMG3}02-dusk.webp" alt="Junebhai Residence at dusk" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture — Residential</span><h1>Junebhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#bfd3ad">Architecture, Residential</span><h1>Junebhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
   <div class="container wrap-narrow reveal">
     <p class="eyebrow">The project</p>
-    <p class="lead">A green, terraced residence where architecture and planting grow together — a board-formed concrete frame layered with cascading creepers, deep planted balconies and a perforated brick-jaali screen that crowns the upper floor.</p>
+    <p class="lead">A green, terraced residence where architecture and planting grow together, a board-formed concrete frame layered with cascading creepers, deep planted balconies and a perforated brick-jaali screen that crowns the upper floor.</p>
     <p class="muted">Corner glazing opens the living spaces to light and the street, while the jaali and timber louvers filter the Surat sun and give privacy above. Trailing greenery softens every edge, turning the façade into a living, seasonal thing; by evening, warm interior light glows between the planted tiers.</p>
   </div>
   <div class="container" style="margin-top:clamp(40px,5vw,60px)">
@@ -525,15 +525,15 @@ const junebhai = `
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
       <img src="${IMG3}01-day.webp" alt="Junebhai Residence by day" />
-      <figcaption>Daylight — planted balconies and the brick-jaali crown in full detail.</figcaption>
+      <figcaption>Daylight, planted balconies and the brick-jaali crown in full detail.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG3}04-day-front.webp" alt="Junebhai Residence — street elevation by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG3}03-night.webp" alt="Junebhai Residence — street elevation at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG3}04-day-front.webp" alt="Junebhai Residence, street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG3}03-night.webp" alt="Junebhai Residence, street elevation at night" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG3}05-front-alt.webp" alt="Junebhai Residence — front elevation" />
-      <figcaption>The layered façade — stone, timber, jaali and green.</figcaption>
+      <img src="${IMG3}05-front-alt.webp" alt="Junebhai Residence, front elevation" />
+      <figcaption>The layered façade, stone, timber, jaali and green.</figcaption>
     </figure>
   </div>
 </section>
@@ -552,7 +552,7 @@ const junebhai = `
 const kalpeshbhai = `
 <div class="pd-hero">
   <img src="${IMG4}01-night.webp" alt="Kalpeshbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e8b49a">Architecture — Residential</span><h1>Kalpeshbhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e8b49a">Architecture, Residential</span><h1>Kalpeshbhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
@@ -575,15 +575,15 @@ const kalpeshbhai = `
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
       <img src="${IMG4}02-day.webp" alt="Kalpeshbhai Residence by day" />
-      <figcaption>Daylight — terracotta piers, concrete and vertical gardens in full detail.</figcaption>
+      <figcaption>Daylight, terracotta piers, concrete and vertical gardens in full detail.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG4}04-day-rear.webp" alt="Kalpeshbhai Residence — rear view by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG4}03-night-rear.webp" alt="Kalpeshbhai Residence — rear view at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG4}04-day-rear.webp" alt="Kalpeshbhai Residence, rear view by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG4}03-night-rear.webp" alt="Kalpeshbhai Residence, rear view at night" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG4}05-front.webp" alt="Kalpeshbhai Residence — street elevation" />
-      <figcaption>Street elevation — the timber jaali and planted terrace along the front.</figcaption>
+      <img src="${IMG4}05-front.webp" alt="Kalpeshbhai Residence, street elevation" />
+      <figcaption>Street elevation, the timber jaali and planted terrace along the front.</figcaption>
     </figure>
   </div>
 </section>
@@ -602,14 +602,14 @@ const kalpeshbhai = `
 const kamalbhai = `
 <div class="pd-hero">
   <img src="${IMG5}01-night.webp" alt="Kamalbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e2c39c">Architecture — Residential</span><h1>Kamalbhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e2c39c">Architecture, Residential</span><h1>Kamalbhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
   <div class="container wrap-narrow reveal">
     <p class="eyebrow">The project</p>
-    <p class="lead">A calm, contemporary home in board-formed concrete and warm timber — clean stacked volumes softened by full-height wood-slat panels, deep planted balconies and trailing green that spills from every level.</p>
-    <p class="muted">Grey concrete grids the façade into quiet bays, while cedar-toned slats warm the entrances and screen the terraces. Corner glazing and generous openings pull daylight deep inside; by night, the timber glows and the greenery reads as soft silhouettes against the lit interiors — a restrained, liveable balance of raw material and planting.</p>
+    <p class="lead">A calm, contemporary home in board-formed concrete and warm timber, clean stacked volumes softened by full-height wood-slat panels, deep planted balconies and trailing green that spills from every level.</p>
+    <p class="muted">Grey concrete grids the façade into quiet bays, while cedar-toned slats warm the entrances and screen the terraces. Corner glazing and generous openings pull daylight deep inside; by night, the timber glows and the greenery reads as soft silhouettes against the lit interiors, a restrained, liveable balance of raw material and planting.</p>
   </div>
   <div class="container" style="margin-top:clamp(40px,5vw,60px)">
     <div class="pd-meta reveal">
@@ -625,15 +625,15 @@ const kamalbhai = `
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
       <img src="${IMG5}02-day.webp" alt="Kamalbhai Residence by day" />
-      <figcaption>Daylight — concrete, timber slats and planted balconies in full detail.</figcaption>
+      <figcaption>Daylight, concrete, timber slats and planted balconies in full detail.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG5}04-day-front.webp" alt="Kamalbhai Residence — street elevation by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG5}03-night-front.webp" alt="Kamalbhai Residence — street elevation at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG5}04-day-front.webp" alt="Kamalbhai Residence, street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG5}03-night-front.webp" alt="Kamalbhai Residence, street elevation at night" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG5}05-day-tall.webp" alt="Kamalbhai Residence — front elevation" />
-      <figcaption>Front elevation — the timber-clad core and layered balconies.</figcaption>
+      <img src="${IMG5}05-day-tall.webp" alt="Kamalbhai Residence, front elevation" />
+      <figcaption>Front elevation, the timber-clad core and layered balconies.</figcaption>
     </figure>
   </div>
 </section>
@@ -652,13 +652,13 @@ const kamalbhai = `
 const mukeshbhai = `
 <div class="pd-hero">
   <img src="${IMG6}01-night.webp" alt="Mukeshbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture — Residential</span><h1>Mukeshbhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6c1a0">Architecture, Residential</span><h1>Mukeshbhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
   <div class="container wrap-narrow reveal">
     <p class="eyebrow">The project</p>
-    <p class="lead">A crisp, cubic villa in white and sage — clean panelised volumes cut by a tall exposed-brick jaali that glows like a lantern at the entrance, its perforations dissolving from solid to open as they rise.</p>
+    <p class="lead">A crisp, cubic villa in white and sage, clean panelised volumes cut by a tall exposed-brick jaali that glows like a lantern at the entrance, its perforations dissolving from solid to open as they rise.</p>
     <p class="muted">Interlocking stone-grey and white masses stack and cantilever to frame planted balconies and a sheltered entry court, while full-height glazing and sheer curtains soften the geometry. The single warm brick element anchors the composition against the pale façade; concealed uplighting turns the house luminous after dark.</p>
   </div>
   <div class="container" style="margin-top:clamp(40px,5vw,60px)">
@@ -674,16 +674,16 @@ const mukeshbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG6}03-day-front.jpg" alt="Mukeshbhai Residence — entrance by day" />
-      <figcaption>Daylight — the brick jaali against the white and sage volumes.</figcaption>
+      <img src="${IMG6}03-day-front.jpg" alt="Mukeshbhai Residence, entrance by day" />
+      <figcaption>Daylight, the brick jaali against the white and sage volumes.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG6}02-night-front.webp" alt="Mukeshbhai Residence — entrance at night" /></figure>
-      <figure class="pd-figure"><img src="${IMG6}05-day-street.jpg" alt="Mukeshbhai Residence — street view by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG6}02-night-front.webp" alt="Mukeshbhai Residence, entrance at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG6}05-day-street.jpg" alt="Mukeshbhai Residence, street view by day" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG6}04-night-street.webp" alt="Mukeshbhai Residence — street view at night" />
-      <figcaption>Night — the massing reads as glowing, stacked volumes from the street.</figcaption>
+      <img src="${IMG6}04-night-street.webp" alt="Mukeshbhai Residence, street view at night" />
+      <figcaption>Night, the massing reads as glowing, stacked volumes from the street.</figcaption>
     </figure>
   </div>
 </section>
@@ -702,14 +702,14 @@ const mukeshbhai = `
 const kamleshbhai = `
 <div class="pd-hero">
   <img src="${IMG7}01-front.jpg" alt="Kamleshbhai Residence" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture — Residential</span><h1>Kamleshbhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture, Residential</span><h1>Kamleshbhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
   <div class="container wrap-narrow reveal">
     <p class="eyebrow">The project</p>
-    <p class="lead">A warm, earthen family home where clay-toned render meets banded rammed-earth-textured stone and teak — quiet, grounded volumes arranged around a private courtyard and softened by desert planting.</p>
-    <p class="muted">A double-height stone entrance portal frames a full-height teak door, while a taller rendered block rises behind for the upper rooms. The palette is deliberately of the earth — sandy render, striated stone and timber — and the design turns inward to a sheltered garden. A jaali compound wall gives privacy, and a full run of rooftop solar makes the house quietly self-sufficient.</p>
+    <p class="lead">A warm, earthen family home where clay-toned render meets banded rammed-earth-textured stone and teak, quiet, grounded volumes arranged around a private courtyard and softened by desert planting.</p>
+    <p class="muted">A double-height stone entrance portal frames a full-height teak door, while a taller rendered block rises behind for the upper rooms. The palette is deliberately of the earth, sandy render, striated stone and timber, and the design turns inward to a sheltered garden. A jaali compound wall gives privacy, and a full run of rooftop solar makes the house quietly self-sufficient.</p>
   </div>
   <div class="container" style="margin-top:clamp(40px,5vw,60px)">
     <div class="pd-meta reveal">
@@ -724,16 +724,16 @@ const kamleshbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG7}05-aerial.jpg" alt="Kamleshbhai Residence — aerial view" />
-      <figcaption>Aerial — the plan wraps a private courtyard; rooftop solar crowns the massing.</figcaption>
+      <img src="${IMG7}05-aerial.jpg" alt="Kamleshbhai Residence, aerial view" />
+      <figcaption>Aerial, the plan wraps a private courtyard; rooftop solar crowns the massing.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Kamleshbhai Residence — garden elevation" /></figure>
-      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Kamleshbhai Residence — courtyard elevation" /></figure>
+      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Kamleshbhai Residence, garden elevation" /></figure>
+      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Kamleshbhai Residence, courtyard elevation" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG7}04-rear.jpg" alt="Kamleshbhai Residence — rear elevation" />
-      <figcaption>Rear elevation — rammed-earth-textured stone meets warm clay render.</figcaption>
+      <img src="${IMG7}04-rear.jpg" alt="Kamleshbhai Residence, rear elevation" />
+      <figcaption>Rear elevation, rammed-earth-textured stone meets warm clay render.</figcaption>
     </figure>
   </div>
 </section>
@@ -752,14 +752,14 @@ const kamleshbhai = `
 const sudhirbhai = `
 <div class="pd-hero">
   <img src="${IMG8}03-night-front.webp" alt="Sudhirbhai Residence at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture — Residential</span><h1>Sudhirbhai Residence</h1></div></div>
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture, Residential</span><h1>Sudhirbhai Residence</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
   <div class="container wrap-narrow reveal">
     <p class="eyebrow">The project</p>
-    <p class="lead">A contemporary apartment building where pale stone and grey panels are framed by bands and piers of exposed red brick — deep, recessed balconies stacked up a corner that turns the street with quiet confidence.</p>
-    <p class="muted">Punched openings and full-height glazing are set into stone surrounds, while brick wraps the corner and grounds the base at the sheltered parking level. A timber-lined pavilion caps the roof, catching light and giving the block a crown. The material pairing — cool stone against warm brick — keeps the elevation ordered yet tactile.</p>
+    <p class="lead">A contemporary apartment building where pale stone and grey panels are framed by bands and piers of exposed red brick, deep, recessed balconies stacked up a corner that turns the street with quiet confidence.</p>
+    <p class="muted">Punched openings and full-height glazing are set into stone surrounds, while brick wraps the corner and grounds the base at the sheltered parking level. A timber-lined pavilion caps the roof, catching light and giving the block a crown. The material pairing, cool stone against warm brick, keeps the elevation ordered yet tactile.</p>
   </div>
   <div class="container" style="margin-top:clamp(40px,5vw,60px)">
     <div class="pd-meta reveal">
@@ -774,12 +774,12 @@ const sudhirbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG8}02-day-corner.webp" alt="Sudhirbhai Residence — corner view by day" />
-      <figcaption>Daylight — stone and grey panels framed by exposed red brick.</figcaption>
+      <img src="${IMG8}02-day-corner.webp" alt="Sudhirbhai Residence, corner view by day" />
+      <figcaption>Daylight, stone and grey panels framed by exposed red brick.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Sudhirbhai Residence — corner at night" /></figure>
-      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Sudhirbhai Residence — street elevation by day" /></figure>
+      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Sudhirbhai Residence, corner at night" /></figure>
+      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Sudhirbhai Residence, street elevation by day" /></figure>
     </div>
   </div>
 </section>
@@ -798,9 +798,9 @@ const sudhirbhai = `
 const NIMG = 'assets/projects/nehalbhai/';
 const nehalbhai = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${NIMG}hero.webp" alt="Nehalbhai Residence — living room" />
+  <img src="${NIMG}hero.webp" alt="Nehalbhai Residence, living room" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#e6b7a3">Interior Design — Residential · Surat</span>
+    <span class="tag" style="color:#e6b7a3">Interior Design, Residential · Surat</span>
     <h1>Nehalbhai Residence</h1>
     <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
   </div></div>
@@ -811,11 +811,11 @@ const nehalbhai = `
     <div class="grid-2 top">
       <div class="reveal">
         <p class="eyebrow">The project</p>
-        <h2 class="statement">The raw hallmarks of <em>industrial</em> design — exposed concrete and copper — softened with warm, modern living.</h2>
+        <h2 class="statement">The raw hallmarks of <em>industrial</em> design, exposed concrete and copper, softened with warm, modern living.</h2>
       </div>
       <div class="reveal d1">
         <p class="lead">Micro-cement walls, a ribbed concrete ceiling and surface-mounted copper conduits set the structural key. Against it, textured terracotta sofas, geometric glass tables, sheer drapes and indoor greenery bring warmth and calm.</p>
-        <p class="muted">The interior is composed as a single, continuous idea with the architecture that holds it — a comprehensive approach where every material, fixture and line is resolved together. Diffused daylight softens the shell by day; exposed copper track lighting and frosted milk-glass globes warm it by night.</p>
+        <p class="muted">The interior is composed as a single, continuous idea with the architecture that holds it, a comprehensive approach where every material, fixture and line is resolved together. Diffused daylight softens the shell by day; exposed copper track lighting and frosted milk-glass globes warm it by night.</p>
       </div>
     </div>
   </div>
@@ -853,9 +853,9 @@ const nehalbhai = `
       <h2 class="h-lg">The spaces.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Nehalbhai Residence — living room" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Nehalbhai Residence — master bedroom" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Nehalbhai Residence — bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Nehalbhai Residence, living room" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Nehalbhai Residence, master bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Nehalbhai Residence, bedroom" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -865,18 +865,18 @@ const nehalbhai = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Nehalbhai Residence renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Bedroom — micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Nehalbhai Residence — bedroom" /></figure>
-      <figure class="slide" data-cap="Living room — terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Nehalbhai Residence — living room" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Living room — glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Nehalbhai Residence — living room seating" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Master bedroom — a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Nehalbhai Residence — master bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Dining — copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Nehalbhai Residence — dining" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Lounge — sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Nehalbhai Residence — lounge" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Nehalbhai Residence, bedroom" /></figure>
+      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Nehalbhai Residence, living room" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Nehalbhai Residence, living room seating" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Nehalbhai Residence, master bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Nehalbhai Residence, dining" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Nehalbhai Residence, lounge" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
     <div class="slideshow__bar">
       <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Bedroom — micro-cement walls and a warm timber base.</span>
+        <span class="slideshow__cap">Bedroom, micro-cement walls and a warm timber base.</span>
         <div class="slideshow__dots" role="tablist"></div>
         <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
       </div>
@@ -891,12 +891,12 @@ const nehalbhai = `
       <h2 class="h-lg">Where the warmth lives.</h2>
     </div>
     <div class="pd-details reveal">
-      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Nehalbhai Residence — copper-toned steel-mesh partition" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Nehalbhai Residence — kitchen" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Nehalbhai Residence — dining" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Nehalbhai Residence — bathroom" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Nehalbhai Residence — powder room" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Nehalbhai Residence — bedroom" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Nehalbhai Residence, copper-toned steel-mesh partition" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Nehalbhai Residence, kitchen" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Nehalbhai Residence, dining" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Nehalbhai Residence, bathroom" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Nehalbhai Residence, powder room" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Nehalbhai Residence, bedroom" loading="lazy" /></figure>
     </div>
   </div>
 </section>
@@ -920,7 +920,7 @@ const services = `
       <p class="eyebrow">What we do</p>
       <h1 class="whead__title display" style="font-size:clamp(44px,7vw,96px)">Discipline.</h1>
     </div>
-    <p class="lead reveal" style="max-width:600px;margin-top:18px">Three connected disciplines under one roof — architecture, interiors and furniture, integrated into a single, comprehensive approach to transforming spaces.</p>
+    <p class="lead reveal" style="max-width:600px;margin-top:18px">Three connected disciplines under one roof, architecture, interiors and furniture, integrated into a single, comprehensive approach to transforming spaces.</p>
   </div>
   <div class="dcols">
     ${dcol('01', 'Architecture', 'architecture', IMG + '01-day.webp', 'Surat, Gujarat')}
@@ -933,7 +933,7 @@ const services = `
   <div class="container">
     <div class="reveal" style="max-width:640px;margin-bottom:clamp(40px,5vw,64px)"><p class="eyebrow">How we work</p><h2 class="h-lg">From first sketch to finished object.</h2></div>
     <div class="steps reveal">
-      <div class="step"><div class="step__n">01</div><h4>Sketch</h4><p>Ideas begin on paper — concept studies that capture the intent.</p></div>
+      <div class="step"><div class="step__n">01</div><h4>Sketch</h4><p>Ideas begin on paper, concept studies that capture the intent.</p></div>
       <div class="step"><div class="step__n">02</div><h4>Plan</h4><p>Rough thinking is resolved into a considered, comprehensive plan.</p></div>
       <div class="step"><div class="step__n">03</div><h4>Craft</h4><p>Production is set in motion with custom craftsmanship.</p></div>
       <div class="step"><div class="step__n">04</div><h4>Deliver</h4><p>The space or piece is refined, resolved and handed over.</p></div>
@@ -944,7 +944,7 @@ const services = `
 <section class="cta section">
   <div class="container reveal">
     <h2>Not sure which service you need?</h2>
-    <p>Tell us about your project and we'll point you to the right starting point — no obligation.</p>
+    <p>Tell us about your project and we'll point you to the right starting point, no obligation.</p>
     <a href="contact.html" class="btn btn--ghost-light">Talk to us ${ARROW}</a>
   </div>
 </section>`;
@@ -955,32 +955,66 @@ const about = `
     <div class="reveal">
       <p class="eyebrow">The studio</p>
       <h1 class="display" style="font-size:clamp(42px,6vw,86px)">Tvastra<br />Design LLP</h1>
+      <p class="muted" style="margin-top:20px;font-family:var(--serif);font-size:clamp(18px,2vw,22px);color:var(--clay)">Inspired by creativity. Defined by design.</p>
     </div>
     <div class="reveal d1">
-      <p class="lead">A firm dedicated to architecture, interior design and product design. With a legacy of 29 years, we have been a pioneering force in shaping architectural landscapes, crafting inspired interiors, and producing exquisite furniture.</p>
-      <p class="muted">Our philosophy revolves around the fusion of innovation and custom craftsmanship — seamlessly blending historical elegance with contemporary aesthetics, so every project is a masterpiece of both.</p>
+      <p class="lead">Tvastra Design LLP is an architecture and interior design firm dedicated to creating spaces that are functional, timeless and meaningful.</p>
+      <p class="muted">We believe every project is more than a design assignment. It is someone's dream, lifestyle and future, and we treat it that way, blending creative thinking with practical planning, technical precision and quality execution.</p>
     </div>
   </div>
 </section>
 
 <section class="section section--paper2">
   <div class="container grid-2 top">
-    <div class="reveal"><p class="eyebrow">Our vision</p><h2 class="statement">Every home a <em>sanctuary</em> of comfort, style and individuality.</h2></div>
-    <div class="reveal d1">
-      <p class="muted">We envision a world where every home is a sanctuary of comfort, style and individuality — and we commit to being the catalyst for that transformation, redefining the entire design experience.</p>
-      <p class="muted">We are unwavering in our belief to source responsibly, to champion ethical practices, and to create living spaces that resonate with our clients' desires while respecting the environment. Our commitment revolves around timeless design, durability and affordability.</p>
-    </div>
+    <div class="reveal"><p class="eyebrow">What we bring</p><h2 class="h-lg">Creativity, grounded.</h2></div>
+    <ul class="approach reveal d1">
+      <li>Creative thinking</li>
+      <li>Practical planning</li>
+      <li>Technical precision</li>
+      <li>Quality execution</li>
+      <li>Client satisfaction</li>
+    </ul>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <div class="reveal" style="margin-bottom:6px"><p class="eyebrow">What guides us</p><h2 class="h-lg">Our principles.</h2></div>
-    <div class="disc reveal">
-      <div class="disc__row"><div class="disc__n">01</div><h3>Innovation &amp; craft</h3><div class="muted">The fusion of innovation and custom craftsmanship sits at the heart of everything we make.</div></div>
-      <div class="disc__row"><div class="disc__n">02</div><h3>Elegance, old &amp; new</h3><div class="muted">We blend historical elegance with contemporary aesthetics, so our work feels both timeless and current.</div></div>
-      <div class="disc__row"><div class="disc__n">03</div><h3>Form meets function</h3><div class="muted">Every design integrates utility, aesthetics, functionality and style into a single, resolved idea.</div></div>
-      <div class="disc__row"><div class="disc__n">04</div><h3>Responsible &amp; lasting</h3><div class="muted">We source responsibly and build to last — timeless design, durability and affordability, made to be lived with.</div></div>
+  <div class="container grid-2 top">
+    <div class="reveal"><p class="eyebrow">The founder's journey</p><h2 class="statement">Passion became <em>purpose.</em></h2></div>
+    <div class="reveal d1">
+      <p class="lead">The passion for designing started during college, learning by balancing education with real site work, days on projects and nights on assignments.</p>
+      <p class="muted">Real-world experience became the biggest teacher. Every project strengthened both knowledge and confidence, and taught a simple lesson that still guides the studio: success comes from continuous learning and practical experience.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink">
+  <div class="container grid-2 top">
+    <div class="reveal"><p class="eyebrow">Why we started</p><h2 class="h-lg">Design that solves real problems.</h2></div>
+    <div class="reveal d1">
+      <p class="lead" style="color:#cfd9e0">Tvastra was founded on one simple belief: great design is not just about beautiful spaces, it is about solving real problems.</p>
+      <p class="muted" style="margin-bottom:20px">So every design we make sets out to be:</p>
+      <ul class="approach">
+        <li>Functional</li>
+        <li>Practical</li>
+        <li>Creative</li>
+        <li>Budget friendly</li>
+        <li>Long lasting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container grid-2 top">
+    <div class="reveal"><p class="eyebrow">Our philosophy</p><h2 class="statement">People always come before <em>projects.</em></h2></div>
+    <div class="reveal d1">
+      <p class="muted" style="margin-bottom:20px">Whether it is a client, a vendor, a contractor or a team member, everyone deserves respect. That belief shows up as:</p>
+      <ul class="approach">
+        <li>Respect and trust</li>
+        <li>Transparency</li>
+        <li>Honest communication</li>
+        <li>Long-term relationships</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -993,14 +1027,14 @@ const about = `
       <div class="stat"><div class="n">2023</div><div class="l">A&amp;D Platinum Winner</div></div>
       <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
     </div>
-    <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Platinum Winner — Architecture &amp; Design Collection Awards 2023.&nbsp; Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
+    <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Platinum Winner, Architecture &amp; Design Collection Awards 2023.&nbsp; Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
   </div>
 </section>
 
 <section class="cta section">
   <div class="container reveal">
     <h2>Let's build something worth returning to.</h2>
-    <p>A home, a workspace, an interior or a single piece of furniture — we'd love to hear what you're planning.</p>
+    <p>A home, a workspace, an interior or a single piece of furniture, we'd love to hear what you're planning.</p>
     <a href="contact.html" class="btn btn--ghost-light">Get in touch ${ARROW}</a>
   </div>
 </section>`;
@@ -1010,14 +1044,14 @@ const contact = `
   <div class="container reveal" style="max-width:760px;margin-bottom:clamp(40px,5vw,60px)">
     <p class="eyebrow">Say hello</p>
     <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Let's talk.</h1>
-    <p class="lead" style="margin-top:22px">Tell us a little about your project — the site, the idea, the timeline — and we'll get back to you within a couple of working days.</p>
+    <p class="lead" style="margin-top:22px">Tell us a little about your project, the site, the idea, the timeline, and we'll get back to you within a couple of working days.</p>
   </div>
   <div class="container contact-grid">
     <div class="reveal">
-      <div class="cinfo"><div class="k">Studio</div><div class="v">Patel Faliyu, near Pal–Umra Bridge,<br />opp. Karuna Sagar Temple, Umra Rd,<br />Athwalines, Surat, Gujarat 395007</div></div>
+      <div class="cinfo"><div class="k">Studio</div><div class="v">Patel Faliyu, near Pal-Umra Bridge,<br />opp. Karuna Sagar Temple, Umra Rd,<br />Athwalines, Surat, Gujarat 395007</div></div>
       <div class="cinfo"><div class="k">Email</div><div class="v"><a href="mailto:info@tvastra.design">info@tvastra.design</a></div></div>
       <div class="cinfo"><div class="k">Phone</div><div class="v"><a href="tel:+919081813231">+91 90818 13231</a></div></div>
-      <div class="cinfo"><div class="k">Hours</div><div class="v">Mon – Sat, 10:00 – 18:00</div></div>
+      <div class="cinfo"><div class="k">Hours</div><div class="v">Mon to Sat, 10:00 to 18:00</div></div>
       <div class="socials" style="margin-top:16px">
         <a href="https://www.instagram.com/tvastradesignllp/" aria-label="Instagram" target="_blank" rel="noopener" style="border-color:var(--line)">${IG}</a>
         <a href="#" aria-label="LinkedIn" style="border-color:var(--line)">${LI}</a>
@@ -1049,7 +1083,7 @@ const recognition = `
   <div class="container reveal" style="max-width:820px">
     <p class="eyebrow">Awards &amp; press</p>
     <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Recognition.</h1>
-    <p class="lead" style="margin-top:22px">Considered, crafted work — and the honours it has quietly earned along the way.</p>
+    <p class="lead" style="margin-top:22px">Considered, crafted work, and the honours it has quietly earned along the way.</p>
   </div>
 </section>
 
@@ -1085,7 +1119,7 @@ const recognition = `
 <section class="cta section">
   <div class="container reveal">
     <h2>Let's create something worth celebrating.</h2>
-    <p>Tell us about your project — we'd love to help shape it.</p>
+    <p>Tell us about your project, we'd love to help shape it.</p>
     <a href="contact.html" class="btn btn--ghost-light">Get in touch ${ARROW}</a>
   </div>
 </section>`;
@@ -1096,7 +1130,7 @@ const foundersMind = `
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#bfe0f2">The founder</span>
     <h1>Inside the founder's mind</h1>
-    <p class="pd-hero__sub">Design since 1995 — a way of seeing, before it is a way of building.</p>
+    <p class="pd-hero__sub">Design since 1995, a way of seeing, before it is a way of building.</p>
   </div></div>
 </div>
 
@@ -1105,11 +1139,11 @@ const foundersMind = `
     <div class="grid-2 top">
       <div class="reveal">
         <p class="eyebrow">The journey</p>
-        <h2 class="statement">It began in 1995 — in <em>college studies</em>, in practical training, and on site, learning how buildings really come together.</h2>
+        <h2 class="statement">It began in 1995, in <em>college studies</em>, in practical training, and on site, learning how buildings really come together.</h2>
       </div>
       <div class="reveal d1">
-        <p class="lead">Nearly three decades on, that hands-on beginning still shapes the way I work — moving between the drawing and the dust of the workshop, from the first sketch to the finished site.</p>
-        <p class="muted">I have never seen architecture, interiors and the objects within them as separate crafts. They are one continuous idea — and my role is to hold that idea steady, across every scale and every discipline, until a space feels inevitable.</p>
+        <p class="lead">Nearly three decades on, that hands-on beginning still shapes the way I work, moving between the drawing and the dust of the workshop, from the first sketch to the finished site.</p>
+        <p class="muted">I have never seen architecture, interiors and the objects within them as separate crafts. They are one continuous idea, and my role is to hold that idea steady, across every scale and every discipline, until a space feels inevitable.</p>
       </div>
     </div>
   </div>
@@ -1120,8 +1154,8 @@ const foundersMind = `
     <div class="reveal" style="max-width:760px">
       <p class="eyebrow">What I believe</p>
       <h2 class="h-lg" style="margin-bottom:26px">Good design is quiet.</h2>
-      <p class="lead" style="color:#cfd9e0">It does not announce itself. It earns its place through proportion, light and material — through the patience to resolve the unseen details, and the discipline to leave out everything that isn't needed.</p>
-      <p class="muted" style="margin-top:16px">A home should feel like a sanctuary — comfortable, individual, and made to last. That belief, more than any style, is what carries through every project.</p>
+      <p class="lead" style="color:#cfd9e0">It does not announce itself. It earns its place through proportion, light and material, through the patience to resolve the unseen details, and the discipline to leave out everything that isn't needed.</p>
+      <p class="muted" style="margin-top:16px">A home should feel like a sanctuary, comfortable, individual, and made to last. That belief, more than any style, is what carries through every project.</p>
     </div>
   </div>
 </section>
@@ -1154,24 +1188,24 @@ const foundersMind = `
 
 /* ---------- assemble ---------- */
 const PAGES = [
-  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
-  { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition — Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
-  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
-  { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects — Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
-  { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects — Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP — considered materials, custom furniture and contemporary warmth.', content: projInterior },
-  { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects — Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP.', content: projProduct },
-  { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
-  { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
-  { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence — Tvastra Design LLP', desc: 'Kalpeshbhai Residence — a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
-  { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence — Tvastra Design LLP', desc: 'Kamalbhai Residence — a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
-  { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
-  { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
-  { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
-  { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence — Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence — a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
-  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
-  { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
-  { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind — Tvastra Design LLP", desc: "Inside the founder's mind — designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
-  { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
+  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
+  { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
+  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
+  { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects, Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
+  { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
+  { file: 'projects-product.html',     id: 'proj-prod', nav: 'projects.html', dark: true,  title: 'Product Design Projects, Tvastra Design LLP', desc: 'Furniture and product design by Tvastra Design LLP.', content: projProduct },
+  { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence, Tvastra Design LLP', desc: 'Aashihbhai Residence, a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
+  { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence, Tvastra Design LLP', desc: 'Junebhai Residence, a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
+  { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence, Tvastra Design LLP', desc: 'Kalpeshbhai Residence, a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
+  { file: 'kamalbhai-residence.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Kamalbhai Residence, Tvastra Design LLP', desc: 'Kamalbhai Residence, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: kamalbhai },
+  { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence, Tvastra Design LLP', desc: 'Mukeshbhai Residence, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
+  { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence, Tvastra Design LLP', desc: 'Kamleshbhai Residence, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
+  { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence, Tvastra Design LLP', desc: 'Sudhirbhai Residence, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
+  { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence, Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
+  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
+  { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
+  { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
+  { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact, Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
 ];
 
 for (const p of PAGES) {
@@ -1292,7 +1326,7 @@ if (process.argv[2] === 'preview') {
   }); });
   // form
   var form = document.querySelector('#contact-form');
-  if(form) form.addEventListener('submit', function(e){ e.preventDefault(); var n=form.querySelector('.form-status'); if(n) n.textContent="Thank you — your enquiry has reached us. (Preview: not actually sent.)"; form.reset(); });
+  if(form) form.addEventListener('submit', function(e){ e.preventDefault(); var n=form.querySelector('.form-status'); if(n) n.textContent="Thank you, your enquiry has reached us. (Preview: not actually sent.)"; form.reset(); });
 
   // slideshow / carousel
   document.querySelectorAll('.slideshow').forEach(function(ss){
@@ -1320,7 +1354,7 @@ if (process.argv[2] === 'preview') {
 })();
 </script>`;
 
-  const banner = `<div style="position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--ink);color:#d8cbb8;font:500 12px/1.4 var(--sans);letter-spacing:.02em;text-align:center;padding:8px 16px">Interactive preview — click through every page. Web-font rendering differs slightly from the deployed site.</div>`;
+  const banner = `<div style="position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--ink);color:#d8cbb8;font:500 12px/1.4 var(--sans);letter-spacing:.02em;text-align:center;padding:8px 16px">Interactive preview, click through every page. Web-font rendering differs slightly from the deployed site.</div>`;
 
   const out = `<style>
 ${css}
