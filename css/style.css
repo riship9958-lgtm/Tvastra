@@ -546,6 +546,13 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pcols .dcol:hover { transform: scale(1.035); z-index: 5; box-shadow: 0 30px 60px -22px rgba(0,0,0,.65); }
 .pcols .dcol:hover .dcol__img img { filter: brightness(.92) blur(0); transform: scale(1.01); }
 .disc-empty--dark { border-color: rgba(255,255,255,.2); color: #aebfc9; margin-top: clamp(24px, 3vw, 40px); }
+/* Product-category cards */
+.pcols--trio { grid-template-columns: repeat(3, 1fr); margin-top: 2px; }
+@media (max-width: 720px) { .pcols--trio { grid-template-columns: 1fr; } }
+.dcol--soon { background: linear-gradient(150deg, #1b2a38 0%, #0e1720 100%); }
+.dcol__img--soon { position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0 14px, rgba(255,255,255,0) 14px 28px); }
+.dcol--soon::after { background: linear-gradient(180deg, rgba(8,14,20,.35) 0%, rgba(8,14,20,.1) 40%, rgba(8,14,20,.55) 100%); }
+.dcol--soon .dcol__side { color: var(--clay-soft); }
 @media (max-width: 720px) { .pcols { grid-template-columns: 1fr; } .pcols .dcol { height: 56vh; min-height: 340px; } }
 
 /* ---------- Project detail — premium layout ---------- */

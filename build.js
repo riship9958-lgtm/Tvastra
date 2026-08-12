@@ -171,6 +171,19 @@ function dcard(num, href, img, name, side) {
 }
 function pcol(num, p) { return dcard(num, p.file, p.card, p.name, 'Residential &middot; Surat'); }
 
+// A product-category card (same format as dcard; supports an image-less "coming soon" state).
+function catcard(num, o) {
+  const media = o.img
+    ? `<div class="dcol__img"><img src="${o.img}" alt="${o.name}" loading="lazy" /></div>`
+    : `<div class="dcol__img dcol__img--soon"></div>`;
+  return `<a class="dcol reveal${o.img ? '' : ' dcol--soon'}" href="${o.href || 'contact.html'}">
+      ${media}
+      <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${o.name}</span></div>
+      <span class="dcol__side">${o.side}</span>
+      ${PLUS}
+    </a>`;
+}
+
 // A discipline group on the projects overview page — numbered heading + a grid of project columns.
 function projGroup(num, id, title, cat) {
   const items = PROJECTS_LIST.filter(function (p) { return p.cat === cat; });
@@ -196,6 +209,13 @@ function disciplinePage(ghost, title, cat, lead, feature) {
   let body;
   if (items.length) {
     body = `<div class="pcols">\n      ${items.map(function (p, i) { return pcol(String(i + 1).padStart(2, '0'), p); }).join('\n      ')}\n    </div>`;
+  } else if (Array.isArray(feature) && feature.length) {
+    const first = `<div class="pcols">\n      ${catcard('01', feature[0])}\n    </div>`;
+    const rest = feature.slice(1);
+    const more = rest.length
+      ? `<div class="pcols pcols--trio">\n      ${rest.map(function (o, i) { return catcard(String(i + 2).padStart(2, '0'), o); }).join('\n      ')}\n    </div>`
+      : '';
+    body = first + more + `\n  <div class="container"><p class="pgrp__note reveal">Furniture in production; lighting, décor and bespoke commissions on request. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
   } else if (feature) {
     body = `<div class="pcols">\n      ${dcard('01', feature.href, feature.img, feature.name, feature.side)}\n    </div>
   <div class="container"><p class="pgrp__note reveal">More ${title.toLowerCase()} projects are being photographed. <a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></p></div>`;
@@ -306,7 +326,12 @@ const projInterior = disciplinePage(
 const projProduct = disciplinePage(
   'Objects', 'Product Design', 'product',
   'Furniture and objects designed and made in-house — the pieces that complete a Tvastra interior.',
-  { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Meshobase', side: 'Furniture' }
+  [
+    { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Meshobase', side: 'Furniture' },
+    { href: 'contact.html', name: 'Lighting', side: 'Coming soon' },
+    { href: 'contact.html', name: 'Decor', side: 'Coming soon' },
+    { href: 'contact.html', name: 'Bespoke', side: 'Coming soon' }
+  ]
 );
 
 const aashihbhai = `
