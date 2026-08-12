@@ -515,6 +515,9 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .dcol__img { position: absolute; inset: 0; }
 .dcol__img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.72); transition: transform 1s var(--ease), filter .5s var(--ease); }
 .dcol:hover .dcol__img img { transform: scale(1.06); filter: brightness(.5); }
+/* Discipline page columns: black & white at rest, colour on hover */
+.dcols .dcol__img img { filter: grayscale(1) brightness(.8); }
+.dcols .dcol:hover .dcol__img img { filter: grayscale(0) brightness(.68); }
 .dcol::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,14,20,.5) 0%, rgba(8,14,20,.05) 30%, rgba(8,14,20,.6) 100%); }
 .dcol__top { position: absolute; top: 32px; left: 30px; z-index: 3; }
 .dcol__num { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; color: var(--clay-soft); letter-spacing: .06em; margin-bottom: 6px; }
