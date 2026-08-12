@@ -495,3 +495,33 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 
 .disc-empty { border: 1px dashed var(--line); border-radius: 3px; padding: clamp(40px, 7vw, 88px) 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; color: var(--stone-dk); }
 .disc-empty span { font-size: 14px; letter-spacing: .03em; }
+
+/* ==========================================================================
+   Discipline page — dark section, ghosted heading, tall numbered columns
+   ========================================================================== */
+.dsec { background: var(--bg-deep); color: #fff; padding-top: clamp(120px, 16vh, 200px); padding-bottom: 0; overflow: hidden; }
+.dsec .lead { color: #b9c4cc; }
+
+.whead { position: relative; display: inline-block; padding-top: clamp(30px, 5vw, 64px); }
+.whead__ghost { position: absolute; left: -4px; top: 0; z-index: 0; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600;
+  font-size: clamp(72px, 13vw, 210px); line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.07);
+  text-transform: uppercase; white-space: nowrap; pointer-events: none; }
+.whead .eyebrow { position: relative; z-index: 1; color: var(--clay-soft); }
+.whead .eyebrow::before { background: var(--clay-soft); }
+.whead__title { position: relative; z-index: 1; }
+
+.dcols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: clamp(40px, 6vw, 84px); }
+.dcol { position: relative; overflow: hidden; height: min(76vh, 760px); display: block; color: #fff; }
+.dcol__img { position: absolute; inset: 0; }
+.dcol__img img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.72); transition: transform 1s var(--ease), filter .5s var(--ease); }
+.dcol:hover .dcol__img img { transform: scale(1.06); filter: brightness(.5); }
+.dcol::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(8,14,20,.5) 0%, rgba(8,14,20,.05) 30%, rgba(8,14,20,.6) 100%); }
+.dcol__top { position: absolute; top: 32px; left: 30px; z-index: 3; }
+.dcol__num { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; color: var(--clay-soft); letter-spacing: .06em; margin-bottom: 6px; }
+.dcol__title { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; font-size: clamp(22px, 2vw, 30px); }
+.dcol__side { position: absolute; bottom: 34px; left: 34px; z-index: 3; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+.dcol__plus { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; transition: opacity .35s var(--ease); }
+.dcol__plus > span { width: 62px; height: 62px; border: 1px solid rgba(255,255,255,.6); border-radius: 50%; display: grid; place-items: center; background: rgba(0,0,0,.15); }
+.dcol__plus svg { width: 22px; height: 22px; }
+.dcol:hover .dcol__plus { opacity: 1; }
+@media (max-width: 820px) { .dcols { grid-template-columns: 1fr; gap: 2px; } .dcol { height: 56vh; min-height: 360px; } }

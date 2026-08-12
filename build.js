@@ -150,6 +150,16 @@ function discSection(id, title, cat) {
 </section>`;
 }
 
+// A tall numbered discipline column (Agressov-style), linking to its projects.
+function dcol(num, title, cat, img, side) {
+  return `<a class="dcol reveal" href="projects.html#d-${cat}">
+      <div class="dcol__img"><img src="${img}" alt="${title}" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${title}</span></div>
+      <span class="dcol__side">${side}</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
+    </a>`;
+}
+
 const home = `
 <section class="title-card">
   <div class="title-card__inner">
@@ -610,59 +620,20 @@ const sudhirbhai = `
 </section>`;
 
 const services = `
-<section class="wwd" id="wwd">
-  <div class="wwd__stage">
-    <div class="wwd__track">
-      <article class="wwd__slide" data-cat="architecture">
-        <div class="wwd__media"><img src="${IMG}01-day.webp" alt="Architecture" loading="lazy" /></div>
-        <h2 class="wwd__word">Architec&shy;ture</h2>
-        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Façade</li><li>Sustainable</li></ul>
-      </article>
-      <article class="wwd__slide" data-cat="interior">
-        <div class="wwd__media"><img src="${IMG4}01-night.webp" alt="Interior Design" loading="lazy" /></div>
-        <h2 class="wwd__word">Interior<br>Design</h2>
-        <ul class="wwd__tags"><li>Residential</li><li>Commercial</li><li>Styling</li><li>Lighting</li></ul>
-      </article>
-      <article class="wwd__slide" data-cat="product">
-        <div class="wwd__media"><img src="${IMG6}01-night.webp" alt="Product Design" loading="lazy" /></div>
-        <h2 class="wwd__word">Product<br>Design</h2>
-        <ul class="wwd__tags"><li>Furniture</li><li>Vatrusa</li><li>Teak · Oak · Walnut</li><li>Objets</li></ul>
-      </article>
+<section class="dsec">
+  <div class="container">
+    <div class="whead reveal">
+      <span class="whead__ghost" aria-hidden="true">Discipline</span>
+      <p class="eyebrow">What we do</p>
+      <h1 class="whead__title display" style="font-size:clamp(44px,7vw,96px)">Discipline.</h1>
     </div>
+    <p class="lead reveal" style="max-width:600px;margin-top:18px">Three connected disciplines under one roof — architecture, interiors and furniture, integrated into a single, comprehensive approach to transforming spaces.</p>
   </div>
-
-  <div class="wwd__meta">
-    <span class="wwd__label">What we do</span>
-    <div class="wwd__num"><b>01</b><span>/ 03</span></div>
+  <div class="dcols">
+    ${dcol('01', 'Architecture', 'architecture', IMG + '01-day.webp', 'Surat, Gujarat')}
+    ${dcol('02', 'Interior Design', 'interior', IMG4 + '01-night.webp', 'Residential · Commercial')}
+    ${dcol('03', 'Product Design', 'product', IMG6 + '01-night.webp', 'Vatrusa Furniture')}
   </div>
-
-  <button class="wwd__arrow wwd__prev" aria-label="Previous discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 6l-6 6 6 6"/></svg></button>
-  <button class="wwd__arrow wwd__next" aria-label="Next discipline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l6 6-6 6"/></svg></button>
-
-  <a class="wwd__view" href="projects.html"><span>View projects</span><span class="wwd__circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-
-  <script>
-  (function(){
-    var s = document.getElementById('wwd'); if(!s || s.__wwd) return; s.__wwd = 1;
-    var track = s.querySelector('.wwd__track');
-    var slides = s.querySelectorAll('.wwd__slide');
-    var numB = s.querySelector('.wwd__num b');
-    var view = s.querySelector('.wwd__view');
-    var total = slides.length, i = 0;
-    function go(n){
-      i = (n % total + total) % total;
-      track.style.transform = 'translateX(' + (-i * 100) + '%)';
-      slides.forEach(function(sl, k){ sl.classList.toggle('is-active', k === i); });
-      if(numB) numB.textContent = '0' + (i + 1);
-      if(view) view.setAttribute('href', 'projects.html#d-' + slides[i].getAttribute('data-cat'));
-    }
-    s.querySelector('.wwd__next').addEventListener('click', function(){ go(i + 1); });
-    s.querySelector('.wwd__prev').addEventListener('click', function(){ go(i - 1); });
-    s.addEventListener('keydown', function(e){ if(e.key==='ArrowRight') go(i+1); if(e.key==='ArrowLeft') go(i-1); });
-    s.setAttribute('tabindex','0');
-    go(0);
-  })();
-  </script>
 </section>
 
 <section class="section section--ink">
