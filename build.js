@@ -170,7 +170,7 @@ const home = `
 </section>
 
 <section class="hero" id="lead">
-  <div class="hero__media"><img src="${IMG}01-day.webp" alt="Aashihbhai Residence — brick and concrete façade" /></div>
+  <div class="hero__media"><img src="assets/home/hero-bw.webp" alt="Tvastra Design — rammed-earth residence, black and white" /></div>
   <div class="container hero__inner">
     <p class="eyebrow">Architecture · Interiors · Objects</p>
     <h1>We shape spaces worth returning to.</h1>
