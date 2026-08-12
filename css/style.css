@@ -561,8 +561,9 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pd-hero__sub { margin-top: 14px; font-size: clamp(15px, 1.6vw, 19px); color: rgba(255,255,255,.82); letter-spacing: .01em; max-width: 30ch; }
 /* Longer hero titles (e.g. Inside the Founder's Mind) — smaller and wrap-friendly so they never crowd the edge */
 .fmind-hero .pd-hero__cap h1 { font-size: clamp(30px, 4.6vw, 66px); line-height: 1.08; max-width: 16ch; text-wrap: balance; }
-/* Pin the top of the photo: widening the window crops the sides and bottom, never the top */
-.fmind-hero img { object-position: 76% top; }
+/* Wide, left-extended photo: keep the figure anchored right and the top pinned, so
+   resizing only reveals/crops the fog on the left — the composition never changes. */
+.fmind-hero img { object-position: right top; }
 .pd-intro { padding-top: clamp(70px, 9vw, 130px); }
 .pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
 
