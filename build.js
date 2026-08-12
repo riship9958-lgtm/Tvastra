@@ -7,7 +7,16 @@
    ========================================================================== */
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const ROOT = __dirname;
+
+// Content-hash cache-busting: browsers refetch css/js only when they actually change.
+function assetVer(rel) {
+  try { return crypto.createHash('md5').update(fs.readFileSync(path.join(ROOT, rel))).digest('hex').slice(0, 8); }
+  catch (e) { return '1'; }
+}
+const CSS_VER = assetVer('css/style.css');
+const JS_VER = assetVer('js/main.js');
 
 /* ---------- shared bits ---------- */
 const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />';
@@ -24,7 +33,7 @@ function head(title, desc) {
 <meta name="description" content="${desc}" />
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 ${FONTS}
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/style.css?v=${CSS_VER}" />
 </head>
 <body>`;
 }
@@ -88,7 +97,7 @@ const FOOTER = `
     </div>
   </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="js/main.js?v=${JS_VER}"></script>
 </body>
 </html>`;
 
@@ -1217,7 +1226,7 @@ if (process.argv[2] === 'preview') {
     <ul class="nav-links">${navLinks}</ul>
   </div>
 </header>`;
-  const spaFooter = prep(FOOTER.replace('<script src="js/main.js"></script>','').replace('</body>','').replace('</html>',''));
+  const spaFooter = prep(FOOTER.replace(/<script src="js\/main\.js[^"]*"><\/script>/, '').replace('</body>','').replace('</html>',''));
 
   const spaScript = `
 <script>
