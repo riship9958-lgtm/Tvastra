@@ -111,6 +111,7 @@ const PROJECTS_LIST = [
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
   { name: 'Kamleshbhai Residence', file: 'kamleshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
   { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
+  { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet) — none shown for now
 const PROJECTS_SOON = [];
@@ -736,6 +737,123 @@ const sudhirbhai = `
   </div>
 </section>`;
 
+const NIMG = 'assets/projects/nehalbhai/';
+const nehalbhai = `
+<div class="pd-hero pd-hero--tall">
+  <img src="${NIMG}hero.webp" alt="Nehalbhai Residence — living room" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e6b7a3">Interior Design — Residential · Surat</span>
+    <h1>Nehalbhai Residence</h1>
+    <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">The raw hallmarks of <em>industrial</em> design — exposed concrete and copper — softened with warm, modern living.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">Micro-cement walls, a ribbed concrete ceiling and surface-mounted copper conduits set the structural key. Against it, textured terracotta sofas, geometric glass tables, sheer drapes and indoor greenery bring warmth and calm.</p>
+        <p class="muted">The interior is composed as a single, continuous idea with the architecture that holds it — a comprehensive approach where every material, fixture and line is resolved together. Diffused daylight softens the shell by day; exposed copper track lighting and frosted milk-glass globes warm it by night.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
+      <div><div class="k">Style</div><div class="v">Industrial · Warm</div></div>
+      <div><div class="k">Palette</div><div class="v">Concrete &amp; terracotta</div></div>
+      <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">Colour psychology</p><h2 class="h-lg">Cold structure, warm energy.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Concrete</div><p>A calm, stable, neutral foundation.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Terracotta</div><p>Warmth, energy and a cosy, welcoming feel.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Greenery</div><p>Brings life and softens the harsh industrial lines.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Copper</div><p>A touch of warm, reflective sophistication.</p></div>
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      <span>Wood</span><span>Metal</span><span>Glass</span><span>Fabric</span><span>Micro-cement</span>
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">The spaces.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Nehalbhai Residence — living room" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Nehalbhai Residence — master bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Nehalbhai Residence — bedroom" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">Room by room.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Nehalbhai Residence renders">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="Bedroom — micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Nehalbhai Residence — bedroom" /></figure>
+      <figure class="slide" data-cap="Living room — terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Nehalbhai Residence — living room" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Living room — glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Nehalbhai Residence — living room seating" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Master bedroom — a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Nehalbhai Residence — master bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Dining — copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Nehalbhai Residence — dining" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Lounge — sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Nehalbhai Residence — lounge" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">Bedroom — micro-cement walls and a warm timber base.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Details</p>
+      <h2 class="h-lg">Where the warmth lives.</h2>
+    </div>
+    <div class="pd-details reveal">
+      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Nehalbhai Residence — copper-toned steel-mesh partition" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Nehalbhai Residence — kitchen" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Nehalbhai Residence — dining" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Nehalbhai Residence — bathroom" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Nehalbhai Residence — powder room" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Nehalbhai Residence — bedroom" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="dsec">
   <div class="container">
@@ -929,6 +1047,7 @@ const PAGES = [
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence — Tvastra Design LLP', desc: 'Mukeshbhai Residence — a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
   { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence — Tvastra Design LLP', desc: 'Kamleshbhai Residence — a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
   { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence — Tvastra Design LLP', desc: 'Sudhirbhai Residence — a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
+  { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence — Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence — a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines — Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio — Tvastra Design LLP', desc: 'About Tvastra Design LLP — a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact — Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
