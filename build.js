@@ -631,8 +631,8 @@ const services = `
   </div>
   <div class="dcols">
     ${dcol('01', 'Architecture', 'architecture', IMG + '01-day.webp', 'Surat, Gujarat')}
-    ${dcol('02', 'Interior Design', 'interior', IMG4 + '01-night.webp', 'Residential · Commercial')}
-    ${dcol('03', 'Product Design', 'product', IMG6 + '01-night.webp', 'Vatrusa Furniture')}
+    ${dcol('02', 'Interior Design', 'interior', 'assets/interior/living-room.webp', 'Residential · Commercial')}
+    ${dcol('03', 'Product Design', 'product', 'assets/product/mesh-chair.webp', 'Vatrusa Furniture')}
   </div>
 </section>
 
