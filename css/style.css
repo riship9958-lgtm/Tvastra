@@ -633,6 +633,16 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .section--ink .link-arrow { color: #bfe0f2; }
 @media (max-width: 760px) { .founder__grid { grid-template-columns: 1fr; } }
 
+/* The name — brand-story section (About) */
+.namesec { text-align: center; }
+.namesec__inner { max-width: 780px; margin: 0 auto; }
+.namesec__logo { width: min(340px, 66vw); height: auto; margin: 0 auto clamp(30px, 4vw, 46px); }
+.namesec .eyebrow { margin-bottom: 16px; }
+.namesec__title { max-width: 18ch; margin: 0 auto 22px; }
+.namesec__title em { font-style: italic; color: var(--clay); }
+.namesec__lead { max-width: 60ch; margin: 0 auto 16px; }
+.namesec__body { max-width: 66ch; margin: 0 auto; }
+
 /* Colour-psychology grid */
 .cpsych { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 34px) clamp(24px, 4vw, 48px); }
 .cpsych__item { border-top: 1px solid var(--line); padding-top: 16px; }
