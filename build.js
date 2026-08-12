@@ -305,7 +305,7 @@ const projInterior = disciplinePage(
 const projProduct = disciplinePage(
   'Objects', 'Product Design', 'product',
   'Furniture and objects designed and made in-house — the pieces that complete a Tvastra interior.',
-  { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Steel Mesh Chair', side: 'Furniture' }
+  { href: 'contact.html', img: 'assets/product/mesh-chair.webp', name: 'Meshobase', side: 'Furniture' }
 );
 
 const aashihbhai = `
