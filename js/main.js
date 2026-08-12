@@ -60,6 +60,57 @@
     });
   }
 
+  // ---- Slideshow / carousel ----
+  window.initSlideshows = function (root) {
+    var scope = root || document;
+    scope.querySelectorAll(".slideshow").forEach(function (ss) {
+      if (ss.__init) return; ss.__init = true;
+      var slides = [].slice.call(ss.querySelectorAll(".slide"));
+      if (!slides.length) return;
+      var dotsWrap = ss.querySelector(".slideshow__dots");
+      var capEl = ss.querySelector(".slideshow__cap");
+      var curEl = ss.querySelector(".slideshow__counter .cur");
+      var idx = 0;
+      slides.forEach(function (s, i) { if (s.classList.contains("is-active")) idx = i; });
+      var dots = slides.map(function (_, i) {
+        var b = document.createElement("button");
+        b.className = "dot" + (i === idx ? " is-active" : "");
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", "Slide " + (i + 1));
+        b.addEventListener("click", function () { go(i, true); });
+        if (dotsWrap) dotsWrap.appendChild(b);
+        return b;
+      });
+      function go(n, user) {
+        idx = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle("is-active", i === idx); });
+        dots.forEach(function (d, i) { d.classList.toggle("is-active", i === idx); });
+        if (curEl) curEl.textContent = ("0" + (idx + 1)).slice(-2);
+        if (capEl) capEl.textContent = slides[idx].getAttribute("data-cap") || "";
+        if (user) restart();
+      }
+      var prev = ss.querySelector(".slideshow__nav--prev");
+      var next = ss.querySelector(".slideshow__nav--next");
+      if (prev) prev.addEventListener("click", function () { go(idx - 1, true); });
+      if (next) next.addEventListener("click", function () { go(idx + 1, true); });
+      var delay = parseInt(ss.getAttribute("data-autoplay"), 10) || 0, timer = null;
+      function restart() { if (!delay) return; clearInterval(timer); timer = setInterval(function () { go(idx + 1); }, delay); }
+      ss.addEventListener("mouseenter", function () { clearInterval(timer); });
+      ss.addEventListener("mouseleave", restart);
+      // touch swipe
+      var x0 = null;
+      ss.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+      ss.addEventListener("touchend", function (e) {
+        if (x0 === null) return;
+        var dx = e.changedTouches[0].clientX - x0;
+        if (Math.abs(dx) > 40) go(idx + (dx < 0 ? 1 : -1), true);
+        x0 = null;
+      }, { passive: true });
+      restart();
+    });
+  };
+  window.initSlideshows();
+
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");
   if (form) {

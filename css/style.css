@@ -547,3 +547,50 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pcols .dcol:hover .dcol__img img { filter: brightness(.92) blur(0); transform: scale(1.01); }
 .disc-empty--dark { border-color: rgba(255,255,255,.2); color: #aebfc9; margin-top: clamp(24px, 3vw, 40px); }
 @media (max-width: 720px) { .pcols { grid-template-columns: 1fr; } .pcols .dcol { height: 56vh; min-height: 340px; } }
+
+/* ---------- Project detail — premium layout ---------- */
+.pd-hero--tall { height: 96svh; }
+.pd-hero--tall .pd-hero__cap { padding-bottom: clamp(38px, 6vw, 76px); background: linear-gradient(0deg, rgba(14,20,26,.82), rgba(14,20,26,.15) 46%, transparent); }
+.pd-hero__sub { margin-top: 14px; font-size: clamp(15px, 1.6vw, 19px); color: rgba(255,255,255,.82); letter-spacing: .01em; max-width: 30ch; }
+.pd-intro { padding-top: clamp(70px, 9vw, 130px); }
+.pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
+
+/* Design-approach list */
+.approach { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(24px, 4vw, 56px); }
+.approach li { position: relative; padding: 16px 0 16px 26px; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); color: var(--ink); }
+.approach li::before { content: ""; position: absolute; left: 0; top: 50%; width: 8px; height: 8px; margin-top: -4px; border: 1px solid var(--clay); border-radius: 50%; }
+@media (max-width: 560px) { .approach { grid-template-columns: 1fr; } }
+
+/* Accommodation / program */
+.program { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 3vw, 40px); }
+.program__floor { border-top: 1px solid var(--line); padding-top: 18px; }
+.program__lvl { font-family: var(--serif); font-size: clamp(19px, 2vw, 24px); color: var(--clay); margin-bottom: 14px; }
+.program__floor ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.program__floor li { font-size: 14.5px; color: var(--stone-dk); letter-spacing: .01em; }
+
+/* Slideshow */
+.pd-showcase { padding-block: clamp(64px, 9vw, 130px); }
+.slideshow { position: relative; background: var(--bg-deep); }
+.slideshow__viewport { position: relative; width: 100%; height: min(80vh, 840px); overflow: hidden; }
+.slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1s var(--ease); pointer-events: none; }
+.slide.is-active { opacity: 1; pointer-events: auto; }
+.slide img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.03); transition: transform 6s var(--ease); }
+.slide.is-active img { transform: scale(1); }
+.slideshow__nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; width: clamp(46px, 4vw, 58px); height: clamp(46px, 4vw, 58px); border-radius: 50%; border: 1px solid rgba(255,255,255,.45); background: rgba(10,16,22,.28); backdrop-filter: blur(4px); color: #fff; display: grid; place-items: center; cursor: pointer; opacity: .78; transition: opacity .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease); }
+.slideshow__nav:hover { opacity: 1; background: rgba(10,16,22,.5); border-color: #fff; }
+.slideshow__nav svg { width: 22px; height: 22px; }
+.slideshow__nav--prev { left: clamp(14px, 2.5vw, 34px); }
+.slideshow__nav--next { right: clamp(14px, 2.5vw, 34px); }
+.slideshow__bar { background: var(--bg-deep); color: #fff; padding-block: clamp(18px, 2vw, 26px); }
+.slideshow__bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.slideshow__cap { font-size: 13.5px; letter-spacing: .015em; color: rgba(255,255,255,.72); flex: 1; min-width: 0; }
+.slideshow__dots { display: flex; gap: 10px; }
+.slideshow__dots .dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); background: transparent; cursor: pointer; transition: background .3s var(--ease), transform .3s var(--ease); }
+.slideshow__dots .dot.is-active { background: #fff; transform: scale(1.15); }
+.slideshow__counter { font-family: var(--serif); font-size: 15px; letter-spacing: .06em; color: rgba(255,255,255,.85); white-space: nowrap; }
+.slideshow__counter .cur { color: var(--clay-soft); }
+@media (max-width: 640px) {
+  .slideshow__viewport { height: 62vh; }
+  .slideshow__cap { display: none; }
+  .slideshow__bar-inner { justify-content: center; gap: 26px; }
+}
