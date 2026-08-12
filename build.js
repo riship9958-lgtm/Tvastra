@@ -977,16 +977,6 @@ const about = `
   </div>
 </section>
 
-<section class="section">
-  <div class="container grid-2 top">
-    <div class="reveal"><p class="eyebrow">The founder's journey</p><h2 class="statement">Passion became <em>purpose.</em></h2></div>
-    <div class="reveal d1">
-      <p class="lead">The passion for designing started during college, learning by balancing education with real site work, days on projects and nights on assignments.</p>
-      <p class="muted">Real-world experience became the biggest teacher. Every project strengthened both knowledge and confidence, and taught a simple lesson that still guides the studio: success comes from continuous learning and practical experience.</p>
-    </div>
-  </div>
-</section>
-
 <section class="section section--ink">
   <div class="container grid-2 top">
     <div class="reveal"><p class="eyebrow">Why we started</p><h2 class="h-lg">Design that solves real problems.</h2></div>
@@ -1138,12 +1128,12 @@ const foundersMind = `
   <div class="container">
     <div class="grid-2 top">
       <div class="reveal">
-        <p class="eyebrow">The journey</p>
-        <h2 class="statement">It began in 1995, in <em>college studies</em>, in practical training, and on site, learning how buildings really come together.</h2>
+        <p class="eyebrow">The founder's journey</p>
+        <h2 class="statement">Passion became <em>purpose.</em></h2>
       </div>
       <div class="reveal d1">
-        <p class="lead">Nearly three decades on, that hands-on beginning still shapes the way I work, moving between the drawing and the dust of the workshop, from the first sketch to the finished site.</p>
-        <p class="muted">I have never seen architecture, interiors and the objects within them as separate crafts. They are one continuous idea, and my role is to hold that idea steady, across every scale and every discipline, until a space feels inevitable.</p>
+        <p class="lead">The passion for designing started during college, learning by balancing education with real site work, days on projects and nights on assignments.</p>
+        <p class="muted">Real-world experience became the biggest teacher. Every project strengthened both knowledge and confidence, and taught a simple lesson that still guides the studio: success comes from continuous learning and practical experience.</p>
       </div>
     </div>
   </div>
