@@ -602,8 +602,8 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
   .slideshow__bar-inner { justify-content: center; gap: 26px; }
 }
 
-/* Full uncropped renders below the slideshow — three side by side */
-.pd-fullset { margin-top: clamp(48px, 6vw, 84px); }
+/* Full uncropped 3D-elevation renders — three side by side */
+.pd-showcase__sub { margin-top: clamp(58px, 7vw, 104px); }
 .pd-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 1.5vw, 20px); }
 .pd-full { margin: 0; }
 .pd-full img { width: 100%; height: auto; display: block; border-radius: 2px; }

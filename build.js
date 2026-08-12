@@ -359,6 +359,16 @@ const aashihbhai = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">3D Elevation.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence — full corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence — full aerial view" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence — full side elevation with brick jaali" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
       <h2 class="h-lg">Day to night.</h2>
     </div>
   </div>
@@ -379,17 +389,6 @@ const aashihbhai = `
         <div class="slideshow__dots" role="tablist"></div>
         <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
       </div>
-    </div>
-  </div>
-  <div class="container pd-fullset">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">The complete project</p>
-      <h2 class="h-lg">Every angle.</h2>
-    </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Aashihbhai Residence — full corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Aashihbhai Residence — full aerial view" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Aashihbhai Residence — full side elevation with brick jaali" loading="lazy" /></figure>
     </div>
   </div>
 </section>
