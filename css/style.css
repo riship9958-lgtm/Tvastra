@@ -568,6 +568,13 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .program__floor ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
 .program__floor li { font-size: 14.5px; color: var(--stone-dk); letter-spacing: .01em; }
 
+/* Concept sketches — shown whole (uncropped) */
+.pd-sketch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 28px); }
+.pd-sketch-fig { margin: 0; }
+.pd-sketch-fig img { width: 100%; height: auto; display: block; background: #fff; border: 1px solid var(--line); border-radius: 2px; }
+.pd-sketch-note { text-align: center; margin-top: clamp(22px, 3vw, 34px); font-size: 14px; letter-spacing: .01em; }
+@media (max-width: 640px) { .pd-sketch-grid { grid-template-columns: 1fr; } }
+
 /* Slideshow */
 .pd-showcase { padding-block: clamp(64px, 9vw, 130px); }
 .slideshow { position: relative; background: var(--bg-deep); }
