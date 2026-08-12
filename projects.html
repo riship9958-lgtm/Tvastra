@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header class="site-header solid on-light">
+<header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="Tvastra Design LLP — home">
       <img class="logo-color" src="assets/logo.png" alt="Tvastra Design LLP" />
@@ -20,75 +20,96 @@
     <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="services.html">Discipline</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="contact.html">Contact Us</a></li></ul>
   </div>
 </header>
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
-  <div class="container reveal" style="max-width:760px">
-    <p class="eyebrow">Selected work</p>
-    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
-    <p class="lead" style="margin-top:22px">Our work, grouped by discipline — architecture, interiors and product design.</p>
-  </div>
-</section>
-
-
-<section class="section" id="d-architecture">
+<section class="dsec">
   <div class="container">
-    <div class="reveal" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:clamp(26px,3vw,42px);border-top:1px solid var(--line);padding-top:clamp(28px,3vw,44px)">
-      <h2 class="h-lg">Architecture.</h2>
-      <span class="muted" style="font-size:13px;letter-spacing:.06em;text-transform:uppercase">8 projects</span>
+    <div class="whead reveal">
+      <span class="whead__ghost" aria-hidden="true">Projects</span>
+      <p class="eyebrow">Selected work</p>
+      <h1 class="whead__title display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
     </div>
-    <div class="tiles">
-      <a class="tile reveal" href="aashihbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/aashihbhai/01-day.webp" alt="Aashihbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Aashihbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+    <p class="lead reveal" style="max-width:600px;margin-top:18px">Our work, grouped by discipline — architecture, interiors and product design, each project a fusion of innovation and custom craftsmanship.</p>
+  </div>
+  
+  <div class="pgrp" id="d-architecture">
+    <div class="container">
+      <div class="pgrp__head reveal">
+        <span class="pgrp__num">01</span>
+        <h2 class="pgrp__title">Architecture</h2>
+        <span class="pgrp__count">8 Projects</span>
+      </div>
+    </div>
+    <div class="pcols">
+      <a class="dcol reveal" href="aashihbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/aashihbhai/01-day.webp" alt="Aashihbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">01</span><span class="dcol__title">Aashihbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal d1" href="dilipbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/dilipbhai/01-day.jpg" alt="Dilipbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Dilipbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="dilipbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/dilipbhai/01-day.jpg" alt="Dilipbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">02</span><span class="dcol__title">Dilipbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal" href="junebhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/junebhai/02-dusk.webp" alt="Junebhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Junebhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="junebhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/junebhai/02-dusk.webp" alt="Junebhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">03</span><span class="dcol__title">Junebhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal d1" href="kalpeshbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/kalpeshbhai/01-night.webp" alt="Kalpeshbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Kalpeshbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="kalpeshbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/kalpeshbhai/01-night.webp" alt="Kalpeshbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">04</span><span class="dcol__title">Kalpeshbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal" href="kamalbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/kamalbhai/01-night.webp" alt="Kamalbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Kamalbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="kamalbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/kamalbhai/01-night.webp" alt="Kamalbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">05</span><span class="dcol__title">Kamalbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal d1" href="mukeshbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/mukeshbhai/01-night.webp" alt="Mukeshbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Mukeshbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="mukeshbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/mukeshbhai/01-night.webp" alt="Mukeshbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">06</span><span class="dcol__title">Mukeshbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal" href="kamleshbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/kamleshbhai/01-front.jpg" alt="Kamleshbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Kamleshbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="kamleshbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/kamleshbhai/01-front.jpg" alt="Kamleshbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">07</span><span class="dcol__title">Kamleshbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
-      <a class="tile reveal d1" href="sudhirbhai-residence.html" data-cat="architecture">
-      <div class="tile__img"><img src="assets/projects/sudhirbhai/01-night-corner.webp" alt="Sudhirbhai Residence" loading="lazy" /></div>
-      <div class="tile__cap"><span class="tile__cat">Architecture</span><span class="tile__name">Sudhirbhai Residence</span><span class="tile__meta">Residential · Surat, Gujarat</span></div>
+      <a class="dcol reveal" href="sudhirbhai-residence.html">
+      <div class="dcol__img"><img src="assets/projects/sudhirbhai/01-night-corner.webp" alt="Sudhirbhai Residence" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">08</span><span class="dcol__title">Sudhirbhai Residence</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
     </a>
     </div>
   </div>
-</section>
-
-<section class="section" id="d-interior">
-  <div class="container">
-    <div class="reveal" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:clamp(26px,3vw,42px);border-top:1px solid var(--line);padding-top:clamp(28px,3vw,44px)">
-      <h2 class="h-lg">Interior Design.</h2>
-      <span class="muted" style="font-size:13px;letter-spacing:.06em;text-transform:uppercase">Coming soon</span>
+  
+  <div class="pgrp" id="d-interior">
+    <div class="container">
+      <div class="pgrp__head reveal">
+        <span class="pgrp__num">02</span>
+        <h2 class="pgrp__title">Interior Design</h2>
+        <span class="pgrp__count">Coming soon</span>
+      </div>
     </div>
-    <div class="disc-empty reveal"><span>Projects in interior design are being photographed.</span><a href="contact.html" class="link-arrow">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="container"><div class="disc-empty disc-empty--dark reveal"><span>Projects in interior design are being photographed.</span><a href="contact.html" class="link-arrow">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
   </div>
-</section>
-
-<section class="section" id="d-product">
-  <div class="container">
-    <div class="reveal" style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:clamp(26px,3vw,42px);border-top:1px solid var(--line);padding-top:clamp(28px,3vw,44px)">
-      <h2 class="h-lg">Product Design.</h2>
-      <span class="muted" style="font-size:13px;letter-spacing:.06em;text-transform:uppercase">Coming soon</span>
+  
+  <div class="pgrp" id="d-product">
+    <div class="container">
+      <div class="pgrp__head reveal">
+        <span class="pgrp__num">03</span>
+        <h2 class="pgrp__title">Product Design</h2>
+        <span class="pgrp__count">Coming soon</span>
+      </div>
     </div>
-    <div class="disc-empty reveal"><span>Projects in product design are being photographed.</span><a href="contact.html" class="link-arrow">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="container"><div class="disc-empty disc-empty--dark reveal"><span>Projects in product design are being photographed.</span><a href="contact.html" class="link-arrow">Enquire <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div>
   </div>
 </section>
 

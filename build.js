@@ -150,6 +150,35 @@ function discSection(id, title, cat) {
 </section>`;
 }
 
+// A tall numbered project column (Agressov-style), linking to its case study.
+function pcol(num, p) {
+  return `<a class="dcol reveal" href="${p.file}">
+      <div class="dcol__img"><img src="${p.card}" alt="${p.name}" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${p.name}</span></div>
+      <span class="dcol__side">Residential &middot; Surat</span>
+      <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
+    </a>`;
+}
+
+// A discipline group on the projects page — numbered heading + a grid of project columns.
+function projGroup(num, id, title, cat) {
+  const items = PROJECTS_LIST.filter(function (p) { return p.cat === cat; });
+  const grid = items.length
+    ? `<div class="pcols">\n      ${items.map(function (p, i) { return pcol(String(i + 1).padStart(2, '0'), p); }).join('\n      ')}\n    </div>`
+    : `<div class="container"><div class="disc-empty disc-empty--dark reveal"><span>Projects in ${title.toLowerCase()} are being photographed.</span><a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></div></div>`;
+  return `
+  <div class="pgrp" id="${id}">
+    <div class="container">
+      <div class="pgrp__head reveal">
+        <span class="pgrp__num">${num}</span>
+        <h2 class="pgrp__title">${title}</h2>
+        <span class="pgrp__count">${items.length ? (items.length + (items.length > 1 ? ' Projects' : ' Project')) : 'Coming soon'}</span>
+      </div>
+    </div>
+    ${grid}
+  </div>`;
+}
+
 // A tall numbered discipline column (Agressov-style), linking to its projects.
 function dcol(num, title, cat, img, side) {
   return `<a class="dcol reveal" href="projects.html#d-${cat}">
@@ -210,17 +239,19 @@ const home = `
 `;
 
 const projects = `
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
-  <div class="container reveal" style="max-width:760px">
-    <p class="eyebrow">Selected work</p>
-    <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
-    <p class="lead" style="margin-top:22px">Our work, grouped by discipline — architecture, interiors and product design.</p>
+<section class="dsec">
+  <div class="container">
+    <div class="whead reveal">
+      <span class="whead__ghost" aria-hidden="true">Projects</span>
+      <p class="eyebrow">Selected work</p>
+      <h1 class="whead__title display" style="font-size:clamp(44px,7vw,96px)">Projects.</h1>
+    </div>
+    <p class="lead reveal" style="max-width:600px;margin-top:18px">Our work, grouped by discipline — architecture, interiors and product design, each project a fusion of innovation and custom craftsmanship.</p>
   </div>
+  ${projGroup('01', 'd-architecture', 'Architecture', 'architecture')}
+  ${projGroup('02', 'd-interior', 'Interior Design', 'interior')}
+  ${projGroup('03', 'd-product', 'Product Design', 'product')}
 </section>
-
-${discSection('d-architecture', 'Architecture', 'architecture')}
-${discSection('d-interior', 'Interior Design', 'interior')}
-${discSection('d-product', 'Product Design', 'product')}
 `;
 
 const aashihbhai = `
@@ -851,7 +882,7 @@ const recognition = `
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP — Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP — a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft. Home of the Vatrusa furniture line.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition — Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
-  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: false, title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
+  { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work — Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including the Aashihbhai Residence.', content: projects },
   { file: 'aashihbhai-residence.html', id: 'project',   nav: 'projects.html', dark: true,  title: 'Aashihbhai Residence — Tvastra Design LLP', desc: 'Aashihbhai Residence — a sculptural brick-and-concrete family home in Surat by Tvastra Design LLP.', content: aashihbhai },
   { file: 'dilipbhai-residence.html',  id: 'project2',  nav: 'projects.html', dark: true,  title: 'Dilipbhai Residence — Tvastra Design LLP', desc: 'Dilipbhai Residence — a contemporary stone-and-sage family villa in Surat by Tvastra Design LLP.', content: dilipbhai },
   { file: 'junebhai-residence.html',   id: 'project3',  nav: 'projects.html', dark: true,  title: 'Junebhai Residence — Tvastra Design LLP', desc: 'Junebhai Residence — a green, terraced residence with cascading planting and a brick-jaali screen in Surat by Tvastra Design LLP.', content: junebhai },
