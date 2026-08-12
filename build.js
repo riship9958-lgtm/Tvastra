@@ -120,7 +120,7 @@ const PROJECTS_LIST = [
   { name: 'Urdhva',  file: 'urdhva.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
   { name: 'Vālukā', file: 'valuka.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
   { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
-  { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
+  { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -795,13 +795,13 @@ const asamvrta = `
   </div>
 </section>`;
 
-const NIMG = 'assets/projects/nehalbhai/';
-const nehalbhai = `
+const NIMG = 'assets/projects/metal-life/';
+const metalLife = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${NIMG}hero.webp" alt="Nehalbhai Residence, living room" />
+  <img src="${NIMG}hero.webp" alt="Metal Life, living room" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e6b7a3">Interior Design, Residential · Surat</span>
-    <h1>Nehalbhai Residence</h1>
+    <h1>Metal Life</h1>
     <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
   </div></div>
 </div>
@@ -853,9 +853,9 @@ const nehalbhai = `
       <h2 class="h-lg">The spaces.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Nehalbhai Residence, living room" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Nehalbhai Residence, master bedroom" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Nehalbhai Residence, bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Metal Life, living room" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -863,14 +863,14 @@ const nehalbhai = `
       <h2 class="h-lg">Room by room.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Nehalbhai Residence renders">
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Metal Life renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Nehalbhai Residence, bedroom" /></figure>
-      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Nehalbhai Residence, living room" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Nehalbhai Residence, living room seating" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Nehalbhai Residence, master bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Nehalbhai Residence, dining" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Nehalbhai Residence, lounge" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
+      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Metal Life, living room seating" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -891,12 +891,12 @@ const nehalbhai = `
       <h2 class="h-lg">Where the warmth lives.</h2>
     </div>
     <div class="pd-details reveal">
-      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Nehalbhai Residence, copper-toned steel-mesh partition" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Nehalbhai Residence, kitchen" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Nehalbhai Residence, dining" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Nehalbhai Residence, bathroom" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Nehalbhai Residence, powder room" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Nehalbhai Residence, bedroom" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Metal Life, copper-toned steel-mesh partition" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Metal Life, kitchen" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Metal Life, dining" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Metal Life, bathroom" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Metal Life, powder room" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
     </div>
   </div>
 </section>
@@ -1203,7 +1203,7 @@ const PAGES = [
   { file: 'urdhva.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Urdhva, Tvastra Design LLP', desc: 'Urdhva, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: urdhva },
   { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
-  { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence, Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
+  { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
