@@ -108,7 +108,7 @@ const IMG3 = 'assets/projects/rju/';
 const IMG4 = 'assets/projects/kalpeshbhai/';
 const IMG5 = 'assets/projects/vallabh-nivas/';
 const IMG6 = 'assets/projects/mukeshbhai/';
-const IMG7 = 'assets/projects/kamleshbhai/';
+const IMG7 = 'assets/projects/valuka/';
 const IMG8 = 'assets/projects/sudhirbhai/';
 
 // Central list of real projects, add one entry (+ a detail page) to publish a new project.
@@ -118,7 +118,7 @@ const PROJECTS_LIST = [
   { name: 'Kalpeshbhai Residence', file: 'kalpeshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG4}01-night.webp`, feat: `${IMG4}01-night.webp` },
   { name: 'Vallabh Nivas',   file: 'vallabh-nivas.html',   cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG5}01-night.webp`, feat: `${IMG5}01-night.webp` },
   { name: 'Mukeshbhai Residence',  file: 'mukeshbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG6}02-night-street.webp`, feat: `${IMG6}02-night-street.webp` },
-  { name: 'Kamleshbhai Residence', file: 'kamleshbhai-residence.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
+  { name: 'Vālukā', file: 'valuka.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
   { name: 'Sudhirbhai Residence',  file: 'sudhirbhai-residence.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Nehalbhai Residence',   file: 'nehalbhai-residence.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/nehalbhai/hero.webp', feat: 'assets/projects/nehalbhai/hero.webp' },
 ];
@@ -699,10 +699,10 @@ const mukeshbhai = `
   </div>
 </section>`;
 
-const kamleshbhai = `
+const valuka = `
 <div class="pd-hero pd-hero--zoom">
-  <img src="${IMG7}01-front.jpg" alt="Kamleshbhai Residence" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture, Residential</span><h1>Kamleshbhai Residence</h1></div></div>
+  <img src="${IMG7}01-front.jpg" alt="Vālukā" />
+  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture, Residential</span><h1>Vālukā</h1></div></div>
 </div>
 
 <section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
@@ -724,15 +724,15 @@ const kamleshbhai = `
 <section class="section" style="padding-top:0">
   <div class="container">
     <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG7}05-aerial.jpg" alt="Kamleshbhai Residence, aerial view" />
+      <img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view" />
       <figcaption>Aerial, the plan wraps a private courtyard; rooftop solar crowns the massing.</figcaption>
     </figure>
     <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Kamleshbhai Residence, garden elevation" /></figure>
-      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Kamleshbhai Residence, courtyard elevation" /></figure>
+      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Vālukā, garden elevation" /></figure>
+      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Vālukā, courtyard elevation" /></figure>
     </div>
     <figure class="pd-figure reveal">
-      <img src="${IMG7}04-rear.jpg" alt="Kamleshbhai Residence, rear elevation" />
+      <img src="${IMG7}04-rear.jpg" alt="Vālukā, rear elevation" />
       <figcaption>Rear elevation, rammed-earth-textured stone meets warm clay render.</figcaption>
     </figure>
   </div>
@@ -1201,7 +1201,7 @@ const PAGES = [
   { file: 'kalpeshbhai-residence.html', id: 'project4', nav: 'projects.html', dark: true,  title: 'Kalpeshbhai Residence, Tvastra Design LLP', desc: 'Kalpeshbhai Residence, a terracotta-and-concrete family home with vertical gardens and timber-jaali screens in Surat by Tvastra Design LLP.', content: kalpeshbhai },
   { file: 'vallabh-nivas.html',   id: 'project5', nav: 'projects.html', dark: true,  title: 'Vallabh Nivas, Tvastra Design LLP', desc: 'Vallabh Nivas, a concrete-and-timber family home with planted balconies and cascading greenery in Surat by Tvastra Design LLP.', content: vallabhNivas },
   { file: 'mukeshbhai-residence.html',  id: 'project6', nav: 'projects.html', dark: true,  title: 'Mukeshbhai Residence, Tvastra Design LLP', desc: 'Mukeshbhai Residence, a crisp white-and-sage cubic villa with a glowing exposed-brick jaali in Surat by Tvastra Design LLP.', content: mukeshbhai },
-  { file: 'kamleshbhai-residence.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Kamleshbhai Residence, Tvastra Design LLP', desc: 'Kamleshbhai Residence, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: kamleshbhai },
+  { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
   { file: 'sudhirbhai-residence.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Sudhirbhai Residence, Tvastra Design LLP', desc: 'Sudhirbhai Residence, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: sudhirbhai },
   { file: 'nehalbhai-residence.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Nehalbhai Residence, Interior Design by Tvastra Design LLP', desc: 'Nehalbhai Residence, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: nehalbhai },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
