@@ -556,10 +556,10 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
 
 /* Design-approach list */
-.approach { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0 clamp(24px, 4vw, 56px); }
-.approach li { position: relative; padding: 16px 0 16px 26px; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); color: var(--ink); }
-.approach li::before { content: ""; position: absolute; left: 0; top: 50%; width: 8px; height: 8px; margin-top: -4px; border: 1px solid var(--clay); border-radius: 50%; }
-@media (max-width: 560px) { .approach { grid-template-columns: 1fr; } }
+.approach { list-style: none; columns: 2; column-gap: clamp(24px, 4vw, 56px); }
+.approach li { display: flex; align-items: flex-start; gap: 14px; break-inside: avoid; padding: 15px 0; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); line-height: 1.5; color: var(--ink); }
+.approach li::before { content: ""; flex: 0 0 8px; width: 8px; height: 8px; margin-top: calc(0.75em - 4px); border: 1px solid var(--clay); border-radius: 50%; }
+@media (max-width: 560px) { .approach { columns: 1; } }
 
 /* Accommodation / program */
 .program { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: clamp(24px, 3vw, 40px); }
