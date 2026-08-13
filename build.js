@@ -1200,14 +1200,16 @@ const foundersMind = `
 <section class="section fportfolio">
   <div class="container">
     <div class="grid-2 top fportfolio__grid">
-      <figure class="fportfolio__media reveal">
+      <a class="fportfolio__media reveal" href="founder-portfolio.html" aria-label="Open the founder's portfolio">
         <img src="assets/founder/founder-portfolio-bw.webp" alt="The founder of Tvastra Design LLP, camera in hand, framed by a carved jharokha" loading="lazy" />
-      </figure>
+        ${PLUS}
+      </a>
       <div class="fportfolio__text reveal d1">
         <p class="eyebrow">The founder's portfolio</p>
         <h2 class="h-lg">A designer's eye, off the drawing board.</h2>
         <p class="lead">The same attention to proportion, light and detail that shapes a building carries into how the world is seen through a lens, quiet frames of craft, ornament and space.</p>
         <p class="muted">Travel and photography are where the studio's language is refreshed. Carved facades, old courtyards and the play of shadow become a private library of reference that finds its way back into the work.</p>
+        <a href="founder-portfolio.html" class="link-arrow">View the portfolio ${ARROW}</a>
       </div>
     </div>
   </div>
@@ -1223,6 +1225,37 @@ const foundersMind = `
     </div>
   </div>
 </section>`;
+
+// The founder's personal portfolio — projects and photographs, added over time.
+// To add a piece, drop its image in assets/founder/portfolio/ and append an entry:
+//   { img: 'assets/founder/portfolio/<file>.webp', name: 'Title', side: 'Place · Year', href: 'optional-link.html' }
+const FOUNDER_WORKS = [
+];
+
+function fwcard(num, w) {
+  return `<a class="dcol reveal" href="${w.href || '#'}">
+      <div class="dcol__img"><img src="${w.img}" alt="${w.name}" loading="lazy" /></div>
+      <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${w.name}</span></div>
+      <span class="dcol__side">${w.side || ''}</span>
+      ${PLUS}
+    </a>`;
+}
+
+const founderPortfolio = `
+<section class="dsec">
+  <div class="container">
+    <div class="whead reveal">
+      <span class="whead__ghost" aria-hidden="true">Portfolio</span>
+      <p class="eyebrow"><a href="founders-mind.html" class="crumb">Inside the founder's mind</a> &middot; Portfolio</p>
+      <h1 class="whead__title display" style="font-size:clamp(40px,6.4vw,88px)">The portfolio.</h1>
+    </div>
+    <p class="lead reveal" style="max-width:640px;margin-top:18px">A personal archive of projects and photographs by the founder of Tvastra Design LLP, a designer's eye at work beyond the drawing board.</p>
+  </div>
+  ${FOUNDER_WORKS.length
+    ? `<div class="pcols">\n      ${FOUNDER_WORKS.map(function (w, i) { return fwcard(String(i + 1).padStart(2, '0'), w); }).join('\n      ')}\n    </div>`
+    : `<div class="container"><div class="disc-empty disc-empty--dark reveal"><span>The portfolio is being compiled. Projects and photographs will be added here.</span><a href="contact.html" class="link-arrow">Enquire ${ARROW}</a></div></div>`}
+</section>
+`;
 
 const PERKS = [
   ['Professional development', 'Ongoing training for skill growth and career advancement.'],
@@ -1339,6 +1372,7 @@ const PAGES = [
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
+  { file: 'founder-portfolio.html',    id: 'founder-portfolio', nav: 'about.html', dark: true, title: "The Founder's Portfolio, Tvastra Design LLP", desc: "The founder's portfolio, a personal archive of projects and photographs by the founder of Tvastra Design LLP.", content: founderPortfolio },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact, Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
 ];
 
