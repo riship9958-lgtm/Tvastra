@@ -1264,7 +1264,7 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://apsda.org/competition/apsda-awards-2025/finalist-list/" target="_blank" rel="noopener">View listing ${ARROW}</a>
       </div>
       <div class="rec-item">
-        <div class="rec-item__year"><span>2024</span></div>
+        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--id" src="assets/awards/interior-design.png" alt="Interior Design magazine" loading="lazy" /><span>2024</span></div>
         <div>
           <h3 class="rec-item__title">Best of Year 2024</h3>
           <div class="rec-item__where">Interior Design magazine</div>
