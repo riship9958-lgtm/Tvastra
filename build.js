@@ -1050,7 +1050,7 @@ const contact = `
   </div>
   <div class="container contact-grid">
     <div class="reveal">
-      <div class="cinfo"><div class="k">Studio</div><div class="v">Patel Faliyu, near Pal-Umra Bridge,<br />opp. Karuna Sagar Temple, Umra Rd,<br />Athwalines, Surat, Gujarat 395007</div></div>
+      <div class="cinfo"><div class="k">Studio</div><div class="v">Patel Faliyu, near Pal-Umra Bridge,<br />opp. Karuna Sagar Temple, Umra Rd,<br />Athwalines, Surat, Gujarat 395007<br /><a class="link-arrow" style="font-size:12px;margin-top:12px" href="https://www.google.com/maps/search/?api=1&amp;query=Tvastra%20Design%20LLP%2C%20Umra%20Road%2C%20Athwalines%2C%20Surat%2C%20Gujarat%20395007" target="_blank" rel="noopener">View on Google Maps ${ARROW}</a></div></div>
       <div class="cinfo"><div class="k">Email</div><div class="v"><a href="mailto:info@tvastra.design">info@tvastra.design</a></div></div>
       <div class="cinfo"><div class="k">Phone</div><div class="v"><a href="tel:+919081813231">+91 90818 13231</a></div></div>
       <div class="cinfo"><div class="k">Hours</div><div class="v">Mon to Sat, 10:00 to 18:00</div></div>
