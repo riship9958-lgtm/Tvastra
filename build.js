@@ -122,6 +122,7 @@ const PROJECTS_LIST = [
   { name: 'Vālukā', file: 'valuka.html', cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG7}06-dusk-corner.webp`, feat: `${IMG7}06-dusk-corner.webp` },
   { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
+  { name: 'Juneberry',    file: 'juneberry.html',    cat: 'interior',     meta: 'Café · Surat, Gujarat', side: 'Café &middot; Surat',       card: 'assets/projects/juneberry/counter.webp', feat: 'assets/projects/juneberry/counter.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -179,7 +180,7 @@ function dcard(num, href, img, name, side) {
       ${PLUS}
     </a>`;
 }
-function pcol(num, p) { return dcard(num, p.file, p.card, p.name, 'Residential &middot; Surat'); }
+function pcol(num, p) { return dcard(num, p.file, p.card, p.name, p.side || 'Residential &middot; Surat'); }
 
 // A product-category card (same format as dcard; supports an image-less "coming soon" state).
 function catcard(num, o) {
@@ -932,6 +933,119 @@ const metalLife = `
   </div>
 </section>`;
 
+const JIMG = 'assets/projects/juneberry/';
+const juneberry = `
+<div class="pd-hero pd-hero--tall">
+  <img src="${JIMG}facade.webp" alt="Juneberry cafe, street facade with the brand sign" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#bcd3e2">Interior Design, Café · Surat</span>
+    <h1>Juneberry</h1>
+    <p class="pd-hero__sub">A specialty coffee and artisan bakehouse, calm, sunlit and handmade.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">A quiet, sunlit room where <em>pastel</em> minimalism meets handmade Indian craft.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">Juneberry is a specialty coffee and artisan bakehouse in Surat. Behind a crisp white storefront, the interior opens into a soft, light-filled room, micro-cement counters, grid-tiled walls and pale floors, kept deliberately quiet so the coffee and the craft can speak.</p>
+        <p class="muted">Custom oak chairs on slim steel frames, pleated fabric light diffusers and layered greenery bring warmth and rhythm. Handmade bark-relief panels and folk-art khadi textile hangings carry a thread of Indian craft through the space, a modern café rooted in something older.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
+      <div><div class="k">Type</div><div class="v">Café &amp; Bakehouse</div></div>
+      <div><div class="k">Palette</div><div class="v">Oatmeal, oak &amp; white</div></div>
+      <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">Quiet shell, handmade soul.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Pastel shell</div><p>Micro-cement, grid tile and pale floors keep the room bright and calm.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Oak craft</div><p>Custom plywood chairs on slim steel frames, warm and hand-finished.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Folk art</div><p>Bark-relief panels and khadi textile hangings bring Indian craft indoors.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Soft light</div><p>Pleated fabric diffusers and full-height glazing wash it all in daylight.</p></div>
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      <span>Micro-cement</span><span>Oak</span><span>Steel</span><span>Khadi</span><span>Ceramic</span><span>Tile</span>
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The space</p>
+      <h2 class="h-lg">Coffee, counter and craft.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">A closer look.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="Hand-textured relief artwork on the tiled column."><img src="${JIMG}art-pillar.webp" alt="Juneberry, relief artwork on the tiled column" /></figure>
+      <figure class="slide" data-cap="Banquette seating beneath framed bark-art panels."><img src="${JIMG}banquette.webp" alt="Juneberry, banquette seating below framed bark-art panels" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A window nook framed by a hanging khadi textile."><img src="${JIMG}window-nook.webp" alt="Juneberry, window seating with a hanging khadi textile artwork" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The counter and pastry display, up close."><img src="${JIMG}counter-detail.webp" alt="Juneberry, the counter and pastry display" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">Hand-textured relief artwork on the tiled column.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">04</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Moments</p>
+      <h2 class="h-lg">Small corners, slow mornings.</h2>
+    </div>
+    <div class="pd-details reveal">
+      <figure class="pd-detail"><img src="${JIMG}art-panels.webp" alt="Juneberry, framed handmade bark-art panels" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window with a khadi textile hanging" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of oak chairs beneath the relief artwork" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a framed art panel" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="dsec">
   <div class="container">
@@ -1365,6 +1479,7 @@ const PAGES = [
   { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
+  { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a specialty coffee and artisan bakehouse in Surat, pastel micro-cement, oak craft and handmade folk-art, by Tvastra Design LLP.', content: juneberry },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
