@@ -452,7 +452,7 @@ const vritta = `
       <h2 class="h-lg">Day to night.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vritta renders">
+  <div class="slideshow slideshow--contain reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vritta renders">
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Vritta, street corner by day" /></figure>
       <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Vritta, street corner at night" loading="lazy" /></figure>
