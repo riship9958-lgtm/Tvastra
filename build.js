@@ -1041,15 +1041,13 @@ const juneberry = `
       <p class="eyebrow">Moments</p>
       <h2 class="h-lg">Small corners, slow mornings.</h2>
     </div>
-    <div class="pd-details reveal">
-      <figure class="pd-detail"><img src="${JIMG}art-panels.webp" alt="Juneberry, banana-stem canvas artworks with waste-metal figurines" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window beside an upcycled textile installation" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of reel-wood chairs beneath the wood-waste installation" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a banana-stem canvas" loading="lazy" /></figure>
-    </div>
-    <div class="pd-duo reveal">
-      <figure class="pd-detail"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, wood-waste installation evoking mountain ranges above the banquette" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
+    <div class="mgrid reveal">
+      <figure class="mgrid__cell"><img src="${JIMG}art-panels.webp" alt="Juneberry, banana-stem canvas artworks with waste-metal figurines" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, wood-waste installation evoking mountain ranges above the banquette" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window beside an upcycled textile installation" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a banana-stem canvas" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of reel-wood chairs beneath the wood-waste installation" loading="lazy" /></figure>
     </div>
   </div>
 </section>
