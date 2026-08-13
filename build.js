@@ -327,6 +327,17 @@ const home = `
   </div>
 </section>
 
+<section class="section trust">
+  <div class="container">
+    <div class="trust__inner reveal">
+      <p class="eyebrow no-rule" style="justify-content:center">Trusted by our clients</p>
+      <h2 class="h-lg">Homes built on relationships, not just plans.</h2>
+      <p class="lead" style="margin-top:18px">People come before projects. For nearly three decades, families have trusted Tvastra to shape their homes with honesty, transparency and care, from the first conversation to the final handover.</p>
+      <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
+    </div>
+  </div>
+</section>
+
 `;
 
 const projects = `

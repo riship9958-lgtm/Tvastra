@@ -100,6 +100,7 @@ p { margin: 0 0 1.1em; }
   cursor: pointer; transition: background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease);
 }
 .btn:hover { background: var(--ink); color: var(--paper); }
+.btn { white-space: nowrap; }
 .btn--clay { background: var(--clay); border-color: var(--clay); color: #fff; }
 .btn--clay:hover { background: var(--clay-deep); border-color: var(--clay-deep); }
 .btn--ghost-light { border-color: rgba(255,255,255,.55); color: #fff; }
@@ -639,6 +640,12 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .founder__spec li:not(:last-child)::after { content: "·"; margin: 0 clamp(10px, 1.4vw, 16px); color: var(--clay-soft); }
 .section--ink .link-arrow { color: #bfe0f2; }
 @media (max-width: 760px) { .founder__grid { grid-template-columns: 1fr; } }
+
+/* Trusted by our clients (home) */
+.trust { background: var(--paper-2); }
+.trust__inner { max-width: 780px; margin: 0 auto; text-align: center; }
+.trust__inner .eyebrow { margin-bottom: 16px; }
+.trust__cta { margin-top: clamp(28px, 4vw, 40px); }
 
 /* The name — brand-story section (About) */
 .namesec { text-align: center; }
