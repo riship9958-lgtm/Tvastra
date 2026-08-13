@@ -262,6 +262,7 @@ const home = `
 <section class="title-card">
   <div class="title-card__inner">
     <img class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
+    <p class="title-card__motto">The Power of Creativity</p>
     <p class="title-card__tag">Architecture &middot; Interiors &middot; Product Design</p>
   </div>
   <a href="#lead" class="title-card__scroll" aria-label="Scroll to enter"><span>Scroll</span></a>
