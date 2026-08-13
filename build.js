@@ -961,52 +961,130 @@ const urdhva = `
 </section>`;
 
 const valuka = `
-<div class="pd-hero pd-hero--zoom">
-  <img src="${IMG7}01-front.jpg" alt="Vālukā" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e6cbb0">Architecture, Residential</span><h1>Vālukā</h1></div></div>
+<div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
+  <img src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e6cbb0">Architecture, Residential · Surat</span>
+    <h1>Vālukā</h1>
+    <p class="pd-hero__sub">A grounded, earthen villa turned inward to a private courtyard.</p>
+  </div></div>
 </div>
 
-<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
-  <div class="container wrap-narrow reveal">
-    <p class="eyebrow">The project</p>
-    <p class="lead">A warm, earthen family home where clay-toned render meets banded rammed-earth-textured stone and teak, quiet, grounded volumes arranged around a private courtyard and softened by desert planting.</p>
-    <p class="muted">A double-height stone entrance portal frames a full-height teak door, while a taller rendered block rises behind for the upper rooms. The palette is deliberately of the earth, sandy render, striated stone and timber, and the design turns inward to a sheltered garden. A jaali compound wall gives privacy, and a full run of rooftop solar makes the house quietly self-sufficient.</p>
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">Grounded volumes of sandy render and striated stone gathered around a private <em>courtyard</em>.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">On a generous 6,460 sq ft plot in Adarsh Society, the house turns inward to a sheltered courtyard and Zen garden. Clay-toned render meets banded, rammed-earth-textured stone and teak, and a stone entrance portal frames a full-height timber door.</p>
+        <p class="muted">The palette is deliberately of the earth. Living spaces open through full-height glazing to the garden while a jaali compound wall gives privacy. Planned to Vastu and built to breathe: cavity walls and soundproofing calm the interior, rainwater harvesting and rooftop solar make it self-sufficient, and generous landscape wraps the house.</p>
+      </div>
+    </div>
   </div>
-  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
     <div class="pd-meta reveal">
       <div><div class="k">Type</div><div class="v">Residential</div></div>
-      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
-      <div><div class="k">Scope</div><div class="v">Architecture &amp; Landscape</div></div>
+      <div><div class="k">Site area</div><div class="v">6,460 sq ft</div></div>
+      <div><div class="k">Levels</div><div class="v">G + 1</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
     <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section pd-sketch">
   <div class="container">
-    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view" />
-      <figcaption>Aerial, the plan wraps a private courtyard; rooftop solar crowns the massing.</figcaption>
-    </figure>
-    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG7}02-rear-angle.jpg" alt="Vālukā, garden elevation" /></figure>
-      <figure class="pd-figure"><img src="${IMG7}03-side.jpg" alt="Vālukā, courtyard elevation" /></figure>
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Concept</p>
+      <h2 class="h-lg">From the first line.</h2>
     </div>
-    <figure class="pd-figure reveal">
-      <img src="${IMG7}04-rear.jpg" alt="Vālukā, rear elevation" />
-      <figcaption>Rear elevation, rammed-earth-textured stone meets warm clay render.</figcaption>
-    </figure>
+    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
+      <figure class="pd-sketch-fig"><img src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch, courtyard corner" /></figure>
+    </div>
+    <p class="muted reveal pd-sketch-note">A hand study of the courtyard corner, the striated stone bands, deep glazing and the sheltered garden drawn before the render.</p>
   </div>
 </section>
 
-<section class="section section--paper2" style="text-align:center">
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">3D Elevation.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view over the courtyard" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">Around the house.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vālukā renders">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="The courtyard corner at dusk, warm render glowing against striated stone."><img src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" /></figure>
+      <figure class="slide" data-cap="Front elevation by day, the stone portal and full-height timber door."><img src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Garden elevation, living spaces opening to the sheltered courtyard."><img src="${IMG7}02-rear-angle.jpg" alt="Vālukā, garden elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Courtyard elevation, banded stone meeting warm clay render."><img src="${IMG7}03-side.jpg" alt="Vālukā, courtyard elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Rear elevation, rammed-earth-textured stone and deep glazing."><img src="${IMG7}04-rear.jpg" alt="Vālukā, rear elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Aerial, the plan wraps the courtyard; rooftop solar crowns the massing."><img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">The courtyard corner at dusk, warm render glowing against striated stone.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The approach</p><h2 class="h-lg">Built to breathe.</h2></div>
+      <ul class="approach reveal d1">
+        <li>Vastu-guided planning</li>
+        <li>Raw, exposed &amp; natural materials</li>
+        <li>Daylight through the day</li>
+        <li>Cavity walls, heat &amp; sound</li>
+        <li>Open planning</li>
+        <li>Stack ventilation</li>
+        <li>Generous green areas</li>
+        <li>Rainwater harvesting</li>
+        <li>Soundproof windows</li>
+        <li>Solar-ready roof</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal" style="max-width:640px">
+      <p class="eyebrow">Accommodation</p>
+      <h2 class="h-lg">A home across two levels.</h2>
+    </div>
+    <div class="program reveal">
+      <div class="program__floor"><div class="program__lvl">Ground</div><ul><li>Foyer, verandah &amp; pooja</li><li>Formal &amp; informal living</li><li>Master suite &amp; walk-in closet</li><li>Dining, kitchen &amp; curry kitchen</li><li>Utility &amp; servant quarter</li><li>Zen garden &amp; covered garage</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">First</div><ul><li>Guest bedrooms &amp; wardrobe</li><li>Multi-purpose room</li><li>Indoor &amp; outdoor swings</li><li>Landscape area</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
   <div class="container reveal">
     <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
     <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="projects.html" class="btn">All projects</a>
-      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+      <a href="projects-architecture.html" class="btn btn--ghost-light">All architecture</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
     </div>
   </div>
 </section>`;
