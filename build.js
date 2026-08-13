@@ -1121,6 +1121,15 @@ const recognition = `
         </div>
         <a class="rec-item__tag rec-item__tag--link" href="https://architecture-collection.com/winner/platinum-winner-meshobase-adca2023/" target="_blank" rel="noopener">View award ${ARROW}</a>
       </div>
+      <div class="rec-item rec-item--badge">
+        <div class="rec-item__badge"><img src="assets/awards/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner" loading="lazy" /></div>
+        <div>
+          <h3 class="rec-item__title">Qualified ASID Interior Designer</h3>
+          <div class="rec-item__where">American Society of Interior Designers &middot; since 1975</div>
+          <p class="muted" style="margin:0">Recognised as a Professional Practitioner, affirming our interior-design expertise and standards.</p>
+        </div>
+        <span class="rec-item__tag">Credential</span>
+      </div>
     </div>
     <p class="muted reveal" style="margin-top:30px;font-size:15px">More awards and press features will appear here as they're announced. Have a feature to share? <a href="contact.html" class="link-arrow" style="font-size:12px">Get in touch ${ARROW}</a></p>
   </div>
