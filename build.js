@@ -940,7 +940,7 @@ const juneberry = `
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#bcd3e2">Interior Design, Café · Surat</span>
     <h1>Juneberry</h1>
-    <p class="pd-hero__sub">A specialty coffee and artisan bakehouse, calm, sunlit and handmade.</p>
+    <p class="pd-hero__sub">Beyond hospitality, a community-centred café where sustainability is the story.</p>
   </div></div>
 </div>
 
@@ -949,37 +949,38 @@ const juneberry = `
     <div class="grid-2 top">
       <div class="reveal">
         <p class="eyebrow">The project</p>
-        <h2 class="statement">A quiet, sunlit room where <em>pastel</em> minimalism meets handmade Indian craft.</h2>
+        <h2 class="statement">Sustainability, not as a feature, but as the <em>story</em> itself.</h2>
       </div>
       <div class="reveal d1">
-        <p class="lead">Juneberry is a specialty coffee and artisan bakehouse in Surat. Behind a crisp white storefront, the interior opens into a soft, light-filled room, micro-cement counters, grid-tiled walls and pale floors, kept deliberately quiet so the coffee and the craft can speak.</p>
-        <p class="muted">Custom oak chairs on slim steel frames, pleated fabric light diffusers and layered greenery bring warmth and rhythm. Handmade bark-relief panels and folk-art khadi textile hangings carry a thread of Indian craft through the space, a modern café rooted in something older.</p>
+        <p class="lead">Juneberry is a minimalist specialty-coffee café in Surat that reimagines everyday hospitality as a place where craftsmanship, sustainability and human connection meet, answering a growing need for spaces that invite reflection and community rather than efficiency and overconsumption.</p>
+        <p class="muted">A neutral palette and natural materials replace bold ornamentation: sculpted plaster feature walls, reel-wood furniture and refined white powder-coated metal make a calm, timeless room guided by the owner's vision of understated comfort. Almost every surface tells a quieter story of waste reclaimed as craft.</p>
       </div>
     </div>
   </div>
   <div class="container" style="margin-top:clamp(46px,6vw,72px)">
     <div class="pd-meta reveal">
       <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
-      <div><div class="k">Type</div><div class="v">Café &amp; Bakehouse</div></div>
-      <div><div class="k">Palette</div><div class="v">Oatmeal, oak &amp; white</div></div>
+      <div><div class="k">Area</div><div class="v">1,170 sq ft</div></div>
+      <div><div class="k">Completed</div><div class="v">2025</div></div>
       <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
     </div>
+    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b>Dev Kajiwala</b> &middot; Art installation <b>Artitude Satyarth</b> &middot; Photography <b>Kenny Zaveri</b></p>
   </div>
 </section>
 
 <section class="section section--paper2">
   <div class="container">
     <div class="grid-2 top">
-      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">Quiet shell, handmade soul.</h2></div>
+      <div class="reveal"><p class="eyebrow">The making</p><h2 class="h-lg">Made from what's left.</h2></div>
       <div class="reveal d1 cpsych">
-        <div class="cpsych__item"><div class="cpsych__k">Pastel shell</div><p>Micro-cement, grid tile and pale floors keep the room bright and calm.</p></div>
-        <div class="cpsych__item"><div class="cpsych__k">Oak craft</div><p>Custom plywood chairs on slim steel frames, warm and hand-finished.</p></div>
-        <div class="cpsych__item"><div class="cpsych__k">Folk art</div><p>Bark-relief panels and khadi textile hangings bring Indian craft indoors.</p></div>
-        <div class="cpsych__item"><div class="cpsych__k">Soft light</div><p>Pleated fabric diffusers and full-height glazing wash it all in daylight.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Sculpted plaster</div><p>Hand-sculpted Plaster of Paris feature walls with a quiet grid texture, no wallpaper, no synthetic finishes.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Upcycled textiles</div><p>Hangings hand-stitched from waste textiles, naturally dyed in coffee and earth tones, placed to filter the day's sun.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Waste into art</div><p>Wood-waste mountain ranges, banana-stem canvases and oxidised-metal figurines, discarded material reborn as art.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Reel wood &amp; craft</div><p>Reel-wood composite furniture and locally made upholstery in place of virgin timber.</p></div>
       </div>
     </div>
     <div class="matstrip reveal">
-      <span>Micro-cement</span><span>Oak</span><span>Steel</span><span>Khadi</span><span>Ceramic</span><span>Tile</span>
+      <span>Sculpted POP</span><span>Reel wood</span><span>Powder-coated metal</span><span>Upcycled textile</span><span>Banana stem</span><span>Wood waste</span>
     </div>
   </div>
 </section>
@@ -1003,18 +1004,32 @@ const juneberry = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Hand-textured relief artwork on the tiled column."><img src="${JIMG}art-pillar.webp" alt="Juneberry, relief artwork on the tiled column" /></figure>
-      <figure class="slide" data-cap="Banquette seating beneath framed bark-art panels."><img src="${JIMG}banquette.webp" alt="Juneberry, banquette seating below framed bark-art panels" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A window nook framed by a hanging khadi textile."><img src="${JIMG}window-nook.webp" alt="Juneberry, window seating with a hanging khadi textile artwork" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Wood-waste wall installation, evoking mountain ranges and coffee foam."><img src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" /></figure>
+      <figure class="slide" data-cap="Banana-stem canvases set with waste-metal figurines."><img src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /></figure>
+      <figure class="slide" data-cap="An upcycled textile installation, hand-dyed in coffee and earth tones."><img src="${JIMG}window-nook.webp" alt="Juneberry, window seating beside an upcycled textile installation" loading="lazy" /></figure>
       <figure class="slide" data-cap="The counter and pastry display, up close."><img src="${JIMG}counter-detail.webp" alt="Juneberry, the counter and pastry display" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
     <div class="slideshow__bar">
       <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Hand-textured relief artwork on the tiled column.</span>
+        <span class="slideshow__cap">Wood-waste wall installation, evoking mountain ranges and coffee foam.</span>
         <div class="slideshow__dots" role="tablist"></div>
         <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">04</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">Beyond the coffee</p><h2 class="h-lg">A café that gives back.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Room to gather</div><p>Bookshelves built into the seating turn the café into a place to read, share and slow down.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Daylight as design</div><p>Textile screens tuned to the sun's path fill the room with shifting daylight and cut the need for artificial light.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Green and quiet</div><p>Greenery softens the street-to-interior threshold while acoustic ceilings hush the urban noise.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Warm, low-glare light</div><p>Concealed sources behind translucent fabric diffusers keep the glow soft and intimate.</p></div>
       </div>
     </div>
   </div>
@@ -1027,13 +1042,13 @@ const juneberry = `
       <h2 class="h-lg">Small corners, slow mornings.</h2>
     </div>
     <div class="pd-details reveal">
-      <figure class="pd-detail"><img src="${JIMG}art-panels.webp" alt="Juneberry, framed handmade bark-art panels" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window with a khadi textile hanging" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of oak chairs beneath the relief artwork" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a framed art panel" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}art-panels.webp" alt="Juneberry, banana-stem canvas artworks with waste-metal figurines" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window beside an upcycled textile installation" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of reel-wood chairs beneath the wood-waste installation" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a banana-stem canvas" loading="lazy" /></figure>
     </div>
     <div class="pd-duo reveal">
-      <figure class="pd-detail"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, mountain-relief artworks above the banquette, with the counter beyond" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, wood-waste installation evoking mountain ranges above the banquette" loading="lazy" /></figure>
       <figure class="pd-detail"><img src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
     </div>
   </div>
@@ -1483,7 +1498,7 @@ const PAGES = [
   { file: 'valuka.html', id: 'project7', nav: 'projects.html', dark: true,  title: 'Vālukā, Tvastra Design LLP', desc: 'Vālukā, a warm earthen courtyard home in clay render and rammed-earth-textured stone in Surat by Tvastra Design LLP.', content: valuka },
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
-  { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a specialty coffee and artisan bakehouse in Surat, pastel micro-cement, oak craft and handmade folk-art, by Tvastra Design LLP.', content: juneberry },
+  { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a 1,170 sq ft sustainable specialty-coffee café in Surat (2025) by Tvastra Design LLP, sculpted-plaster walls, upcycled-textile installations and waste-into-art craft.', content: juneberry },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
