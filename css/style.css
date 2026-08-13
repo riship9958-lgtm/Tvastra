@@ -583,6 +583,15 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pd-intro { padding-top: clamp(70px, 9vw, 130px); }
 .pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
 
+/* Founder portfolio — B&W photograph beside the note */
+.fportfolio__grid { align-items: center; gap: clamp(34px, 5vw, 72px); }
+.fportfolio__media { margin: 0; overflow: hidden; border-radius: 4px; background: var(--bg-deep); }
+.fportfolio__media img { display: block; width: 100%; height: auto; filter: grayscale(1) contrast(1.02); }
+.fportfolio__text .eyebrow { margin-bottom: 18px; }
+.fportfolio__text .lead { margin-top: 22px; }
+.fportfolio__text .muted { margin-top: 16px; }
+@media (max-width: 760px) { .fportfolio__grid { gap: clamp(24px, 6vw, 40px); } }
+
 /* Design-approach list */
 .approach { list-style: none; columns: 2; column-gap: clamp(24px, 4vw, 56px); }
 .approach li { display: flex; align-items: flex-start; gap: 14px; break-inside: avoid; padding: 15px 0; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); line-height: 1.5; color: var(--ink); }

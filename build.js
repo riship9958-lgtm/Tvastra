@@ -1197,6 +1197,22 @@ const foundersMind = `
   </div>
 </section>
 
+<section class="section fportfolio">
+  <div class="container">
+    <div class="grid-2 top fportfolio__grid">
+      <figure class="fportfolio__media reveal">
+        <img src="assets/founder/founder-portfolio-bw.webp" alt="The founder of Tvastra Design LLP, camera in hand, framed by a carved jharokha" loading="lazy" />
+      </figure>
+      <div class="fportfolio__text reveal d1">
+        <p class="eyebrow">The founder's portfolio</p>
+        <h2 class="h-lg">A designer's eye, off the drawing board.</h2>
+        <p class="lead">The same attention to proportion, light and detail that shapes a building carries into how the world is seen through a lens, quiet frames of craft, ornament and space.</p>
+        <p class="muted">Travel and photography are where the studio's language is refreshed. Carved facades, old courtyards and the play of shadow become a private library of reference that finds its way back into the work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section section--ink" style="text-align:center">
   <div class="container reveal">
     <p class="eyebrow no-rule" style="justify-content:center">Let's build something</p>
