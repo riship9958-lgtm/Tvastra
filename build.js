@@ -1389,13 +1389,13 @@ const metalLife = `
       <p class="eyebrow">Details</p>
       <h2 class="h-lg">Where the warmth lives.</h2>
     </div>
-    <div class="pd-details reveal">
-      <figure class="pd-detail"><img src="${NIMG}detail-01.webp" alt="Metal Life, copper-toned steel-mesh partition" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-02.webp" alt="Metal Life, kitchen" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-03.webp" alt="Metal Life, dining" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-04.webp" alt="Metal Life, bathroom" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-05.webp" alt="Metal Life, powder room" loading="lazy" /></figure>
-      <figure class="pd-detail"><img src="${NIMG}detail-06.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
+    <div class="mgrid reveal">
+      <figure class="mgrid__cell"><img src="${NIMG}detail-01.webp" alt="Metal Life, copper-toned steel-mesh partition" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${NIMG}detail-02.webp" alt="Metal Life, kitchen" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${NIMG}detail-03.webp" alt="Metal Life, dining" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${NIMG}detail-04.webp" alt="Metal Life, bathroom" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${NIMG}detail-05.webp" alt="Metal Life, powder room" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${NIMG}detail-06.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
     </div>
   </div>
 </section>
