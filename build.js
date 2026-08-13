@@ -334,12 +334,12 @@ const home = `
       <h2 class="h-lg">Homes built on relationships, not just plans.</h2>
       <p class="lead" style="margin-top:18px">People come before projects. For nearly three decades, families and developers have trusted Tvastra to shape their spaces with honesty, transparency and care, from the first conversation to the final handover.</p>
       <div class="clients">
-        <span>Happy Homes</span>
-        <span>Shaligram</span>
-        <span>Avadh</span>
-        <span>Sangini</span>
-        <span>Pyramid Group</span>
-        <span>Smarathya</span>
+        <img src="assets/clients/happy-home.png" alt="Happy Home Group" loading="lazy" />
+        <img src="assets/clients/shaligram.png" alt="Shaligram" loading="lazy" />
+        <img src="assets/clients/avadh.png" alt="Avadh" loading="lazy" />
+        <img src="assets/clients/sangini.png" alt="Sangini" loading="lazy" />
+        <img src="assets/clients/piramyd.png" alt="Piramyd Group" loading="lazy" />
+        <img src="assets/clients/samarthya.png" alt="Samarthya" loading="lazy" />
       </div>
       <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
     </div>
