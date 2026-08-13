@@ -1179,7 +1179,7 @@ const about = `
     <div class="stats reveal" style="border:0;padding:0;margin:0">
       <div class="stat"><div class="n">29</div><div class="l">Years of experience</div></div>
       <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">International design awards</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Awards &amp; honours</div></div>
       <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
     </div>
     <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Gold Winner, IADA 2025 &amp; Platinum Winner, Architecture &amp; Design Collection Awards 2023.&nbsp; Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
@@ -1255,6 +1255,24 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://ad-c.org/winner/metal-life-gold-winner-custom-interior-design-category-iada-2025/" target="_blank" rel="noopener">View award ${ARROW}</a>
       </div>
       <div class="rec-item">
+        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--apsda" src="assets/awards/apsda.png" alt="Asia-Pacific Space Designers Association" loading="lazy" /><span>2025</span></div>
+        <div>
+          <h3 class="rec-item__title">Finalist</h3>
+          <div class="rec-item__where">APSDA Awards 2025 &middot; Asia-Pacific Space Designers Association</div>
+          <p class="muted" style="margin:0">Residential Category, for <a href="metal-life.html" class="crumb">Metal Life</a>, shortlisted among the Asia-Pacific's finest interiors.</p>
+        </div>
+        <a class="rec-item__tag rec-item__tag--link" href="https://apsda.org/competition/apsda-awards-2025/finalist-list/" target="_blank" rel="noopener">View listing ${ARROW}</a>
+      </div>
+      <div class="rec-item">
+        <div class="rec-item__year"><span>2024</span></div>
+        <div>
+          <h3 class="rec-item__title">Best of Year 2024</h3>
+          <div class="rec-item__where">Interior Design magazine</div>
+          <p class="muted" style="margin:0">Recognised in Interior Design magazine's Best of Year 2024, for the Medium City House residence.</p>
+        </div>
+        <a class="rec-item__tag rec-item__tag--link" href="https://interiordesign.net/awards/best-of-year/2024/tvastra-design-medium-city-house/" target="_blank" rel="noopener">View feature ${ARROW}</a>
+      </div>
+      <div class="rec-item">
         <div class="rec-item__year"><img class="rec-item__seal" src="assets/awards/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner" loading="lazy" /><span>2023</span></div>
         <div>
           <h3 class="rec-item__title">Platinum Winner</h3>
@@ -1272,7 +1290,7 @@ const recognition = `
   <div class="container">
     <div class="stats reveal" style="border:0;padding:0;margin:0">
       <div class="stat"><div class="n">29</div><div class="l">Years of practice</div></div>
-      <div class="stat"><div class="n">2</div><div class="l">International design awards</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Awards &amp; honours</div></div>
       <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
       <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
     </div>
