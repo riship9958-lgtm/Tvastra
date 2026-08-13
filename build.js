@@ -38,7 +38,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['index.html','Home'],['services.html','Discipline'],['about.html','About Us'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
+const NAV = [['index.html','Home'],['services.html','Discipline'],['about.html','About Us'],['gospels.html','Gospels'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -1985,10 +1985,62 @@ const careers = `
 </section>`;
 
 /* ---------- assemble ---------- */
+// The founder's video library. To add a film, drop its thumbnail in assets/gospels/
+// and append an entry:
+//   { title:'', topic:'', length:'12:04', desc:'', thumb:'assets/gospels/<file>.webp', url:'https://youtu.be/...' }
+const GOSPELS = [
+];
+function gcard(v) {
+  return `<a class="gcard reveal" href="${v.url}" target="_blank" rel="noopener">
+      <div class="gcard__thumb">
+        <img src="${v.thumb}" alt="${v.title}" loading="lazy" />
+        <span class="gcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+        ${v.length ? `<span class="gcard__len">${v.length}</span>` : ''}
+      </div>
+      <div class="gcard__body">
+        ${v.topic ? `<span class="gcard__tag">${v.topic}</span>` : ''}
+        <h3 class="gcard__title">${v.title}</h3>
+        ${v.desc ? `<p class="gcard__desc">${v.desc}</p>` : ''}
+      </div>
+    </a>`;
+}
+
+const gospels = `
+<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
+  <div class="container grid-2 top">
+    <div class="reveal">
+      <p class="eyebrow">The founder's voice</p>
+      <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Gospels.</h1>
+    </div>
+    <div class="reveal d1">
+      <p class="lead">A growing video library where the founder shares his thought process, ideas and points of view, on design, craft and the quiet principles that guide the studio.</p>
+      <p class="muted">Short films, recorded between projects, the thinking behind the work, in his own words. Watch, pause, and return.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="matstrip reveal"><span>Thought process</span><span>Ideas</span><span>Points of view</span></div>
+    ${GOSPELS.length
+      ? `<div class="gvid-grid reveal">\n      ${GOSPELS.map(gcard).join('\n      ')}\n    </div>`
+      : `<div class="disc-empty reveal" style="margin-top:clamp(28px,4vw,46px)"><span>The first films are being recorded. Soon you'll find the founder's thoughts, ideas and points of view here.</span><a href="contact.html" class="link-arrow">Get in touch ${ARROW}</a></div>`}
+  </div>
+</section>
+
+<section class="cta section">
+  <div class="container reveal">
+    <h2>Have a question for the founder?</h2>
+    <p>Send it in, it might become the next film.</p>
+    <a href="contact.html" class="btn btn--ghost-light">Get in touch ${ARROW}</a>
+  </div>
+</section>`;
+
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'careers.html',              id: 'careers',   nav: 'careers.html',  dark: false, title: 'Careers, Tvastra Design LLP', desc: 'Careers at Tvastra Design LLP. Join a hands-on architecture, interior and product design studio in Surat.', content: careers },
+  { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: false, title: 'Gospels, Tvastra Design LLP', desc: "Gospels, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including Vritta.', content: projects },
   { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects, Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
@@ -2051,7 +2103,7 @@ if (process.argv[2] === 'preview') {
   let sections = '';
   for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
 
-  const navLinks = [['home','Home'],['services','Discipline'],['about','About Us'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
+  const navLinks = [['home','Home'],['services','Discipline'],['about','About Us'],['gospels','Gospels'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
