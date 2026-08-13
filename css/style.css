@@ -331,7 +331,7 @@ p { margin: 0 0 1.1em; }
 /* Architecture project title cards: zoomed in and softly blurred behind the title */
 .pd-hero--zoom img { transform: scale(1.14); filter: blur(3px); }
 /* Sketch title card (Vritta): soft-blurred concept drawing behind a scrim so the title stays legible */
-.pd-hero--sketch img { filter: blur(4px); }
+.pd-hero--sketch img { filter: none; }
 .pd-hero--sketch::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(10,18,26,.66) 0%, rgba(10,18,26,.34) 32%, rgba(10,18,26,.34) 60%, rgba(10,18,26,.8) 100%); }
 .pd-hero--sketch .pd-hero__cap { z-index: 3; }
 .pd-hero__cap { position: absolute; left: 0; right: 0; bottom: 0; padding: var(--gutter); background: linear-gradient(0deg, rgba(20,17,13,.72), transparent); color: #fff; }
