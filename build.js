@@ -1154,48 +1154,129 @@ const valuka = `
 </section>`;
 
 const asamvrta = `
-<div class="pd-hero pd-hero--zoom">
-  <img src="${IMG8}03-night-front.webp" alt="Asaṁvṛta at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e0b39a">Architecture, Residential</span><h1>Asaṁvṛta</h1></div></div>
+<div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
+  <img src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e0b39a">Architecture, Residential · Surat</span>
+    <h1>Asaṁvṛta</h1>
+    <p class="pd-hero__sub">Stacked homes of pale stone and warm brick turning the corner.</p>
+  </div></div>
 </div>
 
-<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
-  <div class="container wrap-narrow reveal">
-    <p class="eyebrow">The project</p>
-    <p class="lead">A contemporary apartment building where pale stone and grey panels are framed by bands and piers of exposed red brick, deep, recessed balconies stacked up a corner that turns the street with quiet confidence.</p>
-    <p class="muted">Punched openings and full-height glazing are set into stone surrounds, while brick wraps the corner and grounds the base at the sheltered parking level. A timber-lined pavilion caps the roof, catching light and giving the block a crown. The material pairing, cool stone against warm brick, keeps the elevation ordered yet tactile.</p>
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">Pale stone and grey panels framed by piers of exposed red <em>brick</em>, deep balconies stacked up a corner.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">On a 2,290 sq ft corner plot, this apartment building stacks a home on each level, punched openings and full-height glazing set into stone surrounds while brick wraps the corner and grounds the sheltered parking base.</p>
+        <p class="muted">A timber-lined pavilion caps the roof, catching light and giving the block a crown; the pairing of cool stone against warm brick keeps the elevation ordered yet tactile. Planned to Vastu and built to breathe: cavity walls temper heat and sound, stack ventilation and open planning move air through the section, and a water-conservation tank and solar-ready roof carry the building toward self-sufficiency.</p>
+      </div>
+    </div>
   </div>
-  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
     <div class="pd-meta reveal">
       <div><div class="k">Type</div><div class="v">Residential</div></div>
-      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
-      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Site area</div><div class="v">2,290 sq ft</div></div>
+      <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
     <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section pd-sketch">
   <div class="container">
-    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" />
-      <figcaption>Daylight, stone and grey panels framed by exposed red brick.</figcaption>
-    </figure>
-    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" /></figure>
-      <figure class="pd-figure"><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" /></figure>
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Concept</p>
+      <h2 class="h-lg">From the first line.</h2>
+    </div>
+    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
+      <figure class="pd-sketch-fig"><img src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch, street corner" /></figure>
+    </div>
+    <p class="muted reveal pd-sketch-note">A hand study of the street corner, the stone-and-brick banding, deep recessed balconies and the rooftop pavilion drawn before the render.</p>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">3D Elevation.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner view at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">Day to night.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Asaṁvṛta renders">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="The corner by day, stone and grey panels framed by exposed brick."><img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner after dark, balconies and rooms glowing warm."><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation by day, brick banding across the stone facade."><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation at night, the rooftop pavilion lit against the sky."><img src="${IMG8}03-night-front.webp" alt="Asaṁvṛta, street elevation at night" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">The corner by day, stone and grey panels framed by exposed brick.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">04</span></span>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section--paper2" style="text-align:center">
+<section class="section">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The approach</p><h2 class="h-lg">Built to breathe.</h2></div>
+      <ul class="approach reveal d1">
+        <li>Vastu-guided planning</li>
+        <li>Raw, exposed &amp; natural materials</li>
+        <li>Daylight through the day</li>
+        <li>Cavity walls, heat &amp; sound</li>
+        <li>Open planning</li>
+        <li>Stack ventilation</li>
+        <li>Generous green areas</li>
+        <li>Water conservation tank</li>
+        <li>Solar-ready roof</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal" style="max-width:640px">
+      <p class="eyebrow">Accommodation</p>
+      <h2 class="h-lg">Homes across four levels.</h2>
+    </div>
+    <div class="program reveal">
+      <div class="program__floor"><div class="program__lvl">Ground</div><ul><li>Parking &amp; court</li><li>Living, kitchen &amp; dining</li><li>Two bedrooms &amp; att. toilet</li><li>Pooja room &amp; wash</li><li>Lift / staircase &amp; balcony</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">First</div><ul><li>Living room</li><li>Two bedrooms &amp; att. toilets</li><li>Dressing room &amp; store</li><li>Kitchen / dining &amp; wash</li><li>Pooja room &amp; balcony</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">Second</div><ul><li>Living room</li><li>Two bedrooms &amp; att. toilets</li><li>Dressing room &amp; store</li><li>Kitchen / dining &amp; wash</li><li>Pooja room &amp; balcony</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">Terrace</div><ul><li>Multi-purpose area</li><li>Skylight &amp; pantry</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
   <div class="container reveal">
     <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
     <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="projects.html" class="btn">All projects</a>
-      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+      <a href="projects-architecture.html" class="btn btn--ghost-light">All architecture</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
     </div>
   </div>
 </section>`;
