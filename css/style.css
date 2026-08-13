@@ -764,9 +764,7 @@ details[open] > .role__head .role__toggle { transform: rotate(45deg); background
 /* Full uncropped 3D-elevation renders — three side by side */
 .pd-showcase__sub { margin-top: clamp(58px, 7vw, 104px); }
 .pd-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 1.5vw, 20px); }
-/* Uniform tiles: every tile is the same size, and each image is shown whole
-   (contain) so nothing is cropped; the tile fits the largest, letterboxing on a
-   soft card so short/tall images sit tidily. */
-.pd-full { margin: 0; overflow: hidden; border-radius: 2px; aspect-ratio: 3 / 2; background: var(--paper); }
-.pd-full img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* Uniform, edge-to-edge tiles — same filled style as the Juneberry Moments grid. */
+.pd-full { margin: 0; overflow: hidden; border-radius: 2px; }
+.pd-full img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 @media (max-width: 720px) { .pd-full-grid { grid-template-columns: 1fr; } }
