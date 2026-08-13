@@ -1032,6 +1032,10 @@ const juneberry = `
       <figure class="pd-detail"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of oak chairs beneath the relief artwork" loading="lazy" /></figure>
       <figure class="pd-detail"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a framed art panel" loading="lazy" /></figure>
     </div>
+    <div class="pd-duo reveal">
+      <figure class="pd-detail"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, mountain-relief artworks above the banquette, with the counter beyond" loading="lazy" /></figure>
+      <figure class="pd-detail"><img src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
+    </div>
   </div>
 </section>
 
