@@ -368,8 +368,8 @@ const projProduct = disciplinePage(
 );
 
 const vritta = `
-<div class="pd-hero pd-hero--tall pd-hero--zoom">
-  <img src="${IMG}slide-01.webp" alt="Vritta" />
+<div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
+  <img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e6b7a3">Architecture, Residential · Surat</span>
     <h1>Vritta</h1>
