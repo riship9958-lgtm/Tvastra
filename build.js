@@ -910,8 +910,8 @@ const vallabhNivas = `
 </section>`;
 
 const urdhva = `
-<div class="pd-hero pd-hero--tall">
-  <img src="${IMG6}01-night.webp" alt="Urdhva, the white panel volumes and brick spine at night" />
+<div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
+  <img src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e6c1a0">Architecture, Residential · Surat</span>
     <h1>Urdhva</h1>
@@ -940,6 +940,19 @@ const urdhva = `
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
     <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+  </div>
+</section>
+
+<section class="section pd-sketch">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Concept</p>
+      <h2 class="h-lg">From the first line.</h2>
+    </div>
+    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
+      <figure class="pd-sketch-fig"><img src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch, street corner" /></figure>
+    </div>
+    <p class="muted reveal pd-sketch-note">A hand study of the corner, the stacked white panel volumes, the exposed-brick spine and the rooftop pavilion drawn before the render.</p>
   </div>
 </section>
 
