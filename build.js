@@ -781,52 +781,130 @@ const jalika = `
 </section>`;
 
 const vallabhNivas = `
-<div class="pd-hero pd-hero--zoom">
-  <img src="${IMG5}01-night.webp" alt="Vallabh Nivas at night" />
-  <div class="pd-hero__cap"><div class="container"><span class="tag" style="color:#e2c39c">Architecture, Residential</span><h1>Vallabh Nivas</h1></div></div>
+<div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
+  <img src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e2c39c">Architecture, Residential · Surat</span>
+    <h1>Vallabh Nivas</h1>
+    <p class="pd-hero__sub">A tall, narrow home of concrete, warm timber and trailing green.</p>
+  </div></div>
 </div>
 
-<section class="section" style="padding-bottom:clamp(40px,6vw,70px)">
-  <div class="container wrap-narrow reveal">
-    <p class="eyebrow">The project</p>
-    <p class="lead">A calm, contemporary home in board-formed concrete and warm timber, clean stacked volumes softened by full-height wood-slat panels, deep planted balconies and trailing green that spills from every level.</p>
-    <p class="muted">Grey concrete grids the façade into quiet bays, while cedar-toned slats warm the entrances and screen the terraces. Corner glazing and generous openings pull daylight deep inside; by night, the timber glows and the greenery reads as soft silhouettes against the lit interiors, a restrained, liveable balance of raw material and planting.</p>
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">Clean stacked volumes softened by wood-slat <em>screens</em>, planted balconies and green that spills from every level.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">On a compact 1,210 sq ft plot, the house rises four slender levels in board-formed concrete gridded into quiet bays. A full-height timber-slat panel warms the core and screens the terraces, while corner glazing pulls daylight deep into the narrow plan.</p>
+        <p class="muted">Planned to Vastu and built to breathe: cavity walls temper heat and sound, stack ventilation and open planning move air up through the section, and a water-conservation tank and solar-ready roof carry the house toward self-sufficiency. By night the timber glows and the trailing greenery reads as soft silhouettes against the lit rooms.</p>
+      </div>
+    </div>
   </div>
-  <div class="container" style="margin-top:clamp(40px,5vw,60px)">
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
     <div class="pd-meta reveal">
       <div><div class="k">Type</div><div class="v">Residential</div></div>
-      <div><div class="k">Site</div><div class="v">Surat, Gujarat</div></div>
-      <div><div class="k">Scope</div><div class="v">Architecture &amp; Façade</div></div>
+      <div><div class="k">Site area</div><div class="v">1,210 sq ft</div></div>
+      <div><div class="k">Levels</div><div class="v">G + 3</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
     <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section pd-sketch">
   <div class="container">
-    <figure class="pd-figure reveal" style="margin-bottom:clamp(14px,2vw,22px)">
-      <img src="${IMG5}02-day.webp" alt="Vallabh Nivas by day" />
-      <figcaption>Daylight, concrete, timber slats and planted balconies in full detail.</figcaption>
-    </figure>
-    <div class="pd-duo reveal d1" style="margin-bottom:clamp(14px,2vw,22px)">
-      <figure class="pd-figure"><img src="${IMG5}04-day-front.webp" alt="Vallabh Nivas, street elevation by day" /></figure>
-      <figure class="pd-figure"><img src="${IMG5}03-night-front.webp" alt="Vallabh Nivas, street elevation at night" /></figure>
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Concept</p>
+      <h2 class="h-lg">From the first line.</h2>
     </div>
-    <figure class="pd-figure reveal">
-      <img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, front elevation" />
-      <figcaption>Front elevation, the timber-clad core and layered balconies.</figcaption>
-    </figure>
+    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:760px;margin-inline:auto">
+      <figure class="pd-sketch-fig"><img src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch, corner perspective" /></figure>
+    </div>
+    <p class="muted reveal pd-sketch-note">A hand study of the street corner, the concrete-panel grid, timber-slat core and the cascading planted balconies drawn before the render.</p>
   </div>
 </section>
 
-<section class="section section--paper2" style="text-align:center">
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">3D Elevation.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">Day to night.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vallabh Nivas renders">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="Front elevation by day, the timber-slat core and planted balconies."><img src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" /></figure>
+      <figure class="slide" data-cap="The same elevation after dark, warm timber and glowing rooms."><img src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street view by day, concrete grid and cascading greenery."><img src="${IMG5}04-day-front.webp" alt="Vallabh Nivas, street view by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street view at night, the interiors warm behind the slats."><img src="${IMG5}03-night-front.webp" alt="Vallabh Nivas, street view at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The tall corner, four slender levels stacked over the entrance."><img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">Front elevation by day, the timber-slat core and planted balconies.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The approach</p><h2 class="h-lg">Built to breathe.</h2></div>
+      <ul class="approach reveal d1">
+        <li>Vastu-guided planning</li>
+        <li>Raw, exposed &amp; natural materials</li>
+        <li>Daylight through the day</li>
+        <li>Cavity walls, heat &amp; sound</li>
+        <li>Open planning</li>
+        <li>Stack ventilation</li>
+        <li>Generous green areas</li>
+        <li>Water conservation tank</li>
+        <li>Solar-ready roof</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal" style="max-width:640px">
+      <p class="eyebrow">Accommodation</p>
+      <h2 class="h-lg">A home across four levels.</h2>
+    </div>
+    <div class="program reveal">
+      <div class="program__floor"><div class="program__lvl">Ground</div><ul><li>Parking &amp; backyard</li><li>Kitchen &amp; passage</li><li>Bedroom &amp; att. toilet</li><li>Pooja room &amp; C. toilet</li><li>Lift / staircase</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">First</div><ul><li>Living room</li><li>Bedroom &amp; att. toilet</li><li>Kitchen / dining &amp; wash</li><li>Common toilet</li><li>Balcony</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">Second</div><ul><li>Living room</li><li>Two bedrooms &amp; att. toilets</li><li>Walk-in wardrobe</li><li>Balcony</li></ul></div>
+      <div class="program__floor"><div class="program__lvl">Third</div><ul><li>Living room</li><li>Two bedrooms &amp; att. toilets</li><li>Walk-in wardrobe</li><li>Balcony</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
   <div class="container reveal">
     <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
     <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="projects.html" class="btn">All projects</a>
-      <a href="contact.html" class="btn btn--clay">Start a project ${ARROW}</a>
+      <a href="projects-architecture.html" class="btn btn--ghost-light">All architecture</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
     </div>
   </div>
 </section>`;
