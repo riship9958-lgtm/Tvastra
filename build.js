@@ -1179,10 +1179,10 @@ const about = `
     <div class="stats reveal" style="border:0;padding:0;margin:0">
       <div class="stat"><div class="n">29</div><div class="l">Years of experience</div></div>
       <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
-      <div class="stat"><div class="n">2023</div><div class="l">A&amp;D Platinum Winner</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">International design awards</div></div>
       <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
     </div>
-    <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Platinum Winner, Architecture &amp; Design Collection Awards 2023.&nbsp; Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
+    <p class="muted reveal" style="text-align:center;margin-top:40px;font-size:15px">Gold Winner, IADA 2025 &amp; Platinum Winner, Architecture &amp; Design Collection Awards 2023.&nbsp; Led by designated partners Bhavin Ghanshyambhai Swami &amp; Alpaben Bhavinbhai Swami.</p>
   </div>
 </section>
 
@@ -1246,6 +1246,15 @@ const recognition = `
   <div class="container">
     <div class="rec-list reveal">
       <div class="rec-item">
+        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/adc.png" alt="Architecture &amp; Design Collection" loading="lazy" /><span>2025</span></div>
+        <div>
+          <h3 class="rec-item__title">Gold Winner</h3>
+          <div class="rec-item__where">IADA 2025 &middot; Architecture &amp; Design Collection</div>
+          <p class="muted" style="margin:0">Custom Interior Design Category, for <a href="metal-life.html" class="crumb">Metal Life</a>, our raw industrial shell warmed with terracotta, copper and light.</p>
+        </div>
+        <a class="rec-item__tag rec-item__tag--link" href="https://ad-c.org/winner/metal-life-gold-winner-custom-interior-design-category-iada-2025/" target="_blank" rel="noopener">View award ${ARROW}</a>
+      </div>
+      <div class="rec-item">
         <div class="rec-item__year"><img class="rec-item__seal" src="assets/awards/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner" loading="lazy" /><span>2023</span></div>
         <div>
           <h3 class="rec-item__title">Platinum Winner</h3>
@@ -1263,7 +1272,7 @@ const recognition = `
   <div class="container">
     <div class="stats reveal" style="border:0;padding:0;margin:0">
       <div class="stat"><div class="n">29</div><div class="l">Years of practice</div></div>
-      <div class="stat"><div class="n">2023</div><div class="l">A&amp;D Platinum Winner</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">International design awards</div></div>
       <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
       <div class="stat"><div class="n">Surat</div><div class="l">Gujarat, India</div></div>
     </div>
