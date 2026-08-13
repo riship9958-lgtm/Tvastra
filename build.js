@@ -428,11 +428,10 @@ const vritta = `
       <p class="eyebrow">Concept</p>
       <h2 class="h-lg">From the first line.</h2>
     </div>
-    <div class="pd-sketch-grid reveal">
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, aerial perspective" /></figure>
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-02.webp" alt="Vritta, concept sketch, street perspective" /></figure>
+    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
+      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, corner perspective" /></figure>
     </div>
-    <p class="muted reveal pd-sketch-note">Hand studies, the stepped massing, carved terraces and circular apertures explored in line before the render.</p>
+    <p class="muted reveal pd-sketch-note">A hand study of the stepped massing, carved terraces and the circular apertures explored in line before the render.</p>
   </div>
 </section>
 
