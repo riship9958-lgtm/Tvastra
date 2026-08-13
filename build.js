@@ -1197,23 +1197,19 @@ const foundersMind = `
   </div>
 </section>
 
-<section class="section fportfolio">
-  <div class="container">
-    <div class="grid-2 top fportfolio__grid">
-      <a class="fportfolio__media reveal" href="founder-portfolio.html" aria-label="Open the founder's portfolio">
-        <img src="assets/founder/founder-portfolio-bw.webp" alt="The founder of Tvastra Design LLP, camera in hand, framed by a carved jharokha" loading="lazy" />
-        ${PLUS}
-      </a>
-      <div class="fportfolio__text reveal d1">
-        <p class="eyebrow">The founder's portfolio</p>
-        <h2 class="h-lg">A designer's eye, off the drawing board.</h2>
-        <p class="lead">The same attention to proportion, light and detail that shapes a building carries into how the world is seen through a lens, quiet frames of craft, ornament and space.</p>
-        <p class="muted">Travel and photography are where the studio's language is refreshed. Carved facades, old courtyards and the play of shadow become a private library of reference that finds its way back into the work.</p>
-        <a href="founder-portfolio.html" class="link-arrow">View the portfolio ${ARROW}</a>
-      </div>
+<a class="fpband reveal" href="founder-portfolio.html" aria-label="Open the founder's portfolio">
+  <img class="fpband__img" src="assets/founder/portfolio-band-bw.webp" alt="The founder marking timber beside furniture design sketches in the workshop" loading="lazy" />
+  <span class="fpband__blur" aria-hidden="true"></span>
+  <span class="fpband__shade" aria-hidden="true"></span>
+  <div class="fpband__inner">
+    <div class="fpband__text">
+      <p class="eyebrow">The founder's portfolio</p>
+      <h2 class="fpband__title">A designer's eye, off the drawing board.</h2>
+      <p class="fpband__lead">From the first pencil sketch to the finished joint, a personal archive of the founder's projects and craft.</p>
+      <span class="link-arrow">View the portfolio ${ARROW}</span>
     </div>
   </div>
-</section>
+</a>
 
 <section class="section section--ink" style="text-align:center">
   <div class="container reveal">

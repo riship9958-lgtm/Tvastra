@@ -583,18 +583,32 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .pd-intro { padding-top: clamp(70px, 9vw, 130px); }
 .pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
 
-/* Founder portfolio — B&W photograph beside the note (links to the portfolio page) */
-.fportfolio__grid { align-items: center; gap: clamp(34px, 5vw, 72px); }
-.fportfolio__media { position: relative; display: block; margin: 0; overflow: hidden; border-radius: 4px; background: var(--bg-deep); }
-.fportfolio__media img { display: block; width: 100%; height: auto; filter: grayscale(1) contrast(1.02); transition: transform .7s cubic-bezier(.2,.7,.2,1), filter .5s ease; }
-.fportfolio__media:hover img { transform: scale(1.04); filter: grayscale(1) contrast(1.06) brightness(1.04); }
-.fportfolio__media .dcol__plus { inset: auto 16px 16px auto; place-items: end; }
-.fportfolio__media:hover .dcol__plus { opacity: 1; }
-.fportfolio__text .eyebrow { margin-bottom: 18px; }
-.fportfolio__text .lead { margin-top: 22px; }
-.fportfolio__text .muted { margin-top: 16px; }
-.fportfolio__text .link-arrow { margin-top: 26px; }
-@media (max-width: 760px) { .fportfolio__grid { gap: clamp(24px, 6vw, 40px); } }
+/* Founder portfolio — full-bleed B&W image band, text overlaid on the blurred side.
+   The whole band is a link to the portfolio page. */
+.fpband { position: relative; display: block; width: 100%; min-height: clamp(440px, 64vh, 700px); overflow: hidden; background: #0e1216; isolation: isolate; }
+.fpband__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: left center; filter: grayscale(1) contrast(1.05); transition: transform .9s cubic-bezier(.2,.7,.2,1); }
+.fpband:hover .fpband__img { transform: scale(1.03); }
+/* Stronger blur on the right (text) side, fading to a clear left. */
+.fpband__blur { position: absolute; inset: 0; backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px);
+  -webkit-mask-image: linear-gradient(to left, #000 0%, #000 30%, transparent 62%);
+          mask-image: linear-gradient(to left, #000 0%, #000 30%, transparent 62%); }
+.fpband__shade { position: absolute; inset: 0; background: linear-gradient(to left, rgba(8,12,15,.9) 0%, rgba(8,12,15,.72) 30%, rgba(8,12,15,.26) 60%, rgba(8,12,15,.06) 100%); }
+.fpband__inner { position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: flex-end; padding: clamp(40px, 6vw, 92px) clamp(22px, 6vw, 110px); }
+.fpband__text { max-width: 460px; }
+.fpband__text .eyebrow { color: #cfe3ef; margin-bottom: 16px; }
+.fpband__title { font-family: var(--serif); font-weight: 500; color: #fff; font-size: clamp(28px, 3.6vw, 50px); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 16px; }
+.fpband__lead { color: #d5dee4; font-size: clamp(16px, 1.6vw, 19px); line-height: 1.55; margin-bottom: 24px; }
+.fpband .link-arrow { color: #bfe0f2; }
+.fpband:hover .link-arrow { opacity: .82; }
+@media (max-width: 720px) {
+  .fpband { min-height: clamp(420px, 78vh, 560px); }
+  .fpband__inner { justify-content: center; text-align: center; padding: clamp(28px, 8vw, 54px); }
+  .fpband__text { max-width: 100%; }
+  .fpband__text .eyebrow { justify-content: center; }
+  .fpband__shade { background: linear-gradient(to top, rgba(8,12,15,.92) 0%, rgba(8,12,15,.6) 52%, rgba(8,12,15,.35) 100%); }
+  .fpband__blur { -webkit-mask-image: linear-gradient(to top, #000 0%, #000 46%, transparent 84%);
+                          mask-image: linear-gradient(to top, #000 0%, #000 46%, transparent 84%); }
+}
 
 /* Design-approach list */
 .approach { list-style: none; columns: 2; column-gap: clamp(24px, 4vw, 56px); }
