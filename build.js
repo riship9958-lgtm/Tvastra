@@ -68,6 +68,7 @@ const FOOTER = `
     <div class="footer-top">
       <div class="footer-brand">
         <img src="assets/logo-white.png" alt="Tvastra Design LLP" />
+        <p class="footer-tag">The Power of Creativity</p>
         <p>Architecture, interiors &amp; product design, a 29-year practice blending historical elegance with contemporary craft.</p>
       </div>
       <div>
