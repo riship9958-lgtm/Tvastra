@@ -496,14 +496,11 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .rec-list { border-top: 1px solid var(--line); }
 .rec-item { display: grid; grid-template-columns: 150px 1fr auto; gap: clamp(20px, 4vw, 50px); align-items: start; padding-block: clamp(30px, 4vw, 50px); border-bottom: 1px solid var(--line); transition: padding .35s var(--ease); }
 .rec-item:hover { padding-left: 8px; }
-.rec-item__year { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(40px, 5vw, 64px); color: var(--clay); line-height: 1; }
+.rec-item__year { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(40px, 5vw, 64px); color: var(--clay); line-height: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.rec-item__seal { width: clamp(72px, 8vw, 100px); height: auto; }
 .rec-item__title { font-family: var(--serif); font-size: clamp(24px, 3vw, 34px); font-weight: 500; }
 .rec-item__where { color: var(--clay); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; margin: 8px 0 14px; }
 .rec-item__tag { align-self: center; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--stone-dk); border: 1px solid var(--line); border-radius: 100px; padding: 8px 16px; white-space: nowrap; }
-.rec-item__badge { display: flex; align-items: center; justify-content: flex-start; }
-.rec-item__badge img { height: clamp(84px, 8vw, 108px); width: auto; }
-.rec-item--badge { align-items: center; }
-@media (max-width: 720px) { .rec-item__badge { justify-content: flex-start; } }
 .rec-item__tag--link { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; transition: background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease); }
 .rec-item__tag--link svg { width: 13px; height: 13px; }
 .rec-item__tag--link:hover { background: var(--clay); border-color: var(--clay); color: #fff; }
