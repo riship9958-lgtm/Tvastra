@@ -652,6 +652,34 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .clients img:hover { opacity: 1; }
 @media (max-width: 600px) { .clients { gap: 28px 34px; } .clients img { max-height: 34px; max-width: 108px; } }
 
+/* Careers — perks grid */
+.perks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(22px, 3vw, 38px) clamp(28px, 4vw, 56px); }
+.perk { border-top: 1px solid var(--line); padding-top: 18px; }
+.perk__t { font-family: var(--serif); font-size: clamp(17px, 1.9vw, 21px); margin-bottom: 8px; color: var(--ink); }
+.perk p { color: var(--stone-dk); font-size: 15px; line-height: 1.55; margin: 0; }
+
+/* Careers — role listings (native accordion) */
+.roles__group { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--clay); margin: 0 0 4px; }
+.role { border-bottom: 1px solid var(--line); }
+.role__head { display: flex; align-items: center; gap: 20px; padding: clamp(20px, 2.4vw, 28px) 0; cursor: pointer; list-style: none; }
+.role__head::-webkit-details-marker { display: none; }
+.role__head::marker { content: ""; }
+.role__title { font-family: var(--serif); font-weight: 500; font-size: clamp(19px, 2.1vw, 26px); flex: 1; }
+.role__exp { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); white-space: nowrap; }
+.role__toggle { width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; color: var(--ink); flex-shrink: 0; transition: transform .3s var(--ease), background .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease); }
+.role__toggle svg { width: 16px; height: 16px; }
+.role:hover .role__toggle { background: var(--paper-2); }
+details[open] > .role__head .role__toggle { transform: rotate(45deg); background: var(--clay); border-color: var(--clay); color: #fff; }
+.role__body { padding: 0 0 clamp(24px, 3vw, 34px); max-width: 820px; }
+.role__overview { color: var(--stone-dk); }
+.role__meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px 28px; margin: 18px 0 20px; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.role__meta > div { display: flex; flex-direction: column; gap: 4px; font-size: 14.5px; color: var(--ink); }
+.role__k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--clay); }
+.role__points { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0 0 22px; }
+.role__points li { position: relative; padding-left: 22px; font-size: 15px; color: var(--stone-dk); }
+.role__points li::before { content: ""; position: absolute; left: 0; top: .6em; width: 7px; height: 7px; border: 1px solid var(--clay); border-radius: 50%; }
+@media (max-width: 560px) { .role__exp { display: none; } }
+
 /* The name — brand-story section (About) */
 .namesec { text-align: center; }
 .namesec__inner { max-width: 780px; margin: 0 auto; }

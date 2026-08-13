@@ -1207,6 +1207,52 @@ const foundersMind = `
   </div>
 </section>`;
 
+const PERKS = [
+  ['Professional development', 'Ongoing training for skill growth and career advancement.'],
+  ['Flexible schedules', 'Manage work and life with adaptable scheduling options.'],
+  ['Rewarding culture', 'An annual allowance to empower your journey.'],
+  ['Enrichment workshops', 'Broaden your expertise and advance your career.'],
+  ['Cross-culture teams', 'Work with cross-culture and cross-function teams.'],
+  ['Project variety', 'Diverse projects from residential to commercial keep the work dynamic.'],
+  ['Collaborative environment', 'A team-oriented atmosphere that encourages creativity.'],
+  ['Sustainability initiatives', 'Join eco-friendly projects that make a real difference.'],
+];
+
+const ARCH_ROLES = [
+  { title: 'Trainee Architect', exp: 'Fresh graduate to 1 year', qual: 'B.Arch (or final-year student)', reports: 'Junior / Mid-level Architect', overview: 'An entry-level role supporting the architecture team in drafting, documentation, model-making and research, while learning our standards, tools and statutory processes.', points: ['Prepare and revise plans, elevations, sections and details under supervision', 'Assist with 3D and physical models for design development', 'Compile drawings for statutory submissions under guidance', 'Research materials and record site conditions on visits'] },
+  { title: 'Junior Architect', exp: '1 to 3 years', qual: 'B.Arch', reports: 'Mid-level / Senior Architect', overview: 'Produces drawings and documentation with moderate supervision, supports approvals and coordination, and develops toward handling project packages independently.', points: ['Develop working and construction drawing sets', 'Prepare 3D models and renders to communicate design intent', 'Coordinate approvals and consultant drawings', 'Attend site visits to check execution against drawings'] },
+  { title: 'Mid-level Architect', exp: '3 to 6 years', qual: 'B.Arch; Council of Architecture registration preferred', reports: 'Senior Architect', overview: 'Independently leads design development and technical documentation, coordinates consultants and approvals, supervises site execution and mentors junior colleagues.', points: ['Own design development and construction documentation', 'Prepare statutory drawing sets and liaise on approvals', 'Coordinate structural, services and specialist consultants', 'Supervise site execution and guide junior architects'] },
+  { title: 'Senior Architect', exp: '6 years and above', qual: 'B.Arch with current Council of Architecture registration', reports: 'Founding Partners', overview: 'Leads architectural projects end-to-end, signs off statutory drawings within authorisation, owns client and authority relationships, and leads and develops the architecture team.', points: ['Lead projects from concept through approvals to handover', 'Set technical direction and maintain code compliance', 'Own client and statutory-authority relationships', 'Plan resources and mentor the architecture team'] },
+];
+
+const INT_ROLES = [
+  { title: 'Trainee Interior Designer', exp: 'Fresh graduate to 1 year', qual: 'Degree or diploma in Interior Design (or final-year student)', reports: 'Junior / Mid-level Interior Designer', overview: 'An entry-level role supporting the interior team in drafting, documentation and material research across residential and commercial projects, while learning our standards and tools.', points: ['Prepare and revise 2D drawings under supervision', 'Assist with basic 3D models and views for design development', 'Maintain the material, finish and product library', 'Support mood boards, presentations and site records'] },
+  { title: 'Junior Interior Designer', exp: '1 to 3 years', qual: 'Degree or diploma in Interior Design', reports: 'Mid-level / Senior Interior Designer', overview: 'Produces design documentation and 3D visualisation with moderate supervision, contributing to design development, material selection and site coordination toward independent project ownership.', points: ['Develop working, joinery and detail drawing sets', 'Prepare 3D models, renders and walkthroughs', 'Select materials, finishes and FF&E and prepare schedules', 'Coordinate vendors and check execution on site'] },
+  { title: 'Mid-level Interior Designer', exp: '3 to 6 years', qual: 'Degree or diploma in Interior Design', reports: 'Senior Interior Designer', overview: 'Independently leads the design development and documentation of interior projects from concept to execution, coordinates consultants and site works, and mentors junior colleagues.', points: ['Own design development and technical documentation', 'Lead material, finish and FF&E selection and specification', 'Coordinate consultants and integrate their inputs', 'Present to clients and guide junior designers'] },
+  { title: 'Senior Interior Designer', exp: '6 years and above', qual: 'Degree or diploma in Interior Design', reports: 'Founding Partners', overview: 'Leads interior projects end-to-end, owns client relationships, sets and maintains design quality, and leads and develops the interior-design team.', points: ['Lead projects from brief and concept through to handover', 'Own client relationships and lead presentations', 'Set design direction and maintain quality across projects', 'Plan resources and mentor the interior-design team'] },
+];
+
+function roleItem(r) {
+  return `<details class="role reveal">
+      <summary class="role__head">
+        <span class="role__title">${r.title}</span>
+        <span class="role__exp">${r.exp}</span>
+        <span class="role__toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 5v14M5 12h14"/></svg></span>
+      </summary>
+      <div class="role__body">
+        <p class="role__overview">${r.overview}</p>
+        <div class="role__meta">
+          <div><span class="role__k">Experience</span>${r.exp}</div>
+          <div><span class="role__k">Qualification</span>${r.qual}</div>
+          <div><span class="role__k">Reports to</span>${r.reports}</div>
+          <div><span class="role__k">Type</span>Full-time &middot; Surat</div>
+        </div>
+        <ul class="role__points">${r.points.map(function (p) { return `<li>${p}</li>`; }).join('')}</ul>
+        <a class="link-arrow" href="mailto:info@tvastra.design?subject=${encodeURIComponent('Application: ' + r.title)}">Apply for this role ${ARROW}</a>
+      </div>
+    </details>`;
+}
+
 const careers = `
 <section class="section" style="padding-top:clamp(120px,15vh,190px)">
   <div class="container grid-2 top">
@@ -1216,37 +1262,31 @@ const careers = `
     </div>
     <div class="reveal d1">
       <p class="lead">We are always looking for thoughtful, curious people who care about the craft of building. If you want to learn by doing, from the first sketch to the finished site, we would love to hear from you.</p>
-      <p class="muted">Tvastra is a hands-on studio. You will work close to real projects and real clients, across architecture, interiors and the objects within them.</p>
+      <p class="muted">Tvastra is a hands-on studio. People come before projects, and that is the same culture we bring to our team: respect, trust, transparency and long-term relationships.</p>
     </div>
   </div>
 </section>
 
 <section class="section section--paper2">
-  <div class="container grid-2 top">
-    <div class="reveal"><p class="eyebrow">Why work here</p><h2 class="statement">People come before <em>projects.</em></h2></div>
-    <div class="reveal d1">
-      <p class="muted">We believe in respect, trust, transparency and long-term relationships, with clients and with each other. That is the same culture we bring to our team.</p>
-      <ul class="approach" style="margin-top:8px">
-        <li>Real, hands-on project experience</li>
-        <li>Mentorship and continuous learning</li>
-        <li>Work across every discipline</li>
-        <li>A studio that values your voice</li>
-      </ul>
+  <div class="container">
+    <div class="reveal" style="max-width:640px;margin-bottom:clamp(34px,4.5vw,52px)"><p class="eyebrow">Life at Tvastra</p><h2 class="h-lg">Perks &amp; benefits.</h2></div>
+    <div class="perks reveal">
+      ${PERKS.map(function (p) { return `<div class="perk"><h4 class="perk__t">${p[0]}</h4><p>${p[1]}</p></div>`; }).join('\n      ')}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <div class="reveal" style="max-width:640px;margin-bottom:clamp(30px,4vw,44px)"><p class="eyebrow">Where you might fit</p><h2 class="h-lg">Roles we hire for.</h2></div>
-    <ul class="approach reveal" style="max-width:760px">
-      <li>Architects</li>
-      <li>Interior designers</li>
-      <li>3D visualisers</li>
-      <li>Draughtspersons</li>
-      <li>Site coordinators</li>
-      <li>Design interns</li>
-    </ul>
+    <div class="reveal" style="max-width:640px;margin-bottom:clamp(30px,4vw,44px)"><p class="eyebrow">Open roles</p><h2 class="h-lg">Join the studio.</h2></div>
+    <div class="roles reveal">
+      <h3 class="roles__group">Architecture Studio</h3>
+      ${ARCH_ROLES.map(roleItem).join('\n      ')}
+    </div>
+    <div class="roles reveal" style="margin-top:clamp(36px,4vw,54px)">
+      <h3 class="roles__group">Interior Design Studio</h3>
+      ${INT_ROLES.map(roleItem).join('\n      ')}
+    </div>
   </div>
 </section>
 
@@ -1254,7 +1294,7 @@ const careers = `
   <div class="container reveal">
     <p class="eyebrow no-rule" style="justify-content:center">How to apply</p>
     <h2 class="h-lg" style="margin-bottom:16px">Send us your work.</h2>
-    <p class="lead" style="color:#cfd9e0;max-width:56ch;margin:0 auto 30px">Email your CV and portfolio, and tell us a little about what you would love to work on. We read every application.</p>
+    <p class="lead" style="color:#cfd9e0;max-width:56ch;margin:0 auto 30px">Email your CV and portfolio and tell us which role interests you. We read every application.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
       <a href="mailto:info@tvastra.design?subject=Career%20at%20Tvastra%20Design%20LLP" class="btn btn--ghost-light">Email your portfolio ${ARROW}</a>
       <a href="contact.html" class="btn btn--ghost-light">Contact the studio</a>
