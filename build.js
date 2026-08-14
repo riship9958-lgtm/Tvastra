@@ -2005,6 +2005,38 @@ const GOSPELS = [
     poster: 'assets/gospels/ep-golden-words-poster.webp',
     video: 'assets/gospels/videos/golden-words.mp4',
   },
+  {
+    title: 'The biggest challenges in site supervision',
+    topic: 'Thought process',
+    length: '1:13',
+    desc: 'The founder on the realities of site supervision and getting a project executed.',
+    poster: 'assets/gospels/ep-reel-1-poster.webp',
+    video: 'assets/gospels/videos/reel-1.mp4',
+  },
+  {
+    title: 'Are you choosing the right colour for your space?',
+    topic: 'Ideas',
+    length: '1:56',
+    desc: 'The founder on choosing colour for a space, and why it matters more than you think.',
+    poster: 'assets/gospels/ep-reel-2-poster.webp',
+    video: 'assets/gospels/videos/reel-2.mp4',
+  },
+  {
+    title: 'What shapes the feeling of a space?',
+    topic: 'Points of view',
+    length: '1:19',
+    desc: 'The founder on what most influences how a space feels to be in.',
+    poster: 'assets/gospels/ep-reel-3-poster.webp',
+    video: 'assets/gospels/videos/reel-3.mp4',
+  },
+  {
+    title: 'Meet the founder, in three points',
+    topic: 'Thought process',
+    length: '1:42',
+    desc: 'A short introduction from the founder, and the three points he keeps coming back to.',
+    poster: 'assets/gospels/ep-reel-4-poster.webp',
+    video: 'assets/gospels/videos/reel-4.mp4',
+  },
 ];
 function gcard(v) {
   return `<button class="gcard reveal" type="button" data-video="${v.video}" aria-label="Play film: ${v.title}">
@@ -2220,6 +2252,21 @@ if (process.argv[2] === 'preview') {
     ss.addEventListener('touchend',function(e){ if(x0===null)return; var dx=e.changedTouches[0].clientX-x0; if(Math.abs(dx)>40)go(idx+(dx<0?1:-1),true); x0=null; },{passive:true});
     restart();
   });
+
+  // video popup player (Gospels)
+  var vTriggers = document.querySelectorAll('[data-video]');
+  if(vTriggers.length){
+    var vmodal=document.createElement('div'); vmodal.className='vmodal';
+    vmodal.innerHTML='<button class="vmodal__close" aria-label="Close">&times;</button><video class="vmodal__video" controls playsinline></video>';
+    document.body.appendChild(vmodal);
+    var vEl=vmodal.querySelector('.vmodal__video');
+    var closeV=function(){ vmodal.classList.remove('open'); vEl.pause(); vEl.removeAttribute('src'); vEl.load(); document.body.style.overflow=''; };
+    var openV=function(src){ vEl.src=src; vmodal.classList.add('open'); document.body.style.overflow='hidden'; var pr=vEl.play(); if(pr&&pr.catch)pr.catch(function(){}); };
+    vTriggers.forEach(function(t){ t.addEventListener('click',function(e){ e.preventDefault(); openV(t.getAttribute('data-video')); }); });
+    vmodal.querySelector('.vmodal__close').addEventListener('click',closeV);
+    vmodal.addEventListener('click',function(e){ if(e.target===vmodal)closeV(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&vmodal.classList.contains('open'))closeV(); });
+  }
 
   var start = (location.hash||'#home').slice(1);
   show(document.getElementById(start)?start:'home');
