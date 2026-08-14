@@ -124,6 +124,7 @@ const PROJECTS_LIST = [
   { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
   { name: 'Juneberry',    file: 'juneberry.html',    cat: 'interior',     meta: 'Café · Surat, Gujarat', side: 'Café &middot; Surat',       card: 'assets/projects/juneberry/counter.webp', feat: 'assets/projects/juneberry/counter.webp' },
   { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Boutique · Surat, Gujarat', side: 'Boutique &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
+  { name: 'Pyramid Palacia', file: 'pyramid-palacia.html', cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/pyramid-palacia/hero.webp', feat: 'assets/projects/pyramid-palacia/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -1660,6 +1661,107 @@ const calibre = `
   </div>
 </section>`;
 
+const PIMG = 'assets/projects/pyramid-palacia/';
+const pyramidPalacia = `
+<div class="pd-hero pd-hero--tall">
+  <img src="${PIMG}hero.webp" alt="Pyramid Palacia, warm-neutral living and dining interior" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e2c8a6">Interior Design, Residence · Surat</span>
+    <h1>Pyramid Palacia</h1>
+    <p class="pd-hero__sub">A warm, modern-luxury home grounded by brass and earthy texture.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">A clean, minimal foundation dressed in classic, high-end finishes, balanced around <em>visual equilibrium.</em></h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">Pyramid Palacia is a residence composed in the Modern Luxury Contemporary key. A warm base of creams and greys is grounded by rich, earthy brown; geometric wall paneling draws the eye upward, softened by floor-to-ceiling sheer drapery.</p>
+        <p class="muted">Earth tones anchor the seating with comfort and intimacy, muted sage adds a cooling natural balance, and gold and brass bring a timeless refinement to lighting, inlays and table bases. Lighting is treated as sculptural art, layered daylight, sleek track light and grounding pendants in brushed brass and frosted glass, warming wood, stone and marble through every room.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
+      <div><div class="k">Style</div><div class="v">Modern Luxury Contemporary</div></div>
+      <div><div class="k">Palette</div><div class="v">Warm neutrals &amp; brass</div></div>
+      <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
+    </div>
+    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b></b></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">Grounded luxury.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Warm neutrals</div><p>Creams and greys for tranquility and an open, inviting calm.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Earth tones</div><p>Rich brown anchors the seating with comfort and intimacy.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Muted sage</div><p>A restorative, cooling natural balance within the minimal scheme.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Gold &amp; brass</div><p>Timeless elegance in the lighting, inlays and table bases.</p></div>
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      <span>Wood</span><span>Brass</span><span>Marble</span><span>Textured plaster</span><span>Fabric</span>
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The space</p>
+      <h2 class="h-lg">Room by room.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${PIMG}space-01.webp" alt="Pyramid Palacia, living room seating" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${PIMG}space-02.webp" alt="Pyramid Palacia, living room with panelled media wall" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${PIMG}space-03.webp" alt="Pyramid Palacia, dining and hallway" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">A closer look.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Pyramid Palacia interior">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="The entrance foyer, wood paneling and a soft welcome."><img src="${PIMG}look-01.webp" alt="Pyramid Palacia, entrance foyer" /></figure>
+      <figure class="slide" data-cap="A bedroom framed by the city view and sheer drapery."><img src="${PIMG}look-02.webp" alt="Pyramid Palacia, bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The master bedroom, a marble feature wall behind the bed."><img src="${PIMG}look-03.webp" alt="Pyramid Palacia, master bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A calm bedroom with a panelled media wall."><img src="${PIMG}look-04.webp" alt="Pyramid Palacia, bedroom media wall" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Soft greys and sculptural pendant lighting."><img src="${PIMG}look-05.webp" alt="Pyramid Palacia, grey bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Warm brown and mauve, an intimate retreat."><img src="${PIMG}look-06.webp" alt="Pyramid Palacia, warm bedroom" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">The entrance foyer, wood paneling and a soft welcome.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="dsec">
   <div class="container">
@@ -2218,6 +2320,7 @@ const PAGES = [
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
   { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a 1,170 sq ft sustainable specialty-coffee café in Surat (2025) by Tvastra Design LLP, sculpted-plaster walls, upcycled-textile installations and waste-into-art craft.', content: juneberry },
   { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
+  { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
