@@ -2086,23 +2086,24 @@ for (const p of PAGES) {
 /* ---------- preview bundle (SPA, data-URI images) ---------- */
 if (process.argv[2] === 'preview') {
   const OUTP = process.argv[3] || path.join(ROOT, 'preview.html');
-  const mime = { '.webp': 'image/webp', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg' };
-  const OVERRIDE = process.env.PREVIEW_ASSETS || ''; // dir of downscaled, webp-encoded copies
+  const mime = { '.webp': 'image/webp', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.mp4': 'video/mp4' };
+  const OVERRIDE = process.env.PREVIEW_ASSETS || ''; // dir of downscaled/compressed copies
   const cache = {};
   function toData(rel) {
     if (cache[rel]) return cache[rel];
-    // Prefer a downscaled override copy (all re-encoded to webp) to keep the bundle small.
+    const ext = path.extname(rel).toLowerCase();
+    const mt = mime[ext] || 'application/octet-stream';
+    // Prefer a downscaled/compressed override copy to keep the bundle small.
     if (OVERRIDE) {
       const ov = path.join(OVERRIDE, rel);
       if (fs.existsSync(ov)) {
-        const uri = `data:image/webp;base64,${fs.readFileSync(ov).toString('base64')}`;
+        const uri = `data:${mt};base64,${fs.readFileSync(ov).toString('base64')}`;
         cache[rel] = uri; return uri;
       }
     }
     const abs = path.join(ROOT, rel);
     if (!fs.existsSync(abs)) return rel;
-    const ext = path.extname(rel).toLowerCase();
-    const uri = `data:${mime[ext] || 'application/octet-stream'};base64,${fs.readFileSync(abs).toString('base64')}`;
+    const uri = `data:${mt};base64,${fs.readFileSync(abs).toString('base64')}`;
     cache[rel] = uri; return uri;
   }
   const css = fs.readFileSync(path.join(ROOT, 'css/style.css'), 'utf8');
@@ -2111,6 +2112,8 @@ if (process.argv[2] === 'preview') {
   function prep(content) {
     // data-URI images
     content = content.replace(/(src=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
+    // data-URI videos (Gospels) so they play inside the single-file preview
+    content = content.replace(/(data-video=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // *.html -> hash
     content = content.replace(/href="([a-z0-9-]+\.html)(#[a-z0-9-]+)?"/g, (m,f) => `href="${hmap[f] || ('#'+f)}"`);
     return content;
