@@ -1664,7 +1664,7 @@ const calibre = `
 const PIMG = 'assets/projects/pyramid-palacia/';
 const pyramidPalacia = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${PIMG}hero.webp" alt="Pyramid Palacia, warm-neutral living and dining interior" />
+  <img src="${PIMG}hero.webp" alt="Pyramid Palacia, serene warm-neutral bedroom" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#e2c8a6">Interior Design, Residence · Surat</span>
     <h1>Pyramid Palacia</h1>
@@ -1719,34 +1719,11 @@ const pyramidPalacia = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Room by room.</h2>
     </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${PIMG}space-01.webp" alt="Pyramid Palacia, living room seating" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${PIMG}space-02.webp" alt="Pyramid Palacia, living room with panelled media wall" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${PIMG}space-03.webp" alt="Pyramid Palacia, dining and hallway" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">A closer look.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Pyramid Palacia interior">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The entrance foyer, wood paneling and a soft welcome."><img src="${PIMG}look-01.webp" alt="Pyramid Palacia, entrance foyer" /></figure>
-      <figure class="slide" data-cap="A bedroom framed by the city view and sheer drapery."><img src="${PIMG}look-02.webp" alt="Pyramid Palacia, bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The master bedroom, a marble feature wall behind the bed."><img src="${PIMG}look-03.webp" alt="Pyramid Palacia, master bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A calm bedroom with a panelled media wall."><img src="${PIMG}look-04.webp" alt="Pyramid Palacia, bedroom media wall" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Soft greys and sculptural pendant lighting."><img src="${PIMG}look-05.webp" alt="Pyramid Palacia, grey bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Warm brown and mauve, an intimate retreat."><img src="${PIMG}look-06.webp" alt="Pyramid Palacia, warm bedroom" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">The entrance foyer, wood paneling and a soft welcome.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
-      </div>
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+      <figure class="pd-full"><img src="${PIMG}space-01.webp" alt="Pyramid Palacia, master bedroom with a book-matched marble feature wall" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom &middot; book-matched marble &amp; brass pendants</figcaption></figure>
+      <figure class="pd-full"><img src="${PIMG}space-02.webp" alt="Pyramid Palacia, bedroom with fluted panelling and a media wall" loading="lazy" /><figcaption class="pd-full__cap">Bedroom &middot; fluted panelling &amp; wood media console</figcaption></figure>
+      <figure class="pd-full"><img src="${PIMG}space-03.webp" alt="Pyramid Palacia, ensuite bathroom with a glazed partition and timber vanity" loading="lazy" /><figcaption class="pd-full__cap">Ensuite &middot; glazed partition &amp; fluted timber vanity</figcaption></figure>
+      <figure class="pd-full"><img src="${PIMG}space-04.webp" alt="Pyramid Palacia, marble bathroom framed in brushed brass" loading="lazy" /><figcaption class="pd-full__cap">Bathroom &middot; grey marble framed in brushed brass</figcaption></figure>
     </div>
   </div>
 </section>
