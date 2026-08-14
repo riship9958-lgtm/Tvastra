@@ -123,6 +123,7 @@ const PROJECTS_LIST = [
   { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
   { name: 'Juneberry',    file: 'juneberry.html',    cat: 'interior',     meta: 'Café · Surat, Gujarat', side: 'Café &middot; Surat',       card: 'assets/projects/juneberry/counter.webp', feat: 'assets/projects/juneberry/counter.webp' },
+  { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Boutique · Surat, Gujarat', side: 'Boutique &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -1541,6 +1542,121 @@ const juneberry = `
   </div>
 </section>`;
 
+const CIMG = 'assets/projects/calibre/';
+const calibre = `
+<div class="pd-hero pd-hero--tall">
+  <img src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior under a circular skylight" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#e6c9a3">Interior Design, Boutique · Surat</span>
+    <h1>Calibre</h1>
+    <p class="pd-hero__sub">Beyond retail, a fluid, sculptural canvas for luxury fashion.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">The boutique reimagined as a fluid, sculptural <em>canvas</em>, where the garments stay the focus.</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">In the commercial district of Vesu, Surat, Calibre trades the rigid rectangular shopfloor for sweeping, continuous curves. Undulating partitions choreograph a seamless journey through the store, quietly concealing the structure so the clothes remain the focal point.</p>
+        <p class="muted">Central curved display units and circular seating islands form intimate, lounge-like pods to meander between; changing rooms, a sweeping reception and utilities tuck invisibly into the negative space behind the walls. Polished matte tile, textured plaster and brushed brass give a tactile, breathable luxury, lit to reveal every fabric without a hard shadow in sight.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
+      <div><div class="k">Type</div><div class="v">Retail · Boutique</div></div>
+      <div><div class="k">Area</div><div class="v">1,950 sq ft</div></div>
+      <div><div class="k">Completed</div><div class="v">2025</div></div>
+    </div>
+    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b>Kanaiya Gajjar</b> &middot; Photography <b>Prabal Gupta</b></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">No sharp corners.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Sweeping curves</div><p>Undulating display walls choreograph the journey and hide the structure within them.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Fluid zones</div><p>Curved display units and circular seating islands make intimate, lounge-like browsing pods.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Tactile materials</div><p>Polished matte tile, textured plaster and brushed brass against soft fabric.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Sculptural light</div><p>Focused track light and soft cove glow reveal the clothing with no harsh shadow.</p></div>
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      <span>Textured plaster</span><span>Matte tile</span><span>Brushed brass</span><span>Curved joinery</span><span>Cove light</span>
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The space</p>
+      <h2 class="h-lg">A room that flows.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">A closer look.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="Circular seating islands beneath the sculpted skylight."><img src="${CIMG}look-01.webp" alt="Calibre, circular seating island" /></figure>
+      <figure class="slide" data-cap="Arched display niches carved into the plaster walls."><img src="${CIMG}look-02.webp" alt="Calibre, arched display niches" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Floating hanging racks keep the circulation open."><img src="${CIMG}look-03.webp" alt="Calibre, floating hanging racks" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A lounge-like pod for browsing and fitting."><img src="${CIMG}look-04.webp" alt="Calibre, lounge-like browsing pod" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The sweeping perimeter wall folds around the room."><img src="${CIMG}look-05.webp" alt="Calibre, sweeping perimeter wall" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Daylight from the arched window across the curves."><img src="${CIMG}look-06.webp" alt="Calibre, daylight across the curved interior" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">Circular seating islands beneath the sculpted skylight.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Moments</p>
+      <h2 class="h-lg">In the detail.</h2>
+    </div>
+    <div class="mgrid reveal">
+      <figure class="mgrid__cell"><img src="${CIMG}moment-01.webp" alt="Calibre, a curved display detail" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${CIMG}moment-02.webp" alt="Calibre, an arched niche with accessories" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img src="${CIMG}moment-03.webp" alt="Calibre, the fitting corner and mirror" loading="lazy" /></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const services = `
 <section class="dsec">
   <div class="container">
@@ -2098,6 +2214,7 @@ const PAGES = [
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
   { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a 1,170 sq ft sustainable specialty-coffee café in Surat (2025) by Tvastra Design LLP, sculpted-plaster walls, upcycled-textile installations and waste-into-art craft.', content: juneberry },
+  { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
