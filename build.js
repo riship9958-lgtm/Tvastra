@@ -1997,6 +1997,14 @@ const GOSPELS = [
     poster: 'assets/gospels/ep-tvastra-poster.webp',
     video: 'assets/gospels/videos/tvastra-meaning.mp4',
   },
+  {
+    title: 'Golden words for every young designer',
+    topic: 'Points of view',
+    length: '1:07',
+    desc: 'Thirty years in, the founder shares his advice for every upcoming designer, an episode of Arch Corner by ConcreeXpo.',
+    poster: 'assets/gospels/ep-golden-words-poster.webp',
+    video: 'assets/gospels/videos/golden-words.mp4',
+  },
 ];
 function gcard(v) {
   return `<button class="gcard reveal" type="button" data-video="${v.video}" aria-label="Play film: ${v.title}">
