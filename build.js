@@ -1985,24 +1985,32 @@ const careers = `
 </section>`;
 
 /* ---------- assemble ---------- */
-// The founder's video library. To add a film, drop its thumbnail in assets/gospels/
-// and append an entry:
-//   { title:'', topic:'', length:'12:04', desc:'', thumb:'assets/gospels/<file>.webp', url:'https://youtu.be/...' }
+// The founder's video library. To add a film, drop the .mp4 in assets/gospels/videos/
+// and a poster in assets/gospels/, then append an entry:
+//   { title:'', topic:'', length:'12:04', desc:'', poster:'assets/gospels/<file>.webp', video:'assets/gospels/videos/<file>.mp4' }
 const GOSPELS = [
+  {
+    title: 'What is the meaning of Tvastra?',
+    topic: 'Ideas',
+    length: '0:56',
+    desc: 'The founder on the name Tvastra and the idea behind the studio, an episode of Arch Corner by ConcreeXpo.',
+    poster: 'assets/gospels/ep-tvastra-poster.webp',
+    video: 'assets/gospels/videos/tvastra-meaning.mp4',
+  },
 ];
 function gcard(v) {
-  return `<a class="gcard reveal" href="${v.url}" target="_blank" rel="noopener">
-      <div class="gcard__thumb">
-        <img src="${v.thumb}" alt="${v.title}" loading="lazy" />
+  return `<button class="gcard reveal" type="button" data-video="${v.video}" aria-label="Play film: ${v.title}">
+      <span class="gcard__thumb">
+        <img src="${v.poster}" alt="${v.title}" loading="lazy" />
         <span class="gcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
         ${v.length ? `<span class="gcard__len">${v.length}</span>` : ''}
-      </div>
-      <div class="gcard__body">
+      </span>
+      <span class="gcard__body">
         ${v.topic ? `<span class="gcard__tag">${v.topic}</span>` : ''}
-        <h3 class="gcard__title">${v.title}</h3>
-        ${v.desc ? `<p class="gcard__desc">${v.desc}</p>` : ''}
-      </div>
-    </a>`;
+        <span class="gcard__title">${v.title}</span>
+        ${v.desc ? `<span class="gcard__desc">${v.desc}</span>` : ''}
+      </span>
+    </button>`;
 }
 
 const gospels = `
