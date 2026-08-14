@@ -111,42 +111,13 @@
   };
   window.initSlideshows();
 
-  // ---- Video popup player (Gospels) ----
-  var vTriggers = document.querySelectorAll("[data-video]");
-  if (vTriggers.length) {
-    var vmodal = document.createElement("div");
-    vmodal.className = "vmodal";
-    vmodal.innerHTML =
-      '<button class="vmodal__close" aria-label="Close">&times;</button>' +
-      '<video class="vmodal__video" controls playsinline></video>';
-    document.body.appendChild(vmodal);
-    var vEl = vmodal.querySelector(".vmodal__video");
-    var closeVideo = function () {
-      vmodal.classList.remove("open");
-      vEl.pause();
-      vEl.removeAttribute("src");
-      vEl.load();
-      document.body.style.overflow = "";
-    };
-    var openVideo = function (src) {
-      vEl.src = src;
-      vmodal.classList.add("open");
-      document.body.style.overflow = "hidden";
-      var pr = vEl.play();
-      if (pr && pr.catch) pr.catch(function () {});
-    };
-    vTriggers.forEach(function (t) {
-      t.addEventListener("click", function (e) {
-        e.preventDefault();
-        openVideo(t.getAttribute("data-video"));
-      });
+  // ---- Gospels: inline players, only one at a time ----
+  var gclips = [].slice.call(document.querySelectorAll(".gclip__video"));
+  gclips.forEach(function (v) {
+    v.addEventListener("play", function () {
+      gclips.forEach(function (o) { if (o !== v) o.pause(); });
     });
-    vmodal.querySelector(".vmodal__close").addEventListener("click", closeVideo);
-    vmodal.addEventListener("click", function (e) { if (e.target === vmodal) closeVideo(); });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && vmodal.classList.contains("open")) closeVideo();
-    });
-  }
+  });
 
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");

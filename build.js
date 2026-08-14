@@ -2039,18 +2039,14 @@ const GOSPELS = [
   },
 ];
 function gcard(v) {
-  return `<button class="gcard reveal" type="button" data-video="${v.video}" aria-label="Play film: ${v.title}">
-      <span class="gcard__thumb">
-        <img src="${v.poster}" alt="${v.title}" loading="lazy" />
-        <span class="gcard__play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-        ${v.length ? `<span class="gcard__len">${v.length}</span>` : ''}
-      </span>
-      <span class="gcard__body">
+  return `<figure class="gclip reveal">
+      <video class="gclip__video" controls playsinline preload="none" poster="${v.poster}" src="${v.video}"></video>
+      <figcaption class="gclip__body">
         ${v.topic ? `<span class="gcard__tag">${v.topic}</span>` : ''}
         <span class="gcard__title">${v.title}</span>
         ${v.desc ? `<span class="gcard__desc">${v.desc}</span>` : ''}
-      </span>
-    </button>`;
+      </figcaption>
+    </figure>`;
 }
 
 const gospels = `
@@ -2146,6 +2142,8 @@ if (process.argv[2] === 'preview') {
     content = content.replace(/(src=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // data-URI videos (Gospels) so they play inside the single-file preview
     content = content.replace(/(data-video=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
+    // data-URI video posters
+    content = content.replace(/(poster=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // *.html -> hash
     content = content.replace(/href="([a-z0-9-]+\.html)(#[a-z0-9-]+)?"/g, (m,f) => `href="${hmap[f] || ('#'+f)}"`);
     return content;
@@ -2253,20 +2251,9 @@ if (process.argv[2] === 'preview') {
     restart();
   });
 
-  // video popup player (Gospels)
-  var vTriggers = document.querySelectorAll('[data-video]');
-  if(vTriggers.length){
-    var vmodal=document.createElement('div'); vmodal.className='vmodal';
-    vmodal.innerHTML='<button class="vmodal__close" aria-label="Close">&times;</button><video class="vmodal__video" controls playsinline></video>';
-    document.body.appendChild(vmodal);
-    var vEl=vmodal.querySelector('.vmodal__video');
-    var closeV=function(){ vmodal.classList.remove('open'); vEl.pause(); vEl.removeAttribute('src'); vEl.load(); document.body.style.overflow=''; };
-    var openV=function(src){ vEl.src=src; vmodal.classList.add('open'); document.body.style.overflow='hidden'; var pr=vEl.play(); if(pr&&pr.catch)pr.catch(function(){}); };
-    vTriggers.forEach(function(t){ t.addEventListener('click',function(e){ e.preventDefault(); openV(t.getAttribute('data-video')); }); });
-    vmodal.querySelector('.vmodal__close').addEventListener('click',closeV);
-    vmodal.addEventListener('click',function(e){ if(e.target===vmodal)closeV(); });
-    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&vmodal.classList.contains('open'))closeV(); });
-  }
+  // Gospels: inline players, one at a time
+  var gclips = [].slice.call(document.querySelectorAll('.gclip__video'));
+  gclips.forEach(function(v){ v.addEventListener('play', function(){ gclips.forEach(function(o){ if(o!==v) o.pause(); }); }); });
 
   var start = (location.hash||'#home').slice(1);
   show(document.getElementById(start)?start:'home');
