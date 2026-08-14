@@ -2006,20 +2006,20 @@ function gcard(v) {
 }
 
 const gospels = `
-<section class="section" style="padding-top:clamp(120px,15vh,190px);padding-bottom:clamp(20px,3vw,40px)">
-  <div class="container grid-2 top">
-    <div class="reveal">
+<section class="gband">
+  <img class="gband__img" src="assets/gospels/founder-band-bw.webp" alt="The founder of Tvastra Design LLP in conversation on a workshop floor" />
+  <span class="gband__blur" aria-hidden="true"></span>
+  <span class="gband__shade" aria-hidden="true"></span>
+  <div class="gband__inner">
+    <div class="gband__text">
       <p class="eyebrow">The founder's voice</p>
-      <h1 class="display" style="font-size:clamp(44px,7vw,96px)">Gospels.</h1>
-    </div>
-    <div class="reveal d1">
-      <p class="lead">A growing video library where the founder shares his thought process, ideas and points of view, on design, craft and the quiet principles that guide the studio.</p>
-      <p class="muted">Short films, recorded between projects, the thinking behind the work, in his own words. Watch, pause, and return.</p>
+      <h1 class="gband__title">Gospels.</h1>
+      <p class="gband__lead">A growing library of short films where the founder shares his thought process, ideas and points of view, the thinking behind the work, in his own words.</p>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section">
   <div class="container">
     <div class="matstrip reveal"><span>Thought process</span><span>Ideas</span><span>Points of view</span></div>
     ${GOSPELS.length
@@ -2040,7 +2040,7 @@ const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'careers.html',              id: 'careers',   nav: 'careers.html',  dark: false, title: 'Careers, Tvastra Design LLP', desc: 'Careers at Tvastra Design LLP. Join a hands-on architecture, interior and product design studio in Surat.', content: careers },
-  { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: false, title: 'Gospels, Tvastra Design LLP', desc: "Gospels, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
+  { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: true, title: 'Gospels, Tvastra Design LLP', desc: "Gospels, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including Vritta.', content: projects },
   { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects, Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
