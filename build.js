@@ -31,7 +31,10 @@ function head(title, desc) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/favicon.ico?v=tdl" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tdl" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tdl" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tdl" />
 ${FONTS}
 <link rel="stylesheet" href="css/style.css?v=${CSS_VER}" />
 </head>
