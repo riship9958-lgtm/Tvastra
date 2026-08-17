@@ -1789,6 +1789,35 @@ const about = `
   </div>
 </section>
 
+<section class="section section--paper2 leadership">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The people behind Tvastra</p>
+      <h2 class="h-lg">Leadership.</h2>
+    </div>
+    <div class="ldr reveal">
+      <figure class="ldr__photo">
+        <img src="assets/founder/leadership-bw.webp" alt="Bhavin Swami and Alpa Swami, designated partners of Tvastra Design LLP" loading="lazy" />
+        <figcaption>Bhavin Swami &amp; Alpa Swami &middot; Designated Partners</figcaption>
+      </figure>
+      <div class="ldr__bios">
+        <div class="ldr__bio">
+          <h3 class="ldr__name">Bhavin Swami</h3>
+          <p class="ldr__role">Managing Director &amp; Principal Architect</p>
+          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With close to three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
+          <p class="muted">Hands-on from the first sketch to final execution, he is known for balancing proportion, light and material honesty, and for treating every project as someone's dream to be realised. His leadership shapes both the creative vision and the values that define the studio, people before projects.</p>
+        </div>
+        <div class="ldr__bio">
+          <h3 class="ldr__name">Alpa Swami</h3>
+          <p class="ldr__role">Partner &amp; Interior Stylist</p>
+          <p class="muted">Alpa Swami is a partner and core team member at Tvastra Design, known for her refined eye for detail and warm design sensibility. As an Interior Stylist, she contributes to shaping spaces with balance, comfort and character.</p>
+          <p class="muted">She also manages office operations and internal systems, ensuring the studio runs smoothly. Her thoughtful presence and organised approach make her an integral part of Tvastra's everyday functioning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container grid-2 top">
     <div class="reveal">
