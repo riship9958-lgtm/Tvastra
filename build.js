@@ -127,6 +127,7 @@ const PROJECTS_LIST = [
   { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
   { name: 'Juneberry',    file: 'juneberry.html',    cat: 'interior',     meta: 'Café · Surat, Gujarat', side: 'Café &middot; Surat',       card: 'assets/projects/juneberry/counter.webp', feat: 'assets/projects/juneberry/counter.webp' },
   { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Boutique · Surat, Gujarat', side: 'Boutique &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
+  { name: 'ICON',         file: 'icon.html',         cat: 'interior',     meta: 'Office · Surat, Gujarat', side: 'Office &middot; Surat', card: 'assets/projects/icon/hero.webp', feat: 'assets/projects/icon/hero.webp' },
   { name: 'Pyramid Palacia', file: 'pyramid-palacia.html', cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/pyramid-palacia/hero.webp', feat: 'assets/projects/pyramid-palacia/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
@@ -1664,6 +1665,106 @@ const calibre = `
   </div>
 </section>`;
 
+const IIMG = 'assets/projects/icon/';
+const icon = `
+<div class="pd-hero pd-hero--tall">
+  <img src="${IIMG}hero.webp" alt="ICON office, backlit ROSCA identity wall at the entrance in oak veneer and stone" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#004477">Interior Design, Office · Surat</span>
+    <h1>ICON</h1>
+    <p class="pd-hero__sub">A corporate workplace on the Surat skyline, framed by glass and light.</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">A corporate floor organised for clarity, framed by glass, texture and the <em>city beyond.</em></h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">ICON is a top-floor corporate office for ROSCA in Surat, where the closed-cabin plan gives way to a transparent, glass-partitioned workplace. Full-height glazing opens the floor to the riverfront and skyline, while a disciplined material palette keeps the workspace calm and focused.</p>
+        <p class="muted">Grey stone floors, oak-veneer joinery and a textured charcoal fabric feature wall ground the interior; slim black-metal frames, white worktops and mesh task seating keep it light and contemporary. A backlit identity wall and slatted timber ceiling mark the arrival, and layered recessed and linear lighting carry an even, glare-free glow across every desk.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+      <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
+      <div><div class="k">Type</div><div class="v">Corporate Office</div></div>
+      <div><div class="k">Client</div><div class="v">ROSCA</div></div>
+      <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
+    </div>
+    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">Clarity, framed.</h2></div>
+      <div class="reveal d1 cpsych">
+        <div class="cpsych__item"><div class="cpsych__k">Transparency</div><p>Glass partitions keep sightlines and daylight flowing end to end.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Warm neutrals</div><p>Grey stone and oak veneer ground the floor in a calm, corporate palette.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Texture</div><p>A charcoal fabric feature wall adds depth to the workspace without noise.</p></div>
+        <div class="cpsych__item"><div class="cpsych__k">Focused light</div><p>Recessed and linear lighting give an even, glare-free glow at every desk.</p></div>
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      <span>Grey stone</span><span>Oak veneer</span><span>Textured fabric</span><span>Glass</span><span>Black metal</span>
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The space</p>
+      <h2 class="h-lg">Workspace, end to end.</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+      <figure class="pd-full"><img src="${IIMG}wk-01.webp" alt="ICON, open workstations along the glazed facade" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IIMG}wk-03.webp" alt="ICON, task desks along the textured feature wall" loading="lazy" /></figure>
+      <figure class="pd-full"><img src="${IIMG}wk-05.webp" alt="ICON, the meeting room with a glass table" loading="lazy" /></figure>
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">A closer look.</h2>
+    </div>
+  </div>
+  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="ICON office interior">
+    <div class="slideshow__viewport">
+      <figure class="slide is-active" data-cap="Open workstations run the length of the glazed facade."><img src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" /></figure>
+      <figure class="slide" data-cap="Glass cabins keep the river view open to the whole floor."><img src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Task desks line the textured charcoal feature wall."><img src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A director's cabin framed by art and glass."><img src="${IIMG}wk-04.webp" alt="ICON, a director's cabin" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The meeting room, screened by soft daylight blinds."><img src="${IIMG}wk-05.webp" alt="ICON, the meeting room" loading="lazy" /></figure>
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">Open workstations run the length of the glazed facade.</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+
 const PIMG = 'assets/projects/pyramid-palacia/';
 const pyramidPalacia = `
 <div class="pd-hero pd-hero--tall">
@@ -2329,6 +2430,7 @@ const PAGES = [
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
   { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a 1,170 sq ft sustainable specialty-coffee café in Surat (2025) by Tvastra Design LLP, sculpted-plaster walls, upcycled-textile installations and waste-into-art craft.', content: juneberry },
   { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
+  { file: 'icon.html',         id: 'proj-icon',    nav: 'projects.html', dark: true, title: 'ICON, Corporate Office Interior by Tvastra Design LLP', desc: 'ICON, a top-floor corporate office for ROSCA in Surat by Tvastra Design LLP, a transparent, glass-partitioned workplace in grey stone, oak veneer and textured fabric.', content: icon },
   { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
