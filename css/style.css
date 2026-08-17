@@ -812,6 +812,10 @@ details[open] > .role__head .role__toggle { transform: rotate(45deg); background
 /* Uniform, edge-to-edge tiles — same filled style as the Juneberry Moments grid. */
 .pd-full { margin: 0; overflow: hidden; border-radius: 2px; }
 .pd-full img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+/* 3D Elevation grids: show each render in full (no crop) inside uniform tiles,
+   so the row stays symmetrical and the letterboxing blends into the page. */
+.pd-full-grid--elev .pd-full { background: var(--paper); }
+.pd-full-grid--elev .pd-full img { object-fit: contain; }
 /* Four-up portrait gallery (Pyramid Palacia): uniform tall tiles with a caption. */
 .pd-full-grid--quad { grid-template-columns: repeat(4, 1fr); }
 .pd-full-grid--tall .pd-full img { aspect-ratio: 3 / 4; }

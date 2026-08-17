@@ -443,7 +443,7 @@ const vritta = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Vritta, full corner view by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Vritta, full aerial view" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
@@ -575,7 +575,7 @@ const rju = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
@@ -705,7 +705,7 @@ const jalika = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG4}02-day.webp" alt="Jālikā, corner by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
@@ -834,7 +834,7 @@ const vallabhNivas = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
@@ -963,7 +963,7 @@ const urdhva = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG6}01-night.webp" alt="Urdhva, corner view at night" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
@@ -1091,7 +1091,7 @@ const valuka = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view over the courtyard" loading="lazy" /></figure>
@@ -1220,7 +1220,7 @@ const asamvrta = `
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
-    <div class="pd-full-grid reveal">
+    <div class="pd-full-grid pd-full-grid--elev reveal">
       <figure class="pd-full"><img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner view at night" loading="lazy" /></figure>
       <figure class="pd-full"><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
