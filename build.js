@@ -91,7 +91,7 @@ const FOOTER = `
         </ul>
         <div class="socials">
           <a href="https://www.instagram.com/tvastradesignllp/" aria-label="Instagram" target="_blank" rel="noopener">${IG}</a>
-          <a href="#" aria-label="LinkedIn">${LI}</a>
+          <a href="https://www.linkedin.com/company/tvastra-design-/" aria-label="LinkedIn" target="_blank" rel="noopener">${LI}</a>
         </div>
       </div>
     </div>
@@ -2016,7 +2016,7 @@ const contact = `
       <div class="cinfo"><div class="k">Hours</div><div class="v">Mon to Sat, 10:00 to 18:00</div></div>
       <div class="socials" style="margin-top:16px">
         <a href="https://www.instagram.com/tvastradesignllp/" aria-label="Instagram" target="_blank" rel="noopener" style="border-color:var(--line)">${IG}</a>
-        <a href="#" aria-label="LinkedIn" style="border-color:var(--line)">${LI}</a>
+        <a href="https://www.linkedin.com/company/tvastra-design-/" aria-label="LinkedIn" target="_blank" rel="noopener" style="border-color:var(--line)">${LI}</a>
       </div>
     </div>
     <div class="reveal d1">
