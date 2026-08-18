@@ -72,7 +72,7 @@ const FOOTER = `
       <div class="footer-brand">
         <img src="assets/logo-white.png" alt="Tvastra Design LLP" />
         <p class="footer-tag">The Power of Creativity</p>
-        <p>Architecture, interiors &amp; product design, a 29-year practice blending historical elegance with contemporary craft.</p>
+        <p>Architecture, interiors &amp; product design, an established practice blending ethnical and cultural elegance with contemporary craft.</p>
       </div>
       <div>
         <h5>Explore</h5>
@@ -278,7 +278,7 @@ const home = `
   <div class="container hero__inner">
     <p class="eyebrow">Architecture · Interiors · Objects</p>
     <h1>We shape spaces worth returning to.</h1>
-    <p class="lead">Tvastra Design LLP is a 29-year practice in Surat, blending historical elegance with contemporary craft, across architecture, interiors and the furniture within them.</p>
+    <p class="lead">Tvastra Design LLP is an established practice in Surat, blending ethnical and cultural elegance with contemporary craft, across architecture, interiors and the furniture within them.</p>
     <div class="hero__row">
       <div style="display:flex;gap:14px;flex-wrap:wrap">
         <a href="projects.html" class="btn btn--ghost-light">View our work</a>
@@ -2412,7 +2412,7 @@ const gospels = `
 </section>`;
 
 const PAGES = [
-  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, a 29-year architecture, interior and product design practice in Surat blending historical elegance with contemporary craft.', content: home },
+  { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'careers.html',              id: 'careers',   nav: 'careers.html',  dark: false, title: 'Careers, Tvastra Design LLP', desc: 'Careers at Tvastra Design LLP. Join a hands-on architecture, interior and product design studio in Surat.', content: careers },
   { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: true, title: 'Gospels, Tvastra Design LLP', desc: "Gospels, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
@@ -2433,7 +2433,7 @@ const PAGES = [
   { file: 'icon.html',         id: 'proj-icon',    nav: 'projects.html', dark: true, title: 'ICON, Corporate Office Interior by Tvastra Design LLP', desc: 'ICON, a top-floor corporate office for ROSCA in Surat by Tvastra Design LLP, a transparent, glass-partitioned workplace in grey stone, oak veneer and textured fabric.', content: icon },
   { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
   { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
-  { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, a 29-year architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
+  { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
   { file: 'founder-portfolio.html',    id: 'founder-portfolio', nav: 'about.html', dark: true, title: "The Founder's Portfolio, Tvastra Design LLP", desc: "The founder's portfolio, a personal archive of projects and photographs by the founder of Tvastra Design LLP.", content: founderPortfolio },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact, Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
