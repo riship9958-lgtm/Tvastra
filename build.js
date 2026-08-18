@@ -2207,7 +2207,7 @@ const founderPortfolio = `
       <p class="eyebrow"><a href="founders-mind.html" class="crumb">Inside the founder's mind</a> &middot; Portfolio</p>
       <h1 class="whead__title display" style="font-size:clamp(40px,6.4vw,88px)">The portfolio.</h1>
     </div>
-    <p class="lead reveal" style="max-width:640px;margin-top:18px">A personal archive of projects and photographs by the founder of Tvastra Design LLP, a designer's eye at work beyond the drawing board.</p>
+    <p class="lead reveal" style="max-width:640px;margin-top:18px">A personal archive of projects and photographs by the founder of Tvastra Design LLP and former founding partner of Utopia Designs, a designer's eye at work beyond the drawing board.</p>
   </div>
   ${FOUNDER_WORKS.length
     ? `<div class="pcols">\n      ${FOUNDER_WORKS.map(function (w, i) { return fwcard(String(i + 1).padStart(2, '0'), w); }).join('\n      ')}\n    </div>`
