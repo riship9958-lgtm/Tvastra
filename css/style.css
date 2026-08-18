@@ -502,7 +502,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 .rec-item:hover { padding-left: 8px; }
 .rec-item__year { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(40px, 5vw, 64px); color: var(--clay); line-height: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
 .rec-item__seal { width: clamp(72px, 8vw, 100px); height: auto; }
-.rec-item__seal--adc { width: clamp(56px, 6.2vw, 80px); border-radius: 8px; }
+.rec-item__seal--adc { width: clamp(76px, 8.5vw, 108px); }
 .rec-item__seal--apsda { width: clamp(64px, 7vw, 88px); }
 .rec-item__seal--id { width: clamp(104px, 12vw, 140px); }
 .rec-item__title { font-family: var(--serif); font-size: clamp(24px, 3vw, 34px); font-weight: 500; }

@@ -2045,7 +2045,7 @@ const recognition = `
   <div class="container">
     <div class="rec-list reveal">
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/adc.png" alt="Architecture &amp; Design Collection" loading="lazy" /><span>2025</span></div>
+        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/adc.png" alt="Gold Winner, International Architecture &amp; Design Awards 2025" loading="lazy" /><span>2025</span></div>
         <div>
           <h3 class="rec-item__title">Gold Winner</h3>
           <div class="rec-item__where">IADA 2025 &middot; Architecture &amp; Design Collection</div>
