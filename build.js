@@ -296,7 +296,7 @@ const home = `
       <h2 class="statement">Named after the celestial architect, we design across scales, from the <em>building</em> to the <em>object</em> within it.</h2>
     </div>
     <div class="reveal d1">
-      <p class="lead">For nearly three decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
+      <p class="lead">For over two decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
       <p class="muted">Our work integrates a sense of arrival where luxury is complemented by warmth. We wanted them to instantly feel both pride and comfort, knowing their home is not just beautiful but deeply livable.</p>
       <a href="about.html" class="link-arrow" style="margin-top:10px">About the studio ${ARROW}</a>
     </div>
@@ -1900,7 +1900,7 @@ const about = `
         <div class="ldr__bio">
           <h3 class="ldr__name">Bhavin Swami</h3>
           <p class="ldr__role">Managing Director &amp; Principal Architect</p>
-          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With close to three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
+          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With over two decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
           <p class="muted">Hands-on from the first sketch to final execution, he is known for balancing proportion, light and material honesty, and for treating every project as someone's dream to be realised. His leadership shapes both the creative vision and the values that define the studio, people before projects.</p>
         </div>
         <div class="ldr__bio">
@@ -2125,7 +2125,7 @@ const foundersMind = `
       <div class="reveal d1">
         <p class="lead">The passion for designing started during college, learning by balancing education with real site work, days on projects and nights on assignments.</p>
         <p class="muted">Real-world experience became the biggest teacher. Every project strengthened both knowledge and confidence, and taught a simple lesson that still guides the studio: success comes from continuous learning and practical experience.</p>
-        <p class="muted">Across more than three decades, my work has been shaped by studying how people truly live in and move through a space. Early on I understood that design is less about appearance and more about experience, a blend of functionality, sustainability and timeless elegance, where every project should enhance both lifestyle and well-being.</p>
+        <p class="muted">My journey has been shaped by over two decades of exploring how people truly live in and interact with spaces. Early on I realised that design is not just about aesthetics but about creating experiences, a philosophy that blends functionality, sustainability and timeless elegance, so every project enhances both lifestyle and well-being.</p>
       </div>
     </div>
   </div>
@@ -2138,6 +2138,8 @@ const foundersMind = `
       <h2 class="h-lg" style="margin-bottom:26px">Good design is quiet.</h2>
       <p class="lead" style="color:#cfd9e0">It does not announce itself. It earns its place through proportion, light and material, through the patience to resolve the unseen details, and the discipline to leave out everything that isn't needed.</p>
       <p class="muted" style="margin-top:16px">I begin by understanding the aspirations of the client and the cultural context of the project, then distil those insights into spatial experiences, natural light, proportion, texture and materiality, that engage the senses. The concept comes alive when architecture responds to human emotion, not just physical needs.</p>
+      <p class="muted" style="margin-top:16px">A few things stay non-negotiable. A home should breathe, so natural light, generous proportions and the honest use of materials like stone, wood and glass are where every project begins, and where timelessness is earned.</p>
+      <p class="lead" style="color:#cfd9e0;margin-top:22px">Three words, in the end: <em>timeless, experiential, refined.</em></p>
     </div>
   </div>
 </section>
