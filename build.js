@@ -297,16 +297,8 @@ const home = `
     </div>
     <div class="reveal d1">
       <p class="lead">For nearly three decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
-      <p class="muted">Our work integrates utility, aesthetics, function and style into a single, considered whole, so historical warmth and contemporary calm sit together as one continuous idea.</p>
+      <p class="muted">Our work integrates a sense of arrival where luxury is complemented by warmth. We wanted them to instantly feel both pride and comfort, knowing their home is not just beautiful but deeply livable.</p>
       <a href="about.html" class="link-arrow" style="margin-top:10px">About the studio ${ARROW}</a>
-    </div>
-  </div>
-  <div class="container">
-    <div class="stats reveal">
-      <div class="stat"><div class="n">29</div><div class="l">Years of practice</div></div>
-      <div class="stat"><div class="n">3</div><div class="l">Design disciplines</div></div>
-      <div class="stat"><div class="n">2023</div><div class="l">A&amp;D Platinum Award</div></div>
-      <div class="stat"><div class="n">100%</div><div class="l">Custom craftsmanship</div></div>
     </div>
   </div>
 </section>
@@ -340,7 +332,7 @@ const home = `
     <div class="trust__inner reveal">
       <p class="eyebrow no-rule" style="justify-content:center">Trusted by our clients</p>
       <h2 class="h-lg">Homes built on relationships, not just plans.</h2>
-      <p class="lead" style="margin-top:18px">People come before projects. For nearly three decades, families and developers have trusted Tvastra to shape their spaces with honesty, transparency and care, from the first conversation to the final handover.</p>
+      <p class="lead" style="margin-top:18px">People come before projects. Families and developers have trusted Tvastra to shape their spaces with honesty, transparency and care, from the first conversation to the final handover.</p>
       <div class="clients">
         <img src="assets/clients/happy-home.png" alt="Happy Home Group" loading="lazy" />
         <img src="assets/clients/shaligram.png" alt="Shaligram" loading="lazy" />
@@ -2119,7 +2111,7 @@ const foundersMind = `
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#004477">The founder</span>
     <h1>Inside the founder's mind</h1>
-    <p class="pd-hero__sub">Design since 1995, a way of seeing, before it is a way of building.</p>
+    <p class="pd-hero__sub">Designing since 1995, a way of seeing, before it is a way of building.</p>
   </div></div>
 </div>
 
