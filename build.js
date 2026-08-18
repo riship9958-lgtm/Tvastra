@@ -416,7 +416,7 @@ const vritta = `
       <div><div class="k">Levels</div><div class="v">G + 3 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -548,7 +548,7 @@ const rju = `
       <div><div class="k">Levels</div><div class="v">G + 3 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -678,7 +678,7 @@ const jalika = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -807,7 +807,7 @@ const vallabhNivas = `
       <div><div class="k">Levels</div><div class="v">G + 3</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -936,7 +936,7 @@ const urdhva = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -1064,7 +1064,7 @@ const valuka = `
       <div><div class="k">Levels</div><div class="v">G + 1</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -1193,7 +1193,7 @@ const asamvrta = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
   </div>
 </section>
 
@@ -1322,7 +1322,7 @@ const metalLife = `
       <div><div class="k">Palette</div><div class="v">Concrete &amp; terracotta</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Designer <b></b></p>
   </div>
 </section>
 
@@ -1440,7 +1440,7 @@ const juneberry = `
       <div><div class="k">Completed</div><div class="v">2025</div></div>
       <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b>Dev Kajiwala</b> &middot; Art installation <b>Artitude Satyarth</b> &middot; Photography <b>Kenny Zaveri</b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Designer <b>Dev Kajiwala</b> &middot; Art installation <b>Artitude Satyarth</b> &middot; Photography <b>Kenny Zaveri</b></p>
   </div>
 </section>
 
@@ -1570,7 +1570,7 @@ const calibre = `
       <div><div class="k">Area</div><div class="v">1,950 sq ft</div></div>
       <div><div class="k">Completed</div><div class="v">2025</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b>Kanaiya Gajjar</b> &middot; Photography <b>Prabal Gupta</b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Designer <b>Kanaiya Gajjar</b> &middot; Photography <b>Prabal Gupta</b></p>
   </div>
 </section>
 
@@ -1688,7 +1688,7 @@ const icon = `
       <div><div class="k">Client</div><div class="v">ROSCA</div></div>
       <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b></p>
   </div>
 </section>
 
@@ -1788,7 +1788,7 @@ const pyramidPalacia = `
       <div><div class="k">Palette</div><div class="v">Warm neutrals &amp; brass</div></div>
       <div><div class="k">Location</div><div class="v">Surat, Gujarat</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Architect <b>Bhavin Swami</b> &middot; Senior Designer <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Designer <b></b></p>
   </div>
 </section>
 
@@ -1899,7 +1899,7 @@ const about = `
       <div class="ldr__bios">
         <div class="ldr__bio">
           <h3 class="ldr__name">Bhavin Swami</h3>
-          <p class="ldr__role">Managing Director &amp; Principal Architect</p>
+          <p class="ldr__role">Managing Director &amp; Principal Designer</p>
           <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With over three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
           <p class="muted">Hands-on from the first sketch to final execution, he is known for balancing proportion, light and material honesty, and for treating every project as someone's dream to be realised. His leadership shapes both the creative vision and the values that define the studio, people before projects.</p>
         </div>
