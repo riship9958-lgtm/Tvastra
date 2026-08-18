@@ -634,11 +634,15 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 @media (max-width: 560px) { .approach { columns: 1; } }
 /* Founder certifications list */
 .certs { list-style: none; margin: 0; padding: 0; }
-.cert { display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px, 2vw, 26px); align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); }
+.cert { display: grid; grid-template-columns: 56px 1fr auto; gap: clamp(14px, 2vw, 26px); align-items: center; padding: 16px 0; border-top: 1px solid var(--line); }
 .cert:last-child { border-bottom: 1px solid var(--line); }
-.cert__yr { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; color: var(--clay); }
+.cert__yr { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; color: var(--clay); align-self: center; }
 .cert__title { font-family: var(--serif); font-weight: 500; font-size: clamp(18px, 1.8vw, 22px); color: var(--ink); line-height: 1.25; }
 .cert__by { color: var(--stone-dk); font-size: 14px; margin-top: 4px; }
+.cert__thumb { display: block; width: clamp(122px, 15vw, 168px); border: 1px solid var(--line); border-radius: 3px; overflow: hidden; background: #fff; transition: border-color .3s var(--ease), transform .3s var(--ease); }
+.cert__thumb img { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; display: block; background: #fff; }
+.cert__thumb:hover { border-color: var(--clay); transform: translateY(-2px); }
+@media (max-width: 620px) { .cert { grid-template-columns: 52px 1fr; } .cert__thumb { grid-column: 1 / -1; width: 100%; max-width: 300px; margin-top: 4px; } }
 .section--ink .approach li { color: #eef3f6; border-top-color: rgba(255,255,255,.16); }
 
 /* Accommodation / program */
