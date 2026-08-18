@@ -2235,7 +2235,6 @@ const founderPortfolio = `
 
 const PERKS = [
   ['Professional development', 'Ongoing training for skill growth and career advancement.'],
-  ['Flexible schedules', 'Manage work and life with adaptable scheduling options.'],
   ['Rewarding culture', 'An annual allowance to empower your journey.'],
   ['Enrichment workshops', 'Broaden your expertise and advance your career.'],
   ['Cross-culture teams', 'Work with cross-culture and cross-function teams.'],
