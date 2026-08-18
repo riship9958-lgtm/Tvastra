@@ -632,6 +632,13 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 .approach li { display: flex; align-items: flex-start; gap: 14px; break-inside: avoid; padding: 15px 0; border-top: 1px solid var(--line); font-size: clamp(15px, 1.5vw, 17px); line-height: 1.5; color: var(--ink); }
 .approach li::before { content: ""; flex: 0 0 8px; width: 8px; height: 8px; margin-top: calc(0.75em - 4px); border: 1px solid var(--clay); border-radius: 50%; }
 @media (max-width: 560px) { .approach { columns: 1; } }
+/* Founder certifications list */
+.certs { list-style: none; margin: 0; padding: 0; }
+.cert { display: grid; grid-template-columns: 72px 1fr; gap: clamp(16px, 2vw, 26px); align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); }
+.cert:last-child { border-bottom: 1px solid var(--line); }
+.cert__yr { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; color: var(--clay); }
+.cert__title { font-family: var(--serif); font-weight: 500; font-size: clamp(18px, 1.8vw, 22px); color: var(--ink); line-height: 1.25; }
+.cert__by { color: var(--stone-dk); font-size: 14px; margin-top: 4px; }
 .section--ink .approach li { color: #eef3f6; border-top-color: rgba(255,255,255,.16); }
 
 /* Accommodation / program */

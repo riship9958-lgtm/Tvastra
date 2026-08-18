@@ -2159,6 +2159,24 @@ const foundersMind = `
   </div>
 </section>
 
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">Continued learning</p>
+        <h2 class="h-lg">Certifications.</h2>
+        <p class="muted" style="margin-top:16px;max-width:34ch">An ongoing commitment to sustainable, responsible building, kept current through green-building and ESG training.</p>
+      </div>
+      <ul class="certs reveal d1">
+        <li class="cert"><span class="cert__yr">2026</span><div><div class="cert__title">Natural Building Course</div><div class="cert__by">Completed &middot; Certificate 26-06964</div></div></li>
+        <li class="cert"><span class="cert__yr">2025</span><div><div class="cert__title">Carbon Accounting Masterclass</div><div class="cert__by">ESG Academy by Tattva ESG Solutions</div></div></li>
+        <li class="cert"><span class="cert__yr">2024</span><div><div class="cert__title">Sustainable Home Week</div><div class="cert__by">UGREEN &mdash; Green Building School</div></div></li>
+        <li class="cert"><span class="cert__yr">2023</span><div><div class="cert__title">Sustainable Architecture Workshop</div><div class="cert__by">UGREEN &mdash; Green Building School &middot; 16-hour Green Building Training</div></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <a class="fpband reveal" href="founder-portfolio.html" aria-label="Open the founder's portfolio">
   <img class="fpband__img" src="assets/founder/portfolio-band-bw.webp" alt="The founder marking timber beside furniture design sketches in the workshop" loading="lazy" />
   <span class="fpband__blur" aria-hidden="true"></span>
