@@ -2056,9 +2056,9 @@ const recognition = `
       <div class="rec-item">
         <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--apsda" src="assets/awards/apsda.png" alt="Asia-Pacific Space Designers Association" loading="lazy" /><span>2025</span></div>
         <div>
-          <h3 class="rec-item__title">Finalist</h3>
+          <h3 class="rec-item__title">Honorary Mention</h3>
           <div class="rec-item__where">APSDA Awards 2025 &middot; Asia-Pacific Space Designers Association</div>
-          <p class="muted" style="margin:0">Residential Category, for <a href="metal-life.html" class="crumb">Metal Life</a>, shortlisted among the Asia-Pacific's finest interiors.</p>
+          <p class="muted" style="margin:0">Residential Category, for <a href="metal-life.html" class="crumb">Metal Life</a>, recognised among the Asia-Pacific's finest interiors.</p>
         </div>
         <a class="rec-item__tag rec-item__tag--link" href="https://apsda.org/competition/apsda-awards-2025/finalist-list/" target="_blank" rel="noopener">View listing ${ARROW}</a>
       </div>
