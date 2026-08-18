@@ -2072,7 +2072,7 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://interiordesign.net/awards/best-of-year/2024/tvastra-design-medium-city-house/" target="_blank" rel="noopener">View feature ${ARROW}</a>
       </div>
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal" src="assets/awards/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner" loading="lazy" /><span>2023</span></div>
+        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/platinum.png" alt="Platinum Winner, Architecture &amp; Design Collection Awards 2023" loading="lazy" /><span>2023</span></div>
         <div>
           <h3 class="rec-item__title">Platinum Winner</h3>
           <div class="rec-item__where">Architecture &amp; Design Collection Awards</div>
