@@ -296,7 +296,7 @@ const home = `
       <h2 class="statement">Named after the celestial architect, we design across scales, from the <em>building</em> to the <em>object</em> within it.</h2>
     </div>
     <div class="reveal d1">
-      <p class="lead">For over two decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
+      <p class="lead">For over three decades we have shaped architectural landscapes, crafted inspired interiors, and produced exquisite furniture, each project a fusion of innovation and custom craftsmanship.</p>
       <p class="muted">Our work integrates a sense of arrival where luxury is complemented by warmth. We wanted them to instantly feel both pride and comfort, knowing their home is not just beautiful but deeply livable.</p>
       <a href="about.html" class="link-arrow" style="margin-top:10px">About the studio ${ARROW}</a>
     </div>
@@ -1900,7 +1900,7 @@ const about = `
         <div class="ldr__bio">
           <h3 class="ldr__name">Bhavin Swami</h3>
           <p class="ldr__role">Managing Director &amp; Principal Architect</p>
-          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With over two decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
+          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With over three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
           <p class="muted">Hands-on from the first sketch to final execution, he is known for balancing proportion, light and material honesty, and for treating every project as someone's dream to be realised. His leadership shapes both the creative vision and the values that define the studio, people before projects.</p>
         </div>
         <div class="ldr__bio">
@@ -2125,7 +2125,7 @@ const foundersMind = `
       <div class="reveal d1">
         <p class="lead">The passion for designing started during college, learning by balancing education with real site work, days on projects and nights on assignments.</p>
         <p class="muted">Real-world experience became the biggest teacher. Every project strengthened both knowledge and confidence, and taught a simple lesson that still guides the studio: success comes from continuous learning and practical experience.</p>
-        <p class="muted">My journey has been shaped by over two decades of exploring how people truly live in and interact with spaces. Early on I realised that design is not just about aesthetics but about creating experiences, a philosophy that blends functionality, sustainability and timeless elegance, so every project enhances both lifestyle and well-being.</p>
+        <p class="muted">My journey has been shaped by over three decades of exploring how people truly live in and interact with spaces. Early on I realised that design is not just about aesthetics but about creating experiences, a philosophy that blends functionality, sustainability and timeless elegance, so every project enhances both lifestyle and well-being.</p>
       </div>
     </div>
   </div>
