@@ -348,6 +348,17 @@ const home = `
   </div>
 </section>
 
+<section class="section members">
+  <div class="container">
+    <div class="members__inner reveal">
+      <p class="eyebrow no-rule" style="justify-content:center">Member of</p>
+      <div class="members__logos">
+        <img src="assets/members/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner &mdash; American Society of Interior Designers" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
 `;
 
 const projects = `
