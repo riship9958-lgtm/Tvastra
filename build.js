@@ -1374,7 +1374,7 @@ const metalLife = `
       <h2 class="h-lg">Room by room.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Metal Life renders">
+  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Metal Life renders">
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
       <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
@@ -1492,7 +1492,7 @@ const juneberry = `
       <h2 class="h-lg">A closer look.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
+  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="Wood-waste wall installation, evoking mountain ranges and coffee foam."><img src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" /></figure>
       <figure class="slide" data-cap="Banana-stem canvases set with waste-metal figurines."><img src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /></figure>
@@ -1622,7 +1622,7 @@ const calibre = `
       <h2 class="h-lg">A closer look.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
+  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="The salon, sculpted plaster and warm bouclé seating."><img src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" /></figure>
       <figure class="slide" data-cap="A sweeping reception carved from the curved shell."><img src="${CIMG}look-02.webp" alt="Calibre, the sweeping reception" loading="lazy" /></figure>
@@ -1722,7 +1722,7 @@ const icon = `
       <h2 class="h-lg">A closer look.</h2>
     </div>
   </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="ICON office interior">
+  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="ICON office interior">
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="Open workstations run the length of the glazed facade."><img src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" /></figure>
       <figure class="slide" data-cap="Glass cabins keep the river view open to the whole floor."><img src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /></figure>
