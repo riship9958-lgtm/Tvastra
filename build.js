@@ -1426,7 +1426,7 @@ const metalLife = `
 const JIMG = 'assets/projects/juneberry/';
 const juneberry = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${JIMG}facade.webp" alt="Juneberry cafe, street facade with the brand sign" />
+  <img src="${JIMG}facade.webp" alt="Juneberry cafe interior, warm daylight with the brand sign on the wall" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#29465B">Interior Design, Café · Surat</span>
     <h1>Juneberry</h1>
