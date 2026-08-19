@@ -1309,7 +1309,7 @@ const metalLife = `
 <div class="pd-hero pd-hero--tall">
   <img src="${NIMG}hero.webp" alt="Metal Life, living room" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Residential · Surat</span>
+    <span class="tag" style="color:#29465B">Interior Design, Residential · Surat</span>
     <h1>Metal Life</h1>
     <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
   </div></div>
@@ -1427,7 +1427,7 @@ const juneberry = `
 <div class="pd-hero pd-hero--tall">
   <img src="${JIMG}facade.webp" alt="Juneberry cafe, street facade with the brand sign" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Café · Surat</span>
+    <span class="tag" style="color:#29465B">Interior Design, Café · Surat</span>
     <h1>Juneberry</h1>
     <p class="pd-hero__sub">Beyond hospitality, a community-centred café where sustainability is the story.</p>
   </div></div>
@@ -1557,7 +1557,7 @@ const calibre = `
 <div class="pd-hero pd-hero--tall">
   <img src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior under a circular skylight" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Boutique · Surat</span>
+    <span class="tag" style="color:#29465B">Interior Design, Boutique · Surat</span>
     <h1>Calibre</h1>
     <p class="pd-hero__sub">Beyond retail, a fluid, sculptural canvas for luxury fashion.</p>
   </div></div>
@@ -1675,7 +1675,7 @@ const icon = `
 <div class="pd-hero pd-hero--tall">
   <img src="${IIMG}hero.webp" alt="ICON office, backlit ROSCA identity wall at the entrance in oak veneer and stone" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Office · Surat</span>
+    <span class="tag" style="color:#29465B">Interior Design, Office · Surat</span>
     <h1>ICON</h1>
     <p class="pd-hero__sub">A corporate workplace on the Surat skyline, framed by glass and light.</p>
   </div></div>
@@ -1775,7 +1775,7 @@ const pyramidPalacia = `
 <div class="pd-hero pd-hero--tall">
   <img src="${PIMG}hero.webp" alt="Pyramid Palacia, serene warm-neutral bedroom" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Residence · Surat</span>
+    <span class="tag" style="color:#29465B">Interior Design, Residence · Surat</span>
     <h1>Pyramid Palacia</h1>
     <p class="pd-hero__sub">A warm, modern-luxury home grounded by brass and earthy texture.</p>
   </div></div>
