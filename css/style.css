@@ -585,7 +585,7 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
    fading to a crisp image on the right — like the founder's-portfolio band. */
 .pd-hero--tall:not(.fmind-hero)::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 58%; z-index: 1;
-  backdrop-filter: blur(13px); -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   -webkit-mask-image: linear-gradient(to right, #000 0%, #000 44%, transparent 100%);
           mask-image: linear-gradient(to right, #000 0%, #000 44%, transparent 100%);
   pointer-events: none;
