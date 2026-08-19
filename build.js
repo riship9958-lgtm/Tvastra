@@ -342,6 +342,7 @@ const home = `
         <img src="assets/clients/rajhans.png" alt="Rajhans" loading="lazy" />
         <img src="assets/clients/happy-home.png" alt="Happy Home Group" loading="lazy" />
         <img src="assets/clients/shott.png" alt="Shott" loading="lazy" />
+        <img src="assets/clients/juneberry.png" alt="Juneberry" loading="lazy" />
       </div>
       <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
     </div>
