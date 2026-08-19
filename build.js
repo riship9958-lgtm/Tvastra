@@ -2242,33 +2242,22 @@ const PERKS = [
   ['Sustainability initiatives', 'Join eco-friendly projects that make a real difference.'],
 ];
 
-const ARCH_ROLES = [
-  { title: 'Trainee Architect', exp: 'Fresh graduate to 1 year', qual: 'B.Arch (or final-year student)', reports: 'Junior / Mid-level Architect', overview: 'An entry-level role supporting the architecture team in drafting, documentation, model-making and research, while learning our standards, tools and statutory processes.', points: ['Prepare and revise plans, elevations, sections and details under supervision', 'Assist with 3D and physical models for design development', 'Compile drawings for statutory submissions under guidance', 'Research materials and record site conditions on visits'] },
-  { title: 'Junior Architect', exp: '1 to 3 years', qual: 'B.Arch', reports: 'Mid-level / Senior Architect', overview: 'Produces drawings and documentation with moderate supervision, supports approvals and coordination, and develops toward handling project packages independently.', points: ['Develop working and construction drawing sets', 'Prepare 3D models and renders to communicate design intent', 'Coordinate approvals and consultant drawings', 'Attend site visits to check execution against drawings'] },
-  { title: 'Mid-level Architect', exp: '3 to 6 years', qual: 'B.Arch; Council of Architecture registration preferred', reports: 'Senior Architect', overview: 'Independently leads design development and technical documentation, coordinates consultants and approvals, supervises site execution and mentors junior colleagues.', points: ['Own design development and construction documentation', 'Prepare statutory drawing sets and liaise on approvals', 'Coordinate structural, services and specialist consultants', 'Supervise site execution and guide junior architects'] },
-  { title: 'Senior Architect', exp: '6 years and above', qual: 'B.Arch with current Council of Architecture registration', reports: 'Founding Partners', overview: 'Leads architectural projects end-to-end, signs off statutory drawings within authorisation, owns client and authority relationships, and leads and develops the architecture team.', points: ['Lead projects from concept through approvals to handover', 'Set technical direction and maintain code compliance', 'Own client and statutory-authority relationships', 'Plan resources and mentor the architecture team'] },
-];
-
-const INT_ROLES = [
-  { title: 'Trainee Interior Designer', exp: 'Fresh graduate to 1 year', qual: 'Degree or diploma in Interior Design (or final-year student)', reports: 'Junior / Mid-level Interior Designer', overview: 'An entry-level role supporting the interior team in drafting, documentation and material research across residential and commercial projects, while learning our standards and tools.', points: ['Prepare and revise 2D drawings under supervision', 'Assist with basic 3D models and views for design development', 'Maintain the material, finish and product library', 'Support mood boards, presentations and site records'] },
-  { title: 'Junior Interior Designer', exp: '1 to 3 years', qual: 'Degree or diploma in Interior Design', reports: 'Mid-level / Senior Interior Designer', overview: 'Produces design documentation and 3D visualisation with moderate supervision, contributing to design development, material selection and site coordination toward independent project ownership.', points: ['Develop working, joinery and detail drawing sets', 'Prepare 3D models, renders and walkthroughs', 'Select materials, finishes and FF&E and prepare schedules', 'Coordinate vendors and check execution on site'] },
-  { title: 'Mid-level Interior Designer', exp: '3 to 6 years', qual: 'Degree or diploma in Interior Design', reports: 'Senior Interior Designer', overview: 'Independently leads the design development and documentation of interior projects from concept to execution, coordinates consultants and site works, and mentors junior colleagues.', points: ['Own design development and technical documentation', 'Lead material, finish and FF&E selection and specification', 'Coordinate consultants and integrate their inputs', 'Present to clients and guide junior designers'] },
-  { title: 'Senior Interior Designer', exp: '6 years and above', qual: 'Degree or diploma in Interior Design', reports: 'Founding Partners', overview: 'Leads interior projects end-to-end, owns client relationships, sets and maintains design quality, and leads and develops the interior-design team.', points: ['Lead projects from brief and concept through to handover', 'Own client relationships and lead presentations', 'Set design direction and maintain quality across projects', 'Plan resources and mentor the interior-design team'] },
+const ROLES = [
+  { title: 'Architect', qual: 'B.Arch', overview: 'We are looking for architects to work across our residential and commercial projects, from concept and design development through documentation, approvals and site execution. Open to a range of experience.', points: ['Develop design and construction drawing sets', 'Prepare 3D models and renders to communicate design intent', 'Coordinate approvals, consultants and statutory drawings', 'Visit site to check execution against drawings'] },
+  { title: 'Interior Designer', qual: 'Degree or diploma in Interior Design', overview: 'We are looking for interior designers to shape considered residential and commercial interiors, from concept and material selection through documentation and site coordination. Open to a range of experience.', points: ['Develop working, joinery and detail drawing sets', 'Prepare 3D models, renders and walkthroughs', 'Select materials, finishes and FF&E and prepare schedules', 'Coordinate vendors and check execution on site'] },
 ];
 
 function roleItem(r) {
   return `<details class="role reveal">
       <summary class="role__head">
         <span class="role__title">${r.title}</span>
-        <span class="role__exp">${r.exp}</span>
+        <span class="role__exp">Full-time &middot; Surat</span>
         <span class="role__toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 5v14M5 12h14"/></svg></span>
       </summary>
       <div class="role__body">
         <p class="role__overview">${r.overview}</p>
         <div class="role__meta">
-          <div><span class="role__k">Experience</span>${r.exp}</div>
           <div><span class="role__k">Qualification</span>${r.qual}</div>
-          <div><span class="role__k">Reports to</span>${r.reports}</div>
           <div><span class="role__k">Type</span>Full-time &middot; Surat</div>
         </div>
         <ul class="role__points">${r.points.map(function (p) { return `<li>${p}</li>`; }).join('')}</ul>
@@ -2304,12 +2293,7 @@ const careers = `
   <div class="container">
     <div class="reveal" style="max-width:640px;margin-bottom:clamp(30px,4vw,44px)"><p class="eyebrow">Open roles</p><h2 class="h-lg">Join the studio.</h2></div>
     <div class="roles reveal">
-      <h3 class="roles__group">Architecture Studio</h3>
-      ${ARCH_ROLES.map(roleItem).join('\n      ')}
-    </div>
-    <div class="roles reveal" style="margin-top:clamp(36px,4vw,54px)">
-      <h3 class="roles__group">Interior Design Studio</h3>
-      ${INT_ROLES.map(roleItem).join('\n      ')}
+      ${ROLES.map(roleItem).join('\n      ')}
     </div>
   </div>
 </section>
