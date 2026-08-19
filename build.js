@@ -1556,7 +1556,7 @@ const juneberry = `
 const CIMG = 'assets/projects/calibre/';
 const calibre = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior under a circular skylight" />
+  <img src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior with garments and a skylight" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#29465B">Interior Design, Boutique · Surat</span>
     <h1>Calibre</h1>
