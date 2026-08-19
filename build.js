@@ -1624,38 +1624,20 @@ const calibre = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Circular seating islands beneath the sculpted skylight."><img src="${CIMG}look-01.webp" alt="Calibre, circular seating island" /></figure>
-      <figure class="slide" data-cap="Arched display niches carved into the plaster walls."><img src="${CIMG}look-02.webp" alt="Calibre, arched display niches" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Floating hanging racks keep the circulation open."><img src="${CIMG}look-03.webp" alt="Calibre, floating hanging racks" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A lounge-like pod for browsing and fitting."><img src="${CIMG}look-04.webp" alt="Calibre, lounge-like browsing pod" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The sweeping perimeter wall folds around the room."><img src="${CIMG}look-05.webp" alt="Calibre, sweeping perimeter wall" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Daylight from the arched window across the curves."><img src="${CIMG}look-06.webp" alt="Calibre, daylight across the curved interior" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="The salon, sculpted plaster and warm bouclé seating."><img src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" /></figure>
+      <figure class="slide" data-cap="A sweeping reception carved from the curved shell."><img src="${CIMG}look-02.webp" alt="Calibre, the sweeping reception" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A daylit lounge framed by the arched window."><img src="${CIMG}look-03.webp" alt="Calibre, the daylit lounge" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Fitting mirrors and a sculpted display counter."><img src="${CIMG}look-04.webp" alt="Calibre, fitting mirrors and display" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Display shelving folds into the flowing walls."><img src="${CIMG}look-05.webp" alt="Calibre, display shelving in the curved wall" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
     <div class="slideshow__bar">
       <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Circular seating islands beneath the sculpted skylight.</span>
+        <span class="slideshow__cap">The salon, sculpted plaster and warm bouclé seating.</span>
         <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Moments</p>
-      <h2 class="h-lg">In the detail.</h2>
-    </div>
-    <div class="mgrid reveal">
-      <figure class="mgrid__cell"><img src="${CIMG}moment-01.webp" alt="Calibre, a curved display detail" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${CIMG}moment-02.webp" alt="Calibre, an arched niche with accessories" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${CIMG}moment-03.webp" alt="Calibre, the fitting corner and mirror" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${CIMG}moment-04.webp" alt="Calibre, the lounge seating framed by the sculpted arch" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${CIMG}moment-05.webp" alt="Calibre, the sweeping reception desk under the skylight" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${CIMG}moment-06.webp" alt="Calibre, the curved cash counter and display shelving" loading="lazy" /></figure>
     </div>
   </div>
 </section>
