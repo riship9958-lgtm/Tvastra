@@ -2237,7 +2237,6 @@ const PERKS = [
   ['Professional development', 'Ongoing training for skill growth and career advancement.'],
   ['Rewarding culture', 'An annual allowance to empower your journey.'],
   ['Enrichment workshops', 'Broaden your expertise and advance your career.'],
-  ['Cross-culture teams', 'Work with cross-culture and cross-function teams.'],
   ['Project variety', 'Diverse projects from residential to commercial keep the work dynamic.'],
   ['Collaborative environment', 'A team-oriented atmosphere that encourages creativity.'],
   ['Sustainability initiatives', 'Join eco-friendly projects that make a real difference.'],
