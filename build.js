@@ -205,6 +205,9 @@ const PROJECTS_LIST = [
   { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Boutique · Surat, Gujarat', side: 'Boutique &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
   { name: 'ICON',         file: 'icon.html',         cat: 'interior',     meta: 'Office · Surat, Gujarat', side: 'Office &middot; Surat', card: 'assets/projects/icon/hero.webp', feat: 'assets/projects/icon/hero.webp' },
   { name: 'Pyramid Palacia', file: 'pyramid-palacia.html', cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/pyramid-palacia/hero.webp', feat: 'assets/projects/pyramid-palacia/hero.webp' },
+  { name: 'SHOTT',          file: 'shott.html',          cat: 'interior', meta: 'Entertainment · Surat, Gujarat', side: 'Entertainment &middot; Surat', card: 'assets/projects/shott/slide-01.webp', feat: 'assets/projects/shott/slide-01.webp' },
+  { name: 'Kapadia Dental', file: 'kapadia.html',        cat: 'interior', meta: 'Dental Clinic · Surat, Gujarat', side: 'Dental Clinic &middot; Surat', card: 'assets/projects/kapadia/hero.webp', feat: 'assets/projects/kapadia/hero.webp' },
+  { name: 'Avadh Habitat',  file: 'avadh.html',          cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/avadh/hero.webp', feat: 'assets/projects/avadh/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -2466,6 +2469,213 @@ const gospels = `
   </div>
 </section>`;
 
+/* ---------- shared interior-project generator (SHOTT, Kapadia, Avadh, …) ---------- */
+function slideBlock(label, imgs) {
+  const slides = imgs.map((s, i) => `      <figure class="slide${i === 0 ? ' is-active' : ''}" data-cap="${s.cap}"><img decoding="async" src="${s.src}" alt="${s.alt}"${i ? ' loading="lazy"' : ''} /></figure>`).join('\n');
+  return `  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="${label}">
+    <div class="slideshow__viewport">
+${slides}
+    </div>
+    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="slideshow__bar">
+      <div class="container slideshow__bar-inner">
+        <span class="slideshow__cap">${imgs[0].cap}</span>
+        <div class="slideshow__dots" role="tablist"></div>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">${String(imgs.length).padStart(2, '0')}</span></span>
+      </div>
+    </div>
+  </div>`;
+}
+function interiorProject(o) {
+  const heroCls = o.pano ? 'pd-hero pd-hero--pano' : 'pd-hero pd-hero--tall';
+  const grid = o.grid.map(g => `      <figure class="pd-full"><img decoding="async" src="${g.src}" alt="${g.alt}" loading="lazy" /></figure>`).join('\n');
+  const meta = o.meta.map(m => `      <div><div class="k">${m[0]}</div><div class="v">${m[1]}</div></div>`).join('\n');
+  const cpsych = o.cpsych.map(c => `        <div class="cpsych__item"><div class="cpsych__k">${c[0]}</div><p>${c[1]}</p></div>`).join('\n');
+  const mats = o.mats.map(m => `<span>${m}</span>`).join('');
+  return `
+<div class="${heroCls}">
+  <img decoding="async" src="${o.hero}" alt="${o.heroAlt}" />
+  <div class="pd-hero__cap"><div class="container">
+    <span class="tag" style="color:#9ecbe4">${o.tag}</span>
+    <h1>${o.name}</h1>
+    <p class="pd-hero__sub">${o.sub}</p>
+  </div></div>
+</div>
+
+<section class="section pd-intro">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal">
+        <p class="eyebrow">The project</p>
+        <h2 class="statement">${o.statement}</h2>
+      </div>
+      <div class="reveal d1">
+        <p class="lead">${o.lead}</p>
+        <p class="muted">${o.muted}</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:clamp(46px,6vw,72px)">
+    <div class="pd-meta reveal">
+${meta}
+    </div>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b></p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="grid-2 top">
+      <div class="reveal"><p class="eyebrow">The idea</p><h2 class="h-lg">${o.ideaHead}</h2></div>
+      <div class="reveal d1 cpsych">
+${cpsych}
+      </div>
+    </div>
+    <div class="matstrip reveal">
+      ${mats}
+    </div>
+  </div>
+</section>
+
+<section class="pd-showcase">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">The space</p>
+      <h2 class="h-lg">${o.showcaseHead}</h2>
+    </div>
+    <div class="pd-full-grid reveal">
+${grid}
+    </div>
+  </div>
+  <div class="container">
+    <div class="pd-sec-head reveal pd-showcase__sub">
+      <h2 class="h-lg">A closer look.</h2>
+    </div>
+  </div>
+${slideBlock(o.name + ' interior', o.slides)}
+</section>
+
+<section class="section section--ink" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
+    <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
+    </div>
+  </div>
+</section>`;
+}
+
+const shott = interiorProject({
+  pano: true,
+  hero: 'assets/projects/shott/hero.webp',
+  heroAlt: 'SHOTT family entertainment centre, illuminated Eat Party Play storefront facade',
+  name: 'SHOTT',
+  tag: 'Interior Design, Entertainment · Surat',
+  sub: 'A family entertainment centre where every zone plays a different game.',
+  statement: 'A high-energy playground of arcade, bowling and lounge, wrapped in <em>concrete, timber and neon.</em>',
+  lead: 'SHOTT is a family entertainment centre in Surat built around one idea, eat, party and play under a single roof. Behind a graphic, colour-blocked facade, the plan unfolds as a sequence of rooms, an arcade, a bowling alley, a kids’ world and lounges, each with its own character but tied together by a warm, raw material language.',
+  muted: 'Exposed-concrete shells and battened timber ceilings keep the base architectural and calm, while neon signage, pop-art murals and colour-blocked screens bring the energy. Astro-turf break-outs, redemption counters and glass-walled game rooms let each zone read clearly while the whole floor stays connected.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Family Entertainment Centre'], ['Client', 'SHOTT'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Eat. Party. Play.',
+  cpsych: [
+    ['Zoning', 'Arcade, bowling, kids’ world and lounges each get a distinct room, tied together on one floor.'],
+    ['Raw shell', 'Exposed concrete and battened timber keep the architecture calm behind the colour.'],
+    ['Graphic energy', 'Neon, pop-art murals and colour-blocked screens set the playful mood.'],
+    ['Layered light', 'Warm ambient light with punchy accents makes each game zone its own world.'],
+  ],
+  mats: ['Exposed concrete', 'Timber battens', 'Neon', 'Pop-art murals', 'Astro-turf'],
+  showcaseHead: 'One floor, many games.',
+  grid: [
+    { src: 'assets/projects/shott/slide-01.webp', alt: 'SHOTT reception under a wall of trophies' },
+    { src: 'assets/projects/shott/slide-03.webp', alt: 'SHOTT kids’ zone with rides and soft play' },
+    { src: 'assets/projects/shott/slide-08.webp', alt: 'SHOTT neon-lit bowling alley' },
+  ],
+  slides: [
+    { src: 'assets/projects/shott/slide-01.webp', cap: 'The welcome desk under a wall of trophies and spinning tops.', alt: 'SHOTT reception' },
+    { src: 'assets/projects/shott/slide-02.webp', cap: 'A colour-blocked screen opens into the arcade floor.', alt: 'SHOTT arcade entrance' },
+    { src: 'assets/projects/shott/slide-03.webp', cap: 'A kids’ world of carousels, rides and soft play.', alt: 'SHOTT kids zone' },
+    { src: 'assets/projects/shott/slide-04.webp', cap: 'Redemption games and air hockey line the central aisle.', alt: 'SHOTT games aisle' },
+    { src: 'assets/projects/shott/slide-05.webp', cap: 'The prize counter, stacked floor to ceiling.', alt: 'SHOTT redemption counter' },
+    { src: 'assets/projects/shott/slide-06.webp', cap: 'A LEGO-mosaic wall frames the redemption store.', alt: 'SHOTT prize store' },
+    { src: 'assets/projects/shott/slide-07.webp', cap: 'Glass-walled lounges glow over an astro-turf break-out.', alt: 'SHOTT lounge' },
+    { src: 'assets/projects/shott/slide-08.webp', cap: 'Neon-lit bowling under the SHOTT signs.', alt: 'SHOTT bowling alley' },
+  ],
+});
+
+const kapadia = interiorProject({
+  hero: 'assets/projects/kapadia/hero.webp',
+  heroAlt: 'Kapadia Dental, curved reception with the KD monogram under a circular light',
+  name: 'Kapadia Dental',
+  tag: 'Interior Design, Dental Clinic · Surat',
+  sub: 'A calm, spa-like dental clinic that takes the edge off the visit.',
+  statement: 'A dental practice reimagined as a warm, unhurried retreat in <em>taupe, teak and cream.</em>',
+  lead: 'Kapadia Dental sets out to make a clinic feel like anything but one. A curved reception, marked by the KD monogram and a floating circular light, greets patients and softens the arrival, while a muted palette of taupe, teak veneer and cream keeps the whole clinic quiet and reassuring.',
+  muted: 'Consultation cabins carry monogrammed desks and garden-lit windows; the treatment rooms stay bright and clinical yet warm, framed by brick-lined openings and timber joinery. Backlit reveals, soft indirect light and a curved timber pod screen the clinical zones from the calm of the waiting lounge.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Dental Clinic'], ['Client', 'Dr Kapadia'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Calm, by design.',
+  cpsych: [
+    ['Soft arrival', 'A curved reception and circular light replace the clinical front desk.'],
+    ['Warm neutrals', 'Taupe, teak veneer and cream keep the clinic quiet and reassuring.'],
+    ['Daylight', 'Garden and brick-lined windows bring calm light into every room.'],
+    ['Screening', 'A curved timber pod separates the clinical zone from the lounge.'],
+  ],
+  mats: ['Taupe render', 'Teak veneer', 'Cream stone', 'Navy accents', 'Brass'],
+  showcaseHead: 'From arrival to chair.',
+  grid: [
+    { src: 'assets/projects/kapadia/slide-01.webp', alt: 'Kapadia Dental reception' },
+    { src: 'assets/projects/kapadia/slide-03.webp', alt: 'Kapadia Dental waiting lounge' },
+    { src: 'assets/projects/kapadia/slide-05.webp', alt: 'Kapadia Dental treatment room' },
+  ],
+  slides: [
+    { src: 'assets/projects/kapadia/slide-01.webp', cap: 'The curved reception under a floating circular light, marked by the KD monogram.', alt: 'Kapadia Dental reception' },
+    { src: 'assets/projects/kapadia/slide-02.webp', cap: 'Reception opens into a softly-lit waiting lounge.', alt: 'Kapadia Dental reception and lounge' },
+    { src: 'assets/projects/kapadia/slide-03.webp', cap: 'A curved sofa wraps the waiting area beneath backlit reveals.', alt: 'Kapadia Dental waiting lounge' },
+    { src: 'assets/projects/kapadia/slide-04.webp', cap: 'A consultation cabin with a monogrammed desk and garden light.', alt: 'Kapadia Dental consultation cabin' },
+    { src: 'assets/projects/kapadia/slide-05.webp', cap: 'The treatment room, bright and calm, framed by a brick-lined window.', alt: 'Kapadia Dental treatment room' },
+    { src: 'assets/projects/kapadia/slide-06.webp', cap: 'A curved timber pod screens the clinical zone from the office.', alt: 'Kapadia Dental timber pod' },
+    { src: 'assets/projects/kapadia/slide-07.webp', cap: 'A consultation desk set against warm timber and stone.', alt: 'Kapadia Dental consultation' },
+  ],
+});
+
+const avadh = interiorProject({
+  hero: 'assets/projects/avadh/hero.webp',
+  heroAlt: 'Avadh Habitat, a warm living and dining space in beige, wood and cream',
+  name: 'Avadh Habitat',
+  tag: 'Interior Design, Residence · Surat',
+  sub: 'A warm, pared-back family apartment in beige, wood and cream.',
+  statement: 'A calm family home where <em>warm neutrals and honest timber</em> do the talking.',
+  lead: 'Avadh Habitat is a residential apartment designed around ease and warmth. Open living and dining flow together beneath a restrained palette of beige, cream and natural wood, with a slatted timber divider giving the plan rhythm without closing it off.',
+  muted: 'Custom joinery, a fluted media wall and a compact, efficient kitchen keep the home practical; layered lighting and a planted balcony soften the edges. Every room stays uncluttered, letting texture, material and daylight carry the mood.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Residential Apartment'], ['Client', 'Private residence'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Warm and pared back.',
+  cpsych: [
+    ['Open plan', 'Living and dining flow together, split only by a slatted timber screen.'],
+    ['Warm neutrals', 'Beige, cream and natural wood keep the home calm and cohesive.'],
+    ['Honest timber', 'Fluted panels and custom joinery add texture without clutter.'],
+    ['Soft light', 'Layered lighting and a planted balcony soften every room.'],
+  ],
+  mats: ['Natural wood', 'Beige stone', 'Cream plaster', 'Fluted panels', 'Brass'],
+  showcaseHead: 'A home, room by room.',
+  grid: [
+    { src: 'assets/projects/avadh/slide-01.webp', alt: 'Avadh Habitat living room' },
+    { src: 'assets/projects/avadh/slide-04.webp', alt: 'Avadh Habitat dining' },
+    { src: 'assets/projects/avadh/slide-07.webp', alt: 'Avadh Habitat kitchen' },
+  ],
+  slides: [
+    { src: 'assets/projects/avadh/slide-01.webp', cap: 'The living room, anchored by a fluted media wall and a slatted screen.', alt: 'Avadh Habitat living room' },
+    { src: 'assets/projects/avadh/slide-02.webp', cap: 'Soft seating and warm wood keep the lounge relaxed.', alt: 'Avadh Habitat living room' },
+    { src: 'assets/projects/avadh/slide-03.webp', cap: 'Living opens into dining beneath a continuous palette.', alt: 'Avadh Habitat living and dining' },
+    { src: 'assets/projects/avadh/slide-04.webp', cap: 'The dining table, framed by the timber divider.', alt: 'Avadh Habitat dining' },
+    { src: 'assets/projects/avadh/slide-05.webp', cap: 'A quiet corner, dressed with greenery.', alt: 'Avadh Habitat dining detail' },
+    { src: 'assets/projects/avadh/slide-06.webp', cap: 'The kitchen and dining sit side by side, warm and efficient.', alt: 'Avadh Habitat kitchen and dining' },
+    { src: 'assets/projects/avadh/slide-07.webp', cap: 'A compact kitchen in wood and dark stone.', alt: 'Avadh Habitat kitchen' },
+    { src: 'assets/projects/avadh/slide-08.webp', cap: 'The balcony, planted and framed for the view.', alt: 'Avadh Habitat balcony' },
+  ],
+});
+
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
@@ -2487,6 +2697,9 @@ const PAGES = [
   { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
   { file: 'icon.html',         id: 'proj-icon',    nav: 'projects.html', dark: true, title: 'ICON, Corporate Office Interior by Tvastra Design LLP', desc: 'ICON, a top-floor corporate office for ROSCA in Surat by Tvastra Design LLP, a transparent, glass-partitioned workplace in grey stone, oak veneer and textured fabric.', content: icon },
   { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
+  { file: 'shott.html',        id: 'proj-shott',   nav: 'projects.html', dark: true, noPreview: true, title: 'SHOTT, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT, a family entertainment centre in Surat by Tvastra Design LLP, arcade, bowling, kids’ zone and lounges in concrete, timber and neon.', content: shott },
+  { file: 'kapadia.html',      id: 'proj-kapadia', nav: 'projects.html', dark: true, noPreview: true, title: 'Kapadia Dental, Clinic Interior by Tvastra Design LLP', desc: 'Kapadia Dental, a calm, spa-like dental clinic in Surat by Tvastra Design LLP in taupe, teak and cream with a curved reception and the KD monogram.', content: kapadia },
+  { file: 'avadh.html',        id: 'proj-avadh',   nav: 'projects.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
@@ -2557,7 +2770,7 @@ if (process.argv[2] === 'preview') {
   }
 
   let sections = '';
-  for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
+  for (const p of PAGES) { if (p.noPreview) continue; sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`; }
 
   const navLinks = [['home','Home'],['discipline','Discipline'],['about','About Us'],['gospels','Gospels'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
