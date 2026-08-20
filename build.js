@@ -23,7 +23,8 @@ const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><lin
 
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
-function head(title, desc) {
+function head(title, desc, heroImg) {
+  const preload = heroImg ? `<link rel="preload" as="image" href="${heroImg}" fetchpriority="high" />\n` : '';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,10 +32,10 @@ function head(title, desc) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
-<link rel="icon" href="assets/favicon.ico?v=tdl" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tdl" />
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tdl" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tdl" />
+${preload}<link rel="icon" href="assets/favicon.ico?v=tva" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tva" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva" />
 ${FONTS}
 <link rel="stylesheet" href="css/style.css?v=${CSS_VER}" />
 </head>
@@ -53,8 +54,8 @@ function header(active, dark) {
 <header class="${cls}">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="Tvastra Design LLP, home">
-      <img class="logo-color" src="assets/logo.png" alt="Tvastra Design LLP" />
-      <img class="logo-white" src="assets/logo-white.png" alt="Tvastra Design LLP" />
+      <img decoding="async" class="logo-color" src="assets/logo.png" alt="Tvastra Design LLP" />
+      <img decoding="async" class="logo-white" src="assets/logo-white.png" alt="Tvastra Design LLP" />
     </a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">${links}</ul>
@@ -70,7 +71,7 @@ const FOOTER = `
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="assets/logo-white.png" alt="Tvastra Design LLP" />
+        <img decoding="async" src="assets/logo-white.png" alt="Tvastra Design LLP" />
         <p class="footer-tag">The Power of Creativity</p>
         <p>Architecture, interiors &amp; product design, an established practice blending ethnical and cultural elegance with contemporary craft.</p>
       </div>
@@ -136,7 +137,7 @@ const PROJECTS_SOON = [];
 function pcard(p, i) {
   const cat = p.cat.charAt(0).toUpperCase() + p.cat.slice(1);
   return `<a class="tile reveal${i%2?' d1':''}" href="${p.file}" data-cat="${p.cat}">
-      <div class="tile__img"><img src="${p.card}" alt="${p.name}" loading="lazy" /></div>
+      <div class="tile__img"><img decoding="async" src="${p.card}" alt="${p.name}" loading="lazy" /></div>
       <div class="tile__cap"><span class="tile__cat">${cat}</span><span class="tile__name">${p.name}</span><span class="tile__meta">${p.meta}</span></div>
     </a>`;
 }
@@ -180,7 +181,7 @@ const PLUS = `<span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none
 // A tall numbered image column (Agressov-style).
 function dcard(num, href, img, name, side) {
   return `<a class="dcol reveal" href="${href}">
-      <div class="dcol__img"><img src="${img}" alt="${name}" loading="lazy" /></div>
+      <div class="dcol__img"><img decoding="async" src="${img}" alt="${name}" loading="lazy" /></div>
       <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${name}</span></div>
       <span class="dcol__side">${side}</span>
       ${PLUS}
@@ -191,7 +192,7 @@ function pcol(num, p) { return dcard(num, p.file, p.card, p.name, p.side || 'Res
 // A product-category card (same format as dcard; supports an image-less "coming soon" state).
 function catcard(num, o) {
   const media = o.img
-    ? `<div class="dcol__img"><img src="${o.img}" alt="${o.name}" loading="lazy" /></div>`
+    ? `<div class="dcol__img"><img decoding="async" src="${o.img}" alt="${o.name}" loading="lazy" /></div>`
     : `<div class="dcol__img dcol__img--soon"></div>`;
   return `<a class="dcol reveal${o.img ? '' : ' dcol--soon'}" href="${o.href || 'contact.html'}">
       ${media}
@@ -257,7 +258,7 @@ function disciplinePage(ghost, title, cat, lead, feature) {
 // A tall numbered discipline column (Agressov-style), linking to its projects.
 function dcol(num, title, cat, img, side) {
   return `<a class="dcol reveal" href="${discHref(cat)}">
-      <div class="dcol__img"><img src="${img}" alt="${title}" loading="lazy" /></div>
+      <div class="dcol__img"><img decoding="async" src="${img}" alt="${title}" loading="lazy" /></div>
       <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${title}</span></div>
       <span class="dcol__side">${side}</span>
       <span class="dcol__plus"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 5v14M5 12h14"/></svg></span></span>
@@ -267,14 +268,14 @@ function dcol(num, title, cat, img, side) {
 const home = `
 <section class="title-card">
   <div class="title-card__inner">
-    <img class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
+    <img decoding="async" class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
     <p class="title-card__tag">Architecture &middot; Interiors &middot; Product Design</p>
   </div>
   <a href="#lead" class="title-card__scroll" aria-label="Scroll to enter"><span>Scroll</span></a>
 </section>
 
 <section class="hero" id="lead">
-  <div class="hero__media"><img src="assets/home/hero-bw.webp" alt="Tvastra Design, rammed-earth residence, black and white" /></div>
+  <div class="hero__media"><img decoding="async" src="assets/home/hero-bw.webp" alt="Tvastra Design, rammed-earth residence, black and white" /></div>
   <div class="container hero__inner">
     <p class="eyebrow">Architecture · Interiors · Objects</p>
     <h1>We shape spaces worth returning to.</h1>
@@ -306,7 +307,7 @@ const home = `
 <section class="section section--ink founder">
   <div class="container">
     <div class="founder__grid reveal">
-      <div class="founder__media"><img src="assets/founder/founder-portrait-bw.webp" alt="Founder, Tvastra Design LLP" loading="lazy" /></div>
+      <div class="founder__media"><img decoding="async" src="assets/founder/founder-portrait-bw.webp" alt="Founder, Tvastra Design LLP" loading="lazy" /></div>
       <div class="founder__body">
         <p class="eyebrow">The founder</p>
         <h2 class="h-lg">In the field of design since 1995.</h2>
@@ -334,15 +335,15 @@ const home = `
       <h2 class="h-lg">Homes built on relationships, not just plans.</h2>
       <p class="lead" style="margin-top:18px">People come before projects. Families and developers have trusted Tvastra to shape their spaces with honesty, transparency and care, from the first conversation to the final handover.</p>
       <div class="clients">
-        <img src="assets/clients/sangini.png" alt="Sangini" loading="lazy" />
-        <img src="assets/clients/piramyd.png" alt="Piramyd Group" loading="lazy" />
-        <img src="assets/clients/avadh.png" alt="Avadh" loading="lazy" />
-        <img src="assets/clients/shaligram.png" alt="Shaligram" loading="lazy" />
-        <img src="assets/clients/samarthya.png" alt="Samarthya" loading="lazy" />
-        <img src="assets/clients/rajhans.png" alt="Rajhans" loading="lazy" />
-        <img src="assets/clients/happy-home.png" alt="Happy Home Group" loading="lazy" />
-        <img src="assets/clients/shott.png" alt="Shott" loading="lazy" />
-        <img src="assets/clients/juneberry.png" alt="Juneberry" loading="lazy" />
+        <img decoding="async" src="assets/clients/sangini.png" alt="Sangini" loading="lazy" />
+        <img decoding="async" src="assets/clients/piramyd.png" alt="Piramyd Group" loading="lazy" />
+        <img decoding="async" src="assets/clients/avadh.png" alt="Avadh" loading="lazy" />
+        <img decoding="async" src="assets/clients/shaligram.png" alt="Shaligram" loading="lazy" />
+        <img decoding="async" src="assets/clients/samarthya.png" alt="Samarthya" loading="lazy" />
+        <img decoding="async" src="assets/clients/rajhans.png" alt="Rajhans" loading="lazy" />
+        <img decoding="async" src="assets/clients/happy-home.png" alt="Happy Home Group" loading="lazy" />
+        <img decoding="async" src="assets/clients/shott.png" alt="Shott" loading="lazy" />
+        <img decoding="async" src="assets/clients/juneberry.png" alt="Juneberry" loading="lazy" />
       </div>
       <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
     </div>
@@ -354,7 +355,7 @@ const home = `
     <div class="members__inner reveal">
       <p class="eyebrow no-rule" style="justify-content:center">Member of</p>
       <div class="members__logos">
-        <img src="assets/members/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner &mdash; American Society of Interior Designers" loading="lazy" />
+        <img decoding="async" src="assets/members/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner &mdash; American Society of Interior Designers" loading="lazy" />
       </div>
     </div>
   </div>
@@ -402,7 +403,7 @@ const projProduct = disciplinePage(
 
 const vritta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch" />
+  <img decoding="async" src="${IMG}sketch-01.webp" alt="Vritta, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Vritta</h1>
@@ -441,7 +442,7 @@ const vritta = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, corner perspective" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, corner perspective" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the stepped massing, carved terraces and the circular apertures explored in line before the render.</p>
   </div>
@@ -454,9 +455,9 @@ const vritta = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG}full-01.webp" alt="Vritta, full corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-02.webp" alt="Vritta, full aerial view" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG}full-03.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-01.webp" alt="Vritta, full corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-02.webp" alt="Vritta, full aerial view" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-03.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -466,12 +467,12 @@ const vritta = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vritta renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img src="${IMG}slide-01.webp" alt="Vritta, street corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img src="${IMG}slide-02.webp" alt="Vritta, street corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img src="${IMG}slide-03.webp" alt="Vritta, upper terraces by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img src="${IMG}slide-04.webp" alt="Vritta, dramatic night view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img src="${IMG}slide-05.webp" alt="Vritta, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img src="${IMG}slide-06.webp" alt="Vritta, street elevation at night" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img decoding="async" src="${IMG}slide-01.webp" alt="Vritta, street corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img decoding="async" src="${IMG}slide-02.webp" alt="Vritta, street corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img decoding="async" src="${IMG}slide-03.webp" alt="Vritta, upper terraces by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img decoding="async" src="${IMG}slide-04.webp" alt="Vritta, dramatic night view" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img decoding="async" src="${IMG}slide-05.webp" alt="Vritta, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img decoding="async" src="${IMG}slide-06.webp" alt="Vritta, street elevation at night" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -534,7 +535,7 @@ const vritta = `
 
 const rju = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch" />
+  <img decoding="async" src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Ṛju</h1>
@@ -573,7 +574,7 @@ const rju = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch, corner perspective" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch, corner perspective" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the corner, the stacked planted balconies, timber louvers and the brick-jaali crown drawn before the render.</p>
   </div>
@@ -586,9 +587,9 @@ const rju = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -598,11 +599,11 @@ const rju = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Ṛju renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner by day, planted balconies and the brick-jaali crown."><img src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" /></figure>
-      <figure class="slide" data-cap="The corner at dusk, warm light rising between the green tiers."><img src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Front elevation at night, interiors glowing behind the screens."><img src="${IMG3}03-night.webp" alt="Ṛju, front elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation by day, stone, glass and cascading vines."><img src="${IMG3}04-day-front.webp" alt="Ṛju, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The layered façade, concrete, timber, jaali and green."><img src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Street corner by day, planted balconies and the brick-jaali crown."><img decoding="async" src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" /></figure>
+      <figure class="slide" data-cap="The corner at dusk, warm light rising between the green tiers."><img decoding="async" src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Front elevation at night, interiors glowing behind the screens."><img decoding="async" src="${IMG3}03-night.webp" alt="Ṛju, front elevation at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation by day, stone, glass and cascading vines."><img decoding="async" src="${IMG3}04-day-front.webp" alt="Ṛju, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The layered façade, concrete, timber, jaali and green."><img decoding="async" src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -664,7 +665,7 @@ const rju = `
 
 const jalika = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch" />
+  <img decoding="async" src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Jālikā</h1>
@@ -703,7 +704,7 @@ const jalika = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:980px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch, corner perspective" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch, corner perspective" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the corner, the double-height jaali screen, terracotta piers and the raised garden podium drawn before the render.</p>
   </div>
@@ -716,9 +717,9 @@ const jalika = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG4}02-day.webp" alt="Jālikā, corner by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}02-day.webp" alt="Jālikā, corner by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -728,11 +729,11 @@ const jalika = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Jālikā renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The corner by day, brick-and-timber jaali over the double-height living room."><img src="${IMG4}02-day.webp" alt="Jālikā, corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner at night, the jaali glowing from within."><img src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation by day, concrete frames and planted balconies."><img src="${IMG4}04-day-rear.webp" alt="Jālikā, rear elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation at night, warm rooms behind the terracotta pier."><img src="${IMG4}03-night-rear.webp" alt="Jālikā, rear elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, the jaali screen and the raised garden podium."><img src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="The corner by day, brick-and-timber jaali over the double-height living room."><img decoding="async" src="${IMG4}02-day.webp" alt="Jālikā, corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner at night, the jaali glowing from within."><img decoding="async" src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Rear elevation by day, concrete frames and planted balconies."><img decoding="async" src="${IMG4}04-day-rear.webp" alt="Jālikā, rear elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Rear elevation at night, warm rooms behind the terracotta pier."><img decoding="async" src="${IMG4}03-night-rear.webp" alt="Jālikā, rear elevation at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation, the jaali screen and the raised garden podium."><img decoding="async" src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -793,7 +794,7 @@ const jalika = `
 
 const vallabhNivas = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch" />
+  <img decoding="async" src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Vallabh Nivas</h1>
@@ -832,7 +833,7 @@ const vallabhNivas = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:760px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch, corner perspective" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch, corner perspective" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the street corner, the concrete-panel grid, timber-slat core and the cascading planted balconies drawn before the render.</p>
   </div>
@@ -845,9 +846,9 @@ const vallabhNivas = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -857,11 +858,11 @@ const vallabhNivas = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vallabh Nivas renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Front elevation by day, the timber-slat core and planted balconies."><img src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" /></figure>
-      <figure class="slide" data-cap="The same elevation after dark, warm timber and glowing rooms."><img src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view by day, concrete grid and cascading greenery."><img src="${IMG5}04-day-front.webp" alt="Vallabh Nivas, street view by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view at night, the interiors warm behind the slats."><img src="${IMG5}03-night-front.webp" alt="Vallabh Nivas, street view at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The tall corner, four slender levels stacked over the entrance."><img src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Front elevation by day, the timber-slat core and planted balconies."><img decoding="async" src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" /></figure>
+      <figure class="slide" data-cap="The same elevation after dark, warm timber and glowing rooms."><img decoding="async" src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street view by day, concrete grid and cascading greenery."><img decoding="async" src="${IMG5}04-day-front.webp" alt="Vallabh Nivas, street view by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street view at night, the interiors warm behind the slats."><img decoding="async" src="${IMG5}03-night-front.webp" alt="Vallabh Nivas, street view at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The tall corner, four slender levels stacked over the entrance."><img decoding="async" src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -922,7 +923,7 @@ const vallabhNivas = `
 
 const urdhva = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch" />
+  <img decoding="async" src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Urdhva</h1>
@@ -961,7 +962,7 @@ const urdhva = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch, street corner" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch, street corner" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the corner, the stacked white panel volumes, the exposed-brick spine and the rooftop pavilion drawn before the render.</p>
   </div>
@@ -974,9 +975,9 @@ const urdhva = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG6}01-night.webp" alt="Urdhva, corner view at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}01-night.webp" alt="Urdhva, corner view at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -986,11 +987,11 @@ const urdhva = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Urdhva renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street elevation by day, white panels split by the brick spine."><img src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" /></figure>
-      <figure class="slide" data-cap="The same corner at night, panels grazed by concealed uplights."><img src="${IMG6}04-night-street.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Entrance by day, the brick jaali against the pale volumes."><img src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Entrance at night, the brick jaali glowing like a lantern."><img src="${IMG6}02-night-front.webp" alt="Urdhva, entrance at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night corner, the stacked volumes and rooftop pavilion aglow."><img src="${IMG6}01-night.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Street elevation by day, white panels split by the brick spine."><img decoding="async" src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" /></figure>
+      <figure class="slide" data-cap="The same corner at night, panels grazed by concealed uplights."><img decoding="async" src="${IMG6}04-night-street.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Entrance by day, the brick jaali against the pale volumes."><img decoding="async" src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Entrance at night, the brick jaali glowing like a lantern."><img decoding="async" src="${IMG6}02-night-front.webp" alt="Urdhva, entrance at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Night corner, the stacked volumes and rooftop pavilion aglow."><img decoding="async" src="${IMG6}01-night.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1050,7 +1051,7 @@ const urdhva = `
 
 const valuka = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch" />
+  <img decoding="async" src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Vālukā</h1>
@@ -1089,7 +1090,7 @@ const valuka = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch, courtyard corner" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch, courtyard corner" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the courtyard corner, the striated stone bands, deep glazing and the sheltered garden drawn before the render.</p>
   </div>
@@ -1102,9 +1103,9 @@ const valuka = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view over the courtyard" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view over the courtyard" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1114,12 +1115,12 @@ const valuka = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vālukā renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The courtyard corner at dusk, warm render glowing against striated stone."><img src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" /></figure>
-      <figure class="slide" data-cap="Front elevation by day, the stone portal and full-height timber door."><img src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Garden elevation, living spaces opening to the sheltered courtyard."><img src="${IMG7}02-rear-angle.jpg" alt="Vālukā, garden elevation" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Courtyard elevation, banded stone meeting warm clay render."><img src="${IMG7}03-side.jpg" alt="Vālukā, courtyard elevation" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation, rammed-earth-textured stone and deep glazing."><img src="${IMG7}04-rear.jpg" alt="Vālukā, rear elevation" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Aerial, the plan wraps the courtyard; rooftop solar crowns the massing."><img src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="The courtyard corner at dusk, warm render glowing against striated stone."><img decoding="async" src="${IMG7}06-dusk-corner.webp" alt="Vālukā, courtyard corner at dusk" /></figure>
+      <figure class="slide" data-cap="Front elevation by day, the stone portal and full-height timber door."><img decoding="async" src="${IMG7}01-front.jpg" alt="Vālukā, front elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Garden elevation, living spaces opening to the sheltered courtyard."><img decoding="async" src="${IMG7}02-rear-angle.jpg" alt="Vālukā, garden elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Courtyard elevation, banded stone meeting warm clay render."><img decoding="async" src="${IMG7}03-side.jpg" alt="Vālukā, courtyard elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Rear elevation, rammed-earth-textured stone and deep glazing."><img decoding="async" src="${IMG7}04-rear.jpg" alt="Vālukā, rear elevation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Aerial, the plan wraps the courtyard; rooftop solar crowns the massing."><img decoding="async" src="${IMG7}05-aerial.jpg" alt="Vālukā, aerial view" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1179,7 +1180,7 @@ const valuka = `
 
 const asamvrta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
-  <img src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch" />
+  <img decoding="async" src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#9ecbe4">Architecture, Residential · Surat</span>
     <h1>Asaṁvṛta</h1>
@@ -1218,7 +1219,7 @@ const asamvrta = `
       <h2 class="h-lg">From the first line.</h2>
     </div>
     <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch, street corner" /></figure>
+      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch, street corner" /></figure>
     </div>
     <p class="muted reveal pd-sketch-note">A hand study of the street corner, the stone-and-brick banding, deep recessed balconies and the rooftop pavilion drawn before the render.</p>
   </div>
@@ -1231,9 +1232,9 @@ const asamvrta = `
       <h2 class="h-lg">3D Elevation.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner view at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner view at night" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1243,10 +1244,10 @@ const asamvrta = `
   </div>
   <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Asaṁvṛta renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The corner by day, stone and grey panels framed by exposed brick."><img src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark, balconies and rooms glowing warm."><img src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation by day, brick banding across the stone facade."><img src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the rooftop pavilion lit against the sky."><img src="${IMG8}03-night-front.webp" alt="Asaṁvṛta, street elevation at night" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="The corner by day, stone and grey panels framed by exposed brick."><img decoding="async" src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner by day" /></figure>
+      <figure class="slide" data-cap="The same corner after dark, balconies and rooms glowing warm."><img decoding="async" src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation by day, brick banding across the stone facade."><img decoding="async" src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Street elevation at night, the rooftop pavilion lit against the sky."><img decoding="async" src="${IMG8}03-night-front.webp" alt="Asaṁvṛta, street elevation at night" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1308,9 +1309,9 @@ const asamvrta = `
 const NIMG = 'assets/projects/metal-life/';
 const metalLife = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${NIMG}hero.webp" alt="Metal Life, living room" />
+  <img decoding="async" src="${NIMG}hero.webp" alt="Metal Life, living room" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#29465B">Interior Design, Residential · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Residential · Surat</span>
     <h1>Metal Life</h1>
     <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
   </div></div>
@@ -1364,9 +1365,9 @@ const metalLife = `
       <h2 class="h-lg">The spaces.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${NIMG}space-01.webp" alt="Metal Life, living room" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-02.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${NIMG}space-03.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}space-01.webp" alt="Metal Life, living room" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}space-02.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}space-03.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1376,12 +1377,12 @@ const metalLife = `
   </div>
   <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Metal Life renders">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
-      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img src="${NIMG}slide-03.webp" alt="Metal Life, living room seating" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
+      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img decoding="async" src="${NIMG}slide-03.webp" alt="Metal Life, living room seating" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img decoding="async" src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img decoding="async" src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1402,12 +1403,12 @@ const metalLife = `
       <h2 class="h-lg">Where the warmth lives.</h2>
     </div>
     <div class="mgrid reveal">
-      <figure class="mgrid__cell"><img src="${NIMG}detail-01.webp" alt="Metal Life, copper-toned steel-mesh partition" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${NIMG}detail-02.webp" alt="Metal Life, kitchen" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${NIMG}detail-03.webp" alt="Metal Life, dining" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${NIMG}detail-04.webp" alt="Metal Life, bathroom" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${NIMG}detail-05.webp" alt="Metal Life, powder room" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${NIMG}detail-06.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-01.webp" alt="Metal Life, copper-toned steel-mesh partition" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-02.webp" alt="Metal Life, kitchen" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-03.webp" alt="Metal Life, dining" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-04.webp" alt="Metal Life, bathroom" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-05.webp" alt="Metal Life, powder room" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${NIMG}detail-06.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
     </div>
   </div>
 </section>
@@ -1426,9 +1427,9 @@ const metalLife = `
 const JIMG = 'assets/projects/juneberry/';
 const juneberry = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${JIMG}facade.webp" alt="Juneberry cafe interior, warm daylight with the brand sign on the wall" />
+  <img decoding="async" src="${JIMG}facade.webp" alt="Juneberry cafe interior, warm daylight with the brand sign on the wall" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#29465B">Interior Design, Café · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Café · Surat</span>
     <h1>Juneberry</h1>
     <p class="pd-hero__sub">Beyond hospitality, a community-centred café where sustainability is the story.</p>
   </div></div>
@@ -1482,9 +1483,9 @@ const juneberry = `
       <h2 class="h-lg">Coffee, counter and craft.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1494,10 +1495,10 @@ const juneberry = `
   </div>
   <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Wood-waste wall installation, evoking mountain ranges and coffee foam."><img src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" /></figure>
-      <figure class="slide" data-cap="Banana-stem canvases set with waste-metal figurines."><img src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /></figure>
-      <figure class="slide" data-cap="An upcycled textile installation, hand-dyed in coffee and earth tones."><img src="${JIMG}window-nook.webp" alt="Juneberry, window seating beside an upcycled textile installation" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The counter and pastry display, up close."><img src="${JIMG}counter-detail.webp" alt="Juneberry, the counter and pastry display" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Wood-waste wall installation, evoking mountain ranges and coffee foam."><img decoding="async" src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" /></figure>
+      <figure class="slide" data-cap="Banana-stem canvases set with waste-metal figurines."><img decoding="async" src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /></figure>
+      <figure class="slide" data-cap="An upcycled textile installation, hand-dyed in coffee and earth tones."><img decoding="async" src="${JIMG}window-nook.webp" alt="Juneberry, window seating beside an upcycled textile installation" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The counter and pastry display, up close."><img decoding="async" src="${JIMG}counter-detail.webp" alt="Juneberry, the counter and pastry display" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1532,12 +1533,12 @@ const juneberry = `
       <h2 class="h-lg">Small corners, slow mornings.</h2>
     </div>
     <div class="mgrid reveal">
-      <figure class="mgrid__cell"><img src="${JIMG}art-panels.webp" alt="Juneberry, banana-stem canvas artworks with waste-metal figurines" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${JIMG}mountain-wall.webp" alt="Juneberry, wood-waste installation evoking mountain ranges above the banquette" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window beside an upcycled textile installation" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a banana-stem canvas" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
-      <figure class="mgrid__cell"><img src="${JIMG}seating-row.webp" alt="Juneberry, a row of reel-wood chairs beneath the wood-waste installation" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}art-panels.webp" alt="Juneberry, banana-stem canvas artworks with waste-metal figurines" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}mountain-wall.webp" alt="Juneberry, wood-waste installation evoking mountain ranges above the banquette" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}coffee-window.webp" alt="Juneberry, a guest by the window beside an upcycled textile installation" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}reading.webp" alt="Juneberry, a guest reading beneath a banana-stem canvas" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}reading-wide.webp" alt="Juneberry, a guest reading by the window beside the retail shelving" loading="lazy" /></figure>
+      <figure class="mgrid__cell"><img decoding="async" src="${JIMG}seating-row.webp" alt="Juneberry, a row of reel-wood chairs beneath the wood-waste installation" loading="lazy" /></figure>
     </div>
   </div>
 </section>
@@ -1556,9 +1557,9 @@ const juneberry = `
 const CIMG = 'assets/projects/calibre/';
 const calibre = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior with garments and a skylight" />
+  <img decoding="async" src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior with garments and a skylight" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#29465B">Interior Design, Boutique · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Boutique · Surat</span>
     <h1>Calibre</h1>
     <p class="pd-hero__sub">Beyond retail, a fluid, sculptural canvas for luxury fashion.</p>
   </div></div>
@@ -1612,9 +1613,9 @@ const calibre = `
       <h2 class="h-lg">A room that flows.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1624,11 +1625,11 @@ const calibre = `
   </div>
   <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The salon, sculpted plaster and warm bouclé seating."><img src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" /></figure>
-      <figure class="slide" data-cap="A sweeping reception carved from the curved shell."><img src="${CIMG}look-02.webp" alt="Calibre, the sweeping reception" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A daylit lounge framed by the arched window."><img src="${CIMG}look-03.webp" alt="Calibre, the daylit lounge" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Fitting mirrors and a sculpted display counter."><img src="${CIMG}look-04.webp" alt="Calibre, fitting mirrors and display" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Display shelving folds into the flowing walls."><img src="${CIMG}look-05.webp" alt="Calibre, display shelving in the curved wall" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="The salon, sculpted plaster and warm bouclé seating."><img decoding="async" src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" /></figure>
+      <figure class="slide" data-cap="A sweeping reception carved from the curved shell."><img decoding="async" src="${CIMG}look-02.webp" alt="Calibre, the sweeping reception" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A daylit lounge framed by the arched window."><img decoding="async" src="${CIMG}look-03.webp" alt="Calibre, the daylit lounge" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Fitting mirrors and a sculpted display counter."><img decoding="async" src="${CIMG}look-04.webp" alt="Calibre, fitting mirrors and display" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Display shelving folds into the flowing walls."><img decoding="async" src="${CIMG}look-05.webp" alt="Calibre, display shelving in the curved wall" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1656,9 +1657,9 @@ const calibre = `
 const IIMG = 'assets/projects/icon/';
 const icon = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${IIMG}hero.webp" alt="ICON office, backlit ROSCA identity wall at the entrance in oak veneer and stone" />
+  <img decoding="async" src="${IIMG}hero.webp" alt="ICON office, backlit ROSCA identity wall at the entrance in oak veneer and stone" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#29465B">Interior Design, Office · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Office · Surat</span>
     <h1>ICON</h1>
     <p class="pd-hero__sub">A corporate workplace on the Surat skyline, framed by glass and light.</p>
   </div></div>
@@ -1712,9 +1713,9 @@ const icon = `
       <h2 class="h-lg">Workspace, end to end.</h2>
     </div>
     <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img src="${IIMG}wk-01.webp" alt="ICON, open workstations along the glazed facade" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IIMG}wk-03.webp" alt="ICON, task desks along the textured feature wall" loading="lazy" /></figure>
-      <figure class="pd-full"><img src="${IIMG}wk-05.webp" alt="ICON, the meeting room with a glass table" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations along the glazed facade" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, task desks along the textured feature wall" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-05.webp" alt="ICON, the meeting room with a glass table" loading="lazy" /></figure>
     </div>
   </div>
   <div class="container">
@@ -1724,11 +1725,11 @@ const icon = `
   </div>
   <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="ICON office interior">
     <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Open workstations run the length of the glazed facade."><img src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" /></figure>
-      <figure class="slide" data-cap="Glass cabins keep the river view open to the whole floor."><img src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Task desks line the textured charcoal feature wall."><img src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A director's cabin framed by art and glass."><img src="${IIMG}wk-04.webp" alt="ICON, a director's cabin" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The meeting room, screened by soft daylight blinds."><img src="${IIMG}wk-05.webp" alt="ICON, the meeting room" loading="lazy" /></figure>
+      <figure class="slide is-active" data-cap="Open workstations run the length of the glazed facade."><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" /></figure>
+      <figure class="slide" data-cap="Glass cabins keep the river view open to the whole floor."><img decoding="async" src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /></figure>
+      <figure class="slide" data-cap="Task desks line the textured charcoal feature wall."><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /></figure>
+      <figure class="slide" data-cap="A director's cabin framed by art and glass."><img decoding="async" src="${IIMG}wk-04.webp" alt="ICON, a director's cabin" loading="lazy" /></figure>
+      <figure class="slide" data-cap="The meeting room, screened by soft daylight blinds."><img decoding="async" src="${IIMG}wk-05.webp" alt="ICON, the meeting room" loading="lazy" /></figure>
     </div>
     <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
     <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
@@ -1756,9 +1757,9 @@ const icon = `
 const PIMG = 'assets/projects/pyramid-palacia/';
 const pyramidPalacia = `
 <div class="pd-hero pd-hero--tall">
-  <img src="${PIMG}hero.webp" alt="Pyramid Palacia, serene warm-neutral bedroom" />
+  <img decoding="async" src="${PIMG}hero.webp" alt="Pyramid Palacia, serene warm-neutral bedroom" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#29465B">Interior Design, Residence · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Residence · Surat</span>
     <h1>Pyramid Palacia</h1>
     <p class="pd-hero__sub">A warm, modern-luxury home grounded by brass and earthy texture.</p>
   </div></div>
@@ -1812,10 +1813,10 @@ const pyramidPalacia = `
       <h2 class="h-lg">Room by room.</h2>
     </div>
     <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
-      <figure class="pd-full"><img src="${PIMG}space-01.webp" alt="Pyramid Palacia, master bedroom with a book-matched marble feature wall" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom &middot; book-matched marble &amp; brass pendants</figcaption></figure>
-      <figure class="pd-full"><img src="${PIMG}space-02.webp" alt="Pyramid Palacia, bedroom with fluted panelling and a media wall" loading="lazy" /><figcaption class="pd-full__cap">Bedroom &middot; fluted panelling &amp; wood media console</figcaption></figure>
-      <figure class="pd-full"><img src="${PIMG}space-03.webp" alt="Pyramid Palacia, ensuite bathroom with a glazed partition and timber vanity" loading="lazy" /><figcaption class="pd-full__cap">Ensuite &middot; glazed partition &amp; fluted timber vanity</figcaption></figure>
-      <figure class="pd-full"><img src="${PIMG}space-04.webp" alt="Pyramid Palacia, marble bathroom framed in brushed brass" loading="lazy" /><figcaption class="pd-full__cap">Bathroom &middot; grey marble framed in brushed brass</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${PIMG}space-01.webp" alt="Pyramid Palacia, master bedroom with a book-matched marble feature wall" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom &middot; book-matched marble &amp; brass pendants</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${PIMG}space-02.webp" alt="Pyramid Palacia, bedroom with fluted panelling and a media wall" loading="lazy" /><figcaption class="pd-full__cap">Bedroom &middot; fluted panelling &amp; wood media console</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${PIMG}space-03.webp" alt="Pyramid Palacia, ensuite bathroom with a glazed partition and timber vanity" loading="lazy" /><figcaption class="pd-full__cap">Ensuite &middot; glazed partition &amp; fluted timber vanity</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${PIMG}space-04.webp" alt="Pyramid Palacia, marble bathroom framed in brushed brass" loading="lazy" /><figcaption class="pd-full__cap">Bathroom &middot; grey marble framed in brushed brass</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1872,7 +1873,7 @@ const about = `
 <section class="section namesec" style="padding-top:clamp(120px,15vh,190px)">
   <div class="container">
     <div class="namesec__inner reveal">
-      <img class="namesec__logo" src="assets/logo.png" alt="Tvastra Design LLP" />
+      <img decoding="async" class="namesec__logo" src="assets/logo.png" alt="Tvastra Design LLP" />
       <p class="eyebrow no-rule" style="justify-content:center">The name</p>
       <h2 class="h-lg namesec__title">Rooted in tradition. Driven by the <em>power of creativity.</em></h2>
       <p class="lead namesec__lead">The name Tvastra traces back to the Sanskrit word for the supreme fashioner, the original architect responsible for giving shape to the unformed.</p>
@@ -1889,7 +1890,7 @@ const about = `
     </div>
     <div class="ldr reveal">
       <figure class="ldr__photo">
-        <img src="assets/founder/leadership-bw.webp" alt="Bhavin Swami and Alpa Swami, designated partners of Tvastra Design LLP" loading="lazy" />
+        <img decoding="async" src="assets/founder/leadership-bw.webp" alt="Bhavin Swami and Alpa Swami, designated partners of Tvastra Design LLP" loading="lazy" />
         <figcaption>Bhavin Swami &amp; Alpa Swami &middot; Designated Partners</figcaption>
       </figure>
       <div class="ldr__bios">
@@ -2029,7 +2030,7 @@ const recognition = `
   <div class="container">
     <div class="rec-list reveal">
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/adc.png" alt="Gold Winner, International Architecture &amp; Design Awards 2025" loading="lazy" /><span>2025</span></div>
+        <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--adc" src="assets/awards/adc.png" alt="Gold Winner, International Architecture &amp; Design Awards 2025" loading="lazy" /><span>2025</span></div>
         <div>
           <h3 class="rec-item__title">Gold Winner</h3>
           <div class="rec-item__where">IADA 2025 &middot; Architecture &amp; Design Collection</div>
@@ -2038,7 +2039,7 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://ad-c.org/winner/metal-life-gold-winner-custom-interior-design-category-iada-2025/" target="_blank" rel="noopener">View award ${ARROW}</a>
       </div>
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--apsda" src="assets/awards/apsda.png" alt="Asia-Pacific Space Designers Association" loading="lazy" /><span>2025</span></div>
+        <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--apsda" src="assets/awards/apsda.png" alt="Asia-Pacific Space Designers Association" loading="lazy" /><span>2025</span></div>
         <div>
           <h3 class="rec-item__title">Honorary Mention</h3>
           <div class="rec-item__where">APSDA Awards 2025 &middot; Asia-Pacific Space Designers Association</div>
@@ -2047,7 +2048,7 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://apsda.org/competition/apsda-awards-2025/finalist-list/" target="_blank" rel="noopener">View listing ${ARROW}</a>
       </div>
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--id" src="assets/awards/interior-design.png" alt="Interior Design magazine" loading="lazy" /><span>2024</span></div>
+        <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--id" src="assets/awards/interior-design.png" alt="Interior Design magazine" loading="lazy" /><span>2024</span></div>
         <div>
           <h3 class="rec-item__title">Best of Year 2024</h3>
           <div class="rec-item__where">Interior Design magazine</div>
@@ -2056,7 +2057,7 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://interiordesign.net/awards/best-of-year/2024/tvastra-design-medium-city-house/" target="_blank" rel="noopener">View feature ${ARROW}</a>
       </div>
       <div class="rec-item">
-        <div class="rec-item__year"><img class="rec-item__seal rec-item__seal--adc" src="assets/awards/platinum.png" alt="Platinum Winner, Architecture &amp; Design Collection Awards 2023" loading="lazy" /><span>2023</span></div>
+        <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--adc" src="assets/awards/platinum.png" alt="Platinum Winner, Architecture &amp; Design Collection Awards 2023" loading="lazy" /><span>2023</span></div>
         <div>
           <h3 class="rec-item__title">Platinum Winner</h3>
           <div class="rec-item__where">Architecture &amp; Design Collection Awards</div>
@@ -2091,7 +2092,7 @@ const recognition = `
 
 const foundersMind = `
 <div class="pd-hero pd-hero--tall fmind-hero">
-  <img src="assets/founder/founder-wide-hd.webp" alt="The founder of Tvastra Design LLP" />
+  <img decoding="async" src="assets/founder/founder-wide-hd.webp" alt="The founder of Tvastra Design LLP" />
   <div class="pd-hero__cap"><div class="container">
     <span class="tag" style="color:#004477">The founder</span>
     <h1>Inside the founder's mind</h1>
@@ -2152,17 +2153,17 @@ const foundersMind = `
         <p class="muted" style="margin-top:16px;max-width:34ch">An ongoing commitment to sustainable, responsible building, kept current through green-building and ESG training.</p>
       </div>
       <ul class="certs reveal d1">
-        <li class="cert"><span class="cert__yr">2026</span><div class="cert__body"><div class="cert__title">Natural Building Course</div><div class="cert__by">Completed &middot; Certificate 26-06964</div></div><a class="cert__thumb" href="assets/founder/certs/natural-building.webp" target="_blank" rel="noopener"><img src="assets/founder/certs/natural-building.webp" alt="Natural Building Course certificate" loading="lazy" /></a></li>
-        <li class="cert"><span class="cert__yr">2025</span><div class="cert__body"><div class="cert__title">Carbon Accounting Masterclass</div><div class="cert__by">ESG Academy by Tattva ESG Solutions</div></div><a class="cert__thumb" href="assets/founder/certs/carbon-accounting.webp" target="_blank" rel="noopener"><img src="assets/founder/certs/carbon-accounting.webp" alt="Carbon Accounting Masterclass certificate" loading="lazy" /></a></li>
-        <li class="cert"><span class="cert__yr">2024</span><div class="cert__body"><div class="cert__title">Sustainable Home Week</div><div class="cert__by">UGREEN &mdash; Green Building School</div></div><a class="cert__thumb" href="assets/founder/certs/sustainable-home-week.webp" target="_blank" rel="noopener"><img src="assets/founder/certs/sustainable-home-week.webp" alt="Sustainable Home Week certificate, UGREEN" loading="lazy" /></a></li>
-        <li class="cert"><span class="cert__yr">2023</span><div class="cert__body"><div class="cert__title">Sustainable Architecture Workshop</div><div class="cert__by">UGREEN &mdash; Green Building School &middot; 16-hour Green Building Training</div></div><a class="cert__thumb" href="assets/founder/certs/sustainable-architecture.webp" target="_blank" rel="noopener"><img src="assets/founder/certs/sustainable-architecture.webp" alt="Sustainable Architecture Workshop certificate, UGREEN" loading="lazy" /></a></li>
+        <li class="cert"><span class="cert__yr">2026</span><div class="cert__body"><div class="cert__title">Natural Building Course</div><div class="cert__by">Completed &middot; Certificate 26-06964</div></div><a class="cert__thumb" href="assets/founder/certs/natural-building.webp" target="_blank" rel="noopener"><img decoding="async" src="assets/founder/certs/natural-building.webp" alt="Natural Building Course certificate" loading="lazy" /></a></li>
+        <li class="cert"><span class="cert__yr">2025</span><div class="cert__body"><div class="cert__title">Carbon Accounting Masterclass</div><div class="cert__by">ESG Academy by Tattva ESG Solutions</div></div><a class="cert__thumb" href="assets/founder/certs/carbon-accounting.webp" target="_blank" rel="noopener"><img decoding="async" src="assets/founder/certs/carbon-accounting.webp" alt="Carbon Accounting Masterclass certificate" loading="lazy" /></a></li>
+        <li class="cert"><span class="cert__yr">2024</span><div class="cert__body"><div class="cert__title">Sustainable Home Week</div><div class="cert__by">UGREEN &mdash; Green Building School</div></div><a class="cert__thumb" href="assets/founder/certs/sustainable-home-week.webp" target="_blank" rel="noopener"><img decoding="async" src="assets/founder/certs/sustainable-home-week.webp" alt="Sustainable Home Week certificate, UGREEN" loading="lazy" /></a></li>
+        <li class="cert"><span class="cert__yr">2023</span><div class="cert__body"><div class="cert__title">Sustainable Architecture Workshop</div><div class="cert__by">UGREEN &mdash; Green Building School &middot; 16-hour Green Building Training</div></div><a class="cert__thumb" href="assets/founder/certs/sustainable-architecture.webp" target="_blank" rel="noopener"><img decoding="async" src="assets/founder/certs/sustainable-architecture.webp" alt="Sustainable Architecture Workshop certificate, UGREEN" loading="lazy" /></a></li>
       </ul>
     </div>
   </div>
 </section>
 
 <a class="fpband reveal" href="founder-portfolio.html" aria-label="Open the founder's portfolio">
-  <img class="fpband__img" src="assets/founder/portfolio-band-bw.webp" alt="The founder marking timber beside furniture design sketches in the workshop" loading="lazy" />
+  <img decoding="async" class="fpband__img" src="assets/founder/portfolio-band-bw.webp" alt="The founder marking timber beside furniture design sketches in the workshop" loading="lazy" />
   <span class="fpband__blur" aria-hidden="true"></span>
   <span class="fpband__shade" aria-hidden="true"></span>
   <div class="fpband__inner">
@@ -2194,7 +2195,7 @@ const FOUNDER_WORKS = [
 
 function fwcard(num, w) {
   return `<a class="dcol reveal" href="${w.href || '#'}">
-      <div class="dcol__img"><img src="${w.img}" alt="${w.name}" loading="lazy" /></div>
+      <div class="dcol__img"><img decoding="async" src="${w.img}" alt="${w.name}" loading="lazy" /></div>
       <div class="dcol__top"><span class="dcol__num">${num}</span><span class="dcol__title">${w.name}</span></div>
       <span class="dcol__side">${w.side || ''}</span>
       ${PLUS}
@@ -2361,7 +2362,7 @@ function gcard(v) {
 
 const gospels = `
 <section class="gband">
-  <img class="gband__img" src="assets/gospels/founder-band-bw.webp" alt="The founder of Tvastra Design LLP in conversation on a workshop floor" />
+  <img decoding="async" class="gband__img" src="assets/gospels/founder-band-bw.webp" alt="The founder of Tvastra Design LLP in conversation on a workshop floor" />
   <span class="gband__blur" aria-hidden="true"></span>
   <span class="gband__shade" aria-hidden="true"></span>
   <div class="gband__inner">
@@ -2419,7 +2420,10 @@ const PAGES = [
 ];
 
 for (const p of PAGES) {
-  const html = head(p.title, p.desc) + header(p.nav, p.dark) + p.content + FOOTER;
+  // Find the first hero/title image so we can preload it (faster first paint, smoother page-to-page).
+  const heroMatch = p.content.match(/<(?:div|section)[^>]*class="[^"]*(?:pd-hero|hero|title-card)[^"]*"[\s\S]*?<img[^>]*src="([^"]+)"/);
+  const heroImg = heroMatch ? heroMatch[1] : null;
+  const html = head(p.title, p.desc, heroImg) + header(p.nav, p.dark) + p.content + FOOTER;
   fs.writeFileSync(path.join(ROOT, p.file), html);
   console.log('wrote', p.file);
 }
@@ -2470,7 +2474,7 @@ if (process.argv[2] === 'preview') {
   const spaHeader = `
 <header class="site-header" id="hdr">
   <div class="container nav">
-    <a class="brand" href="#home" data-page="home"><img class="logo-color" src="${toData('assets/logo.png')}" alt="Tvastra Design LLP" /><img class="logo-white" src="${toData('assets/logo-white.png')}" alt="Tvastra Design LLP" /></a>
+    <a class="brand" href="#home" data-page="home"><img decoding="async" class="logo-color" src="${toData('assets/logo.png')}" alt="Tvastra Design LLP" /><img decoding="async" class="logo-white" src="${toData('assets/logo-white.png')}" alt="Tvastra Design LLP" /></a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="nav-links">${navLinks}</ul>
   </div>
