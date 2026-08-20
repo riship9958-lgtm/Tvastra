@@ -42,11 +42,13 @@ ${FONTS}
 /* One-time cleanup: remove any stale service worker / caches left by the previous site. */
 (function(){
   try {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); });
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      navigator.serviceWorker.getRegistrations()
+        .then(function(rs){ rs.forEach(function(r){ r.unregister(); }); })
+        .catch(function(){});
     }
     if (window.caches && caches.keys) {
-      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); });
+      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }).catch(function(){});
     }
   } catch(e){}
 })();

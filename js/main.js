@@ -119,6 +119,61 @@
     });
   });
 
+  // ---- Smooth image reveal (fade lazy images in instead of a hard pop) ----
+  (function () {
+    var imgs = [].slice.call(document.querySelectorAll('img[loading="lazy"]'));
+    imgs.forEach(function (img) {
+      if (img.complete && img.naturalWidth > 0) return; // already here, no fade needed
+      img.classList.add("img-fade");
+      var show = function () { img.classList.add("img-ready"); };
+      img.addEventListener("load", show, { once: true });
+      img.addEventListener("error", show, { once: true });
+    });
+  })();
+
+  // ---- Instant navigation: prerender (or prefetch) the next page on hover ----
+  (function () {
+    function internal(a) {
+      if (!a || a.origin !== location.origin) return false;
+      if (a.hasAttribute("download") || a.target === "_blank") return false;
+      var h = a.getAttribute("href") || "";
+      if (!h || h.charAt(0) === "#" || /^(mailto:|tel:)/i.test(h)) return false;
+      return a.pathname === "/" || /\.html$/.test(a.pathname);
+    }
+
+    // Chrome/Edge: prerender the full page (HTML + images) on moderate hover.
+    if (typeof HTMLScriptElement !== "undefined" &&
+        HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules")) {
+      var s = document.createElement("script");
+      s.type = "speculationrules";
+      s.textContent = JSON.stringify({
+        prerender: [{
+          source: "document",
+          where: { and: [
+            { href_matches: "/*" },
+            { not: { selector_matches: "[download], [target=_blank], .no-prerender" } }
+          ] },
+          eagerness: "moderate"
+        }]
+      });
+      document.body.appendChild(s);
+      return;
+    }
+
+    // Everyone else: warm the next page's HTML on hover / touch.
+    var done = {};
+    function warm(e) {
+      var a = e.target.closest && e.target.closest("a[href]");
+      if (!a || !internal(a) || done[a.href]) return;
+      done[a.href] = 1;
+      var l = document.createElement("link");
+      l.rel = "prefetch"; l.as = "document"; l.href = a.href;
+      document.head.appendChild(l);
+    }
+    document.addEventListener("pointerover", warm, { passive: true });
+    document.addEventListener("touchstart", warm, { passive: true });
+  })();
+
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");
   if (form) {

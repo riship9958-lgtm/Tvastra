@@ -854,3 +854,8 @@ details[open] > .role__head .role__toggle { transform: rotate(45deg); background
 .pd-full:hover .pd-full__cap { opacity: 1; transform: none; }
 @media (max-width: 900px) { .pd-full-grid--quad { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 720px) { .pd-full-grid { grid-template-columns: 1fr; } .pd-full-grid--quad { grid-template-columns: repeat(2, 1fr); } }
+
+/* Smooth image reveal — fade lazy images in as they load instead of a hard pop-in */
+img.img-fade { opacity: 0; transition: opacity .55s var(--ease, ease); }
+img.img-fade.img-ready { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { img.img-fade { transition: none; opacity: 1; } }

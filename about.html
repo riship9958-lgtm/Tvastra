@@ -10,16 +10,18 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=40580a79" />
+<link rel="stylesheet" href="css/style.css?v=7e9c59e4" />
 <script>
 /* One-time cleanup: remove any stale service worker / caches left by the previous site. */
 (function(){
   try {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); });
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      navigator.serviceWorker.getRegistrations()
+        .then(function(rs){ rs.forEach(function(r){ r.unregister(); }); })
+        .catch(function(){});
     }
     if (window.caches && caches.keys) {
-      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); });
+      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }).catch(function(){});
     }
   } catch(e){}
 })();
@@ -178,6 +180,6 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js?v=a22ebafe"></script>
+<script src="js/main.js?v=dd138ced"></script>
 </body>
 </html>
