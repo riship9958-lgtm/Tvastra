@@ -2271,6 +2271,8 @@ const FOUNDER_WORKS = [
   { name: 'Avadh Habitat', href: 'avadh.html', img: 'assets/projects/avadh/hero.webp',     side: 'Residence &middot; Surat' },
   { name: 'ICON Rosca', href: 'icon.html', img: 'assets/projects/icon/hero.webp', side: 'Office &middot; Surat' },
   { name: 'SHOTT Surat', href: 'shott-surat.html', img: 'assets/projects/shott-surat/slide-03.webp', side: 'Entertainment &middot; Surat' },
+  { name: 'E3 Bungalows', href: 'e3.html', img: 'assets/projects/e3/slide-01.webp', side: 'Residence &middot; Surat' },
+  { name: 'Shah Clinic', href: 'shah.html', img: 'assets/projects/shah/slide-01.webp', side: 'Aesthetic Clinic &middot; Surat' },
 ];
 
 function fwcard(num, w) {
@@ -2753,6 +2755,78 @@ const shottSurat = interiorProject({
   ],
 });
 
+const e3 = interiorProject({
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
+  hero: 'assets/projects/e3/hero.webp',
+  heroAlt: 'E3 Bungalows, a warm marble-and-timber living room with the city beyond',
+  name: 'E3 Bungalows',
+  tag: 'Interior Design, Residence · Surat',
+  sub: 'A luxurious family bungalow in grey marble, warm timber and glass.',
+  statement: 'A contemporary family home where <em>grey marble, warm timber and layered light</em> set a calm, luxurious tone.',
+  lead: 'E3 Bungalows is a large family residence organised around open, light-filled living. Grey-veined marble floors run through a living and dining sequence framed by timber panelling, sheer drapes and full-height glazing that opens each room to the greenery and skyline beyond.',
+  muted: 'Sculptural coffered ceilings in timber and metal give the living spaces a strong signature, while bedrooms stay softer, in warm neutrals with jaali screens and accent panels. A generous terrace with a battened pergola extends the living outdoors, day and night.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Residential Bungalow'], ['Client', 'Private residence'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Calm, marble, light.',
+  cpsych: [
+    ['Open living', 'Living, dining and kitchen flow together under one material language.'],
+    ['Marble & timber', 'Grey marble floors and warm timber set a calm, luxurious base.'],
+    ['Sculptural ceilings', 'Coffered timber-and-metal ceilings give the living spaces their signature.'],
+    ['Indoor–outdoor', 'A battened-pergola terrace extends the living spaces outside.'],
+  ],
+  mats: ['Grey marble', 'Timber panelling', 'Metal', 'Sheer drapes', 'Glass'],
+  showcaseHead: 'A home, room by room.',
+  grid: [
+    { src: 'assets/projects/e3/slide-01.webp', alt: 'E3 Bungalows living room' },
+    { src: 'assets/projects/e3/slide-04.webp', alt: 'E3 Bungalows kitchen' },
+    { src: 'assets/projects/e3/slide-08.webp', alt: 'E3 Bungalows terrace at night' },
+  ],
+  slides: [
+    { src: 'assets/projects/e3/slide-01.webp', cap: 'The living room, framed by timber panelling and full-height glass.', alt: 'E3 Bungalows living room' },
+    { src: 'assets/projects/e3/slide-02.webp', cap: 'Soft seating over grey marble, open to the view.', alt: 'E3 Bungalows living room' },
+    { src: 'assets/projects/e3/slide-03.webp', cap: 'Dining sits beside the media wall in one continuous space.', alt: 'E3 Bungalows dining' },
+    { src: 'assets/projects/e3/slide-04.webp', cap: 'A sleek kitchen in stone and warm wood.', alt: 'E3 Bungalows kitchen' },
+    { src: 'assets/projects/e3/slide-05.webp', cap: 'A bedroom with an accent panel and a jaali screen.', alt: 'E3 Bungalows bedroom' },
+    { src: 'assets/projects/e3/slide-06.webp', cap: 'A warm master bedroom in timber and neutral tones.', alt: 'E3 Bungalows master bedroom' },
+    { src: 'assets/projects/e3/slide-07.webp', cap: 'The terrace lounge under a battened pergola, by day.', alt: 'E3 Bungalows terrace' },
+    { src: 'assets/projects/e3/slide-08.webp', cap: 'The terrace at dusk, glowing over the skyline.', alt: 'E3 Bungalows terrace at night' },
+  ],
+});
+
+const shah = interiorProject({
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
+  hero: 'assets/projects/shah/hero.webp',
+  heroAlt: 'Shah Clinic, a sage-green waiting lounge framed by line-art face roundels',
+  name: 'Shah Clinic',
+  tag: 'Interior Design, Aesthetic Clinic · Surat',
+  sub: 'A skin and aesthetic clinic in sage, blush and soft daylight.',
+  statement: 'A skin clinic reimagined as a <em>calm, gallery-like retreat</em> in sage green, blush and clean white.',
+  lead: 'Shah Clinic sets the tone for Dr Ami Shah’s aesthetic practice with a double-height, gallery-like reception. A sage-green textured wall, hung with a family of line-art face roundels, wraps the waiting lounge, while a fluted white desk inlaid with mother-of-pearl marks the arrival.',
+  muted: 'Upstairs, reeded-glass partitions in soft green screen a run of numbered procedure and consulting rooms, each named in warm terracotta. A floating timber stair, planted corners and even, diffuse light keep the clinical spaces bright, private and reassuringly calm.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Skin & Aesthetic Clinic'], ['Client', 'Dr Ami Shah'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Calm, like a gallery.',
+  cpsych: [
+    ['Gallery arrival', 'A double-height reception with a wall of line-art roundels sets a calm tone.'],
+    ['Sage & blush', 'Soft green and blush replace the clinical white-out.'],
+    ['Reeded glass', 'Green reeded-glass partitions screen the procedure rooms with privacy and light.'],
+    ['Soft daylight', 'Even, diffuse light keeps every room bright and reassuring.'],
+  ],
+  mats: ['Sage texture', 'Reeded glass', 'Mother-of-pearl', 'White panels', 'Terracotta accents'],
+  showcaseHead: 'From lounge to procedure room.',
+  grid: [
+    { src: 'assets/projects/shah/slide-01.webp', alt: 'Shah Clinic waiting lounge' },
+    { src: 'assets/projects/shah/slide-04.webp', alt: 'Shah Clinic procedure-room corridor' },
+    { src: 'assets/projects/shah/slide-06.webp', alt: 'Shah Clinic treatment room' },
+  ],
+  slides: [
+    { src: 'assets/projects/shah/slide-01.webp', cap: 'The waiting lounge, wrapped in a wall of line-art face roundels.', alt: 'Shah Clinic waiting lounge' },
+    { src: 'assets/projects/shah/slide-02.webp', cap: 'Soft seating and daylight under the sage-green wall.', alt: 'Shah Clinic waiting lounge' },
+    { src: 'assets/projects/shah/slide-03.webp', cap: 'A floating timber stair rises past a planted corner.', alt: 'Shah Clinic floating stair' },
+    { src: 'assets/projects/shah/slide-04.webp', cap: 'Reeded-glass partitions screen the numbered procedure rooms.', alt: 'Shah Clinic corridor' },
+    { src: 'assets/projects/shah/slide-05.webp', cap: 'A consulting cabin, calm in white and green.', alt: 'Shah Clinic consulting room' },
+    { src: 'assets/projects/shah/slide-06.webp', cap: 'The treatment room, bright and clinical yet warm.', alt: 'Shah Clinic treatment room' },
+  ],
+});
+
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
@@ -2778,6 +2852,8 @@ const PAGES = [
   { file: 'kapadia.html',      id: 'proj-kapadia', nav: 'projects.html', dark: true, noPreview: true, title: 'Kapadia Dental, Clinic Interior by Tvastra Design LLP', desc: 'Kapadia Dental, a calm, spa-like dental clinic in Surat by Tvastra Design LLP in taupe, teak and cream with a curved reception and the KD monogram.', content: kapadia },
   { file: 'avadh.html',        id: 'proj-avadh',   nav: 'about.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
   { file: 'shott-surat.html',  id: 'proj-shott-surat', nav: 'about.html', dark: true, noPreview: true, title: 'SHOTT Surat, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT Surat, a riverside family entertainment arena by Tvastra Design LLP, go-karting, bowling, arcade, kids’ zone and cricket under a checkerboard dome.', content: shottSurat },
+  { file: 'e3.html',           id: 'proj-e3',      nav: 'about.html', dark: true, noPreview: true, title: 'E3 Bungalows, Residential Interior by Tvastra Design LLP', desc: 'E3 Bungalows, a luxurious family residence in Surat by Tvastra Design LLP in grey marble, warm timber and glass with sculptural ceilings.', content: e3 },
+  { file: 'shah.html',         id: 'proj-shah',    nav: 'about.html', dark: true, noPreview: true, title: 'Shah Clinic, Aesthetic Clinic Interior by Tvastra Design LLP', desc: 'Shah Clinic, Dr Ami Shah’s skin and aesthetic clinic in Surat by Tvastra Design LLP, a gallery-like reception in sage green, blush and reeded glass.', content: shah },
   { file: 'gurukrupa.html',    id: 'proj-gurukrupa', nav: 'projects.html', dark: true, title: 'Shree Gurukrupaa Vidhya Sankul, Office Interior by Tvastra Design LLP', desc: 'Shree Gurukrupaa Vidhya Sankul, an education group’s head office in Surat by Tvastra Design LLP, colour-blocked glass partitions, oak joinery and daylight.', content: gurukrupa },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
