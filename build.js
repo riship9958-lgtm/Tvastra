@@ -202,12 +202,10 @@ const PROJECTS_LIST = [
   { name: 'Asaṁvṛta',  file: 'asamvrta.html',  cat: 'architecture', meta: 'Residential · Surat, Gujarat', card: `${IMG8}01-night-corner.webp`, feat: `${IMG8}01-night-corner.webp` },
   { name: 'Metal Life',   file: 'metal-life.html',   cat: 'interior',     meta: 'Interior · Surat, Gujarat',    card: 'assets/projects/metal-life/hero.webp', feat: 'assets/projects/metal-life/hero.webp' },
   { name: 'Juneberry',    file: 'juneberry.html',    cat: 'interior',     meta: 'Café · Surat, Gujarat', side: 'Café &middot; Surat',       card: 'assets/projects/juneberry/counter.webp', feat: 'assets/projects/juneberry/counter.webp' },
-  { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Boutique · Surat, Gujarat', side: 'Boutique &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
+  { name: 'Calibre',      file: 'calibre.html',      cat: 'interior',     meta: 'Showroom · Surat, Gujarat', side: 'Showroom &middot; Surat', card: 'assets/projects/calibre/hero.webp', feat: 'assets/projects/calibre/hero.webp' },
   { name: 'ICON',         file: 'icon.html',         cat: 'interior',     meta: 'Office · Surat, Gujarat', side: 'Office &middot; Surat', card: 'assets/projects/icon/hero.webp', feat: 'assets/projects/icon/hero.webp' },
   { name: 'Pyramid Palacia', file: 'pyramid-palacia.html', cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/pyramid-palacia/hero.webp', feat: 'assets/projects/pyramid-palacia/hero.webp' },
-  { name: 'SHOTT',          file: 'shott.html',          cat: 'interior', meta: 'Entertainment · Surat, Gujarat', side: 'Entertainment &middot; Surat', card: 'assets/projects/shott/slide-01.webp', feat: 'assets/projects/shott/slide-01.webp' },
   { name: 'Kapadia Dental', file: 'kapadia.html',        cat: 'interior', meta: 'Dental Clinic · Surat, Gujarat', side: 'Dental Clinic &middot; Surat', card: 'assets/projects/kapadia/hero.webp', feat: 'assets/projects/kapadia/hero.webp' },
-  { name: 'Avadh Habitat',  file: 'avadh.html',          cat: 'interior', meta: 'Residence · Surat, Gujarat', side: 'Residence &middot; Surat', card: 'assets/projects/avadh/hero.webp', feat: 'assets/projects/avadh/hero.webp' },
 ];
 // "Forthcoming" entries (no photography yet), none shown for now
 const PROJECTS_SOON = [];
@@ -1634,9 +1632,9 @@ const juneberry = `
 const CIMG = 'assets/projects/calibre/';
 const calibre = `
 <div class="pd-hero pd-hero--tall">
-  <img decoding="async" src="${CIMG}hero.webp" alt="Calibre boutique, sculptural curved plaster interior with garments and a skylight" />
+  <img decoding="async" src="${CIMG}hero.webp" alt="Calibre showroom, sculptural curved plaster interior with garments and a skylight" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#9ecbe4">Interior Design, Boutique · Surat</span>
+    <span class="tag" style="color:#9ecbe4">Interior Design, Showroom · Surat</span>
     <h1>Calibre</h1>
     <p class="pd-hero__sub">Beyond retail, a fluid, sculptural canvas for luxury fashion.</p>
   </div></div>
@@ -1647,7 +1645,7 @@ const calibre = `
     <div class="grid-2 top">
       <div class="reveal">
         <p class="eyebrow">The project</p>
-        <h2 class="statement">The boutique reimagined as a fluid, sculptural <em>canvas</em>, where the garments stay the focus.</h2>
+        <h2 class="statement">The showroom reimagined as a fluid, sculptural <em>canvas</em>, where the garments stay the focus.</h2>
       </div>
       <div class="reveal d1">
         <p class="lead">In the commercial district of Vesu, Surat, Calibre trades the rigid rectangular shopfloor for sweeping, continuous curves. Undulating partitions choreograph a seamless journey through the store, quietly concealing the structure so the clothes remain the focal point.</p>
@@ -1658,7 +1656,7 @@ const calibre = `
   <div class="container" style="margin-top:clamp(46px,6vw,72px)">
     <div class="pd-meta reveal">
       <div><div class="k">Scope</div><div class="v">Interior Design</div></div>
-      <div><div class="k">Type</div><div class="v">Retail · Boutique</div></div>
+      <div><div class="k">Type</div><div class="v">Retail · Showroom</div></div>
       <div><div class="k">Area</div><div class="v">1,950 sq ft</div></div>
       <div><div class="k">Completed</div><div class="v">2025</div></div>
     </div>
@@ -2269,6 +2267,8 @@ const foundersMind = `
 // To add a piece, drop its image in assets/founder/portfolio/ and append an entry:
 //   { img: 'assets/founder/portfolio/<file>.webp', name: 'Title', side: 'Place · Year', href: 'optional-link.html' }
 const FOUNDER_WORKS = [
+  { name: 'SHOTT',         href: 'shott.html', img: 'assets/projects/shott/slide-01.webp', side: 'Entertainment &middot; Surat' },
+  { name: 'Avadh Habitat', href: 'avadh.html', img: 'assets/projects/avadh/hero.webp',     side: 'Residence &middot; Surat' },
 ];
 
 function fwcard(num, w) {
@@ -2561,7 +2561,7 @@ ${slideBlock(o.name + ' interior', o.slides)}
     <p class="eyebrow no-rule" style="justify-content:center">Keep exploring</p>
     <h2 class="h-lg" style="margin-bottom:34px">More of our work</h2>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="projects-interior.html" class="btn btn--ghost-light">All interiors</a>
+      <a href="${o.backHref || 'projects-interior.html'}" class="btn btn--ghost-light">${o.backLabel || 'All interiors'}</a>
       <a href="contact.html" class="btn btn--ghost-light">Start a project ${ARROW}</a>
     </div>
   </div>
@@ -2570,6 +2570,7 @@ ${slideBlock(o.name + ' interior', o.slides)}
 
 const shott = interiorProject({
   pano: true,
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
   hero: 'assets/projects/shott/hero.webp',
   heroAlt: 'SHOTT family entertainment centre, illuminated Eat Party Play storefront facade',
   name: 'SHOTT',
@@ -2641,6 +2642,7 @@ const kapadia = interiorProject({
 });
 
 const avadh = interiorProject({
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
   hero: 'assets/projects/avadh/hero.webp',
   heroAlt: 'Avadh Habitat, a warm living and dining space in beige, wood and cream',
   name: 'Avadh Habitat',
@@ -2694,12 +2696,12 @@ const PAGES = [
   { file: 'asamvrta.html',  id: 'project8', nav: 'projects.html', dark: true,  title: 'Asaṁvṛta, Tvastra Design LLP', desc: 'Asaṁvṛta, a contemporary stone-and-brick apartment building with deep balconies and a rooftop pavilion in Surat by Tvastra Design LLP.', content: asamvrta },
   { file: 'metal-life.html',   id: 'proj-nehal', nav: 'projects.html', dark: true, title: 'Metal Life, Interior Design by Tvastra Design LLP', desc: 'Metal Life, a raw industrial interior warmed with terracotta, copper and greenery in Surat by Tvastra Design LLP.', content: metalLife },
   { file: 'juneberry.html',    id: 'proj-juneberry', nav: 'projects.html', dark: true, title: 'Juneberry, Café Interior by Tvastra Design LLP', desc: 'Juneberry, a 1,170 sq ft sustainable specialty-coffee café in Surat (2025) by Tvastra Design LLP, sculpted-plaster walls, upcycled-textile installations and waste-into-art craft.', content: juneberry },
-  { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
+  { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Showroom Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion showroom in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
   { file: 'icon.html',         id: 'proj-icon',    nav: 'projects.html', dark: true, title: 'ICON, Corporate Office Interior by Tvastra Design LLP', desc: 'ICON, a top-floor corporate office for ROSCA in Surat by Tvastra Design LLP, a transparent, glass-partitioned workplace in grey stone, oak veneer and textured fabric.', content: icon },
   { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
-  { file: 'shott.html',        id: 'proj-shott',   nav: 'projects.html', dark: true, noPreview: true, title: 'SHOTT, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT, a family entertainment centre in Surat by Tvastra Design LLP, arcade, bowling, kids’ zone and lounges in concrete, timber and neon.', content: shott },
+  { file: 'shott.html',        id: 'proj-shott',   nav: 'about.html', dark: true, noPreview: true, title: 'SHOTT, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT, a family entertainment centre in Surat by Tvastra Design LLP, arcade, bowling, kids’ zone and lounges in concrete, timber and neon.', content: shott },
   { file: 'kapadia.html',      id: 'proj-kapadia', nav: 'projects.html', dark: true, noPreview: true, title: 'Kapadia Dental, Clinic Interior by Tvastra Design LLP', desc: 'Kapadia Dental, a calm, spa-like dental clinic in Surat by Tvastra Design LLP in taupe, teak and cream with a curved reception and the KD monogram.', content: kapadia },
-  { file: 'avadh.html',        id: 'proj-avadh',   nav: 'projects.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
+  { file: 'avadh.html',        id: 'proj-avadh',   nav: 'about.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
