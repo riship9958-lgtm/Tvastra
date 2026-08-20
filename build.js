@@ -90,10 +90,10 @@ function head(title, desc, heroImg, pagePath) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
-${social}${preload}<link rel="icon" href="assets/favicon.ico?v=tva2" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tva2" />
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva2" />
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva2" />
+${social}${preload}<link rel="icon" href="assets/favicon.ico?v=tva3" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tva3" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva3" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva3" />
 ${FONTS}
 <link rel="stylesheet" href="css/style.css?v=${CSS_VER}" />
 <script>
