@@ -1394,7 +1394,6 @@ const metalLife = `
     <div class="slideshow__viewport">
       <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
       <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Living room, glass tables, greenery and layered rugs."><img decoding="async" src="${NIMG}slide-03.webp" alt="Metal Life, living room seating" loading="lazy" /></figure>
       <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
       <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img decoding="async" src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /></figure>
       <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img decoding="async" src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /></figure>
@@ -1405,7 +1404,7 @@ const metalLife = `
       <div class="container slideshow__bar-inner">
         <span class="slideshow__cap">Bedroom, micro-cement walls and a warm timber base.</span>
         <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
+        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
       </div>
     </div>
   </div>
