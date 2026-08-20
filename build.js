@@ -38,6 +38,19 @@ ${preload}<link rel="icon" href="assets/favicon.ico?v=tva" sizes="any" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva" />
 ${FONTS}
 <link rel="stylesheet" href="css/style.css?v=${CSS_VER}" />
+<script>
+/* One-time cleanup: remove any stale service worker / caches left by the previous site. */
+(function(){
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); });
+    }
+    if (window.caches && caches.keys) {
+      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); });
+    }
+  } catch(e){}
+})();
+</script>
 </head>
 <body>`;
 }

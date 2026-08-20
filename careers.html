@@ -11,6 +11,19 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css?v=40580a79" />
+<script>
+/* One-time cleanup: remove any stale service worker / caches left by the previous site. */
+(function(){
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); });
+    }
+    if (window.caches && caches.keys) {
+      caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); });
+    }
+  } catch(e){}
+})();
+</script>
 </head>
 <body>
 <header class="site-header solid on-light">
