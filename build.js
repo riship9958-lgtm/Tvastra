@@ -23,8 +23,66 @@ const FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com" /><lin
 
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
-function head(title, desc, heroImg) {
+const SITE = 'https://tvastra.design';
+const OG_DEFAULT = 'assets/home/hero-bw.webp';
+const SEO_LD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": SITE + "/#org",
+      "name": "Tvastra Design LLP",
+      "alternateName": "Tvastra Design",
+      "url": SITE + "/",
+      "logo": { "@type": "ImageObject", "url": SITE + "/assets/logo.png" },
+      "image": SITE + "/" + OG_DEFAULT,
+      "description": "An established architecture, interior and product design practice in Surat, blending cultural elegance with contemporary craft.",
+      "email": "info@tvastra.design",
+      "telephone": "+91-90818-13231",
+      "foundingDate": "1995",
+      "areaServed": "IN",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Umra Road, Athwalines",
+        "addressLocality": "Surat",
+        "addressRegion": "Gujarat",
+        "postalCode": "395007",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.instagram.com/tvastradesignllp/",
+        "https://www.linkedin.com/company/tvastra-design-/",
+        "https://www.facebook.com/tvastradesignllp/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": SITE + "/#website",
+      "url": SITE + "/",
+      "name": "Tvastra Design LLP",
+      "publisher": { "@id": SITE + "/#org" }
+    }
+  ]
+});
+
+function head(title, desc, heroImg, pagePath) {
   const preload = heroImg ? `<link rel="preload" as="image" href="${heroImg}" fetchpriority="high" />\n` : '';
+  const canon = (pagePath && pagePath !== 'index.html') ? SITE + '/' + pagePath : SITE + '/';
+  const ogImg = SITE + '/' + (heroImg && !/logo/i.test(heroImg) ? heroImg : OG_DEFAULT);
+  const social = `<link rel="canonical" href="${canon}" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Tvastra Design LLP" />
+<meta property="og:title" content="${title}" />
+<meta property="og:description" content="${desc}" />
+<meta property="og:url" content="${canon}" />
+<meta property="og:image" content="${ogImg}" />
+<meta property="og:locale" content="en_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="${title}" />
+<meta name="twitter:description" content="${desc}" />
+<meta name="twitter:image" content="${ogImg}" />
+<script type="application/ld+json">${SEO_LD}</script>
+`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +90,7 @@ function head(title, desc, heroImg) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>${title}</title>
 <meta name="description" content="${desc}" />
-${preload}<link rel="icon" href="assets/favicon.ico?v=tva" sizes="any" />
+${social}${preload}<link rel="icon" href="assets/favicon.ico?v=tva" sizes="any" />
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png?v=tva" />
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva" />
@@ -2440,9 +2498,24 @@ for (const p of PAGES) {
   // Find the first hero/title image so we can preload it (faster first paint, smoother page-to-page).
   const heroMatch = p.content.match(/<(?:div|section)[^>]*class="[^"]*(?:pd-hero|hero|title-card)[^"]*"[\s\S]*?<img[^>]*src="([^"]+)"/);
   const heroImg = heroMatch ? heroMatch[1] : null;
-  const html = head(p.title, p.desc, heroImg) + header(p.nav, p.dark) + p.content + FOOTER;
+  const html = head(p.title, p.desc, heroImg, p.file) + header(p.nav, p.dark) + p.content + FOOTER;
   fs.writeFileSync(path.join(ROOT, p.file), html);
   console.log('wrote', p.file);
+}
+
+/* ---------- sitemap.xml + robots.txt (help Google index every page) ---------- */
+{
+  const today = new Date().toISOString().slice(0, 10);
+  const entries = PAGES.map(p => {
+    const loc = p.file === 'index.html' ? SITE + '/' : SITE + '/' + p.file;
+    const priority = p.file === 'index.html' ? '1.0' : '0.7';
+    return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod><changefreq>monthly</changefreq><priority>${priority}</priority></url>`;
+  }).join('\n');
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), sitemap);
+  const robots = `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`;
+  fs.writeFileSync(path.join(ROOT, 'robots.txt'), robots);
+  console.log('wrote sitemap.xml (' + PAGES.length + ' urls) + robots.txt');
 }
 
 /* ---------- preview bundle (SPA, data-URI images) ---------- */
