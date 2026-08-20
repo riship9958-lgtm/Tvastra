@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — Tvastra Design LLP</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" href="https://tvastra.design/assets/favicon.ico?v=tva" sizes="any" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script>
+/* Also evict any stale service worker / cache left by the previous site. */
+(function(){
+  try {
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      navigator.serviceWorker.getRegistrations().then(function(rs){ rs.forEach(function(r){ r.unregister(); }); }).catch(function(){});
+    }
+    if (window.caches && caches.keys) { caches.keys().then(function(ks){ ks.forEach(function(k){ caches.delete(k); }); }).catch(function(){}); }
+  } catch(e){}
+})();
+</script>
+<style>
+  :root { --deep:#14212e; --clay:#00618e; --paper:#ffffff; --mist:#9ecbe4; }
+  * { box-sizing:border-box; }
+  html,body { height:100%; margin:0; }
+  body {
+    font-family:"Quicksand","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+    background:var(--deep); color:#e7eef3;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:40px 24px; min-height:100vh;
+  }
+  .logo { width:150px; max-width:52vw; margin-bottom:44px; opacity:.95; }
+  .code { font-size:clamp(60px,14vw,120px); line-height:1; font-weight:600; letter-spacing:-.02em; color:var(--mist); margin:0; }
+  h1 { font-family:"Cormorant Garamond",Georgia,serif; font-weight:500; font-size:clamp(26px,4vw,40px); margin:14px 0 10px; }
+  p { max-width:46ch; margin:0 auto 34px; color:#b8c6d0; font-size:clamp(15px,1.8vw,17px); line-height:1.6; }
+  .btns { display:flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+  a.btn {
+    display:inline-block; padding:14px 26px; border-radius:40px; text-decoration:none;
+    font-size:14px; letter-spacing:.02em; transition:transform .2s ease, background .2s ease;
+  }
+  a.solid { background:var(--mist); color:var(--deep); font-weight:600; }
+  a.ghost { border:1px solid rgba(255,255,255,.28); color:#e7eef3; }
+  a.btn:hover { transform:translateY(-2px); }
+  a.solid:hover { background:#fff; }
+</style>
+</head>
+<body>
+<img class="logo" src="https://tvastra.design/assets/logo-white.png" alt="Tvastra Design LLP" />
+<p class="code">404</p>
+<h1>This page has moved.</h1>
+<p>Our website has a new home. The page you followed may be from an older version of our site — head to the homepage to explore our latest architecture, interior and product design work.</p>
+<div class="btns">
+  <a class="btn solid" href="https://tvastra.design/">Go to homepage</a>
+  <a class="btn ghost" href="https://tvastra.design/projects.html">View our work</a>
+</div>
+</body>
+</html>
