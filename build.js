@@ -2269,6 +2269,7 @@ const foundersMind = `
 const FOUNDER_WORKS = [
   { name: 'SHOTT',         href: 'shott.html', img: 'assets/projects/shott/slide-01.webp', side: 'Entertainment &middot; Surat' },
   { name: 'Avadh Habitat', href: 'avadh.html', img: 'assets/projects/avadh/hero.webp',     side: 'Residence &middot; Surat' },
+  { name: 'Shree Gurukrupaa Vidhya Sankul', href: 'gurukrupa.html', img: 'assets/projects/gurukrupa/hero.webp', side: 'Office &middot; Surat' },
 ];
 
 function fwcard(num, w) {
@@ -2678,6 +2679,43 @@ const avadh = interiorProject({
   ],
 });
 
+const gurukrupa = interiorProject({
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
+  hero: 'assets/projects/gurukrupa/hero.webp',
+  heroAlt: 'Shree Gurukrupaa Vidhya Sankul office, marble reception under the illuminated identity',
+  name: 'Shree Gurukrupaa Vidhya Sankul',
+  tag: 'Interior Design, Office · Surat',
+  sub: 'An education group’s head office, colour-blocked in glass and light.',
+  statement: 'A working office for an education group, where <em>colour, glass and daylight</em> keep the workplace bright and open.',
+  lead: 'Shree Gurukrupaa Vidhya Sankul is the head office of an education group in Surat. Behind a marble reception, marked by the illuminated SGVS identity, the plan opens into a grid of glass-partitioned cabins and open desks, screened by colour-blocked, Mondrian-like glazing that lets light and sightlines flow across the floor.',
+  muted: 'Framed steel-and-glass partitions in yellow, green, blue and amber divide the workplace without closing it off; warm oak joinery, planted corners and a calm stone floor ground the colour. A serene shrine niche and a comfortable waiting lounge round out an office built to feel both professional and welcoming.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Corporate Office'], ['Client', 'Shree Gurukrupaa Vidhya Sankul'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Colour, framed in glass.',
+  cpsych: [
+    ['Open plan', 'Glass-partitioned cabins and open desks keep the whole floor connected.'],
+    ['Colour-blocking', 'Mondrian-like coloured glazing brings energy and identity to the workplace.'],
+    ['Daylight', 'Framed glass and planted corners carry light deep into the plan.'],
+    ['Warm base', 'Oak joinery and a calm stone floor ground the colour.'],
+  ],
+  mats: ['Coloured glass', 'Steel framing', 'Oak veneer', 'Stone floor', 'Marble'],
+  showcaseHead: 'A workplace in colour.',
+  grid: [
+    { src: 'assets/projects/gurukrupa/slide-01.webp', alt: 'Gurukrupaa reception with the illuminated identity' },
+    { src: 'assets/projects/gurukrupa/slide-02.webp', alt: 'Gurukrupaa shrine foyer' },
+    { src: 'assets/projects/gurukrupa/slide-05.webp', alt: 'Gurukrupaa open desks behind coloured glass' },
+  ],
+  slides: [
+    { src: 'assets/projects/gurukrupa/slide-01.webp', cap: 'A marble reception under the illuminated SGVS identity.', alt: 'Gurukrupaa reception' },
+    { src: 'assets/projects/gurukrupa/slide-02.webp', cap: 'A serene shrine niche greets the arrival.', alt: 'Gurukrupaa shrine foyer' },
+    { src: 'assets/projects/gurukrupa/slide-03.webp', cap: 'The admin desk sits against colour-blocked glass.', alt: 'Gurukrupaa admin desk' },
+    { src: 'assets/projects/gurukrupa/slide-04.webp', cap: 'Mondrian-like glazing screens the cabins without closing them off.', alt: 'Gurukrupaa glass partitions' },
+    { src: 'assets/projects/gurukrupa/slide-05.webp', cap: 'Open desks run beside the framed glass partitions.', alt: 'Gurukrupaa open desks' },
+    { src: 'assets/projects/gurukrupa/slide-06.webp', cap: 'Bright workstations under an even, glare-free glow.', alt: 'Gurukrupaa workstations' },
+    { src: 'assets/projects/gurukrupa/slide-07.webp', cap: 'A calm waiting lounge in grey and blue.', alt: 'Gurukrupaa waiting lounge' },
+    { src: 'assets/projects/gurukrupa/slide-08.webp', cap: 'A cabin framed in colour and glass.', alt: 'Gurukrupaa cabin' },
+  ],
+});
+
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
@@ -2702,6 +2740,7 @@ const PAGES = [
   { file: 'shott.html',        id: 'proj-shott',   nav: 'about.html', dark: true, noPreview: true, title: 'SHOTT, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT, a family entertainment centre in Surat by Tvastra Design LLP, arcade, bowling, kids’ zone and lounges in concrete, timber and neon.', content: shott },
   { file: 'kapadia.html',      id: 'proj-kapadia', nav: 'projects.html', dark: true, noPreview: true, title: 'Kapadia Dental, Clinic Interior by Tvastra Design LLP', desc: 'Kapadia Dental, a calm, spa-like dental clinic in Surat by Tvastra Design LLP in taupe, teak and cream with a curved reception and the KD monogram.', content: kapadia },
   { file: 'avadh.html',        id: 'proj-avadh',   nav: 'about.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
+  { file: 'gurukrupa.html',    id: 'proj-gurukrupa', nav: 'about.html', dark: true, noPreview: true, title: 'Shree Gurukrupaa Vidhya Sankul, Office Interior by Tvastra Design LLP', desc: 'Shree Gurukrupaa Vidhya Sankul, an education group’s head office in Surat by Tvastra Design LLP, colour-blocked glass partitions, oak joinery and daylight.', content: gurukrupa },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
