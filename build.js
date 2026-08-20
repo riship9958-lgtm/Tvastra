@@ -57,7 +57,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['index.html','Home'],['services.html','Discipline'],['about.html','About Us'],['gospels.html','Gospels'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
+const NAV = [['index.html','Home'],['discipline.html','Discipline'],['about.html','About Us'],['gospels.html','Gospels'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -92,7 +92,7 @@ const FOOTER = `
       </div>
       <div>
         <h5>Explore</h5>
-        <ul><li><a href="index.html">Home</a></li><li><a href="services.html">Discipline</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+        <ul><li><a href="index.html">Home</a></li><li><a href="discipline.html">Discipline</a></li><li><a href="about.html">About Us</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       </div>
       <div>
         <h5>Disciplines</h5>
@@ -402,7 +402,7 @@ const projArch = disciplinePage(
 const projInterior = disciplinePage(
   'Interiors', 'Interior Design', 'interior',
   'Interiors composed as carefully as the buildings that hold them, considered materials, custom furniture and a calm, contemporary warmth.',
-  { href: 'services.html', img: 'assets/interior/living-room.webp', name: 'Living Room Study', side: 'Interior &middot; Surat' }
+  { href: 'discipline.html', img: 'assets/interior/living-room.webp', name: 'Living Room Study', side: 'Interior &middot; Surat' }
 );
 
 const projProduct = disciplinePage(
@@ -2427,7 +2427,7 @@ const PAGES = [
   { file: 'calibre.html',      id: 'proj-calibre', nav: 'projects.html', dark: true, title: 'Calibre, Boutique Interior by Tvastra Design LLP', desc: 'Calibre, a 1,950 sq ft luxury fashion boutique in Vesu, Surat (2025) by Tvastra Design LLP, sweeping curved plaster walls, sculptural forms and a fluid, immersive retail experience.', content: calibre },
   { file: 'icon.html',         id: 'proj-icon',    nav: 'projects.html', dark: true, title: 'ICON, Corporate Office Interior by Tvastra Design LLP', desc: 'ICON, a top-floor corporate office for ROSCA in Surat by Tvastra Design LLP, a transparent, glass-partitioned workplace in grey stone, oak veneer and textured fabric.', content: icon },
   { file: 'pyramid-palacia.html', id: 'proj-pyramid', nav: 'projects.html', dark: true, title: 'Pyramid Palacia, Residential Interior by Tvastra Design LLP', desc: 'Pyramid Palacia, a Modern Luxury Contemporary residential interior in Surat by Tvastra Design LLP, warm neutrals, earthy texture, marble and brass.', content: pyramidPalacia },
-  { file: 'services.html',             id: 'services',  nav: 'services.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
+  { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
   { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
   { file: 'founder-portfolio.html',    id: 'founder-portfolio', nav: 'about.html', dark: true, title: "The Founder's Portfolio, Tvastra Design LLP", desc: "The founder's portfolio, a personal archive of projects and photographs by the founder of Tvastra Design LLP.", content: founderPortfolio },
@@ -2484,7 +2484,7 @@ if (process.argv[2] === 'preview') {
   let sections = '';
   for (const p of PAGES) sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`;
 
-  const navLinks = [['home','Home'],['services','Discipline'],['about','About Us'],['gospels','Gospels'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
+  const navLinks = [['home','Home'],['discipline','Discipline'],['about','About Us'],['gospels','Gospels'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
