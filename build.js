@@ -2270,6 +2270,7 @@ const FOUNDER_WORKS = [
   { name: 'SHOTT',         href: 'shott.html', img: 'assets/projects/shott/slide-01.webp', side: 'Entertainment &middot; Surat' },
   { name: 'Avadh Habitat', href: 'avadh.html', img: 'assets/projects/avadh/hero.webp',     side: 'Residence &middot; Surat' },
   { name: 'ICON Rosca', href: 'icon.html', img: 'assets/projects/icon/hero.webp', side: 'Office &middot; Surat' },
+  { name: 'SHOTT Surat', href: 'shott-surat.html', img: 'assets/projects/shott-surat/slide-03.webp', side: 'Entertainment &middot; Surat' },
 ];
 
 function fwcard(num, w) {
@@ -2715,6 +2716,43 @@ const gurukrupa = interiorProject({
   ],
 });
 
+const shottSurat = interiorProject({
+  backHref: 'founder-portfolio.html', backLabel: "The founder's portfolio",
+  hero: 'assets/projects/shott-surat/hero.webp',
+  heroAlt: 'SHOTT Surat, the checkerboard dome arena beside the riverfront, seen from the air',
+  name: 'SHOTT Surat',
+  tag: 'Interior Design, Entertainment · Surat',
+  sub: 'A riverside family entertainment arena, from go-karts to bowling.',
+  statement: 'A vaulted entertainment arena that packs <em>go-karting, bowling, arcade and cricket</em> under one riverside dome.',
+  lead: 'SHOTT Surat is a large family entertainment centre wrapped in a checkerboard steel dome by the riverfront. Under the single vaulted roof, the plan threads together a full bowling alley, an arcade, a kids’ world, an 11D theatre and indoor cricket nets, while an outdoor go-karting circuit and lawn lounges spill onto the deck outside.',
+  muted: 'Exposed metal and timber keep the vast shell warm and industrial, while neon, pop-art zones and colour-blocked signage give each activity its own identity. Salvaged-drum seating, astro-turf and graphic graphics tie the arena together as one high-energy, all-ages playground.',
+  meta: [['Scope', 'Interior Design'], ['Type', 'Family Entertainment Centre'], ['Client', 'SHOTT'], ['Location', 'Surat, Gujarat']],
+  ideaHead: 'Everything under one dome.',
+  cpsych: [
+    ['One roof', 'Go-karting, bowling, arcade, cricket and a kids’ world share a single vaulted shell.'],
+    ['Warm industrial', 'Exposed metal and timber keep the vast arena grounded.'],
+    ['Zoned energy', 'Neon and colour-blocked graphics give each activity its own identity.'],
+    ['Indoor–outdoor', 'The dome opens to an outdoor circuit and lawn lounges.'],
+  ],
+  mats: ['Steel shell', 'Timber', 'Neon', 'Pop-art graphics', 'Astro-turf'],
+  showcaseHead: 'Play, end to end.',
+  grid: [
+    { src: 'assets/projects/shott-surat/slide-01.webp', alt: 'SHOTT Surat aerial dome' },
+    { src: 'assets/projects/shott-surat/slide-03.webp', alt: 'SHOTT Surat bowling alley' },
+    { src: 'assets/projects/shott-surat/slide-06.webp', alt: 'SHOTT Surat bumper cars' },
+  ],
+  slides: [
+    { src: 'assets/projects/shott-surat/slide-01.webp', cap: 'The checkerboard dome by the riverfront, seen from the air.', alt: 'SHOTT Surat dome' },
+    { src: 'assets/projects/shott-surat/slide-02.webp', cap: 'An outdoor go-karting circuit laid out beside the arena.', alt: 'SHOTT Surat go-kart track' },
+    { src: 'assets/projects/shott-surat/slide-03.webp', cap: 'A full bowling alley glows under the vaulted roof.', alt: 'SHOTT Surat bowling alley' },
+    { src: 'assets/projects/shott-surat/slide-04.webp', cap: 'Lounge seating in salvaged-drum stools beside the lanes.', alt: 'SHOTT Surat bowling lounge' },
+    { src: 'assets/projects/shott-surat/slide-05.webp', cap: 'The EAT zone, neon-lit amid the arcade.', alt: 'SHOTT Surat EAT zone' },
+    { src: 'assets/projects/shott-surat/slide-06.webp', cap: 'Bumper cars spin under the RUMBLE sign.', alt: 'SHOTT Surat bumper cars' },
+    { src: 'assets/projects/shott-surat/slide-07.webp', cap: 'A kids’ world of soft play, pool and the 11D theatre.', alt: 'SHOTT Surat kids zone' },
+    { src: 'assets/projects/shott-surat/slide-08.webp', cap: 'Floodlit indoor cricket nets, the Shott Pitch.', alt: 'SHOTT Surat cricket nets' },
+  ],
+});
+
 const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
@@ -2739,6 +2777,7 @@ const PAGES = [
   { file: 'shott.html',        id: 'proj-shott',   nav: 'about.html', dark: true, noPreview: true, title: 'SHOTT, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT, a family entertainment centre in Surat by Tvastra Design LLP, arcade, bowling, kids’ zone and lounges in concrete, timber and neon.', content: shott },
   { file: 'kapadia.html',      id: 'proj-kapadia', nav: 'projects.html', dark: true, noPreview: true, title: 'Kapadia Dental, Clinic Interior by Tvastra Design LLP', desc: 'Kapadia Dental, a calm, spa-like dental clinic in Surat by Tvastra Design LLP in taupe, teak and cream with a curved reception and the KD monogram.', content: kapadia },
   { file: 'avadh.html',        id: 'proj-avadh',   nav: 'about.html', dark: true, noPreview: true, title: 'Avadh Habitat, Residential Interior by Tvastra Design LLP', desc: 'Avadh Habitat, a warm, pared-back family apartment in Surat by Tvastra Design LLP in beige, natural wood and cream.', content: avadh },
+  { file: 'shott-surat.html',  id: 'proj-shott-surat', nav: 'about.html', dark: true, noPreview: true, title: 'SHOTT Surat, Family Entertainment Centre by Tvastra Design LLP', desc: 'SHOTT Surat, a riverside family entertainment arena by Tvastra Design LLP, go-karting, bowling, arcade, kids’ zone and cricket under a checkerboard dome.', content: shottSurat },
   { file: 'gurukrupa.html',    id: 'proj-gurukrupa', nav: 'projects.html', dark: true, title: 'Shree Gurukrupaa Vidhya Sankul, Office Interior by Tvastra Design LLP', desc: 'Shree Gurukrupaa Vidhya Sankul, an education group’s head office in Surat by Tvastra Design LLP, colour-blocked glass partitions, oak joinery and daylight.', content: gurukrupa },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
