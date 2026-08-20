@@ -2260,7 +2260,7 @@ function roleItem(r) {
           <div><span class="role__k">Type</span>Full-time &middot; Surat</div>
         </div>
         <ul class="role__points">${r.points.map(function (p) { return `<li>${p}</li>`; }).join('')}</ul>
-        <a class="link-arrow" href="mailto:info@tvastra.design?subject=${encodeURIComponent('Application: ' + r.title)}">Apply for this role ${ARROW}</a>
+        <a class="link-arrow" href="mailto:tvastradesignjob@gmail.com?subject=${encodeURIComponent('Application: ' + r.title)}">Apply for this role ${ARROW}</a>
       </div>
     </details>`;
 }
@@ -2303,7 +2303,7 @@ const careers = `
     <h2 class="h-lg" style="margin-bottom:16px">Send us your work.</h2>
     <p class="lead" style="color:#cfd9e0;max-width:56ch;margin:0 auto 30px">Email your CV and portfolio and tell us which role interests you. We read every application.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
-      <a href="mailto:info@tvastra.design?subject=Career%20at%20Tvastra%20Design%20LLP" class="btn btn--ghost-light">Email your portfolio ${ARROW}</a>
+      <a href="mailto:tvastradesignjob@gmail.com?subject=Career%20at%20Tvastra%20Design%20LLP" class="btn btn--ghost-light">Email your portfolio ${ARROW}</a>
       <a href="contact.html" class="btn btn--ghost-light">Contact the studio</a>
     </div>
   </div>
