@@ -260,6 +260,11 @@
         btn.setAttribute('aria-pressed', on ? 'true' : 'false');
         var l = btn.querySelector('.nightbtn__label');
         if (l) l.textContent = on ? 'Lights off' : 'Lights on';
+        // swap elevation images between day and night
+        [].forEach.call(document.querySelectorAll('.pd-full-grid--elev img[data-night]'), function (im) {
+          var t = on ? im.getAttribute('data-night') : im.getAttribute('data-day');
+          if (t) im.src = t;
+        });
       });
     });
   })();

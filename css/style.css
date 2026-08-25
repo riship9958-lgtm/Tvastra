@@ -924,3 +924,10 @@ body.night-mode .nightbtn[aria-pressed="true"] { color: #1b2a32; border-color: #
 .pd-full-grid--tall .pd-full img { aspect-ratio: 16 / 9; object-fit: contain; }
 .pd-full-grid--quad.pd-full-grid--tall { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 620px) { .pd-full-grid--quad.pd-full-grid--tall { grid-template-columns: 1fr; } }
+
+/* 3D Elevation lights toggle — night state */
+.elev-lights__bar { text-align: center; margin-top: clamp(24px, 3vw, 38px); }
+.elev-sec { transition: background .5s var(--ease, ease), color .5s var(--ease, ease); }
+body.night-mode .elev-sec { position: relative; z-index: 60; background: #0b1016; color: #e7eef3; }
+body.night-mode .elev-sec .eyebrow, body.night-mode .elev-sec .h-lg, body.night-mode .elev-sec .lead { color: #e7eef3; }
+body.night-mode .elev-sec .pd-full-grid--elev .pd-full { background: #0b1016; }

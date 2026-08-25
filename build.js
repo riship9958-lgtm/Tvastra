@@ -511,17 +511,6 @@ const vritta = `
   </div>
 </section>
 
-<section class="section night-toggle-sec" style="text-align:center">
-  <div class="container reveal">
-    <p class="eyebrow no-rule" style="justify-content:center">See it after dark</p>
-    <h2 class="h-lg" style="margin-bottom:22px">Turn on the lights.</h2>
-    <button class="nightbtn" type="button" aria-pressed="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
-      <span class="nightbtn__label">Lights on</span>
-    </button>
-  </div>
-</section>
-
 <section class="section pd-sketch">
   <div class="container">
     <div class="pd-sec-head reveal">
@@ -535,40 +524,23 @@ const vritta = `
   </div>
 </section>
 
-<section class="pd-showcase">
+<section class="pd-showcase elev-sec">
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Flip the lights to see the elevations after dark.</p>
     </div>
     <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG}full-01.webp" alt="Vritta, full corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG}full-02.webp" alt="Vritta, full aerial view" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG}full-03.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-01.webp" data-day="${IMG}full-01.webp" data-night="${IMG}03-night.webp" alt="Vritta, full corner elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-02.webp" data-day="${IMG}full-02.webp" data-night="${IMG}06-night-corner.webp" alt="Vritta, full aerial elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}full-03.webp" data-day="${IMG}full-03.webp" data-night="${IMG}05-night-side.webp" alt="Vritta, full side elevation with brick jaali" loading="lazy" /></figure>
     </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vritta renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner, brick volumes stacked over the concrete base. Day."><img decoding="async" src="${IMG}slide-01.webp" alt="Vritta, street corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark, the apertures glowing from within."><img decoding="async" src="${IMG}slide-02.webp" alt="Vritta, street corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Upper terraces and the circular oculus, threaded with greenery."><img decoding="async" src="${IMG}slide-03.webp" alt="Vritta, upper terraces by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night, concealed uplights graze the brick screens."><img decoding="async" src="${IMG}slide-04.webp" alt="Vritta, dramatic night view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, brick jaali punctures the concrete plane."><img decoding="async" src="${IMG}slide-05.webp" alt="Vritta, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the interiors warm behind the screen."><img decoding="async" src="${IMG}slide-06.webp" alt="Vritta, street elevation at night" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Street corner, brick volumes stacked over the concrete base. Day.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">06</span></span>
-      </div>
+    <div class="elev-lights__bar reveal">
+      <button class="nightbtn" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+        <span class="nightbtn__label">Lights on</span>
+      </button>
     </div>
   </div>
 </section>
@@ -2832,6 +2804,8 @@ if (process.argv[2] === 'preview') {
     content = content.replace(/(poster=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // data-URI images referenced inside data-frames JSON (interactive elevation viewer)
     content = content.replace(/data-frames='([^']*)'/g, (m, json) => "data-frames='" + json.replace(/assets\/[^"\\]+?\.(?:webp|png|jpg|jpeg)/g, rel => toData(rel)) + "'");
+    // data-URI day/night elevation images (Lights toggle)
+    content = content.replace(/(data-(?:day|night)=")(assets\/[^"]+)(")/g, (m,a,rel,b) => a + toData(rel) + b);
     // *.html -> hash
     content = content.replace(/href="([a-z0-9-]+\.html)(#[a-z0-9-]+)?"/g, (m,f) => `href="${hmap[f] || ('#'+f)}"`);
     return content;
