@@ -1437,36 +1437,15 @@ const metalLife = `
 <section class="pd-showcase">
   <div class="container">
     <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">The spaces.</h2>
-    </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img decoding="async" src="${NIMG}space-01.webp" alt="Metal Life, living room" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${NIMG}space-02.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${NIMG}space-03.webp" alt="Metal Life, bedroom" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
+      <p class="eyebrow">The space</p>
       <h2 class="h-lg">Room by room.</h2>
     </div>
-  </div>
-  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Metal Life renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Bedroom, micro-cement walls and a warm timber base."><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" /></figure>
-      <figure class="slide" data-cap="Living room, terracotta sofas against the concrete shell."><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Master bedroom, a warm accent wall and floating console."><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Dining, copper-toned steel-mesh screen and daylight."><img decoding="async" src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Lounge, sheer drapes framing the balcony beyond."><img decoding="async" src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Bedroom, micro-cement walls and a warm timber base.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+      <figure class="pd-full"><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" loading="lazy" /><figcaption class="pd-full__cap">Bedroom, micro-cement walls and a warm timber base.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /><figcaption class="pd-full__cap">Living room, terracotta sofas against the concrete shell.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom, a warm accent wall and floating console.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}slide-05.webp" alt="Metal Life, dining" loading="lazy" /><figcaption class="pd-full__cap">Dining, copper-toned steel-mesh screen and daylight.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${NIMG}slide-06.webp" alt="Metal Life, lounge" loading="lazy" /><figcaption class="pd-full__cap">Lounge, sheer drapes framing the balcony beyond.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1557,32 +1536,13 @@ const juneberry = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Coffee, counter and craft.</h2>
     </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img decoding="async" src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">A closer look.</h2>
-    </div>
-  </div>
-  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Juneberry interior">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Wood-waste wall installation, evoking mountain ranges and coffee foam."><img decoding="async" src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" /></figure>
-      <figure class="slide" data-cap="Banana-stem canvases set with waste-metal figurines."><img decoding="async" src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /></figure>
-      <figure class="slide" data-cap="An upcycled textile installation, hand-dyed in coffee and earth tones."><img decoding="async" src="${JIMG}window-nook.webp" alt="Juneberry, window seating beside an upcycled textile installation" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The counter and pastry display, up close."><img decoding="async" src="${JIMG}counter-detail.webp" alt="Juneberry, the counter and pastry display" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Wood-waste wall installation, evoking mountain ranges and coffee foam.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">04</span></span>
-      </div>
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+      <figure class="pd-full"><img decoding="async" src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /><figcaption class="pd-full__cap">The coffee counter, espresso machine and pastry display.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /><figcaption class="pd-full__cap">The main dining hall toward the entrance.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /><figcaption class="pd-full__cap">Seating and retail shelving toward the entrance.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}art-pillar.webp" alt="Juneberry, wood-waste wall installation evoking mountain ranges" loading="lazy" /><figcaption class="pd-full__cap">Wood-waste wall installation, evoking mountain ranges and coffee foam.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}banquette.webp" alt="Juneberry, banana-stem canvas artworks above the banquette" loading="lazy" /><figcaption class="pd-full__cap">Banana-stem canvases set with waste-metal figurines.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${JIMG}window-nook.webp" alt="Juneberry, window seating beside an upcycled textile installation" loading="lazy" /><figcaption class="pd-full__cap">An upcycled textile installation, hand-dyed in coffee and earth tones.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1687,33 +1647,14 @@ const calibre = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">A room that flows.</h2>
     </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img decoding="async" src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">A closer look.</h2>
-    </div>
-  </div>
-  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Calibre interior">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The salon, sculpted plaster and warm bouclé seating."><img decoding="async" src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" /></figure>
-      <figure class="slide" data-cap="A sweeping reception carved from the curved shell."><img decoding="async" src="${CIMG}look-02.webp" alt="Calibre, the sweeping reception" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A daylit lounge framed by the arched window."><img decoding="async" src="${CIMG}look-03.webp" alt="Calibre, the daylit lounge" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Fitting mirrors and a sculpted display counter."><img decoding="async" src="${CIMG}look-04.webp" alt="Calibre, fitting mirrors and display" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Display shelving folds into the flowing walls."><img decoding="async" src="${CIMG}look-05.webp" alt="Calibre, display shelving in the curved wall" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">The salon, sculpted plaster and warm bouclé seating.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /><figcaption class="pd-full__cap">Curved display walls and seating under the skylight.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /><figcaption class="pd-full__cap">The sweeping reception and curved display.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /><figcaption class="pd-full__cap">Browsing pods and floating racks.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}look-01.webp" alt="Calibre, the salon seating and garments" loading="lazy" /><figcaption class="pd-full__cap">The salon, sculpted plaster and warm bouclé seating.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}look-03.webp" alt="Calibre, the daylit lounge" loading="lazy" /><figcaption class="pd-full__cap">A daylit lounge framed by the arched window.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}look-04.webp" alt="Calibre, fitting mirrors and display" loading="lazy" /><figcaption class="pd-full__cap">Fitting mirrors and a sculpted display counter.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${CIMG}look-05.webp" alt="Calibre, display shelving in the curved wall" loading="lazy" /><figcaption class="pd-full__cap">Display shelving folds into the flowing walls.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -1787,33 +1728,12 @@ const icon = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Workspace, end to end.</h2>
     </div>
-    <div class="pd-full-grid reveal">
-      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations along the glazed facade" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, task desks along the textured feature wall" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-05.webp" alt="ICON, the meeting room with a glass table" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">A closer look.</h2>
-    </div>
-  </div>
-  <div class="slideshow slideshow--fit reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="ICON office interior">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Open workstations run the length of the glazed facade."><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" /></figure>
-      <figure class="slide" data-cap="Glass cabins keep the river view open to the whole floor."><img decoding="async" src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Task desks line the textured charcoal feature wall."><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /></figure>
-      <figure class="slide" data-cap="A director's cabin framed by art and glass."><img decoding="async" src="${IIMG}wk-04.webp" alt="ICON, a director's cabin" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The meeting room, screened by soft daylight blinds."><img decoding="async" src="${IIMG}wk-05.webp" alt="ICON, the meeting room" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Open workstations run the length of the glazed facade.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" loading="lazy" /><figcaption class="pd-full__cap">Open workstations run the length of the glazed facade.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /><figcaption class="pd-full__cap">Glass cabins keep the river view open to the whole floor.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /><figcaption class="pd-full__cap">Task desks line the textured charcoal feature wall.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-04.webp" alt="ICON, a director's cabin" loading="lazy" /><figcaption class="pd-full__cap">A director's cabin framed by art and glass.</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IIMG}wk-05.webp" alt="ICON, the meeting room" loading="lazy" /><figcaption class="pd-full__cap">The meeting room, screened by soft daylight blinds.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -2479,6 +2399,7 @@ ${slides}
 function interiorProject(o) {
   const heroCls = o.pano ? 'pd-hero pd-hero--pano' : 'pd-hero pd-hero--tall';
   const grid = o.grid.map(g => `      <figure class="pd-full"><img decoding="async" src="${g.src}" alt="${g.alt}" loading="lazy" /></figure>`).join('\n');
+  const rooms = o.slides.map(s => `      <figure class="pd-full"><img decoding="async" src="${s.src}" alt="${s.alt}" loading="lazy" /><figcaption class="pd-full__cap">${s.cap}</figcaption></figure>`).join('\n');
   const meta = o.meta.map(m => `      <div><div class="k">${m[0]}</div><div class="v">${m[1]}</div></div>`).join('\n');
   const cpsych = o.cpsych.map(c => `        <div class="cpsych__item"><div class="cpsych__k">${c[0]}</div><p>${c[1]}</p></div>`).join('\n');
   const mats = o.mats.map(m => `<span>${m}</span>`).join('');
@@ -2533,16 +2454,10 @@ ${cpsych}
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">${o.showcaseHead}</h2>
     </div>
-    <div class="pd-full-grid reveal">
-${grid}
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+${rooms}
     </div>
   </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">A closer look.</h2>
-    </div>
-  </div>
-${slideBlock(o.name + ' interior', o.slides)}
 </section>
 
 <section class="section section--ink" style="text-align:center">
