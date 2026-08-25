@@ -249,6 +249,21 @@
     render();
   })();
 
+  // ---- Standalone Lights / night-mode toggle ----
+  (function () {
+    var btns = [].slice.call(document.querySelectorAll('.nightbtn'));
+    if (!btns.length) return;
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var on = !document.body.classList.contains('night-mode');
+        document.body.classList.toggle('night-mode', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        var l = btn.querySelector('.nightbtn__label');
+        if (l) l.textContent = on ? 'Lights off' : 'Lights on';
+      });
+    });
+  })();
+
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");
   if (form) {

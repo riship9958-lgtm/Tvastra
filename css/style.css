@@ -907,3 +907,20 @@ img.img-fade.img-ready { opacity: 1; }
 body.night-mode .model3d-sec { background: #0b1016; color: #e7eef3; }
 body.night-mode .model3d-sec .eyebrow, body.night-mode .model3d-sec .h-lg, body.night-mode .model3d-sec .lead { color: #e7eef3; }
 body.night-mode::after { content: ""; position: fixed; inset: 0; background: rgba(6,10,15,.55); pointer-events: none; z-index: 40; }
+
+/* Standalone Lights / night-mode button (Vritta) */
+.nightbtn { display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; border-radius: 40px; border: 1px solid #c7d2d8; background: transparent; cursor: pointer; font-family: var(--sans); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink); transition: background .25s ease, color .25s ease, border-color .25s ease, transform .2s ease; }
+.nightbtn svg { width: 18px; height: 18px; }
+.nightbtn:hover { transform: translateY(-2px); }
+.nightbtn[aria-pressed="true"] { background: #f4c542; border-color: #f4c542; color: #1b2a32; }
+.night-toggle-sec { position: relative; transition: background .5s var(--ease, ease), color .5s var(--ease, ease); }
+body.night-mode .night-toggle-sec { position: relative; z-index: 60; background: #0b1016; color: #e7eef3; }
+body.night-mode .night-toggle-sec .eyebrow, body.night-mode .night-toggle-sec .h-lg { color: #e7eef3; }
+body.night-mode .nightbtn { border-color: rgba(255,255,255,.32); color: #e7eef3; }
+body.night-mode .nightbtn[aria-pressed="true"] { color: #1b2a32; border-color: #f4c542; }
+
+/* Interior grids: show whole images (never cropped), uniform 16:9 cells, two per row */
+.pd-full-grid--tall .pd-full { background: var(--paper-2); }
+.pd-full-grid--tall .pd-full img { aspect-ratio: 16 / 9; object-fit: contain; }
+.pd-full-grid--quad.pd-full-grid--tall { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 620px) { .pd-full-grid--quad.pd-full-grid--tall { grid-template-columns: 1fr; } }

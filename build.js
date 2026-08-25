@@ -511,6 +511,17 @@ const vritta = `
   </div>
 </section>
 
+<section class="section night-toggle-sec" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow no-rule" style="justify-content:center">See it after dark</p>
+    <h2 class="h-lg" style="margin-bottom:22px">Turn on the lights.</h2>
+    <button class="nightbtn" type="button" aria-pressed="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+      <span class="nightbtn__label">Lights on</span>
+    </button>
+  </div>
+</section>
+
 <section class="section pd-sketch">
   <div class="container">
     <div class="pd-sec-head reveal">
