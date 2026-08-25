@@ -1519,7 +1519,7 @@ const juneberry = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Coffee, counter and craft.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall pd-full-grid--zoom reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom reveal">
       <figure class="pd-full"><img decoding="async" src="${JIMG}counter.webp" alt="Juneberry, the coffee counter with espresso machine and pastry display" loading="lazy" /><figcaption class="pd-full__cap">The coffee counter, espresso machine and pastry display.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${JIMG}interior.webp" alt="Juneberry, the main dining hall toward the entrance" loading="lazy" /><figcaption class="pd-full__cap">The main dining hall toward the entrance.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${JIMG}hall.webp" alt="Juneberry, seating and retail shelving toward the entrance" loading="lazy" /><figcaption class="pd-full__cap">Seating and retail shelving toward the entrance.</figcaption></figure>
