@@ -1647,7 +1647,7 @@ const calibre = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">A room that flows.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall pd-full-grid--zoom pd-full-grid--zoomcap reveal">
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /><figcaption class="pd-full__cap">Curved display walls and seating under the skylight.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /><figcaption class="pd-full__cap">The sweeping reception and curved display.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /><figcaption class="pd-full__cap">Browsing pods and floating racks.</figcaption></figure>

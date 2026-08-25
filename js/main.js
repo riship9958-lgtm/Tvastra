@@ -181,13 +181,21 @@
     var ov = document.createElement('div');
     ov.className = 'imgzoom';
     ov.setAttribute('aria-hidden', 'true');
+    var cap = document.createElement('div');
+    cap.className = 'imgzoom__cap';
     var big = document.createElement('img');
     big.alt = '';
+    ov.appendChild(cap);
     ov.appendChild(big);
     document.body.appendChild(ov);
     imgs.forEach(function (img) {
+      var grid = img.closest('.pd-full-grid');
+      var withCap = grid && grid.classList.contains('pd-full-grid--zoomcap');
+      var figcap = img.closest('.pd-full') && img.closest('.pd-full').querySelector('.pd-full__cap');
       img.addEventListener('mouseenter', function () {
         big.src = img.currentSrc || img.src;
+        if (withCap && figcap) { cap.textContent = figcap.textContent; ov.classList.add('has-cap'); }
+        else { cap.textContent = ''; ov.classList.remove('has-cap'); }
         ov.classList.add('on');
       });
       img.addEventListener('mouseleave', function () { ov.classList.remove('on'); });
