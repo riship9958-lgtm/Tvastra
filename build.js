@@ -481,7 +481,7 @@ const vritta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG}sketch-01.webp" alt="Vritta, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Vritta</h1>
     <p class="pd-hero__sub">A sculptural family home in brick and board-formed concrete.</p>
   </div></div>
@@ -613,7 +613,7 @@ const rju = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Ṛju</h1>
     <p class="pd-hero__sub">A green, terraced home wrapped in cascading gardens and a brick-jaali crown.</p>
   </div></div>
@@ -743,7 +743,7 @@ const jalika = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Jālikā</h1>
     <p class="pd-hero__sub">A home behind a woven veil of brick and timber jaali.</p>
   </div></div>
@@ -872,7 +872,7 @@ const vallabhNivas = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG5}sketch-01.webp" alt="Vallabh Nivas, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Vallabh Nivas</h1>
     <p class="pd-hero__sub">A tall, narrow home of concrete, warm timber and trailing green.</p>
   </div></div>
@@ -1001,7 +1001,7 @@ const urdhva = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Urdhva</h1>
     <p class="pd-hero__sub">Clean white volumes rising around a warm brick spine.</p>
   </div></div>
@@ -1129,7 +1129,7 @@ const valuka = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Vālukā</h1>
     <p class="pd-hero__sub">A grounded, earthen villa turned inward to a private courtyard.</p>
   </div></div>
@@ -1258,7 +1258,7 @@ const asamvrta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Architecture, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Architecture, Residential · Surat</span>
     <h1>Asaṁvṛta</h1>
     <p class="pd-hero__sub">Stacked homes of pale stone and warm brick turning the corner.</p>
   </div></div>
@@ -1387,7 +1387,7 @@ const metalLife = `
 <div class="pd-hero pd-hero--tall">
   <img decoding="async" src="${NIMG}hero.webp" alt="Metal Life, living room" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Interior Design, Residential · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Interior Design, Residential · Surat</span>
     <h1>Metal Life</h1>
     <p class="pd-hero__sub">A raw industrial shell, warmed by terracotta and light.</p>
   </div></div>
@@ -1504,7 +1504,7 @@ const juneberry = `
 <div class="pd-hero pd-hero--tall">
   <img decoding="async" src="${JIMG}facade.webp" alt="Juneberry cafe interior, warm daylight with the brand sign on the wall" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Interior Design, Café · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Interior Design, Café · Surat</span>
     <h1>Juneberry</h1>
     <p class="pd-hero__sub">Beyond hospitality, a community-centred café where sustainability is the story.</p>
   </div></div>
@@ -1634,7 +1634,7 @@ const calibre = `
 <div class="pd-hero pd-hero--tall">
   <img decoding="async" src="${CIMG}hero.webp" alt="Calibre showroom, sculptural curved plaster interior with garments and a skylight" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Interior Design, Showroom · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Interior Design, Showroom · Surat</span>
     <h1>Calibre</h1>
     <p class="pd-hero__sub">Beyond retail, a fluid, sculptural canvas for luxury fashion.</p>
   </div></div>
@@ -1734,7 +1734,7 @@ const icon = `
 <div class="pd-hero pd-hero--tall">
   <img decoding="async" src="${IIMG}hero.webp" alt="ICON office, backlit ROSCA identity wall at the entrance in oak veneer and stone" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Interior Design, Office · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Interior Design, Office · Surat</span>
     <h1>ICON Rosca</h1>
     <p class="pd-hero__sub">A corporate workplace on the Surat skyline, framed by glass and light.</p>
   </div></div>
@@ -1834,7 +1834,7 @@ const pyramidPalacia = `
 <div class="pd-hero pd-hero--tall">
   <img decoding="async" src="${PIMG}hero.webp" alt="Pyramid Palacia, serene warm-neutral bedroom" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">Interior Design, Residence · Surat</span>
+    <span class="tag" style="color:#2b8fc7">Interior Design, Residence · Surat</span>
     <h1>Pyramid Palacia</h1>
     <p class="pd-hero__sub">A warm, modern-luxury home grounded by brass and earthy texture.</p>
   </div></div>
@@ -2486,7 +2486,7 @@ function interiorProject(o) {
 <div class="${heroCls}">
   <img decoding="async" src="${o.hero}" alt="${o.heroAlt}" />
   <div class="pd-hero__cap"><div class="container">
-    <span class="tag" style="color:#004d70">${o.tag}</span>
+    <span class="tag" style="color:#2b8fc7">${o.tag}</span>
     <h1>${o.name}</h1>
     <p class="pd-hero__sub">${o.sub}</p>
   </div></div>

@@ -491,7 +491,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 /* ==========================================================================
    Palette placements — aligned to the Tvastra logo (blue)
    ========================================================================== */
-.title-card { background: var(--clay); }                 /* brand-blue cover */
+.title-card { background: #004d70; }                     /* opening cover — darker brand blue */
 .title-card__tag { color: #cfe6f2; }                     /* light blue tagline */
 .site-footer { background: var(--navy); }                /* deep navy-blue footer */
 .hero .eyebrow { color: #bfe0f2; }                       /* light blue on hero */
