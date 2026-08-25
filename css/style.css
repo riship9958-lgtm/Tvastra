@@ -877,3 +877,9 @@ img.img-fade.img-ready { opacity: 1; }
 .imgzoom.has-cap { gap: clamp(20px, 3vw, 48px); }
 .imgzoom.has-cap .imgzoom__cap { display: block; flex: 0 0 auto; width: min(300px, 26vw); color: #dbe7ef; font-family: var(--serif); font-size: clamp(16px, 1.6vw, 21px); line-height: 1.55; text-align: left; text-wrap: balance; }
 .imgzoom.has-cap img { max-width: 62vw; }
+
+/* Smooth pop-out animation for the enlarged view (for --zoompop grids) */
+.imgzoom.pop img { transform: scale(.9); transition: transform .34s cubic-bezier(.2,.85,.25,1), opacity .28s var(--ease, ease); }
+.imgzoom.pop.on img { transform: scale(1); }
+.imgzoom.pop .imgzoom__cap { transform: translateX(-10px); opacity: 0; transition: transform .34s cubic-bezier(.2,.85,.25,1), opacity .3s ease; }
+.imgzoom.pop.on .imgzoom__cap { transform: none; opacity: 1; }

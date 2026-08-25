@@ -1440,7 +1440,7 @@ const metalLife = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Room by room.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall pd-full-grid--zoom pd-full-grid--zoomcap pd-full-grid--zoompop reveal">
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" loading="lazy" /><figcaption class="pd-full__cap">Bedroom, micro-cement walls and a warm timber base.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /><figcaption class="pd-full__cap">Living room, terracotta sofas against the concrete shell.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom, a warm accent wall and floating console.</figcaption></figure>
