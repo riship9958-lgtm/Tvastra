@@ -864,3 +864,10 @@ img.img-fade.img-ready { opacity: 1; }
 .pd-hero--pano { height: 72svh; background: var(--bg-deep); }
 .pd-hero--pano img { object-fit: contain; filter: none; background: var(--bg-deep); }
 .pd-hero--pano .pd-hero__cap { z-index: 2; background: linear-gradient(0deg, rgba(14,20,26,.94), rgba(14,20,26,.4) 42%, transparent); }
+
+/* Hover-to-enlarge overlay for grid images (scales up to the viewport, never past native resolution) */
+.pd-full-grid--zoom .pd-full { cursor: zoom-in; }
+.imgzoom { position: fixed; inset: 0; z-index: 200; display: flex; align-items: center; justify-content: center; padding: 3vmin; background: rgba(10,16,22,.88); opacity: 0; visibility: hidden; transition: opacity .28s var(--ease, ease); pointer-events: none; }
+.imgzoom.on { opacity: 1; visibility: visible; }
+.imgzoom img { width: auto; height: auto; max-width: 94vw; max-height: 94vh; box-shadow: 0 30px 90px rgba(0,0,0,.55); border-radius: 2px; }
+@media (prefers-reduced-motion: reduce) { .imgzoom { transition: none; } }

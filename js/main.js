@@ -174,6 +174,26 @@
     document.addEventListener("touchstart", warm, { passive: true });
   })();
 
+  // ---- Hover to enlarge grid images (fit the viewport, never upscale past native) ----
+  (function () {
+    var imgs = [].slice.call(document.querySelectorAll('.pd-full-grid--zoom .pd-full img'));
+    if (!imgs.length) return;
+    var ov = document.createElement('div');
+    ov.className = 'imgzoom';
+    ov.setAttribute('aria-hidden', 'true');
+    var big = document.createElement('img');
+    big.alt = '';
+    ov.appendChild(big);
+    document.body.appendChild(ov);
+    imgs.forEach(function (img) {
+      img.addEventListener('mouseenter', function () {
+        big.src = img.currentSrc || img.src;
+        ov.classList.add('on');
+      });
+      img.addEventListener('mouseleave', function () { ov.classList.remove('on'); });
+    });
+  })();
+
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");
   if (form) {
