@@ -931,3 +931,7 @@ body.night-mode .nightbtn[aria-pressed="true"] { color: #1b2a32; border-color: #
 body.night-mode .elev-sec { position: relative; z-index: 60; background: #0b1016; color: #e7eef3; }
 body.night-mode .elev-sec .eyebrow, body.night-mode .elev-sec .h-lg, body.night-mode .elev-sec .lead { color: #e7eef3; }
 body.night-mode .elev-sec .pd-full-grid--elev .pd-full { background: #0b1016; }
+
+/* 3D Elevation with matched day/night pairs — two columns, centered */
+.pd-full-grid--elev2 { grid-template-columns: repeat(2, 1fr); max-width: 900px; margin-inline: auto; }
+@media (max-width: 620px) { .pd-full-grid--elev2 { grid-template-columns: 1fr; } }
