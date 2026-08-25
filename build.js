@@ -115,7 +115,7 @@ ${FONTS}
 <body>`;
 }
 
-const NAV = [['index.html','Home'],['discipline.html','Discipline'],['about.html','About Us'],['gospels.html','Gospels'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
+const NAV = [['index.html','Home'],['discipline.html','Discipline'],['about.html','About Us'],['gospels.html','Vault'],['recognition.html','Recognition'],['careers.html','Careers'],['contact.html','Contact Us']];
 function header(active, dark) {
   var cls = dark ? 'site-header' : 'site-header solid on-light';
   if (active === 'index.html') cls += ' on-home'; // hide the small header logo over the title card
@@ -2126,9 +2126,9 @@ const recognition = `
       <div class="rec-item">
         <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--id" src="assets/awards/interior-design.png" alt="Interior Design magazine" loading="lazy" /><span>2024</span></div>
         <div>
-          <h3 class="rec-item__title">Best of Year 2024</h3>
+          <h3 class="rec-item__title">Best of Year Honoree</h3>
           <div class="rec-item__where">Interior Design magazine</div>
-          <p class="muted" style="margin:0">Recognised in Interior Design magazine's Best of Year 2024, for the Medium City House residence.</p>
+          <p class="muted" style="margin:0">Recognised as a Best of Year Honoree by Interior Design magazine, for the Medium City House residence.</p>
         </div>
         <a class="rec-item__tag rec-item__tag--link" href="https://interiordesign.net/awards/best-of-year/2024/tvastra-design-medium-city-house/" target="_blank" rel="noopener">View feature ${ARROW}</a>
       </div>
@@ -2450,7 +2450,7 @@ const gospels = `
   <div class="gband__inner">
     <div class="gband__text">
       <p class="eyebrow">The founder's voice</p>
-      <h1 class="gband__title">Gospels.</h1>
+      <h1 class="gband__title">Vault.</h1>
       <p class="gband__lead">A growing library of short films where the founder shares his thought process, ideas and points of view, the thinking behind the work, in his own words.</p>
     </div>
   </div>
@@ -2831,7 +2831,7 @@ const PAGES = [
   { file: 'index.html',                id: 'home',      nav: 'index.html',    dark: true,  title: 'Tvastra Design LLP, Architecture, Interiors & Product Design', desc: 'Tvastra Design LLP, an established architecture, interior and product design practice in Surat blending ethnical and cultural elegance with contemporary craft.', content: home },
   { file: 'recognition.html',          id: 'recognition', nav: 'recognition.html', dark: false, title: 'Recognition, Tvastra Design LLP', desc: 'Awards and recognition for Tvastra Design LLP, including the 2023 A&D Collection Platinum Award.', content: recognition },
   { file: 'careers.html',              id: 'careers',   nav: 'careers.html',  dark: false, title: 'Careers, Tvastra Design LLP', desc: 'Careers at Tvastra Design LLP. Join a hands-on architecture, interior and product design studio in Surat.', content: careers },
-  { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: true, title: 'Gospels, Tvastra Design LLP', desc: "Gospels, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
+  { file: 'gospels.html',              id: 'gospels',   nav: 'gospels.html',  dark: true, title: 'Vault, Tvastra Design LLP', desc: "Vault, a video library where the founder of Tvastra Design LLP shares his thought process, ideas and points of view.", content: gospels },
   { file: 'projects.html',             id: 'projects',  nav: 'projects.html', dark: true,  title: 'Work, Tvastra Design LLP', desc: 'Selected architecture, interior and product design work by Tvastra Design LLP, including Vritta.', content: projects },
   { file: 'projects-architecture.html', id: 'proj-arch', nav: 'projects.html', dark: true, title: 'Architecture Projects, Tvastra Design LLP', desc: 'Residential architecture projects by Tvastra Design LLP across Surat, Gujarat.', content: projArch },
   { file: 'projects-interior.html',    id: 'proj-int',  nav: 'projects.html', dark: true,  title: 'Interior Design Projects, Tvastra Design LLP', desc: 'Interior design work by Tvastra Design LLP, considered materials, custom furniture and contemporary warmth.', content: projInterior },
@@ -2927,7 +2927,7 @@ if (process.argv[2] === 'preview') {
   let sections = '';
   for (const p of PAGES) { if (p.noPreview) continue; sections += `\n<div class="page" id="${p.id}" data-dark="${p.dark?1:0}">\n${prep(p.content)}\n</div>\n`; }
 
-  const navLinks = [['home','Home'],['discipline','Discipline'],['about','About Us'],['gospels','Gospels'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
+  const navLinks = [['home','Home'],['discipline','Discipline'],['about','About Us'],['gospels','Vault'],['recognition','Recognition'],['careers','Careers'],['contact','Contact Us']]
     .map(n => `<li><a href="#${n[0]}" data-page="${n[0]}">${n[1]}</a></li>`).join('');
   const spaHeader = `
 <header class="site-header" id="hdr">
