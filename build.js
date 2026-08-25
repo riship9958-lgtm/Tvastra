@@ -1949,7 +1949,7 @@ const about = `
     <div class="namesec__inner reveal">
       <img decoding="async" class="namesec__logo" src="assets/logo.png" alt="Tvastra Design LLP" />
       <p class="eyebrow no-rule" style="justify-content:center">The name</p>
-      <h2 class="h-lg namesec__title">Rooted in tradition. Driven by the <em>power of creativity.</em></h2>
+      <h2 class="h-lg namesec__title">Rooted in tradition.<br />Driven by the<br /><em>power of creativity.</em></h2>
       <p class="lead namesec__lead">The name Tvastra traces back to the Sanskrit word for the supreme fashioner, the original architect responsible for giving shape to the unformed.</p>
       <p class="muted namesec__body">At Tvastra Design, architecture is more than constructing walls; it is the art of giving purpose to space. We harness the power of creativity to design structures that harmoniously balance proportion, light and material craftsmanship. From the conceptual sketch to the final execution, we shape spaces designed to stand the test of time.</p>
     </div>
