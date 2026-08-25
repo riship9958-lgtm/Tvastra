@@ -531,9 +531,10 @@ const vritta = `
       <h2 class="h-lg">3D Elevation.</h2>
       <p class="lead" style="max-width:600px;margin-top:12px">Flip the lights to see the elevations after dark.</p>
     </div>
-    <div class="pd-full-grid pd-full-grid--elev pd-full-grid--elev2 reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG}01-day.webp" data-day="${IMG}01-day.webp" data-night="${IMG}03-night.webp" alt="Vritta, street-corner elevation" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG}full-02.webp" data-day="${IMG}full-02.webp" data-night="${IMG}06-night-corner.webp" alt="Vritta, garden-corner elevation" loading="lazy" /></figure>
+    <div class="pd-full-grid pd-full-grid--elev reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG}elev-1-day.webp" data-day="${IMG}elev-1-day.webp" data-night="${IMG}elev-1-night.webp" alt="Vritta, street-corner elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}elev-2-day.webp" data-day="${IMG}elev-2-day.webp" data-night="${IMG}elev-2-night.webp" alt="Vritta, garden-corner elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}elev-3-day.webp" data-day="${IMG}elev-3-day.webp" data-night="${IMG}elev-3-night.webp" alt="Vritta, side elevation with brick jaali" loading="lazy" /></figure>
     </div>
     <div class="elev-lights__bar reveal">
       <button class="nightbtn" type="button" aria-pressed="false">
