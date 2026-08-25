@@ -204,6 +204,51 @@
     });
   })();
 
+  // ---- Interactive elevation viewer: rotate + lights (night) ----
+  (function () {
+    var m = document.querySelector('.model3d');
+    if (!m) return;
+    var img = m.querySelector('.model3d__img');
+    var viewEl = m.querySelector('.model3d__view');
+    var lights = m.querySelector('.model3d__lights');
+    var frames;
+    try { frames = JSON.parse(m.getAttribute('data-frames') || '[]'); } catch (e) { frames = []; }
+    if (!frames.length) return;
+    var i = 0, night = false;
+    function render() {
+      var f = frames[i];
+      img.src = night ? f.night : f.day;
+      if (viewEl) viewEl.textContent = f.label || '';
+    }
+    function rotate(dir) { i = (i + dir + frames.length) % frames.length; render(); }
+    var prev = m.querySelector('.model3d__prev'), next = m.querySelector('.model3d__next');
+    if (prev) prev.addEventListener('click', function () { rotate(-1); });
+    if (next) next.addEventListener('click', function () { rotate(1); });
+    if (lights) lights.addEventListener('click', function () {
+      night = !night;
+      m.classList.toggle('is-night', night);
+      document.body.classList.toggle('night-mode', night);
+      lights.setAttribute('aria-pressed', night ? 'true' : 'false');
+      var lbl = lights.querySelector('.model3d__lights-label');
+      if (lbl) lbl.textContent = night ? 'Lights off' : 'Lights on';
+      render();
+    });
+    // drag to rotate
+    var stage = m.querySelector('.model3d__stage');
+    var x0 = null;
+    if (stage) {
+      stage.addEventListener('pointerdown', function (e) { x0 = e.clientX; m.classList.add('grabbing'); });
+      window.addEventListener('pointerup', function () { x0 = null; m.classList.remove('grabbing'); });
+      stage.addEventListener('pointermove', function (e) {
+        if (x0 === null) return;
+        var dx = e.clientX - x0;
+        if (Math.abs(dx) > 44) { rotate(dx < 0 ? 1 : -1); x0 = e.clientX; }
+      });
+      stage.addEventListener('dragstart', function (e) { e.preventDefault(); });
+    }
+    render();
+  })();
+
   // ---- Contact form (front-end demo) ----
   var form = document.querySelector("#contact-form");
   if (form) {

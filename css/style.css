@@ -883,3 +883,27 @@ img.img-fade.img-ready { opacity: 1; }
 .imgzoom.pop.on img { transform: scale(1); }
 .imgzoom.pop .imgzoom__cap { transform: translateX(-10px); opacity: 0; transition: transform .34s cubic-bezier(.2,.85,.25,1), opacity .3s ease; }
 .imgzoom.pop.on .imgzoom__cap { transform: none; opacity: 1; }
+
+/* ---- Interactive elevation viewer (rotate + lights) ---- */
+.model3d { position: relative; max-width: 1000px; margin-inline: auto; }
+.model3d__stage { position: relative; aspect-ratio: 16 / 10; background: var(--paper-2); border-radius: 4px; overflow: hidden; cursor: grab; user-select: none; touch-action: pan-y; }
+.model3d.grabbing .model3d__stage { cursor: grabbing; }
+.model3d__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity .35s var(--ease, ease), filter .5s var(--ease, ease); -webkit-user-drag: none; }
+.model3d__nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,.9); border: none; display: grid; place-items: center; cursor: pointer; color: var(--ink); box-shadow: 0 6px 18px rgba(0,0,0,.2); transition: background .2s ease, transform .2s ease; }
+.model3d__nav svg { width: 22px; height: 22px; }
+.model3d__nav:hover { background: #fff; }
+.model3d__prev { left: 14px; } .model3d__next { right: 14px; }
+.model3d__hint { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #fff; background: rgba(0,0,0,.42); padding: 6px 13px; border-radius: 20px; pointer-events: none; transition: opacity .3s ease; }
+.model3d__bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 16px; }
+.model3d__view { font-family: var(--serif); font-size: clamp(16px, 1.8vw, 20px); color: var(--stone-dk); }
+.model3d__lights { display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; border-radius: 40px; border: 1px solid #c7d2d8; background: transparent; cursor: pointer; font-family: var(--sans); font-size: 13px; letter-spacing: .02em; color: var(--ink); transition: background .25s ease, color .25s ease, border-color .25s ease; }
+.model3d__lights svg { width: 18px; height: 18px; }
+.model3d__lights[aria-pressed="true"] { background: #f4c542; border-color: #f4c542; color: #1b2a32; }
+/* night state */
+.model3d.is-night { position: relative; z-index: 60; }
+.model3d.is-night .model3d__stage { background: #0b1016; box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 30px 80px rgba(0,0,0,.5); }
+.model3d.is-night .model3d__view { color: #cdd8e0; }
+.model3d-sec { transition: background .5s var(--ease, ease), color .5s var(--ease, ease); }
+body.night-mode .model3d-sec { background: #0b1016; color: #e7eef3; }
+body.night-mode .model3d-sec .eyebrow, body.night-mode .model3d-sec .h-lg, body.night-mode .model3d-sec .lead { color: #e7eef3; }
+body.night-mode::after { content: ""; position: fixed; inset: 0; background: rgba(6,10,15,.55); pointer-events: none; z-index: 40; }

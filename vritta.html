@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva3" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva3" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=e8efef34" />
+<link rel="stylesheet" href="css/style.css?v=5c2a690d" />
 <script>
 /* One-time cleanup: remove any stale service worker / caches left by the previous site. */
 (function(){
@@ -82,6 +82,31 @@
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
     <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+  </div>
+</section>
+
+<section class="section model3d-sec">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Explore</p>
+      <h2 class="h-lg">Turn it around.</h2>
+      <p class="lead" style="max-width:620px;margin-top:14px">Drag or use the arrows to rotate the house and see every side. Flip the lights to step into night.</p>
+    </div>
+    <div class="model3d reveal" data-frames='[{"day":"assets/projects/vritta/01-day.webp","night":"assets/projects/vritta/03-night.webp","label":"Street corner"},{"day":"assets/projects/vritta/full-02.webp","night":"assets/projects/vritta/06-night-corner.webp","label":"Garden corner"},{"day":"assets/projects/vritta/full-03.webp","night":"assets/projects/vritta/05-night-side.webp","label":"Side elevation"}]'>
+      <div class="model3d__stage">
+        <img class="model3d__img" decoding="async" src="assets/projects/vritta/01-day.webp" alt="Vritta, rotatable exterior elevation" />
+        <button class="model3d__nav model3d__prev" type="button" aria-label="Rotate left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="model3d__nav model3d__next" type="button" aria-label="Rotate right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+        <span class="model3d__hint">Drag to rotate</span>
+      </div>
+      <div class="model3d__bar">
+        <span class="model3d__view"></span>
+        <button class="model3d__lights" type="button" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+          <span class="model3d__lights-label">Lights on</span>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -217,6 +242,6 @@
     </div>
   </div>
 </footer>
-<script src="js/main.js?v=22beba57"></script>
+<script src="js/main.js?v=8140f6a6"></script>
 </body>
 </html>
