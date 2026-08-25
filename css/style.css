@@ -8,7 +8,7 @@
 :root {
   /* Tvastra — earthy palette: terracotta + charcoal + navy (beige/olive support) */
   /* Aligned to the Tvastra logo — brand blue on white, navy + charcoal panels */
-  --clay:      #00618e;   /* brand blue — primary accent + fills */
+  --clay:      #004d70;   /* brand blue — primary accent + fills (2 shades darker) */
   --clay-deep: #004b6e;
   --clay-soft: #4a90b3;   /* lighter blue — accents on dark panels / tiles */
   --navy:      #1f3a5f;   /* deep navy-blue — footer */

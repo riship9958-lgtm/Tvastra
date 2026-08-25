@@ -1986,19 +1986,6 @@ const about = `
   </div>
 </section>
 
-<section class="section">
-  <div class="container grid-2 top">
-    <div class="reveal">
-      <p class="eyebrow">The studio</p>
-      <h1 class="display" style="font-size:clamp(42px,6vw,86px)">Tvastra<br />Design LLP</h1>
-      <p class="muted" style="margin-top:20px;font-family:var(--serif);font-size:clamp(18px,2vw,22px);color:var(--clay)">Inspired by creativity. Defined by design.</p>
-    </div>
-    <div class="reveal d1">
-      <p class="lead">Tvastra Design LLP is an architecture and interior design firm dedicated to creating spaces that are functional, timeless and meaningful.</p>
-      <p class="muted">We believe every project is more than a design assignment. It is someone's dream, lifestyle and future, and we treat it that way, blending creative thinking with practical planning, technical precision and quality execution.</p>
-    </div>
-  </div>
-</section>
 
 <section class="section section--paper2">
   <div class="container grid-2 top">
