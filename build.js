@@ -394,8 +394,6 @@ const home = `
             <li>Architecture</li>
             <li>Interior design</li>
             <li>Product design</li>
-            <li>Turn-key projects</li>
-            <li>Project management</li>
           </ul>
         </div>
         <a href="founders-mind.html" class="link-arrow">Inside the founder's mind ${ARROW}</a>
@@ -2200,8 +2198,6 @@ const foundersMind = `
         <li>Architecture</li>
         <li>Interior design</li>
         <li>Product design</li>
-        <li>Turn-key projects</li>
-        <li>Project management</li>
       </ul>
     </div>
   </div>
@@ -2844,7 +2840,7 @@ const PAGES = [
   { file: 'gurukrupa.html',    id: 'proj-gurukrupa', nav: 'projects.html', dark: true, title: 'Shree Gurukrupaa Vidhya Sankul, Office Interior by Tvastra Design LLP', desc: 'Shree Gurukrupaa Vidhya Sankul, an education group’s head office in Surat by Tvastra Design LLP, colour-blocked glass partitions, oak joinery and daylight.', content: gurukrupa },
   { file: 'discipline.html',             id: 'discipline',  nav: 'discipline.html', dark: true,  title: 'Disciplines, Tvastra Design LLP', desc: 'Architecture, interior design and product design disciplines of Tvastra Design LLP.', content: services },
   { file: 'about.html',                id: 'about',     nav: 'about.html',    dark: false, title: 'Studio, Tvastra Design LLP', desc: 'About Tvastra Design LLP, an established architecture, interior and product design practice; our philosophy, vision and principles.', content: about },
-  { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors, product design, turn-key projects and project management.", content: foundersMind },
+  { file: 'founders-mind.html',        id: 'founders-mind', nav: 'about.html', dark: true, title: "Inside the Founder's Mind, Tvastra Design LLP", desc: "Inside the founder's mind, designing since 1995 across architecture, interiors and product design.", content: foundersMind },
   { file: 'founder-portfolio.html',    id: 'founder-portfolio', nav: 'about.html', dark: true, title: "The Founder's Portfolio, Tvastra Design LLP", desc: "The founder's portfolio, a personal archive of projects and photographs by the founder of Tvastra Design LLP.", content: founderPortfolio },
   { file: 'contact.html',              id: 'contact',   nav: 'contact.html',  dark: false, title: 'Contact, Tvastra Design LLP', desc: 'Get in touch with Tvastra Design LLP to discuss your architecture, interior or furniture project.', content: contact },
 ];
