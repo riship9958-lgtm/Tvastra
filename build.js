@@ -511,31 +511,6 @@ const vritta = `
   </div>
 </section>
 
-<section class="section model3d-sec">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Explore</p>
-      <h2 class="h-lg">Turn it around.</h2>
-      <p class="lead" style="max-width:620px;margin-top:14px">Drag or use the arrows to rotate the house and see every side. Flip the lights to step into night.</p>
-    </div>
-    <div class="model3d reveal" data-frames='[{"day":"${IMG}01-day.webp","night":"${IMG}03-night.webp","label":"Street corner"},{"day":"${IMG}full-02.webp","night":"${IMG}06-night-corner.webp","label":"Garden corner"},{"day":"${IMG}full-03.webp","night":"${IMG}05-night-side.webp","label":"Side elevation"}]'>
-      <div class="model3d__stage">
-        <img class="model3d__img" decoding="async" src="${IMG}01-day.webp" alt="Vritta, rotatable exterior elevation" />
-        <button class="model3d__nav model3d__prev" type="button" aria-label="Rotate left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button class="model3d__nav model3d__next" type="button" aria-label="Rotate right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
-        <span class="model3d__hint">Drag to rotate</span>
-      </div>
-      <div class="model3d__bar">
-        <span class="model3d__view"></span>
-        <button class="model3d__lights" type="button" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
-          <span class="model3d__lights-label">Lights on</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section pd-sketch">
   <div class="container">
     <div class="pd-sec-head reveal">
