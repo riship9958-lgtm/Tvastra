@@ -2612,7 +2612,6 @@ const gurukrupa = interiorProject({
     { src: 'assets/projects/gurukrupa/slide-05.webp', cap: 'Open desks run beside the framed glass partitions.', alt: 'Gurukrupaa open desks' },
     { src: 'assets/projects/gurukrupa/slide-06.webp', cap: 'Bright workstations under an even, glare-free glow.', alt: 'Gurukrupaa workstations' },
     { src: 'assets/projects/gurukrupa/slide-07.webp', cap: 'A calm waiting lounge in grey and blue.', alt: 'Gurukrupaa waiting lounge' },
-    { src: 'assets/projects/gurukrupa/slide-08.webp', cap: 'A cabin framed in colour and glass.', alt: 'Gurukrupaa cabin' },
   ],
 });
 
