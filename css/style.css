@@ -937,8 +937,8 @@ body.night-mode .elev-sec .pd-full-grid--elev .pd-full { background: #0b1016; }
 @media (max-width: 620px) { .pd-full-grid--elev2 { grid-template-columns: 1fr; } }
 
 /* Juneberry: six vertical (portrait) tiles in a row, full image on hover-zoom */
-.pd-full-grid--vtiles { grid-template-columns: repeat(6, 1fr); gap: clamp(8px, 0.9vw, 14px); }
+.pd-full-grid--vtiles { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: clamp(8px, 0.9vw, 14px); justify-content: center; }
 .pd-full-grid--vtiles .pd-full { background: transparent; }
 .pd-full-grid--vtiles .pd-full img { aspect-ratio: 3 / 5; object-fit: cover; }
-@media (max-width: 900px) { .pd-full-grid--vtiles { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 900px) { .pd-full-grid--vtiles { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); } }
 @media (max-width: 520px) { .pd-full-grid--vtiles { grid-template-columns: repeat(2, 1fr); } }

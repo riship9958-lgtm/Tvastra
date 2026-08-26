@@ -1427,7 +1427,7 @@ const metalLife = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Room by room.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall pd-full-grid--zoom pd-full-grid--zoomcap pd-full-grid--zoompop reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom pd-full-grid--zoomcap reveal">
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-01.webp" alt="Metal Life, bedroom" loading="lazy" /><figcaption class="pd-full__cap">Bedroom, micro-cement walls and a warm timber base.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-02.webp" alt="Metal Life, living room" loading="lazy" /><figcaption class="pd-full__cap">Living room, terracotta sofas against the concrete shell.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${NIMG}slide-04.webp" alt="Metal Life, master bedroom" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom, a warm accent wall and floating console.</figcaption></figure>
@@ -1634,7 +1634,7 @@ const calibre = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">A room that flows.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom pd-full-grid--zoomcap reveal">
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-01.webp" alt="Calibre, curved display walls and seating under the skylight" loading="lazy" /><figcaption class="pd-full__cap">Curved display walls and seating under the skylight.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-02.webp" alt="Calibre, the sweeping reception and curved display" loading="lazy" /><figcaption class="pd-full__cap">The sweeping reception and curved display.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${CIMG}space-03.webp" alt="Calibre, browsing pods and floating racks" loading="lazy" /><figcaption class="pd-full__cap">Browsing pods and floating racks.</figcaption></figure>
@@ -1715,7 +1715,7 @@ const icon = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Workspace, end to end.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom pd-full-grid--zoomcap reveal">
       <figure class="pd-full"><img decoding="async" src="${IIMG}wk-01.webp" alt="ICON, open workstations by the windows" loading="lazy" /><figcaption class="pd-full__cap">Open workstations run the length of the glazed facade.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${IIMG}wk-02.webp" alt="ICON, glass cabins with the river view" loading="lazy" /><figcaption class="pd-full__cap">Glass cabins keep the river view open to the whole floor.</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${IIMG}wk-03.webp" alt="ICON, desks along the textured wall" loading="lazy" /><figcaption class="pd-full__cap">Task desks line the textured charcoal feature wall.</figcaption></figure>
@@ -1794,7 +1794,7 @@ const pyramidPalacia = `
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">Room by room.</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom pd-full-grid--zoomcap reveal">
       <figure class="pd-full"><img decoding="async" src="${PIMG}space-01.webp" alt="Pyramid Palacia, master bedroom with a book-matched marble feature wall" loading="lazy" /><figcaption class="pd-full__cap">Master bedroom &middot; book-matched marble &amp; brass pendants</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${PIMG}space-02.webp" alt="Pyramid Palacia, bedroom with fluted panelling and a media wall" loading="lazy" /><figcaption class="pd-full__cap">Bedroom &middot; fluted panelling &amp; wood media console</figcaption></figure>
       <figure class="pd-full"><img decoding="async" src="${PIMG}space-03.webp" alt="Pyramid Palacia, ensuite bathroom with a glazed partition and timber vanity" loading="lazy" /><figcaption class="pd-full__cap">Ensuite &middot; glazed partition &amp; fluted timber vanity</figcaption></figure>
@@ -2452,7 +2452,7 @@ ${cpsych}
       <p class="eyebrow">The space</p>
       <h2 class="h-lg">${o.showcaseHead}</h2>
     </div>
-    <div class="pd-full-grid pd-full-grid--quad pd-full-grid--tall reveal">
+    <div class="pd-full-grid pd-full-grid--vtiles pd-full-grid--zoom pd-full-grid--zoomcap reveal">
 ${rooms}
     </div>
   </div>
