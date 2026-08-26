@@ -2023,6 +2023,15 @@ const recognition = `
         <a class="rec-item__tag rec-item__tag--link" href="https://interiordesign.net/awards/best-of-year/2024/tvastra-design-medium-city-house/" target="_blank" rel="noopener">View feature ${ARROW}</a>
       </div>
       <div class="rec-item">
+        <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--adc" src="assets/awards/india5000.png" alt="India 5000 Best MSME Awards" loading="lazy" /><span>2024</span></div>
+        <div>
+          <h3 class="rec-item__title">Nominee</h3>
+          <div class="rec-item__where">India 5000 Best MSME Awards 2024</div>
+          <p class="muted" style="margin:0">Tvastra Design LLP nominated at the India 5000 Best MSME Awards, recognising quality and excellence among India's MSMEs.</p>
+        </div>
+        <a class="rec-item__tag rec-item__tag--link" href="assets/awards/india5000-cert.webp" target="_blank" rel="noopener">View certificate ${ARROW}</a>
+      </div>
+      <div class="rec-item">
         <div class="rec-item__year"><img decoding="async" class="rec-item__seal rec-item__seal--adc" src="assets/awards/platinum.png" alt="Platinum Winner, Architecture &amp; Design Collection Awards 2023" loading="lazy" /><span>2023</span></div>
         <div>
           <h3 class="rec-item__title">Platinum Winner</h3>
