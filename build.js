@@ -160,7 +160,7 @@ const FOOTER = `
       <div>
         <h5>Studio</h5>
         <ul>
-          <li><a href="mailto:info@tvastra.design">info@tvastra.design</a></li>
+          <li><a href="mailto:tvastradesignllp@gmail.com">tvastradesignllp@gmail.com</a></li>
           <li><a href="tel:+919081813231">+91 90818 13231</a></li>
           <li>Umra Road, Athwalines,<br />Surat, Gujarat 395007</li>
         </ul>
