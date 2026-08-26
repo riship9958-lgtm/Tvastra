@@ -419,6 +419,10 @@ const home = `
         <img decoding="async" src="assets/clients/veer.png" alt="Veer Group" loading="lazy" />
         <img decoding="async" src="assets/clients/shott.png" alt="Shott" loading="lazy" />
         <img decoding="async" src="assets/clients/juneberry.png" alt="Juneberry" loading="lazy" />
+        <img decoding="async" src="assets/clients/kohinoor.png" alt="Kohinoor Group" loading="lazy" />
+        <img decoding="async" src="assets/clients/shiv-nirman.png" alt="Shiv Nirman" loading="lazy" />
+        <img decoding="async" src="assets/clients/universal-realty.png" alt="Universal Realty" loading="lazy" />
+        <img decoding="async" src="assets/clients/calibre.png" alt="Calibre" loading="lazy" />
       </div>
       <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
     </div>
@@ -1874,8 +1878,8 @@ const about = `
       <div class="ldr__bios">
         <div class="ldr__bio">
           <h3 class="ldr__name">Bhavin Swami</h3>
-          <p class="ldr__role">Managing Director &amp; Principal Designer</p>
-          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Managing Director and principal architect. With over three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
+          <p class="ldr__role">Founder &amp; Principal Designer</p>
+          <p class="muted">Bhavin Swami leads Tvastra Design LLP as its Founder and principal architect. With over three decades of practice, he sets the studio's design direction across architecture, interiors and product, pairing a deep respect for tradition and craft with a modern, problem-solving mindset.</p>
           <p class="muted">Hands-on from the first sketch to final execution, he is known for balancing proportion, light and material honesty, and for treating every project as someone's dream to be realised. His leadership shapes both the creative vision and the values that define the studio, people before projects.</p>
         </div>
         <div class="ldr__bio">
