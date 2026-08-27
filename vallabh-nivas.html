@@ -98,39 +98,23 @@
   </div>
 </section>
 
-<section class="pd-showcase">
+
+<section class="pd-showcase elev-sec">
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Flip the lights to see the elevations after dark.</p>
     </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="assets/projects/vallabh-nivas/02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="assets/projects/vallabh-nivas/01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="assets/projects/vallabh-nivas/05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
+    <div class="pd-full-grid pd-full-grid--elev pd-full-grid--elev2 reveal">
+      <figure class="pd-full"><img decoding="async" src="assets/projects/vallabh-nivas/02-day.webp" data-day="assets/projects/vallabh-nivas/02-day.webp" data-night="assets/projects/vallabh-nivas/01-night.webp" alt="Vallabh Nivas, corner elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="assets/projects/vallabh-nivas/04-day-front.webp" data-day="assets/projects/vallabh-nivas/04-day-front.webp" data-night="assets/projects/vallabh-nivas/03-night-front.webp" alt="Vallabh Nivas, front elevation" loading="lazy" /></figure>
     </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vallabh Nivas renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Front elevation by day, the timber-slat core and planted balconies."><img decoding="async" src="assets/projects/vallabh-nivas/02-day.webp" alt="Vallabh Nivas, front elevation by day" /></figure>
-      <figure class="slide" data-cap="The same elevation after dark, warm timber and glowing rooms."><img decoding="async" src="assets/projects/vallabh-nivas/01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view by day, concrete grid and cascading greenery."><img decoding="async" src="assets/projects/vallabh-nivas/04-day-front.webp" alt="Vallabh Nivas, street view by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view at night, the interiors warm behind the slats."><img decoding="async" src="assets/projects/vallabh-nivas/03-night-front.webp" alt="Vallabh Nivas, street view at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The tall corner, four slender levels stacked over the entrance."><img decoding="async" src="assets/projects/vallabh-nivas/05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Front elevation by day, the timber-slat core and planted balconies.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
+    <div class="elev-lights__bar reveal">
+      <button class="nightbtn" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+        <span class="nightbtn__label">Lights on</span>
+      </button>
     </div>
   </div>
 </section>

@@ -98,39 +98,23 @@
   </div>
 </section>
 
-<section class="pd-showcase">
+
+<section class="pd-showcase elev-sec">
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Visualisation</p>
       <h2 class="h-lg">3D Elevation.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Flip the lights to see the elevations after dark.</p>
     </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="assets/projects/jalika/02-day.webp" alt="Jālikā, corner by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="assets/projects/jalika/01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="assets/projects/jalika/05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
+    <div class="pd-full-grid pd-full-grid--elev pd-full-grid--elev2 reveal">
+      <figure class="pd-full"><img decoding="async" src="assets/projects/jalika/02-day.webp" data-day="assets/projects/jalika/02-day.webp" data-night="assets/projects/jalika/01-night.webp" alt="Jālikā, corner elevation" loading="lazy" /></figure>
+      <figure class="pd-full"><img decoding="async" src="assets/projects/jalika/04-day-rear.webp" data-day="assets/projects/jalika/04-day-rear.webp" data-night="assets/projects/jalika/03-night-rear.webp" alt="Jālikā, rear elevation" loading="lazy" /></figure>
     </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Jālikā renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The corner by day, brick-and-timber jaali over the double-height living room."><img decoding="async" src="assets/projects/jalika/02-day.webp" alt="Jālikā, corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner at night, the jaali glowing from within."><img decoding="async" src="assets/projects/jalika/01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation by day, concrete frames and planted balconies."><img decoding="async" src="assets/projects/jalika/04-day-rear.webp" alt="Jālikā, rear elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation at night, warm rooms behind the terracotta pier."><img decoding="async" src="assets/projects/jalika/03-night-rear.webp" alt="Jālikā, rear elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, the jaali screen and the raised garden podium."><img decoding="async" src="assets/projects/jalika/05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">The corner by day, brick-and-timber jaali over the double-height living room.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
+    <div class="elev-lights__bar reveal">
+      <button class="nightbtn" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+        <span class="nightbtn__label">Lights on</span>
+      </button>
     </div>
   </div>
 </section>

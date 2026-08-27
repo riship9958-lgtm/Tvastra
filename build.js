@@ -481,6 +481,34 @@ const projProduct = disciplinePage(
   ]
 );
 
+// Interactive "3D Elevation" showcase (Vritta-style): a lights toggle that
+// darkens the page and swaps each elevation from its day to its night render.
+// Each pair needs a matched day/night image of the same view.
+function elevSec(o) {
+  const figs = o.pairs.map(p =>
+    `      <figure class="pd-full"><img decoding="async" src="${p.day}" data-day="${p.day}" data-night="${p.night}" alt="${p.alt}" loading="lazy" /></figure>`
+  ).join('\n');
+  return `
+<section class="pd-showcase elev-sec">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Visualisation</p>
+      <h2 class="h-lg">3D Elevation.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Flip the lights to see the elevations after dark.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--elev pd-full-grid--elev2 reveal">
+${figs}
+    </div>
+    <div class="elev-lights__bar reveal">
+      <button class="nightbtn" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.5.4.8 1 .8 1.6v.5h5.4v-.5c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 3z"/></svg>
+        <span class="nightbtn__label">Lights on</span>
+      </button>
+    </div>
+  </div>
+</section>`;
+}
+
 const vritta = `
 <div class="pd-hero pd-hero--tall pd-hero--zoom pd-hero--sketch">
   <img decoding="async" src="${IMG}sketch-01.webp" alt="Vritta, concept sketch" />
@@ -643,42 +671,10 @@ const rju = `
   </div>
 </section>
 
-<section class="pd-showcase">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">3D Elevation.</h2>
-    </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Ṛju renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street corner by day, planted balconies and the brick-jaali crown."><img decoding="async" src="${IMG3}01-day.webp" alt="Ṛju, street corner by day" /></figure>
-      <figure class="slide" data-cap="The corner at dusk, warm light rising between the green tiers."><img decoding="async" src="${IMG3}02-dusk.webp" alt="Ṛju, street corner at dusk" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Front elevation at night, interiors glowing behind the screens."><img decoding="async" src="${IMG3}03-night.webp" alt="Ṛju, front elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation by day, stone, glass and cascading vines."><img decoding="async" src="${IMG3}04-day-front.webp" alt="Ṛju, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The layered façade, concrete, timber, jaali and green."><img decoding="async" src="${IMG3}05-front-alt.webp" alt="Ṛju, layered front elevation" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Street corner by day, planted balconies and the brick-jaali crown.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
-    </div>
-  </div>
-</section>
+${elevSec({ pairs: [
+  { day: `${IMG3}01-day.webp`, night: `${IMG3}02-dusk.webp`, alt: 'Ṛju, street corner elevation' },
+  { day: `${IMG3}04-day-front.webp`, night: `${IMG3}03-night.webp`, alt: 'Ṛju, front elevation' },
+] })}
 
 <section class="section">
   <div class="container">
@@ -773,42 +769,10 @@ const jalika = `
   </div>
 </section>
 
-<section class="pd-showcase">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">3D Elevation.</h2>
-    </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG4}02-day.webp" alt="Jālikā, corner by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Jālikā renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The corner by day, brick-and-timber jaali over the double-height living room."><img decoding="async" src="${IMG4}02-day.webp" alt="Jālikā, corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner at night, the jaali glowing from within."><img decoding="async" src="${IMG4}01-night.webp" alt="Jālikā, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation by day, concrete frames and planted balconies."><img decoding="async" src="${IMG4}04-day-rear.webp" alt="Jālikā, rear elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Rear elevation at night, warm rooms behind the terracotta pier."><img decoding="async" src="${IMG4}03-night-rear.webp" alt="Jālikā, rear elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation, the jaali screen and the raised garden podium."><img decoding="async" src="${IMG4}05-front.webp" alt="Jālikā, street elevation" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">The corner by day, brick-and-timber jaali over the double-height living room.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
-    </div>
-  </div>
-</section>
+${elevSec({ pairs: [
+  { day: `${IMG4}02-day.webp`, night: `${IMG4}01-night.webp`, alt: 'Jālikā, corner elevation' },
+  { day: `${IMG4}04-day-rear.webp`, night: `${IMG4}03-night-rear.webp`, alt: 'Jālikā, rear elevation' },
+] })}
 
 <section class="section">
   <div class="container">
@@ -902,42 +866,10 @@ const vallabhNivas = `
   </div>
 </section>
 
-<section class="pd-showcase">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">3D Elevation.</h2>
-    </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Vallabh Nivas renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Front elevation by day, the timber-slat core and planted balconies."><img decoding="async" src="${IMG5}02-day.webp" alt="Vallabh Nivas, front elevation by day" /></figure>
-      <figure class="slide" data-cap="The same elevation after dark, warm timber and glowing rooms."><img decoding="async" src="${IMG5}01-night.webp" alt="Vallabh Nivas, front elevation at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view by day, concrete grid and cascading greenery."><img decoding="async" src="${IMG5}04-day-front.webp" alt="Vallabh Nivas, street view by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street view at night, the interiors warm behind the slats."><img decoding="async" src="${IMG5}03-night-front.webp" alt="Vallabh Nivas, street view at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="The tall corner, four slender levels stacked over the entrance."><img decoding="async" src="${IMG5}05-day-tall.webp" alt="Vallabh Nivas, tall corner view" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Front elevation by day, the timber-slat core and planted balconies.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
-    </div>
-  </div>
-</section>
+${elevSec({ pairs: [
+  { day: `${IMG5}02-day.webp`, night: `${IMG5}01-night.webp`, alt: 'Vallabh Nivas, corner elevation' },
+  { day: `${IMG5}04-day-front.webp`, night: `${IMG5}03-night-front.webp`, alt: 'Vallabh Nivas, front elevation' },
+] })}
 
 <section class="section">
   <div class="container">
@@ -1031,42 +963,10 @@ const urdhva = `
   </div>
 </section>
 
-<section class="pd-showcase">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">3D Elevation.</h2>
-    </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG6}01-night.webp" alt="Urdhva, corner view at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Urdhva renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="Street elevation by day, white panels split by the brick spine."><img decoding="async" src="${IMG6}05-day-street.jpg" alt="Urdhva, street elevation by day" /></figure>
-      <figure class="slide" data-cap="The same corner at night, panels grazed by concealed uplights."><img decoding="async" src="${IMG6}04-night-street.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Entrance by day, the brick jaali against the pale volumes."><img decoding="async" src="${IMG6}03-day-front.jpg" alt="Urdhva, entrance by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Entrance at night, the brick jaali glowing like a lantern."><img decoding="async" src="${IMG6}02-night-front.webp" alt="Urdhva, entrance at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Night corner, the stacked volumes and rooftop pavilion aglow."><img decoding="async" src="${IMG6}01-night.webp" alt="Urdhva, corner at night" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">Street elevation by day, white panels split by the brick spine.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">05</span></span>
-      </div>
-    </div>
-  </div>
-</section>
+${elevSec({ pairs: [
+  { day: `${IMG6}03-day-front.jpg`, night: `${IMG6}02-night-front.webp`, alt: 'Urdhva, entrance elevation' },
+  { day: `${IMG6}05-day-street.jpg`, night: `${IMG6}04-night-street.webp`, alt: 'Urdhva, street elevation' },
+] })}
 
 <section class="section">
   <div class="container">
@@ -1288,41 +1188,10 @@ const asamvrta = `
   </div>
 </section>
 
-<section class="pd-showcase">
-  <div class="container">
-    <div class="pd-sec-head reveal">
-      <p class="eyebrow">Visualisation</p>
-      <h2 class="h-lg">3D Elevation.</h2>
-    </div>
-    <div class="pd-full-grid pd-full-grid--elev reveal">
-      <figure class="pd-full"><img decoding="async" src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner view by day" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner view at night" loading="lazy" /></figure>
-      <figure class="pd-full"><img decoding="async" src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
-    </div>
-  </div>
-  <div class="container">
-    <div class="pd-sec-head reveal pd-showcase__sub">
-      <h2 class="h-lg">Day to night.</h2>
-    </div>
-  </div>
-  <div class="slideshow reveal" data-autoplay="5500" aria-roledescription="carousel" aria-label="Asaṁvṛta renders">
-    <div class="slideshow__viewport">
-      <figure class="slide is-active" data-cap="The corner by day, stone and grey panels framed by exposed brick."><img decoding="async" src="${IMG8}02-day-corner.webp" alt="Asaṁvṛta, corner by day" /></figure>
-      <figure class="slide" data-cap="The same corner after dark, balconies and rooms glowing warm."><img decoding="async" src="${IMG8}01-night-corner.webp" alt="Asaṁvṛta, corner at night" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation by day, brick banding across the stone facade."><img decoding="async" src="${IMG8}04-day-front.webp" alt="Asaṁvṛta, street elevation by day" loading="lazy" /></figure>
-      <figure class="slide" data-cap="Street elevation at night, the rooftop pavilion lit against the sky."><img decoding="async" src="${IMG8}03-night-front.webp" alt="Asaṁvṛta, street elevation at night" loading="lazy" /></figure>
-    </div>
-    <button class="slideshow__nav slideshow__nav--prev" aria-label="Previous image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <button class="slideshow__nav slideshow__nav--next" aria-label="Next image"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
-    <div class="slideshow__bar">
-      <div class="container slideshow__bar-inner">
-        <span class="slideshow__cap">The corner by day, stone and grey panels framed by exposed brick.</span>
-        <div class="slideshow__dots" role="tablist"></div>
-        <span class="slideshow__counter"><span class="cur">01</span><span class="sep">&thinsp;/&thinsp;</span><span class="total">04</span></span>
-      </div>
-    </div>
-  </div>
-</section>
+${elevSec({ pairs: [
+  { day: `${IMG8}02-day-corner.webp`, night: `${IMG8}01-night-corner.webp`, alt: 'Asaṁvṛta, corner elevation' },
+  { day: `${IMG8}04-day-front.webp`, night: `${IMG8}03-night-front.webp`, alt: 'Asaṁvṛta, street elevation' },
+] })}
 
 <section class="section">
   <div class="container">
