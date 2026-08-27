@@ -424,19 +424,14 @@ const home = `
         <img decoding="async" src="assets/clients/universal-realty.png" alt="Universal Realty" loading="lazy" />
         <img decoding="async" src="assets/clients/calibre.png" alt="Calibre" loading="lazy" />
       </div>
-      <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
-    </div>
-  </div>
-</section>
-
-<section class="section members">
-  <div class="container">
-    <div class="members__inner reveal">
-      <p class="eyebrow no-rule" style="justify-content:center">Member of</p>
-      <div class="members__logos">
-        <img decoding="async" src="assets/members/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner &mdash; American Society of Interior Designers" loading="lazy" />
-        <img decoding="async" src="assets/members/iiid.png" alt="Member &mdash; Indian Institute of Interior Designers (IIID)" loading="lazy" />
+      <div class="trust__members">
+        <p class="eyebrow no-rule" style="justify-content:center">Member of</p>
+        <div class="members__logos">
+          <img decoding="async" src="assets/members/asid.png" alt="Qualified ASID Interior Designer, Professional Practitioner &mdash; American Society of Interior Designers" loading="lazy" />
+          <img decoding="async" src="assets/members/iiid.png" alt="Member &mdash; Indian Institute of Interior Designers (IIID)" loading="lazy" />
+        </div>
       </div>
+      <div class="trust__cta"><a href="contact.html" class="btn btn--clay">Start your project ${ARROW}</a></div>
     </div>
   </div>
 </section>
