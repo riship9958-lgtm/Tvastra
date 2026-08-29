@@ -342,6 +342,41 @@ function dcol(num, title, cat, img, side) {
 }
 
 const home = `
+<div class="intro" id="intro">
+  <video class="intro__video" src="assets/intro/tvastra-intro.mp4" muted playsinline autoplay preload="auto"></video>
+  <button class="intro__skip" type="button" aria-label="Skip intro">Skip</button>
+  <div class="intro__flood" aria-hidden="true"></div>
+</div>
+<script>
+(function(){
+  var intro = document.getElementById('intro');
+  if(!intro) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen; try { seen = sessionStorage.getItem('tv_intro'); } catch(e){}
+  function done(){ if(intro && intro.parentNode) intro.parentNode.removeChild(intro); document.documentElement.classList.remove('intro-lock'); }
+  if(seen || reduce){ done(); return; }
+  try { sessionStorage.setItem('tv_intro','1'); } catch(e){}
+  document.documentElement.classList.add('intro-lock');
+  var vid = intro.querySelector('.intro__video');
+  var skip = intro.querySelector('.intro__skip');
+  var leaked = false, fallback = null;
+  function leak(){
+    if(leaked) return; leaked = true;
+    if(fallback){ clearTimeout(fallback); }
+    intro.classList.add('is-flood');                                    // brand blue leaks out from the mark
+    setTimeout(function(){ intro.classList.add('is-out'); }, 760);      // fade the wash to reveal the title card
+    setTimeout(done, 1420);
+  }
+  if(vid){
+    vid.addEventListener('ended', leak);
+    vid.addEventListener('error', leak);                                // codec / load failure -> transition anyway
+    fallback = setTimeout(leak, 12000);                                 // safety: never trap the visitor
+    var pr = vid.play && vid.play();
+    if(pr && pr.catch){ pr.catch(function(){ leak(); }); }              // autoplay blocked -> transition anyway
+  } else { leak(); }
+  if(skip) skip.addEventListener('click', leak);
+})();
+</script>
 <section class="title-card">
   <div class="title-card__inner">
     <img decoding="async" class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
