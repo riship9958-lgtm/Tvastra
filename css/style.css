@@ -188,7 +188,7 @@ p { margin: 0 0 1.1em; }
    Title card (home intro cover)
    ========================================================================== */
 .title-card {
-  position: relative; min-height: 86svh;
+  position: relative; min-height: 100svh;
   display: flex; align-items: center; justify-content: center; text-align: center;
   background: var(--clay); color: #fff; overflow: hidden;
 }
