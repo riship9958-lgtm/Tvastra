@@ -189,9 +189,9 @@ p { margin: 0 0 1.1em; }
    ========================================================================== */
 /* ---------- Opening intro: logo-reveal film, then a brand-blue wash into the title card ---------- */
 html.intro-lock, html.intro-lock body { overflow: hidden; }
-.intro { position: fixed; inset: 0; z-index: 9999; background: #fff; overflow: hidden; display: grid; place-items: center; transition: opacity .62s var(--ease); }
+.intro { position: fixed; inset: 0; z-index: 9999; background: #efefef; overflow: hidden; display: grid; place-items: center; transition: opacity .62s var(--ease); }
 .intro.is-out { opacity: 0; }
-.intro__video { width: 100%; height: 100%; object-fit: contain; background: #fff; }
+.intro__video { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; background: #efefef; }
 .intro__flood { position: absolute; left: 50%; top: 50%; width: 100vmax; height: 100vmax; margin: -50vmax 0 0 -50vmax; border-radius: 50%; background: #004d70; transform: scale(0); transition: transform .78s cubic-bezier(.66,0,.32,1); will-change: transform; pointer-events: none; }
 .intro.is-flood .intro__flood { transform: scale(1.85); }
 .intro__skip { position: absolute; bottom: 24px; right: 26px; z-index: 2; background: transparent; border: 1px solid rgba(20,33,46,.22); color: #46535b; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; padding: 10px 20px; border-radius: 40px; cursor: pointer; transition: background .22s var(--ease), color .22s var(--ease), border-color .22s var(--ease), opacity .3s var(--ease); }
