@@ -188,7 +188,7 @@ p { margin: 0 0 1.1em; }
    Title card (home intro cover)
    ========================================================================== */
 .title-card {
-  position: relative; min-height: 100svh;
+  position: relative; min-height: 86svh;
   display: flex; align-items: center; justify-content: center; text-align: center;
   background: var(--clay); color: #fff; overflow: hidden;
 }
@@ -235,8 +235,8 @@ p { margin: 0 0 1.1em; }
 /* ==========================================================================
    Sections
    ========================================================================== */
-.section { padding-block: clamp(72px, 11vw, 168px); }
-.section--tight { padding-block: clamp(48px, 7vw, 96px); }
+.section { padding-block: clamp(58px, 8vw, 116px); }
+.section--tight { padding-block: clamp(40px, 5.5vw, 74px); }
 .section--paper2 { background: var(--paper-2); }
 .section--ink { background: var(--ink); color: var(--paper); }
 .section--ink .muted { color: #aebfc9; }
@@ -528,7 +528,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--c
 /* ==========================================================================
    Discipline page — dark section, ghosted heading, tall numbered columns
    ========================================================================== */
-.dsec { background: var(--bg-deep); color: #fff; padding-top: clamp(120px, 16vh, 200px); padding-bottom: 0; overflow: hidden; }
+.dsec { background: var(--bg-deep); color: #fff; padding-top: clamp(96px, 12vh, 156px); padding-bottom: 0; overflow: hidden; }
 .dsec .lead { color: #b9c4cc; }
 
 .whead { position: relative; display: inline-block; padding-top: clamp(30px, 5vw, 64px); }
@@ -606,7 +606,7 @@ a.pgrp__head:hover .pgrp__title { color: var(--clay-soft); }
 /* Wide, left-extended photo: keep the figure anchored right and the top pinned, so
    resizing only reveals/crops the fog on the left — the composition never changes. */
 .fmind-hero img { object-position: right top; }
-.pd-intro { padding-top: clamp(70px, 9vw, 130px); }
+.pd-intro { padding-top: clamp(54px, 7vw, 98px); }
 .pd-sec-head { margin-bottom: clamp(32px, 4vw, 52px); }
 
 /* Founder portfolio — full-bleed B&W image band, text overlaid on the blurred side.
