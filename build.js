@@ -1103,12 +1103,32 @@ const valuka = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">Read from the site.</h2>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG7}sketch-01.webp" alt="Vālukā, concept sketch, courtyard corner" /></figure>
+    <div class="grid-2 top site-analysis" style="align-items:center">
+      <figure class="reveal" style="margin:0">
+        <img decoding="async" src="${IMG7}site-analysis.svg" alt="Vālukā site analysis, the plot between two roads with the sun's path and the prevailing wind" loading="lazy" />
+      </figure>
+      <div class="reveal d1">
+        <p class="lead">A generous corner plot, roughly 21 by 52 metres between two roads, set the terms, the existing building, the sun's arc and the prevailing breeze all shaping where the new home opens and where it closes.</p>
+        <p class="muted">The plan turns its living spaces to the light and the wind, screening the road edges and drawing green, air and daylight through the section.</p>
+      </div>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the courtyard corner, the striated stone bands, deep glazing and the sheltered garden drawn before the render.</p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--plans-wide pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG7}plans/ground.webp" alt="Vālukā ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG7}plans/first.webp" alt="Vālukā first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG7}plans/terrace.webp" alt="Vālukā terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Terrace floor</figcaption></figure>
+    </div>
   </div>
 </section>
 

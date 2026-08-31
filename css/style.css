@@ -946,6 +946,7 @@ body.night-mode .nightbtn[aria-pressed="true"] { color: #1b2a32; border-color: #
 .pd-full-grid--plans { grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 1.8vw, 26px); }
 .pd-full-grid--plans .pd-full { background: #fff; border: 1px solid var(--line); border-radius: 3px; padding: clamp(8px, 1vw, 14px); }
 .pd-full-grid--plans .pd-full img { width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: contain; }
+.pd-full-grid--plans-wide .pd-full img { aspect-ratio: 3 / 2; }
 .pd-full-grid--plans .pd-full__cap { display: block; text-align: center; margin-top: 10px; font-family: var(--sans); font-size: 12.5px; letter-spacing: .05em; text-transform: uppercase; color: var(--stone-dk); }
 @media (max-width: 820px) { .pd-full-grid--plans { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 460px) { .pd-full-grid--plans { grid-template-columns: 1fr; } }

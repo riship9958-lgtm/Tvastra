@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 620" font-family="Quicksand, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <marker id="v-wind" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto">
+      <path d="M1 1 L7 4.5 L1 8" fill="none" stroke="#2b4a7a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="v-sun" markerWidth="10" markerHeight="10" refX="6.5" refY="5" orient="auto">
+      <path d="M1 1.5 L7.5 5 L1 8.5" fill="none" stroke="#e9a13a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <g id="v-sunicon">
+      <circle r="13" fill="#f4a63a"/>
+      <g stroke="#f4a63a" stroke-width="2.6" stroke-linecap="round">
+        <line x1="0" y1="-18" x2="0" y2="-24"/><line x1="0" y1="18" x2="0" y2="24"/>
+        <line x1="-18" y1="0" x2="-24" y2="0"/><line x1="18" y1="0" x2="24" y2="0"/>
+        <line x1="-13" y1="-13" x2="-17" y2="-17"/><line x1="13" y1="13" x2="17" y2="17"/>
+        <line x1="13" y1="-13" x2="17" y2="-17"/><line x1="-13" y1="13" x2="-17" y2="17"/>
+      </g>
+    </g>
+    <g id="v-tree">
+      <circle r="8" fill="#5fae54"/><circle r="5" cx="-6" cy="3" fill="#6fbb62"/><circle r="5" cx="6" cy="3" fill="#549a4a"/><circle r="5" cx="0" cy="-5" fill="#77c268"/>
+    </g>
+  </defs>
+
+  <g transform="rotate(-19 380 320)">
+    <!-- roads -->
+    <g stroke="#c2c8cf" stroke-width="12" fill="none" stroke-linecap="round">
+      <path d="M60 150 L120 150"/>            <!-- top-left approach -->
+      <path d="M108 120 L108 430"/>           <!-- left road -->
+      <path d="M120 452 L660 452"/>           <!-- bottom road -->
+    </g>
+    <text x="86" y="290" transform="rotate(-90 86 290)" text-anchor="middle" font-size="15" fill="#6d7a82" letter-spacing="1">ROAD</text>
+    <text x="390" y="476" text-anchor="middle" font-size="15" fill="#6d7a82" letter-spacing="1">ROAD</text>
+
+    <!-- plot boundary -->
+    <rect x="140" y="168" width="500" height="250" fill="#ffffff" stroke="#d64f4f" stroke-width="2.4"/>
+    <rect x="146" y="174" width="488" height="238" fill="none" stroke="#c07bd8" stroke-width="1.2" stroke-opacity="0.7"/>
+
+    <!-- plot dimensions -->
+    <text x="128" y="293" transform="rotate(-90 128 293)" text-anchor="middle" font-size="15" font-weight="600" fill="#46535b">20.98 m</text>
+    <text x="390" y="438" text-anchor="middle" font-size="15" font-weight="600" fill="#46535b">52.05 m</text>
+
+    <!-- existing building footprint (notched) -->
+    <path d="M250 214 H430 V300 H360 V344 H250 Z" fill="#eceff1" stroke="#7a828b" stroke-width="2"/>
+    <text x="330" y="286" text-anchor="middle" font-size="14" font-weight="600" fill="#46535b">EXISTING</text>
+    <text x="330" y="304" text-anchor="middle" font-size="14" font-weight="600" fill="#46535b">BUILDING</text>
+
+    <!-- trees -->
+    <use href="#v-tree" x="200" y="205"/><use href="#v-tree" x="470" y="210"/><use href="#v-tree" x="520" y="250"/>
+    <use href="#v-tree" x="560" y="320"/><use href="#v-tree" x="500" y="380"/><use href="#v-tree" x="300" y="380"/>
+    <use href="#v-tree" x="190" y="360"/><use href="#v-tree" x="440" y="360"/>
+
+    <!-- sun path over the plot -->
+    <path d="M200 150 C 340 96, 470 120, 545 235 C 585 300, 590 350, 585 395"
+          fill="none" stroke="#e9a13a" stroke-width="3" stroke-dasharray="13 11" stroke-linecap="round" marker-end="url(#v-sun)"/>
+    <use href="#v-sunicon" x="196" y="150"/>
+    <use href="#v-sunicon" x="540" y="210"/>
+    <use href="#v-sunicon" x="580" y="392"/>
+
+    <!-- prevailing wind sweeping across from the right -->
+    <g fill="none" stroke="#2b4a7a" stroke-width="2.6" stroke-linecap="round">
+      <path d="M660 250 C 610 268, 585 286, 560 300" stroke-dasharray="12 9" marker-end="url(#v-wind)"/>
+      <path d="M672 300 C 615 312, 590 322, 560 332" stroke-dasharray="12 9" marker-end="url(#v-wind)"/>
+      <path d="M660 350 C 615 356, 590 360, 560 366" stroke-dasharray="12 9" marker-end="url(#v-wind)"/>
+    </g>
+  </g>
+
+  <!-- labels (upright) -->
+  <text x="150" y="40" font-size="16" letter-spacing="2" fill="#b7791a">SUN PATH</text>
+  <text x="610" y="120" text-anchor="end" font-size="15" letter-spacing="1.5" fill="#2b4a7a">PREVAILING WIND</text>
+</svg>
