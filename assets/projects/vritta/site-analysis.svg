@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 720" font-family="Quicksand, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <marker id="wind" markerWidth="9" markerHeight="9" refX="6.5" refY="4.5" orient="auto">
+      <path d="M1 1 L7 4.5 L1 8" fill="none" stroke="#2f7fb8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="sunhead" markerWidth="10" markerHeight="10" refX="6.5" refY="5" orient="auto">
+      <path d="M1 1.5 L7.5 5 L1 8.5" fill="none" stroke="#e9b83a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="flow" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
+      <path d="M1 1.5 L7.5 5 L1 8.5" fill="none" stroke="#8a8f9c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <g id="sun">
+      <circle r="15" fill="#f6c445"/>
+      <g stroke="#f6c445" stroke-width="3" stroke-linecap="round">
+        <line x1="0" y1="-21" x2="0" y2="-27"/><line x1="0" y1="21" x2="0" y2="27"/>
+        <line x1="-21" y1="0" x2="-27" y2="0"/><line x1="21" y1="0" x2="27" y2="0"/>
+        <line x1="-15" y1="-15" x2="-19" y2="-19"/><line x1="15" y1="15" x2="19" y2="19"/>
+        <line x1="15" y1="-15" x2="19" y2="-19"/><line x1="-15" y1="15" x2="-19" y2="19"/>
+      </g>
+    </g>
+  </defs>
+
+  <!-- building footprint -->
+  <g transform="rotate(-11 320 340)">
+    <rect x="150" y="255" width="340" height="185" rx="3" fill="#00618e" fill-opacity="0.09" stroke="#1b2a32" stroke-width="2.2"/>
+  </g>
+
+  <!-- sun path: east (left) -> south dip -> west (right) -->
+  <path d="M40 470 C 150 610, 360 620, 470 470 C 520 400, 560 360, 605 330"
+        fill="none" stroke="#e9b83a" stroke-width="3" stroke-dasharray="12 11" stroke-linecap="round" marker-end="url(#sunhead)"/>
+  <use href="#sun" x="62" y="404"/>
+  <use href="#sun" x="292" y="556"/>
+  <use href="#sun" x="520" y="352"/>
+
+  <!-- prevailing wind from the NE, curving to the building -->
+  <path d="M600 120 C 470 150, 470 210, 430 250" fill="none" stroke="#2f7fb8" stroke-width="3" stroke-dasharray="13 10" stroke-linecap="round" marker-end="url(#wind)"/>
+  <path d="M560 210 C 470 230, 460 245, 430 262" fill="none" stroke="#2f7fb8" stroke-width="3" stroke-dasharray="13 10" stroke-linecap="round" marker-end="url(#wind)"/>
+  <path d="M20 505 C 70 470, 95 445, 90 415" fill="none" stroke="#2f7fb8" stroke-width="3" stroke-dasharray="13 10" stroke-linecap="round" marker-end="url(#wind)"/>
+
+  <!-- airflow drawn through the plan -->
+  <path d="M70 405 L 190 392" fill="none" stroke="#9aa0ac" stroke-width="3" stroke-linecap="round" marker-end="url(#flow)"/>
+
+  <!-- labels -->
+  <text x="300" y="632" text-anchor="middle" font-size="16" letter-spacing="2.5" fill="#b78a13">SUN PATH · E → W</text>
+  <text x="598" y="96" text-anchor="end" font-size="15" letter-spacing="2" fill="#2f7fb8">PREVAILING WIND</text>
+
+  <!-- compass rose -->
+  <g transform="translate(556 636)">
+    <circle r="34" fill="#ffffff" stroke="#d5dce1" stroke-width="1.4"/>
+    <line x1="0" y1="-40" x2="0" y2="40" stroke="#8a929b" stroke-width="1"/>
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="#8a929b" stroke-width="1"/>
+    <path d="M0 -30 L6 0 L0 6 L-6 0 Z" fill="#1b2a32"/>
+    <path d="M0 30 L6 0 L0 -6 L-6 0 Z" fill="#c2c8cf"/>
+    <text x="0" y="-44" text-anchor="middle" font-size="14" font-weight="600" fill="#1b2a32">N</text>
+    <text x="0" y="56" text-anchor="middle" font-size="12" fill="#6d7a82">S</text>
+    <text x="48" y="5" text-anchor="middle" font-size="12" fill="#6d7a82">E</text>
+    <text x="-48" y="5" text-anchor="middle" font-size="12" fill="#6d7a82">W</text>
+    <line x1="0" y1="0" x2="-21" y2="21" stroke="#d64f4f" stroke-width="2.4" stroke-linecap="round"/>
+    <text x="-20" y="40" text-anchor="middle" font-size="12" font-weight="600" fill="#d64f4f">SW</text>
+  </g>
+</svg>

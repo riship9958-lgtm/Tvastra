@@ -577,12 +577,35 @@ const vritta = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">Sited to the sun and the wind.</h2>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG}sketch-01.webp" alt="Vritta, concept sketch, corner perspective" /></figure>
+    <div class="grid-2 top site-analysis" style="align-items:center">
+      <figure class="reveal" style="margin:0">
+        <img decoding="async" src="${IMG}site-analysis.svg" alt="Vritta site analysis, the sun's east-to-west path and the prevailing wind across the plot" loading="lazy" />
+      </figure>
+      <div class="reveal d1">
+        <p class="lead">The house is turned to work with its plot, the long faces set to temper the western sun while the southern path washes the terraces with light through the day.</p>
+        <p class="muted">Prevailing breezes are drawn across the section for stack ventilation, and the carved terraces and circular apertures pull that air, and daylight, deep into every level.</p>
+      </div>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the stepped massing, carved terraces and the circular apertures explored in line before the render.</p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/ground.webp" alt="Vritta ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/first.webp" alt="Vritta first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/second.webp" alt="Vritta second floor plan" loading="lazy" /><figcaption class="pd-full__cap">Second floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/third.webp" alt="Vritta third floor plan" loading="lazy" /><figcaption class="pd-full__cap">Third floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/terrace.webp" alt="Vritta terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Terrace floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG}plans/roof.webp" alt="Vritta roof plan" loading="lazy" /><figcaption class="pd-full__cap">Roof plan</figcaption></figure>
+    </div>
   </div>
 </section>
 
