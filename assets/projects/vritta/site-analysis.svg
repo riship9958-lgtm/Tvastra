@@ -25,12 +25,12 @@
     <rect x="150" y="255" width="340" height="185" rx="3" fill="#00618e" fill-opacity="0.09" stroke="#1b2a32" stroke-width="2.2"/>
   </g>
 
-  <!-- sun path: east (left) -> south dip -> west (right) -->
-  <path d="M40 470 C 150 610, 360 620, 470 470 C 520 400, 560 360, 605 330"
+  <!-- sun path: east (right, sunrise) -> south dip -> west (left, sunset), matching the compass -->
+  <path d="M605 330 C 560 360, 520 400, 470 470 C 360 620, 150 610, 40 470"
         fill="none" stroke="#e9b83a" stroke-width="3" stroke-dasharray="12 11" stroke-linecap="round" marker-end="url(#sunhead)"/>
-  <use href="#sun" x="62" y="404"/>
-  <use href="#sun" x="292" y="556"/>
   <use href="#sun" x="520" y="352"/>
+  <use href="#sun" x="292" y="556"/>
+  <use href="#sun" x="62" y="404"/>
 
   <!-- prevailing wind from the NE, curving to the building -->
   <path d="M600 120 C 470 150, 470 210, 430 250" fill="none" stroke="#2f7fb8" stroke-width="3" stroke-dasharray="13 10" stroke-linecap="round" marker-end="url(#wind)"/>
