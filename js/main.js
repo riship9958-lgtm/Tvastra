@@ -174,12 +174,15 @@
     document.addEventListener("touchstart", warm, { passive: true });
   })();
 
-  // ---- Hover to enlarge grid images (fit the viewport, never upscale past native) ----
+  // ---- Enlarge grid images: hover on desktop, tap-to-open / tap-to-dismiss on touch ----
   (function () {
     var imgs = [].slice.call(document.querySelectorAll('.pd-full-grid--zoom .pd-full img'));
     if (!imgs.length) return;
+    // Only devices with a fine pointer that can truly hover get the hover behaviour;
+    // touchscreens (phones, tablets) get tap-to-open and tap-anywhere-to-dismiss.
+    var canHover = !window.matchMedia || window.matchMedia('(hover: hover) and (pointer: fine)').matches;
     var ov = document.createElement('div');
-    ov.className = 'imgzoom';
+    ov.className = 'imgzoom' + (canHover ? '' : ' imgzoom--touch');
     ov.setAttribute('aria-hidden', 'true');
     var cap = document.createElement('div');
     cap.className = 'imgzoom__cap';
@@ -188,20 +191,34 @@
     ov.appendChild(cap);
     ov.appendChild(big);
     document.body.appendChild(ov);
-    imgs.forEach(function (img) {
+
+    function open(img) {
       var grid = img.closest('.pd-full-grid');
       var withCap = grid && grid.classList.contains('pd-full-grid--zoomcap');
       var withPop = grid && grid.classList.contains('pd-full-grid--zoompop');
       var figcap = img.closest('.pd-full') && img.closest('.pd-full').querySelector('.pd-full__cap');
-      img.addEventListener('mouseenter', function () {
-        big.src = img.currentSrc || img.src;
-        if (withCap && figcap) { cap.textContent = figcap.textContent; ov.classList.add('has-cap'); }
-        else { cap.textContent = ''; ov.classList.remove('has-cap'); }
-        ov.classList.toggle('pop', !!withPop);
-        ov.classList.add('on');
+      big.src = img.currentSrc || img.src;
+      if (withCap && figcap) { cap.textContent = figcap.textContent; ov.classList.add('has-cap'); }
+      else { cap.textContent = ''; ov.classList.remove('has-cap'); }
+      ov.classList.toggle('pop', !!withPop);
+      ov.classList.add('on');
+    }
+    function close() { ov.classList.remove('on'); }
+
+    if (canHover) {
+      imgs.forEach(function (img) {
+        img.addEventListener('mouseenter', function () { open(img); });
+        img.addEventListener('mouseleave', close);
       });
-      img.addEventListener('mouseleave', function () { ov.classList.remove('on'); });
-    });
+    } else {
+      // Touch: tap an image to enlarge; tap anywhere on the overlay (or the image) to dismiss.
+      imgs.forEach(function (img) {
+        img.addEventListener('click', function (e) { e.preventDefault(); open(img); });
+      });
+      ov.addEventListener('click', close);
+    }
+    // Esc always closes.
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.keyCode === 27) close(); });
   })();
 
   // ---- Interactive elevation viewer: rotate + lights (night) ----
