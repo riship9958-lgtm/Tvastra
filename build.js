@@ -1333,12 +1333,33 @@ const asamvrta = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">Read from the site.</h2>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG8}sketch-01.webp" alt="Asaṁvṛta, concept sketch, street corner" /></figure>
+    <div class="grid-2 top site-analysis" style="align-items:center">
+      <figure class="reveal" style="margin:0">
+        <img decoding="async" src="${IMG8}site-analysis.svg" alt="Asaṁvṛta site analysis, the sun's path and the prevailing wind across the plot" loading="lazy" />
+      </figure>
+      <div class="reveal d1">
+        <p class="lead">The plan is turned to its plot, holding privacy to the street while opening the living floors to light, with the deep recessed balconies shading the southern face through the day.</p>
+        <p class="muted">Prevailing breezes are drawn across the section for cross and stack ventilation, floor to floor, and the stone-and-brick banding screens the harsh western sun.</p>
+      </div>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the street corner, the stone-and-brick banding, deep recessed balconies and the rooftop pavilion drawn before the render.</p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG8}plans/ground.webp" alt="Asaṁvṛta ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}plans/first.webp" alt="Asaṁvṛta first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}plans/second.webp" alt="Asaṁvṛta second floor plan" loading="lazy" /><figcaption class="pd-full__cap">Second floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG8}plans/terrace.webp" alt="Asaṁvṛta terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Terrace floor</figcaption></figure>
+    </div>
   </div>
 </section>
 
