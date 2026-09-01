@@ -715,12 +715,17 @@ const rju = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">Read from the site.</h2>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:920px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG3}sketch-01.webp" alt="Ṛju, concept sketch, corner perspective" /></figure>
+    <div class="grid-2 top site-analysis" style="align-items:center">
+      <figure class="reveal" style="margin:0">
+        <img decoding="async" src="${IMG3}site-analysis.svg" alt="Ṛju site analysis, the sun's path and the prevailing wind across the corner plot" loading="lazy" />
+      </figure>
+      <div class="reveal d1">
+        <p class="lead">On its corner plot the house turns to work with the light, the terraces and cascading gardens stepped to the sun while the brick-jaali crown filters the harsh western glare.</p>
+        <p class="muted">Prevailing breezes are drawn through the section for cross and stack ventilation, and the timber louvers and planted balconies carry green, air and daylight deep into every level.</p>
+      </div>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the corner, the stacked planted balconies, timber louvers and the brick-jaali crown drawn before the render.</p>
   </div>
 </section>
 
