@@ -729,6 +729,24 @@ ${elevSec({ pairs: [
   { day: `${IMG3}04-day-front.webp`, night: `${IMG3}03-night.webp`, alt: 'Ṛju, front elevation' },
 ] })}
 
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--plans-wide pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/ground.webp" alt="Ṛju ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/first.webp" alt="Ṛju first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/second.webp" alt="Ṛju second floor plan" loading="lazy" /><figcaption class="pd-full__cap">Second floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/third.webp" alt="Ṛju third floor plan" loading="lazy" /><figcaption class="pd-full__cap">Third floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/lower-terrace.webp" alt="Ṛju lower terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Lower terrace</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG3}plans/higher-terrace.webp" alt="Ṛju higher terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Higher terrace</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="container">
     <div class="grid-2 top">
