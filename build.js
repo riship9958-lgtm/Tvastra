@@ -831,12 +831,33 @@ const jalika = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">Read from the site.</h2>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:980px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG4}sketch-01.webp" alt="Jālikā, concept sketch, corner perspective" /></figure>
+    <div class="grid-2 top site-analysis" style="align-items:center">
+      <figure class="reveal" style="margin:0">
+        <img decoding="async" src="${IMG4}site-analysis.svg" alt="Jālikā site analysis, the sun's path and the prevailing wind across the plot" loading="lazy" />
+      </figure>
+      <div class="reveal d1">
+        <p class="lead">The plan is set to its plot, opening the living spaces to the light while the double-height jaali screen filters the western sun and gives the corner its privacy.</p>
+        <p class="muted">Prevailing breezes are drawn through the section for cross and stack ventilation, and the terracotta piers and raised garden podium carry green and air into the home.</p>
+      </div>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the corner, the double-height jaali screen, terracotta piers and the raised garden podium drawn before the render.</p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG4}plans/ground.webp" alt="Jālikā ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}plans/first.webp" alt="Jālikā first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}plans/second.webp" alt="Jālikā second floor plan" loading="lazy" /><figcaption class="pd-full__cap">Second floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG4}plans/terrace.webp" alt="Jālikā terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Terrace floor</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -1047,12 +1068,32 @@ const urdhva = `
   <div class="container">
     <div class="pd-sec-head reveal">
       <p class="eyebrow">Concept</p>
-      <h2 class="h-lg">From the first line.</h2>
+      <h2 class="h-lg">The conceptual idea.</h2>
+      <p class="lead" style="max-width:640px;margin-top:12px">From programmatic volumes to a resolved play of white masses, brick screens and a carved core.</p>
     </div>
-    <div class="pd-sketch-grid reveal" style="grid-template-columns:1fr;max-width:1000px;margin-inline:auto">
-      <figure class="pd-sketch-fig"><img decoding="async" src="${IMG6}sketch-01.webp" alt="Urdhva, concept sketch, street corner" /></figure>
+    <div class="pd-full-grid pd-full-grid--massing pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG6}concept/massing-1.webp" alt="Urdhva massing study, programmatic volumes" loading="lazy" /><figcaption class="pd-full__cap">Programmatic volumes</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}concept/massing-2.webp" alt="Urdhva massing study, stacked and shifted" loading="lazy" /><figcaption class="pd-full__cap">Stacked &amp; shifted</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}concept/massing-3.webp" alt="Urdhva massing study, the carved core" loading="lazy" /><figcaption class="pd-full__cap">A carved core</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}concept/massing-4.webp" alt="Urdhva massing study, brick screens introduced" loading="lazy" /><figcaption class="pd-full__cap">Brick screens</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}concept/massing-5.webp" alt="Urdhva massing study, the resolved form" loading="lazy" /><figcaption class="pd-full__cap">The resolved form</figcaption></figure>
     </div>
-    <p class="muted reveal pd-sketch-note">A hand study of the corner, the stacked white panel volumes, the exposed-brick spine and the rooftop pavilion drawn before the render.</p>
+  </div>
+</section>
+
+<section class="section section--paper2">
+  <div class="container">
+    <div class="pd-sec-head reveal">
+      <p class="eyebrow">Drawings</p>
+      <h2 class="h-lg">The plan, floor by floor.</h2>
+      <p class="lead" style="max-width:600px;margin-top:12px">Tap any plan to enlarge and read it in full.</p>
+    </div>
+    <div class="pd-full-grid pd-full-grid--plans pd-full-grid--zoom pd-full-grid--zoomcap reveal">
+      <figure class="pd-full"><img decoding="async" src="${IMG6}plans/ground.webp" alt="Urdhva ground floor plan" loading="lazy" /><figcaption class="pd-full__cap">Ground floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}plans/first.webp" alt="Urdhva first floor plan" loading="lazy" /><figcaption class="pd-full__cap">First floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}plans/second.webp" alt="Urdhva second floor plan" loading="lazy" /><figcaption class="pd-full__cap">Second floor</figcaption></figure>
+      <figure class="pd-full"><img decoding="async" src="${IMG6}plans/terrace.webp" alt="Urdhva terrace floor plan" loading="lazy" /><figcaption class="pd-full__cap">Terrace floor</figcaption></figure>
+    </div>
   </div>
 </section>
 
