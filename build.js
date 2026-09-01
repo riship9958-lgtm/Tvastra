@@ -569,7 +569,7 @@ const vritta = `
       <div><div class="k">Levels</div><div class="v">G + 3 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -707,7 +707,7 @@ const rju = `
       <div><div class="k">Levels</div><div class="v">G + 3 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -823,7 +823,7 @@ const jalika = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -920,7 +920,7 @@ const vallabhNivas = `
       <div><div class="k">Levels</div><div class="v">G + 3</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -1039,7 +1039,7 @@ const urdhva = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -1135,7 +1135,7 @@ const valuka = `
       <div><div class="k">Levels</div><div class="v">G + 1</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
@@ -1284,7 +1284,7 @@ const asamvrta = `
       <div><div class="k">Levels</div><div class="v">G + 2 &amp; terrace</div></div>
       <div><div class="k">Stage</div><div class="v">Design Visualisation</div></div>
     </div>
-    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b></b></p>
+    <p class="pd-credits reveal">Principal Designer <b>Bhavin Swami</b> &middot; Senior Architect <b>Akshat Mehta</b></p>
   </div>
 </section>
 
