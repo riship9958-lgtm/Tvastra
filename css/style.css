@@ -187,6 +187,14 @@ p { margin: 0 0 1.1em; }
 /* ==========================================================================
    Title card (home intro cover)
    ========================================================================== */
+/* ---------- Opening reveal: a brand-blue wash that blooms in and fades to the title card ---------- */
+html.intro-lock, html.intro-lock body { overflow: hidden; }
+.intro { position: fixed; inset: 0; z-index: 9999; background: #ffffff; overflow: hidden; transition: opacity .62s var(--ease); }
+.intro.is-out { opacity: 0; }
+.intro__flood { position: absolute; left: 50%; top: 50%; width: 100vmax; height: 100vmax; margin: -50vmax 0 0 -50vmax; border-radius: 50%; background: #004d70; transform: scale(0); transition: transform .82s cubic-bezier(.66,0,.32,1); will-change: transform; }
+.intro.is-flood .intro__flood { transform: scale(1.85); }
+@media (prefers-reduced-motion: reduce) { .intro { display: none; } }
+
 .title-card {
   position: relative; min-height: 100svh;
   display: flex; align-items: center; justify-content: center; text-align: center;

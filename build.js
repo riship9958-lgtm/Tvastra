@@ -342,6 +342,27 @@ function dcol(num, title, cat, img, side) {
 }
 
 const home = `
+<div class="intro" id="intro">
+  <div class="intro__flood" aria-hidden="true"></div>
+</div>
+<script>
+(function(){
+  var intro = document.getElementById('intro');
+  if(!intro) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen; try { seen = sessionStorage.getItem('tv_intro'); } catch(e){}
+  function done(){ if(intro && intro.parentNode) intro.parentNode.removeChild(intro); document.documentElement.classList.remove('intro-lock'); }
+  if(seen || reduce){ done(); return; }
+  try { sessionStorage.setItem('tv_intro','1'); } catch(e){}
+  document.documentElement.classList.add('intro-lock');
+  // Brand-blue wash blooms out, then fades to reveal the title card.
+  requestAnimationFrame(function(){
+    setTimeout(function(){ intro.classList.add('is-flood'); }, 120);
+    setTimeout(function(){ intro.classList.add('is-out'); }, 980);
+    setTimeout(done, 1640);
+  });
+})();
+</script>
 <section class="title-card">
   <div class="title-card__inner">
     <img decoding="async" class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />

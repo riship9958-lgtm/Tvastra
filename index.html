@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png?v=tva3" />
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png?v=tva3" />
 <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/style.css?v=59586405" />
+<link rel="stylesheet" href="css/style.css?v=f7551df3" />
 <script>
 /* One-time cleanup: remove any stale service worker / caches left by the previous site. */
 (function(){
@@ -52,6 +52,27 @@
     <ul class="nav-links"><li><a href="index.html" class="active">Home</a></li><li><a href="discipline.html">Discipline</a></li><li><a href="about.html">About Us</a></li><li><a href="gospels.html">Vault</a></li><li><a href="recognition.html">Recognition</a></li><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact Us</a></li></ul>
   </div>
 </header>
+<div class="intro" id="intro">
+  <div class="intro__flood" aria-hidden="true"></div>
+</div>
+<script>
+(function(){
+  var intro = document.getElementById('intro');
+  if(!intro) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var seen; try { seen = sessionStorage.getItem('tv_intro'); } catch(e){}
+  function done(){ if(intro && intro.parentNode) intro.parentNode.removeChild(intro); document.documentElement.classList.remove('intro-lock'); }
+  if(seen || reduce){ done(); return; }
+  try { sessionStorage.setItem('tv_intro','1'); } catch(e){}
+  document.documentElement.classList.add('intro-lock');
+  // Brand-blue wash blooms out, then fades to reveal the title card.
+  requestAnimationFrame(function(){
+    setTimeout(function(){ intro.classList.add('is-flood'); }, 120);
+    setTimeout(function(){ intro.classList.add('is-out'); }, 980);
+    setTimeout(done, 1640);
+  });
+})();
+</script>
 <section class="title-card">
   <div class="title-card__inner">
     <img decoding="async" class="title-card__logo" src="assets/logo-white.png" alt="Tvastra Design LLP" />
