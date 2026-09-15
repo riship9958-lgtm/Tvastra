@@ -174,51 +174,76 @@
     document.addEventListener("touchstart", warm, { passive: true });
   })();
 
-  // ---- Enlarge grid images: hover on desktop, tap-to-open / tap-to-dismiss on touch ----
+  // ---- Enlarge grid images: first hover (or tap) opens the lightbox, then navigate with arrows ----
   (function () {
-    var imgs = [].slice.call(document.querySelectorAll('.pd-full-grid--zoom .pd-full img'));
-    if (!imgs.length) return;
-    // Only devices with a fine pointer that can truly hover get the hover behaviour;
-    // touchscreens (phones, tablets) get tap-to-open and tap-anywhere-to-dismiss.
+    var grids = [].slice.call(document.querySelectorAll('.pd-full-grid--zoom'));
+    if (!grids.length) return;
     var canHover = !window.matchMedia || window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
     var ov = document.createElement('div');
-    ov.className = 'imgzoom' + (canHover ? '' : ' imgzoom--touch');
+    ov.className = 'imgzoom';
     ov.setAttribute('aria-hidden', 'true');
-    var cap = document.createElement('div');
-    cap.className = 'imgzoom__cap';
-    var big = document.createElement('img');
-    big.alt = '';
-    ov.appendChild(cap);
-    ov.appendChild(big);
+    var cap = document.createElement('div'); cap.className = 'imgzoom__cap';
+    var big = document.createElement('img'); big.alt = '';
+    var prev = document.createElement('button');
+    prev.type = 'button'; prev.className = 'imgzoom__nav imgzoom__nav--prev'; prev.setAttribute('aria-label', 'Previous image');
+    prev.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg>';
+    var next = document.createElement('button');
+    next.type = 'button'; next.className = 'imgzoom__nav imgzoom__nav--next'; next.setAttribute('aria-label', 'Next image');
+    next.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg>';
+    var closeb = document.createElement('button');
+    closeb.type = 'button'; closeb.className = 'imgzoom__close'; closeb.setAttribute('aria-label', 'Close');
+    closeb.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+    ov.appendChild(cap); ov.appendChild(big); ov.appendChild(prev); ov.appendChild(next); ov.appendChild(closeb);
     document.body.appendChild(ov);
 
-    function open(img) {
-      var grid = img.closest('.pd-full-grid');
-      var withCap = grid && grid.classList.contains('pd-full-grid--zoomcap');
-      var withPop = grid && grid.classList.contains('pd-full-grid--zoompop');
-      var figcap = img.closest('.pd-full') && img.closest('.pd-full').querySelector('.pd-full__cap');
+    var curImgs = [], curIdx = 0, curGrid = null;
+
+    function render() {
+      var img = curImgs[curIdx];
+      if (!img) return;
+      var withCap = curGrid && curGrid.classList.contains('pd-full-grid--zoomcap');
+      var fig = img.closest('.pd-full');
+      var figcap = fig && fig.querySelector('.pd-full__cap');
       big.src = img.currentSrc || img.src;
+      big.alt = img.alt || '';
       if (withCap && figcap) { cap.textContent = figcap.textContent; ov.classList.add('has-cap'); }
       else { cap.textContent = ''; ov.classList.remove('has-cap'); }
-      ov.classList.toggle('pop', !!withPop);
+      var multi = curImgs.length > 1;
+      prev.hidden = !multi; next.hidden = !multi;
+    }
+    function open(grid, img) {
+      curGrid = grid;
+      curImgs = [].slice.call(grid.querySelectorAll('.pd-full img'));
+      curIdx = curImgs.indexOf(img); if (curIdx < 0) curIdx = 0;
+      ov.classList.toggle('pop', !!(grid && grid.classList.contains('pd-full-grid--zoompop')));
+      render();
       ov.classList.add('on');
     }
     function close() { ov.classList.remove('on'); }
+    function step(d) { if (curImgs.length < 2) return; curIdx = (curIdx + d + curImgs.length) % curImgs.length; render(); }
 
-    if (canHover) {
-      imgs.forEach(function (img) {
-        img.addEventListener('mouseenter', function () { open(img); });
-        img.addEventListener('mouseleave', close);
+    grids.forEach(function (grid) {
+      [].slice.call(grid.querySelectorAll('.pd-full img')).forEach(function (img) {
+        // First hover initiates the zoom (desktop); tap initiates it on touchscreens.
+        if (canHover) img.addEventListener('mouseenter', function () { if (!ov.classList.contains('on')) open(grid, img); });
+        img.addEventListener('click', function (e) { e.preventDefault(); open(grid, img); });
       });
-    } else {
-      // Touch: tap an image to enlarge; tap anywhere on the overlay (or the image) to dismiss.
-      imgs.forEach(function (img) {
-        img.addEventListener('click', function (e) { e.preventDefault(); open(img); });
-      });
-      ov.addEventListener('click', close);
-    }
-    // Esc always closes.
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.keyCode === 27) close(); });
+    });
+
+    // Once open, arrows navigate; backdrop / X / Esc close.
+    prev.addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+    next.addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+    closeb.addEventListener('click', function (e) { e.stopPropagation(); close(); });
+    big.addEventListener('click', function (e) { e.stopPropagation(); });
+    cap.addEventListener('click', function (e) { e.stopPropagation(); });
+    ov.addEventListener('click', close);
+    document.addEventListener('keydown', function (e) {
+      if (!ov.classList.contains('on')) return;
+      if (e.key === 'Escape' || e.keyCode === 27) close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
   })();
 
   // ---- Interactive elevation viewer: rotate + lights (night) ----
