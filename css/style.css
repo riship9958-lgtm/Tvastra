@@ -891,7 +891,14 @@ img.img-fade.img-ready { opacity: 1; }
 .imgzoom__close { position: absolute; top: clamp(14px, 2.5vw, 30px); right: clamp(14px, 2.5vw, 30px); width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,.92); border: none; display: grid; place-items: center; cursor: pointer; color: #1b2a32; box-shadow: 0 8px 24px rgba(0,0,0,.32); transition: background .2s var(--ease, ease); z-index: 2; }
 .imgzoom__close svg { width: 22px; height: 22px; }
 .imgzoom__close:hover { background: #fff; }
-@media (max-width: 560px) { .imgzoom { padding-inline: 58px; } .imgzoom__nav { width: 42px; height: 42px; } .imgzoom__nav--prev { left: 7px; } .imgzoom__nav--next { right: 7px; } }
+@media (max-width: 560px) {
+  .imgzoom { padding: 4vmin 52px; }
+  .imgzoom__nav { width: 40px; height: 40px; }
+  .imgzoom__nav svg { width: 28px; height: 28px; }
+  .imgzoom__nav--prev { left: 6px; }
+  .imgzoom__nav--next { right: 6px; }
+  .imgzoom__close { top: 12px; right: 12px; width: 40px; height: 40px; background: rgba(0,0,0,.35); color: #fff; box-shadow: none; }
+}
 @media (prefers-reduced-motion: reduce) { .imgzoom { transition: none; } }
 
 /* Enlarged-view caption panel on the left (for --zoomcap grids) */
@@ -905,6 +912,14 @@ img.img-fade.img-ready { opacity: 1; }
 .imgzoom.pop.on img { transform: scale(1); }
 .imgzoom.pop .imgzoom__cap { transform: translateX(-10px); opacity: 0; transition: transform .34s cubic-bezier(.2,.85,.25,1), opacity .3s ease; }
 .imgzoom.pop.on .imgzoom__cap { transform: none; opacity: 1; }
+
+/* Phones: stack the caption UNDER the image (not squeezed beside it) — placed after
+   the base has-cap rules so it wins. Arrows stay clear in the side gutters. */
+@media (max-width: 560px) {
+  .imgzoom.has-cap { flex-direction: column; gap: 12px; }
+  .imgzoom.has-cap img { order: -1; max-width: 100%; max-height: 60vh; }
+  .imgzoom.has-cap .imgzoom__cap { width: auto; max-width: 100%; text-align: center; font-size: 14px; line-height: 1.5; text-wrap: pretty; }
+}
 
 /* ---- Interactive elevation viewer (rotate + lights) ---- */
 .model3d { position: relative; max-width: 1000px; margin-inline: auto; }
